@@ -1,0 +1,14 @@
+{"time":"2025-07-20T21:40:01.192631135+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/offline-run-20250720_214000-7d6zaprc/logs/debug-core.log"}
+{"time":"2025-07-20T21:40:01.303171294+10:00","level":"INFO","msg":"created new stream","id":"7d6zaprc"}
+{"time":"2025-07-20T21:40:01.30322159+10:00","level":"INFO","msg":"stream: started","id":"7d6zaprc"}
+{"time":"2025-07-20T21:40:01.303230235+10:00","level":"INFO","msg":"handler: started","stream_id":"7d6zaprc"}
+{"time":"2025-07-20T21:40:01.303240196+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"7d6zaprc"}
+{"time":"2025-07-20T21:40:01.303239422+10:00","level":"INFO","msg":"sender: started","stream_id":"7d6zaprc"}
+{"time":"2025-07-20T21:40:01.308704704+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-20T21:40:27.387667204+10:00","level":"INFO","msg":"stream: closing","id":"7d6zaprc"}
+{"time":"2025-07-20T21:40:27.387743104+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-20T21:40:27.388130755+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-20T21:40:27.388224791+10:00","level":"INFO","msg":"handler: closed","stream_id":"7d6zaprc"}
+{"time":"2025-07-20T21:40:27.388239129+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"7d6zaprc"}
+{"time":"2025-07-20T21:40:27.388254973+10:00","level":"INFO","msg":"sender: closed","stream_id":"7d6zaprc"}
+{"time":"2025-07-20T21:40:27.388668366+10:00","level":"INFO","msg":"stream: closed","id":"7d6zaprc"}
