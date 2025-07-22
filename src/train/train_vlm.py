@@ -121,7 +121,7 @@ class DataArguments:
 class TrainingArguments(transformers.TrainingArguments):
     # lora
     lora_enable: bool = False
-    lora_r: int = 16
+    lora_r: int = 32
     lora_alpha: int = 32
     lora_dropout: float = 0.05
     lora_weight_path: str = ""
@@ -130,7 +130,7 @@ class TrainingArguments(transformers.TrainingArguments):
     cache_dir: Optional[str] = field(default=None)
     remove_unused_columns: bool = field(default=False)
     model_max_length: int = field(
-        default=785,  # 768
+        default=805,  # 768
         metadata={
             "help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."
         },
@@ -312,11 +312,14 @@ def main():
         padding_side="right",
         use_fast=False,
     )
-
+    
     # Define and add special tokens
     special_token = {"additional_special_tokens": ["<im_patch>"]}
     tokenizer.add_special_tokens(special_token)
 
+    if tokenizer.pad_token is None:
+        tokenizer.add_special_tokens({"pad_token":"<pad>"})
+    
     if tokenizer.unk_token is not None and tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.unk_token
     if "llama3" in model_args.model_type:
@@ -402,6 +405,12 @@ def main():
     model_args.num_new_tokens = 1
     model.initialize_vision_tokenizer(model_args, tokenizer)
 
+    added = tokenizer.add_special_tokens(
+        {"additional_special_tokens": ["<ANS>"]}
+    )
+    if added > 0:
+        model.resize_token_embeddings(len(tokenizer))
+    
     if model_args.pretrain_mllm:
         ckpt = torch.load(model_args.pretrain_mllm, map_location="cpu")
         model.load_state_dict(ckpt, strict=True)
@@ -454,7 +463,7 @@ def main():
     train_dataset = VQADataset(
         args=data_args,
         tokenizer=tokenizer,
-        close_ended=False,    # <-- free‑form answer mode
+        close_ended=True,
         mode="train",
     )
 
@@ -484,7 +493,7 @@ def main():
     eval_dataset = VQADataset(
         args=data_args,
         tokenizer=tokenizer,
-        close_ended=False,
+        close_ended=True,
         mode="validation",
     )
     

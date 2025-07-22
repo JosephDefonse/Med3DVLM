@@ -11,6 +11,7 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from src.model.llm import VLMQwenForCausalLM
 
 from src.dataset.mllm_dataset import VQADataset
 
@@ -36,7 +37,7 @@ def parse_args(args=None):
         "--model_name_or_path", type=str, default="./models/Med3DVLM-Qwen-2.5-7B"
     )
     parser.add_argument("--max_length", type=int, default=512)
-    parser.add_argument("--max_new_tokens", type=int, default=256)
+    parser.add_argument("--max_new_tokens", type=int, default=5)
     parser.add_argument("--do_sample", action="store_true", default=False)
     parser.add_argument("--top_p", type=float, default=None)
     parser.add_argument("--temperature", type=float, default=1.0)
@@ -47,7 +48,7 @@ def parse_args(args=None):
     parser.add_argument(
         "--vqa_data_test_path", type=str, default="./data/M3D-VQA/M3D_VQA_test.csv"
     )
-    parser.add_argument("--close_ended", action="store_true", default=False)
+    parser.add_argument("--close_ended", action="store_true", default=True)
     parser.add_argument(
         "--output_dir",
         type=str,
@@ -77,8 +78,9 @@ def main():
         use_fast=False,
         trust_remote_code=True,
     )
-    model = AutoModelForCausalLM.from_pretrained(
-        args.model_name_or_path, device_map="auto", trust_remote_code=True
+    model = VLMQwenForCausalLM.from_pretrained(
+        args.model_name_or_path,  # loads vlm_qwen
+        trust_remote_code=False   # you already have the class locally
     )
     model = model.to(device=device)
 
@@ -234,7 +236,7 @@ def main():
                     ]
                 )
 
-    Qustion_Type = {1: "Plane", 2: "Phase", 3: "Organ", 4: "Abnormality", 5: "Location"}
+    Qustion_Type = {1: "Plane"}
 
     if args.close_ended:
         with open(output_path, mode="r") as infile:

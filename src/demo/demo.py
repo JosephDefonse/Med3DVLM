@@ -8,6 +8,10 @@ import torch
 import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+# NEW
+from transformers import AutoTokenizer
+from src.model.llm import VLMQwenForCausalLM
+
 def resample_volume(img: sitk.Image, target_size=(256,256,128)) -> np.ndarray:
     """
     Resample a sitk.Image to the given (W,H,D)=target_size
@@ -77,11 +81,11 @@ def main():
         use_fast=False,
         trust_remote_code=True,
     )
-    model = AutoModelForCausalLM.from_pretrained(
+    model = VLMQwenForCausalLM.from_pretrained( # ADDED VLMQwenForCausalLM
         args.model_name_or_path,
         torch_dtype=dtype,
         device_map=device,
-        trust_remote_code=True,
+        # trust_remote_code=True, # REMOVED
     )
 
     proj_out_num = (
