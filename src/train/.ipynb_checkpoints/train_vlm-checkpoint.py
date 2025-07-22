@@ -138,7 +138,7 @@ class TrainingArguments(transformers.TrainingArguments):
     seed: int = 42
     ddp_backend: str = "nccl"
     ddp_timeout: int = 128000
-    ddp_find_unused_parameters: bool = False
+    ddp_find_unused_parameters: bool = True
     optim: str = field(default="adamw_torch")
 
     # This is set up to facilitate debugging, pls config these in bash file in training.

@@ -1,0 +1,9 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-lora-adapter/checkpoint-1122
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+Warning: The following arguments do not match the ones in the `trainer_state.json` within the checkpoint directory:
+	logging_steps: 0.001 (from args) != 10 (from trainer_state.json)
+	eval_steps: 0.04 (from args) != 45 (from trainer_state.json)
+	save_steps: 1000 (from args) != 2000 (from trainer_state.json)
+	per_device_train_batch_size: 4 (from args) != 1 (from trainer_state.json)
+ 20%|███████████████▌                                                             | 1137/5610 [01:01<33:09,  2.25it/s]
+{'loss': 0.3974, 'grad_norm': 32.04330371213953, 'learning_rate': 9.24983360639264e-05, 'epoch': 1.01}

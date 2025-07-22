@@ -1,0 +1,16 @@
+{"time":"2025-07-22T01:14:50.18292669+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250722_011448-jiy9hyak/logs/debug-core.log"}
+{"time":"2025-07-22T01:14:50.290784759+10:00","level":"INFO","msg":"created new stream","id":"jiy9hyak"}
+{"time":"2025-07-22T01:14:50.290835976+10:00","level":"INFO","msg":"stream: started","id":"jiy9hyak"}
+{"time":"2025-07-22T01:14:50.290847461+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"jiy9hyak"}
+{"time":"2025-07-22T01:14:50.290860828+10:00","level":"INFO","msg":"sender: started","stream_id":"jiy9hyak"}
+{"time":"2025-07-22T01:14:50.29088235+10:00","level":"INFO","msg":"handler: started","stream_id":"jiy9hyak"}
+{"time":"2025-07-22T01:14:50.73800429+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-22T01:15:10.847065127+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-22T01:15:10.847474964+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-22T01:15:11.847294322+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.75156577,"progress":"25B/25B"},{"desc":"uploading config.yaml","runtime_seconds":0.459023829,"progress":"946B/946B"}],"total_operations":2}}
+{"time":"2025-07-22T01:15:12.104422993+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-22T01:15:13.418255977+10:00","level":"INFO","msg":"stream: closing","id":"jiy9hyak"}
+{"time":"2025-07-22T01:15:13.418300339+10:00","level":"INFO","msg":"handler: closed","stream_id":"jiy9hyak"}
+{"time":"2025-07-22T01:15:13.418311859+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jiy9hyak"}
+{"time":"2025-07-22T01:15:13.418318231+10:00","level":"INFO","msg":"sender: closed","stream_id":"jiy9hyak"}
+{"time":"2025-07-22T01:15:13.418731399+10:00","level":"INFO","msg":"stream: closed","id":"jiy9hyak"}

@@ -28,10 +28,10 @@ deepspeed src/train/train_vlm.py \
     --vqa_data_test_path  /home/sdef0001/iq38_scratch/nmdid/nmdid_vqa_test.csv \
     --tune_mm_mlp_adapter True \
     --bf16 True \
-    --output_dir ./output/Med3DVLM-Qwen-2.5-7B-finetune \
+    --output_dir ./output/Med3DVLM-Qwen-2.5-7B-lora-adapter \
     --num_train_epochs 5 \
-    --per_device_train_batch_size 8 \
-    --per_device_eval_batch_size 4 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 2 \
     --gradient_accumulation_steps 1 \
     --eval_strategy "no" \
     --eval_accumulation_steps 1 \

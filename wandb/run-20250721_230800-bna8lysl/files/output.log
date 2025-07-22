@@ -1,0 +1,10 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-lora-adapter/checkpoint-1122
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+Warning: The following arguments do not match the ones in the `trainer_state.json` within the checkpoint directory:
+	eval_steps: 0.04 (from args) != 45 (from trainer_state.json)
+  0%|                                                                                        | 0/1122 [00:00<?, ?it/s]
+{'train_runtime': 0.0097, 'train_samples_per_second': 115128.904, 'train_steps_per_second': 115128.904, 'train_loss': 0.0, 'epoch': 1.0}
+==================== Save model ====================
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
