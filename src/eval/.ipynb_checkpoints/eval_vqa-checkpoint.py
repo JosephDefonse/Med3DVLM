@@ -3,6 +3,11 @@ import csv
 import os
 import random
 
+"""
+RUN export PYTHONPATH="$PWD" in BASH BEFORE RUNNING
+bash scripts/eval/eval_vqa.sh
+"""
+
 # If the model is not from huggingface but local, please uncomment and import the model architecture.
 # from LaMed.src.model.language_model import *
 import evaluate
@@ -12,8 +17,8 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from src.model.llm import VLMQwenForCausalLM
-
 from src.dataset.mllm_dataset import VQADataset
+import torch.nn.functional as F
 
 bleu = evaluate.load("bleu")
 bertscore = evaluate.load("bertscore")
@@ -37,7 +42,7 @@ def parse_args(args=None):
         "--model_name_or_path", type=str, default="./models/Med3DVLM-Qwen-2.5-7B"
     )
     parser.add_argument("--max_length", type=int, default=512)
-    parser.add_argument("--max_new_tokens", type=int, default=5)
+    parser.add_argument("--max_new_tokens", type=int, default=1)
     parser.add_argument("--do_sample", action="store_true", default=False)
     parser.add_argument("--top_p", type=float, default=None)
     parser.add_argument("--temperature", type=float, default=1.0)
@@ -97,6 +102,27 @@ def main():
         drop_last=False,
     )
 
+    answer_tokens = [ tokenizer.convert_tokens_to_ids(l) for l in list("ABCDEFGHIJKLMNOPQRSTUVWXYZ") ]
+
+    for letter in list("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
+        tid = tokenizer.convert_tokens_to_ids(letter)
+        tok = tokenizer.convert_ids_to_tokens(tid)
+        print(f"{letter!r} → id {tid} → token {tok!r}")
+
+    # import sys; sys.exit(0)
+    
+    from transformers import LogitsProcessorList, MinLengthLogitsProcessor, \
+                                 LogitsProcessor, LogitsWarper
+    
+    class RestrictToAnswers(LogitsProcessor):
+        def __call__(self, input_ids, scores):
+            # zero out everything except your answer_tokens
+            mask = torch.full_like(scores, float("-inf"))
+            mask[:, answer_tokens] = scores[:, answer_tokens]
+            return mask
+    
+    logits_processor = LogitsProcessorList([ RestrictToAnswers() ])
+    
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
 
@@ -125,24 +151,48 @@ def main():
 
                 image = sample["image"].to(device=device)
 
-                input_id = tokenizer(question, return_tensors="pt")["input_ids"].to(
-                    device=device
-                )
+                input_ids      = sample["input_id"].to(device)        # full prompt: Q + Choices + <ANS>
+                attention_mask = sample["attention_mask"].to(device)
+                images         = sample["image"].to(device)
 
-                with torch.inference_mode():
-                    generation = model.generate(
-                        image,
-                        input_id,
-                        max_new_tokens=args.max_new_tokens,
-                        do_sample=args.do_sample,
-                        top_p=args.top_p,
-                        temperature=args.temperature,
-                    )
-                generated_texts = tokenizer.batch_decode(
-                    generation, skip_special_tokens=True
-                )
+                # with torch.inference_mode():
+                #     generation = model.generate(
+                #         image,
+                #         input_id,
+                #         max_new_tokens=args.max_new_tokens,
+                #         do_sample=args.do_sample,
+                #         top_p=args.top_p,
+                #         temperature=args.temperature,
+                #         logits_processor=logits_processor,
+                #     )
+                # generated_texts = tokenizer.batch_decode(
+                #     generation, skip_special_tokens=True
+                # )
 
-                if answer_choice[0] + "." in generated_texts[0]:
+                # --- instead of generate(), do straight logit argmax over A–Z ---
+                with torch.no_grad():
+                    outputs = model(
+                        images=images,
+                        input_ids=input_ids,
+                        attention_mask=attention_mask,
+                    )      # forward
+                    lm_logits    = outputs.logits[:, -1, :]                    # [1, vocab_size]
+                    answer_logits= lm_logits[:, answer_tokens]                 # [1,26]
+                
+                    # 1) get the raw probs
+                    probs        = F.softmax(answer_logits, dim=-1).squeeze(0)  # [26]
+                
+                    # 2) map back to letters
+                    letters      = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+                    for letter, p in zip(letters, probs):
+                        print(f"{letter}: {p.item():.4f}")
+                
+                    # 3) pick the top‐1 as before
+                    idx    = probs.argmax().item()     # 0–25
+                    pred   = letters[idx]
+                generated_texts = [pred]
+                
+                if answer_choice[0] == generated_texts[0]:
                     correct = 1
                 else:
                     correct = 0

@@ -23,12 +23,12 @@ deepspeed src/train/train_vlm.py \
     --pretrain_vision_model ./output/DCFormer_SigLIP/pretrained_ViT.bin \
     --pretrain_mm_mlp_adapter ./output/Med3DVLM-Qwen-2.5-7B/mm_projector.bin \
     --data_root /home/sdef0001/iq38_scratch/nmdid \
-    --vqa_data_train_path /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_train.csv \
-    --vqa_data_val_path   /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_val.csv \
-    --vqa_data_test_path  /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_test.csv \
+    --vqa_data_train_path /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_2_train.csv \
+    --vqa_data_val_path   /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_2_val.csv \
+    --vqa_data_test_path  /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_2_test.csv \
     --tune_mm_mlp_adapter True \
     --bf16 True \
-    --output_dir ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_2 \
+    --output_dir ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_3 \
     --num_train_epochs 10 \
     --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 2 \

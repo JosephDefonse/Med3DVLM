@@ -202,7 +202,7 @@ class VQADataset(Dataset):
 
                 if self.close_ended:
                     question = data["Question"]
-                    choices = "Choices: A. {} B. {} C. {} D. {} E. {} F. {} G. {} H. {} I. {} J. {} K. {} L. {} M. {} N. {} O. {} P. {} Q. {} R. {} S. {} T. {} U. {} V. {} W. {} X. {} Y. {} Z. {} AA. {} AB. {} AC. {} AD. {} AE. {} AF. {} AG. {} AH. {} AI. {} AJ. {} AK. {} AL. {} AM. {} AN. {} AO. {} AP. {} AQ. {}".format(
+                    choices = "Choices: A. {} B. {} C. {} D. {} E. {} F. {} G. {} H. {} I. {} J. {} K. {} L. {} M. {} N. {} O. {} P. {} Q. {} R. {} S. {} T. {} U. {} V. {} W. {} X. {} Y. {} Z. {}".format(
                         data["Choice A"],
                         data["Choice B"],
                         data["Choice C"],
@@ -228,24 +228,24 @@ class VQADataset(Dataset):
                         data["Choice W"],
                         data["Choice X"],
                         data["Choice Y"],
-                        data["Choice Z"],
-                        data["Choice AA"],
-                        data["Choice AB"],
-                        data["Choice AC"],
-                        data["Choice AD"],
-                        data["Choice AE"],
-                        data["Choice AF"],
-                        data["Choice AG"],
-                        data["Choice AH"],
-                        data["Choice AI"],
-                        data["Choice AJ"],
-                        data["Choice AK"],
-                        data["Choice AL"],
-                        data["Choice AM"],
-                        data["Choice AN"],
-                        data["Choice AO"],
-                        data["Choice AP"],
-                        data["Choice AQ"]
+                        data["Choice Z"]
+                        # data["Choice AA"],
+                        # data["Choice AB"],
+                        # data["Choice AC"],
+                        # data["Choice AD"],
+                        # data["Choice AE"],
+                        # data["Choice AF"],
+                        # data["Choice AG"],
+                        # data["Choice AH"],
+                        # data["Choice AI"],
+                        # data["Choice AJ"],
+                        # data["Choice AK"],
+                        # data["Choice AL"],
+                        # data["Choice AM"],
+                        # data["Choice AN"],
+                        # data["Choice AO"],
+                        # data["Choice AP"],
+                        # data["Choice AQ"]
                     )
                     # build a prompt that ends in our new sentinel
                     question   = (
@@ -256,7 +256,7 @@ class VQADataset(Dataset):
                     )
                 
                     # the model now sees prompt<space>answer
-                    answer = "{}. {}".format(data["Answer Choice"], data["Answer"])
+                    answer = data["Answer Choice"]
                 else:
                     question = data["Question"]
                     answer = str(data["Answer"])

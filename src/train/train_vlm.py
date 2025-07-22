@@ -122,7 +122,7 @@ class TrainingArguments(transformers.TrainingArguments):
     # lora
     lora_enable: bool = False
     lora_r: int = 32
-    lora_alpha: int = 32
+    lora_alpha: int = 64
     lora_dropout: float = 0.05
     lora_weight_path: str = ""
     lora_bias: str = "none"
@@ -130,7 +130,7 @@ class TrainingArguments(transformers.TrainingArguments):
     cache_dir: Optional[str] = field(default=None)
     remove_unused_columns: bool = field(default=False)
     model_max_length: int = field(
-        default=805,  # 768
+        default=396,  # 768
         metadata={
             "help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."
         },
