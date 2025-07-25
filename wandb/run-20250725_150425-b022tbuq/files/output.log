@@ -1,0 +1,9 @@
+── RAW SAMPLE ──
+ image tensor shape: torch.Size([1, 128, 256, 256])
+ input_id tensor: [151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665, 151665]
+ label tensor: [-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100]
+── COLLATED BATCH ──
+ keys: dict_keys(['images', 'input_ids', 'labels', 'attention_mask'])
+ input_ids: torch.Size([1, 512])
+ labels:    torch.Size([1, 512])
+ unique labels: tensor([  -100,    444, 151645])

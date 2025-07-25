@@ -10,7 +10,7 @@ import transformers
 from transformers import AutoTokenizer, LlamaForCausalLM
 
 import wandb
-from src.dataset.mllm_dataset import CapDataset, TextDatasets, TextYNDatasets, VQADataset
+from src.dataset.mllm_dataset import CapDataset, TextDatasets, TextYNDatasets, QADatasets
 from src.model.llm.qwen import VLMQwenForCausalLM
 from src.train.trainer import MLLMTrainer
 
@@ -121,8 +121,8 @@ class DataArguments:
 class TrainingArguments(transformers.TrainingArguments):
     # lora
     lora_enable: bool = False
-    lora_r: int = 32
-    lora_alpha: int = 64
+    lora_r: int = 16
+    lora_alpha: int = 32
     lora_dropout: float = 0.05
     lora_weight_path: str = ""
     lora_bias: str = "none"
@@ -130,7 +130,7 @@ class TrainingArguments(transformers.TrainingArguments):
     cache_dir: Optional[str] = field(default=None)
     remove_unused_columns: bool = field(default=False)
     model_max_length: int = field(
-        default=396,  # 768
+        default=512,  # 512
         metadata={
             "help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."
         },
@@ -138,7 +138,7 @@ class TrainingArguments(transformers.TrainingArguments):
     seed: int = 42
     ddp_backend: str = "nccl"
     ddp_timeout: int = 128000
-    ddp_find_unused_parameters: bool = True
+    ddp_find_unused_parameters: bool = False
     optim: str = field(default="adamw_torch")
 
     # This is set up to facilitate debugging, pls config these in bash file in training.
@@ -312,14 +312,11 @@ def main():
         padding_side="right",
         use_fast=False,
     )
-    
+
     # Define and add special tokens
     special_token = {"additional_special_tokens": ["<im_patch>"]}
     tokenizer.add_special_tokens(special_token)
 
-    if tokenizer.pad_token is None:
-        tokenizer.add_special_tokens({"pad_token":"<pad>"})
-    
     if tokenizer.unk_token is not None and tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.unk_token
     if "llama3" in model_args.model_type:
@@ -357,20 +354,6 @@ def main():
             model_args.model_name_or_path, cache_dir=training_args.cache_dir
         )
 
-    device = torch.device("cuda")
-    model.to(device)
-    
-    # ─────── Move all BatchNorm buffers to GPU ───────
-    # This keeps running_mean/var on cuda so F.batch_norm never
-    # sees a CPU/GPU mix under ZeRO‑3 parameter offload.
-    from torch.nn.modules.batchnorm import _BatchNorm
-    device = torch.device("cuda")
-    for m in model.modules():
-        if isinstance(m, _BatchNorm):
-            # these are the two buffers used by batch_norm
-            m.running_mean = m.running_mean.to(device)
-            m.running_var  = m.running_var.to(device)
-    
     model.config.use_cache = False
 
     if model_args.freeze_backbone:
@@ -381,19 +364,8 @@ def main():
         model.gradient_checkpointing_enable()
 
     if model_args.vision_tower is not None:
-        # first load / initialize your vision tower
         model.get_model().initialize_vision_modules(model_args=model_args)
 
-        # **then** pin every BN buffer to CUDA
-        from torch.nn.modules.batchnorm import _BatchNorm
-        for m in model.modules():
-            if isinstance(m, _BatchNorm):
-                # running_mean / running_var are the only two buffers
-                m.running_mean = m.running_mean.cuda()
-                m.running_var  = m.running_var.cuda()
-
-    # finally, anything else like .to(device) is up to DeepSpeed/Accelerate
-    
     model.config.tune_mm_mlp_adapter = training_args.tune_mm_mlp_adapter = (
         model_args.tune_mm_mlp_adapter
     )
@@ -405,12 +377,6 @@ def main():
     model_args.num_new_tokens = 1
     model.initialize_vision_tokenizer(model_args, tokenizer)
 
-    added = tokenizer.add_special_tokens(
-        {"additional_special_tokens": ["<ANS>"]}
-    )
-    if added > 0:
-        model.resize_token_embeddings(len(tokenizer))
-    
     if model_args.pretrain_mllm:
         ckpt = torch.load(model_args.pretrain_mllm, map_location="cpu")
         model.load_state_dict(ckpt, strict=True)
@@ -451,21 +417,10 @@ def main():
     data_args.proj_out_num = model.get_model().mm_projector.proj_out_num
     rank0_print("vision tokens output from projector: ", data_args.proj_out_num)
 
-    # if model_args.tune_mm_mlp_adapter:
-    #     train_dataset = TextDatasets(data_args, tokenizer, mode="train")
-    # else:
-    #     train_dataset = TextYNDatasets(data_args, tokenizer, mode="train")
-
-    # eval_dataset = CapDataset(data_args, tokenizer, mode="validation")
-
-    # ---- pure Q→A VQA (no multiple choice) ----
-
-    train_dataset = VQADataset(
-        args=data_args,
-        tokenizer=tokenizer,
-        close_ended=True,
-        mode="train",
-    )
+    if model_args.tune_mm_mlp_adapter:
+        train_dataset = QADatasets(data_args, tokenizer, mode="train")
+    else:
+        train_dataset = QADatasets(data_args, tokenizer, mode="train")
 
     # sample = train_dataset[0]
     # ids = sample["input_id"].tolist()
@@ -490,15 +445,17 @@ def main():
         
     # import sys; sys.exit(0)
     
-    eval_dataset = VQADataset(
-        args=data_args,
-        tokenizer=tokenizer,
-        close_ended=True,
-        mode="validation",
-    )
-    
+    eval_dataset  = QADatasets(data_args, tokenizer, mode="validation")
     data_collator = DataCollator()
 
+    device = torch.device("cuda")
+    for module in model.modules():
+        if isinstance(module, (torch.nn.BatchNorm1d, 
+                               torch.nn.BatchNorm2d,
+                               torch.nn.BatchNorm3d)):
+            module.running_mean = module.running_mean.to(device)
+            module.running_var  = module.running_var.to(device)
+    
     rank0_print("=" * 20 + " Training " + "=" * 20)
     trainer = MLLMTrainer(
         model=model,
@@ -513,27 +470,7 @@ def main():
     if is_rank_zero():
         wandb.login()
         wandb.init(project="MLLM", name=model_args.wb_name)
-
-        # # 1) Grab one raw example from your VQADataset:
-        # sample = train_dataset[0]
-        # print("── RAW SAMPLE ──")
-        # print(" image tensor shape:", sample["image"].shape)
-        # print(" input_id tensor:", sample["input_id"][:20].tolist())
-        # print(" label tensor:",   sample["label"][:20].tolist())
-
-        # # 2) Now pass that through *only* the collator, to see exactly what
-        # #    your Trainer is going to see:
-        # collated = data_collator([sample])
-        # print("── COLLATED BATCH ──")
-        # print(" keys:", collated.keys())
-        # print(" input_ids:", collated["input_ids"].shape)
-        # print(" labels:   ", collated["labels"].shape)
-        # print(" unique labels:", torch.unique(collated["labels"]))
-
-        # # Exit here so you can inspect the prints
-        # import sys; sys.exit(0)
         
-
     if os.path.exists(training_args.output_dir):
         checkpoints = sorted(
             [

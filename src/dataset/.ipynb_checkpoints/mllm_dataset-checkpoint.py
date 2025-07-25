@@ -10,6 +10,31 @@ from monai.data import set_track_meta
 from torch.utils.data import Dataset, ConcatDataset
 from src.dataset.prompt_templates import Caption_templates
 
+def resample_volume(img: sitk.Image, target_size=(256,256,128)) -> np.ndarray:
+    """
+    Resample a sitk.Image to the given (W,H,D)=target_size
+    and return a numpy array of shape (D,H,W).
+    """
+    orig_size    = img.GetSize()    # (W,H,D)
+    orig_spacing = img.GetSpacing() # (sx,sy,sz)
+    
+    # compute new spacing so physical extent is preserved
+    new_size    = list(target_size)
+    new_spacing = [
+        (orig_size[i] * orig_spacing[i]) / new_size[i]
+        for i in range(3)
+    ]
+    
+    resampler = sitk.ResampleImageFilter()
+    resampler.SetSize(new_size)
+    resampler.SetOutputSpacing(new_spacing)
+    resampler.SetOutputOrigin(img.GetOrigin())
+    resampler.SetOutputDirection(img.GetDirection())
+    resampler.SetInterpolator(sitk.sitkLinear)
+    
+    out_img = resampler.Execute(img)           # still (W,H,D)
+    out_np  = sitk.GetArrayFromImage(out_img)  # numpy shape (D,H,W)
+    return out_np
 
 class CapDataset(Dataset):
     def __init__(self, args, tokenizer, mode="train", test_size=1000):
@@ -161,16 +186,12 @@ class VQADataset(Dataset):
                 mtf.RandFlip(prob=0.10, spatial_axis=2),
                 mtf.RandScaleIntensity(factors=0.1, prob=0.5),
                 mtf.RandShiftIntensity(offsets=0.1, prob=0.5),
-                # ADDED TO WORK WITH DATA
-                mtf.Resize(spatial_size=(128, 256, 256), mode='trilinear', align_corners=False),
                 mtf.ToTensor(dtype=torch.float),
             ]
         )
 
         val_transform = mtf.Compose(
             [
-                # ADDED TO WORK WITH DATA
-                mtf.Resize(spatial_size=(128, 256, 256), mode='trilinear', align_corners=False),
                 mtf.ToTensor(dtype=torch.float),
             ]
         )
@@ -195,73 +216,33 @@ class VQADataset(Dataset):
 
                 # image = np.load(image_abs_path)  # nomalized, 0-1, C,D,H,W
                 # image = np.load(img_path)[np.newaxis, ...]  # nomalized
-                image = sitk.ReadImage(image_abs_path)
-                image = sitk.GetArrayFromImage(image)
-                image = np.expand_dims(image, axis=0)
-                image = self.transform(image)
+                # image = sitk.ReadImage(image_abs_path)
+                # image = sitk.GetArrayFromImage(image)
+                # image = np.expand_dims(image, axis=0)
+                # image = self.transform(image)
 
-                if self.close_ended:
-                    question = data["Question"]
-                    choices = "Choices: A. {} B. {} C. {} D. {} E. {} F. {} G. {} H. {} I. {} J. {} K. {} L. {} M. {} N. {} O. {} P. {} Q. {} R. {} S. {} T. {} U. {} V. {} W. {} X. {} Y. {} Z. {}".format(
-                        data["Choice A"],
-                        data["Choice B"],
-                        data["Choice C"],
-                        data["Choice D"],
-                        data["Choice E"],
-                        data["Choice F"],
-                        data["Choice G"],
-                        data["Choice H"],
-                        data["Choice I"],
-                        data["Choice J"],
-                        data["Choice K"],
-                        data["Choice L"],
-                        data["Choice M"],
-                        data["Choice N"],
-                        data["Choice O"],
-                        data["Choice P"],
-                        data["Choice Q"],
-                        data["Choice R"],
-                        data["Choice S"],
-                        data["Choice T"],
-                        data["Choice U"],
-                        data["Choice V"],
-                        data["Choice W"],
-                        data["Choice X"],
-                        data["Choice Y"],
-                        data["Choice Z"]
-                        # data["Choice AA"],
-                        # data["Choice AB"],
-                        # data["Choice AC"],
-                        # data["Choice AD"],
-                        # data["Choice AE"],
-                        # data["Choice AF"],
-                        # data["Choice AG"],
-                        # data["Choice AH"],
-                        # data["Choice AI"],
-                        # data["Choice AJ"],
-                        # data["Choice AK"],
-                        # data["Choice AL"],
-                        # data["Choice AM"],
-                        # data["Choice AN"],
-                        # data["Choice AO"],
-                        # data["Choice AP"],
-                        # data["Choice AQ"]
-                    )
-                    # build a prompt that ends in our new sentinel
-                    question   = (
-                        question
-                        + " "
-                        + choices
-                        + " <ANS>"
-                    )
+                img_sitk = sitk.ReadImage(image_abs_path)
+                vol_np   = resample_volume(img_sitk, target_size=(256,256,128))
+                image    = np.expand_dims(vol_np, axis=0)
+                image    = self.transform(image)
                 
-                    # the model now sees prompt<space>answer
-                    answer = data["Answer Choice"]
+                question_text = (
+                    data["Question"]
+                    + " Choices: "
+                    + "  ".join(f"{letter}. {data[f'Choice {letter}']}"
+                                for letter in ["A","B","C","D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"])
+                    + "\nAnswer Choice:"
+                )
+                
+                if self.close_ended:
+                    # and only feed the single‑letter as target
+                    answer = data["Answer Choice"]  # e.g. "L" or "N"
                 else:
                     question = data["Question"]
                     answer = str(data["Answer"])
 
-                question = self.image_tokens + " " + question
+                question = self.image_tokens + " " + question_text
+                
                 text_tensor = self.tokenizer(
                     question + " " + answer,
                     max_length=self.args.max_length,
@@ -450,6 +431,20 @@ class TextDatasets(Dataset):
     def __getitem__(self, idx):
         return self.dataset[idx]
 
+class QADatasets(Dataset):
+    def __init__(self, args, tokenizer, mode="train"):
+        super(QADatasets, self).__init__()
+        self.ds_list = [
+            VQADataset(args, tokenizer, close_ended=True, mode=mode),
+            # VQADataset(args, tokenizer, close_ended=False, mode=mode),
+        ]
+        self.dataset = ConcatDataset(self.ds_list)
+
+    def __len__(self):
+        return len(self.dataset)
+
+    def __getitem__(self, idx):
+        return self.dataset[idx]
 
 class TextYNDatasets(Dataset):
     def __init__(self, args, tokenizer, mode="train"):

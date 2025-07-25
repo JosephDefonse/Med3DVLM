@@ -1,0 +1,2 @@
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+  0%|                                                                               | 0/2780 [00:00<?, ?it/s]Traceback (most recent call last):
