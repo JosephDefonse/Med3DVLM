@@ -225,18 +225,28 @@ class VQADataset(Dataset):
                 vol_np   = resample_volume(img_sitk, target_size=(256,256,128))
                 image    = np.expand_dims(vol_np, axis=0)
                 image    = self.transform(image)
-                
+
+                letters = ["A","B","C","D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
+                instruction = (
+                    "\n(please respond with ONLY the single letter A–Z)\n\n"
+                    "Please respond exactly like this:\n"
+                    "The answer is:\n"
+                )
+
+
                 question_text = (
                     data["Question"]
                     + " Choices: "
                     + "  ".join(f"{letter}. {data[f'Choice {letter}']}"
-                                for letter in ["A","B","C","D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"])
-                    + "\nAnswer Choice:"
+                                for letter in letters)
+                    + instruction
                 )
                 
                 if self.close_ended:
                     # and only feed the single‑letter as target
-                    answer = data["Answer Choice"]  # e.g. "L" or "N"
+                    # answer = data["Answer Choice"]  # e.g. "L" or "N"
+                    answer = f"The answer is: {data['Answer Choice']}"
                 else:
                     question = data["Question"]
                     answer = str(data["Answer"])
@@ -244,7 +254,7 @@ class VQADataset(Dataset):
                 question = self.image_tokens + " " + question_text
                 
                 text_tensor = self.tokenizer(
-                    question + " " + answer,
+                    question + answer,
                     max_length=self.args.max_length,
                     truncation=True,
                     padding="max_length",
@@ -268,7 +278,7 @@ class VQADataset(Dataset):
                 question_len = torch.sum(question_tensor["attention_mask"][0])
 
                 label = input_id.clone()
-                label[:question_len] = -100
+                label[:question_len+1] = -100
                 if self.tokenizer.pad_token_id == self.tokenizer.eos_token_id:
                     label[label == self.tokenizer.pad_token_id] = -100
                     if valid_len < len(label):
