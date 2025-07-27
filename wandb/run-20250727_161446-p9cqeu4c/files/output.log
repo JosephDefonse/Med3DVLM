@@ -1,0 +1,2 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_7/checkpoint-3000
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000

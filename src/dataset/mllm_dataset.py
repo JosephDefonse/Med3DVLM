@@ -10,6 +10,12 @@ from monai.data import set_track_meta
 from torch.utils.data import Dataset, ConcatDataset
 from src.dataset.prompt_templates import Caption_templates
 
+from monai.transforms import Compose, RandAffine, RandFlip, ToTensor
+from monai.transforms import (
+    RandScaleIntensity, RandShiftIntensity,
+    RandGaussianNoise, RandAdjustContrast, RandBiasField
+)
+
 def resample_volume(img: sitk.Image, target_size=(256,256,128)) -> np.ndarray:
     """
     Resample a sitk.Image to the given (W,H,D)=target_size
@@ -178,17 +184,40 @@ class VQADataset(Dataset):
         else:
             print("The mode is not desired ! ")
 
-        train_transform = mtf.Compose(
-            [
-                mtf.RandRotate90(prob=0.5, spatial_axes=(1, 2)),
-                mtf.RandFlip(prob=0.10, spatial_axis=0),
-                mtf.RandFlip(prob=0.10, spatial_axis=1),
-                mtf.RandFlip(prob=0.10, spatial_axis=2),
-                mtf.RandScaleIntensity(factors=0.1, prob=0.5),
-                mtf.RandShiftIntensity(offsets=0.1, prob=0.5),
-                mtf.ToTensor(dtype=torch.float),
-            ]
-        )
+        train_transform = Compose([
+            # 1) spatial jitter: translate ±10% of each axis, rotate ±5°, scale [0.8,1.2]
+            RandAffine(
+                prob=1.0,
+                translate_range=(0.1, 0.1, 0.1),   # relative fractions of image size
+                rotate_range=(np.deg2rad(10),)*3,   # 3‑tuple: max ±5° around each axis
+                scale_range=(0.2,)*3,              # ±20% → [0.8,1.2]
+                mode='bilinear',
+            ),
+            # 2) small flips or intensity shifts if you like
+            RandFlip(prob=0.10, spatial_axis=0),
+            RandFlip(prob=0.10, spatial_axis=1),
+            RandFlip(prob=0.10, spatial_axis=2),
+
+            RandScaleIntensity(factors=0.1, prob=0.5),      # ±20%
+            RandShiftIntensity(offsets=0.05, prob=0.5),      # ±0.1 shift
+            RandGaussianNoise(prob=0.3, mean=0.0, std=0.01),
+            RandAdjustContrast(prob=0.3, gamma=(0.8,1.2)),
+            RandBiasField(prob=0.2, coeff_range=(0.3,0.7)),
+            
+            ToTensor(dtype=torch.float),
+        ])
+        
+        # train_transform = mtf.Compose(
+        #     [
+        #         mtf.RandRotate90(prob=0.5, spatial_axes=(1, 2)),
+        #         mtf.RandFlip(prob=0.10, spatial_axis=0),
+        #         mtf.RandFlip(prob=0.10, spatial_axis=1),
+        #         mtf.RandFlip(prob=0.10, spatial_axis=2),
+        #         mtf.RandScaleIntensity(factors=0.1, prob=0.5),
+        #         mtf.RandShiftIntensity(offsets=0.1, prob=0.5),
+        #         mtf.ToTensor(dtype=torch.float),
+        #     ]
+        # )
 
         val_transform = mtf.Compose(
             [
@@ -229,7 +258,7 @@ class VQADataset(Dataset):
                 letters = ["A","B","C","D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
                 instruction = (
-                    "\n(please respond with ONLY the single letter A–Z)\n\n"
+                    "\n(please respond with ONLY the single letter)\n\n"
                     "Please respond exactly like this:\n"
                     "The answer is:\n"
                 )
@@ -246,7 +275,7 @@ class VQADataset(Dataset):
                 if self.close_ended:
                     # and only feed the single‑letter as target
                     # answer = data["Answer Choice"]  # e.g. "L" or "N"
-                    answer = f"The answer is: {data['Answer Choice']}"
+                    answer = f"{data['Answer Choice']}"
                 else:
                     question = data["Question"]
                     answer = str(data["Answer"])
@@ -278,7 +307,7 @@ class VQADataset(Dataset):
                 question_len = torch.sum(question_tensor["attention_mask"][0])
 
                 label = input_id.clone()
-                label[:question_len+1] = -100
+                label[:question_len] = -100
                 if self.tokenizer.pad_token_id == self.tokenizer.eos_token_id:
                     label[label == self.tokenizer.pad_token_id] = -100
                     if valid_len < len(label):
