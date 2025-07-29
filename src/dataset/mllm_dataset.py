@@ -188,21 +188,21 @@ class VQADataset(Dataset):
             # 1) spatial jitter: translate ±10% of each axis, rotate ±5°, scale [0.8,1.2]
             RandAffine(
                 prob=1.0,
-                translate_range=(0.1, 0.1, 0.1),   # relative fractions of image size
-                rotate_range=(np.deg2rad(10),)*3,   # 3‑tuple: max ±5° around each axis
-                scale_range=(0.2,)*3,              # ±20% → [0.8,1.2]
+                translate_range=(0.2, 0.2, 0.2),   # relative fractions of image size
+                rotate_range=(np.deg2rad(5),)*3,   # 3‑tuple: max ±5° around each axis
+                scale_range=(0.25,)*3,              # ±20% → [0.8,1.2]
                 mode='bilinear',
             ),
             # 2) small flips or intensity shifts if you like
-            RandFlip(prob=0.10, spatial_axis=0),
-            RandFlip(prob=0.10, spatial_axis=1),
-            RandFlip(prob=0.10, spatial_axis=2),
-
-            RandScaleIntensity(factors=0.1, prob=0.5),      # ±20%
-            RandShiftIntensity(offsets=0.05, prob=0.5),      # ±0.1 shift
-            RandGaussianNoise(prob=0.3, mean=0.0, std=0.01),
-            RandAdjustContrast(prob=0.3, gamma=(0.8,1.2)),
-            RandBiasField(prob=0.2, coeff_range=(0.3,0.7)),
+            RandFlip(prob=0.1, spatial_axis=0),
+            RandFlip(prob=0.1, spatial_axis=1),
+            RandFlip(prob=0.1, spatial_axis=2),
+            
+            RandScaleIntensity(factors=0.3, prob=0.5),
+            RandShiftIntensity(offsets=0.2, prob=0.5),
+            RandGaussianNoise(prob=0.5, mean=0.0, std=0.02),
+            RandAdjustContrast(prob=0.5, gamma=(0.7,1.3)),
+            RandBiasField(prob=0.3, coeff_range=(0.2,0.8)),
             
             ToTensor(dtype=torch.float),
         ])

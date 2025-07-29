@@ -123,7 +123,7 @@ class TrainingArguments(transformers.TrainingArguments):
     lora_enable: bool = False
     lora_r: int = 16
     lora_alpha: int = 32
-    lora_dropout: float = 0.1
+    lora_dropout: float = 0.30
     lora_weight_path: str = ""
     lora_bias: str = "none"
 

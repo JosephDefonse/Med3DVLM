@@ -1,0 +1,28 @@
+2025-07-28 05:54:01 INFO open for scan: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/run-kqifjf7s.wandb
+2025-07-28 05:54:01 INFO watching files in: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files
+2025-07-28 05:54:01 INFO run started: kqifjf7s with start time 1753645857.46269
+2025-07-28 05:54:01 INFO saving file wandb-metadata.json with policy now
+2025-07-28 05:54:01 INFO saving file wandb-metadata.json with policy now
+2025-07-28 05:54:01 INFO saving file requirements.txt with policy now
+2025-07-28 05:54:01 INFO saving file wandb-summary.json with policy end
+2025-07-28 05:54:01 INFO shutting down sender
+2025-07-28 05:54:02 INFO Uploaded file /tmp/tmp0j4dxgp6wandb/tgrai51m-wandb-metadata.json
+2025-07-28 05:54:02 INFO Uploaded file /tmp/tmp0j4dxgp6wandb/uuoxber5-requirements.txt
+2025-07-28 05:54:02 INFO file/dir modified: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/wandb-summary.json
+2025-07-28 05:54:02 INFO file/dir modified: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/output.log
+2025-07-28 05:54:03 INFO Uploaded file /tmp/tmp0j4dxgp6wandb/at5q2r6u-wandb-metadata.json
+2025-07-28 05:54:03 INFO shutting down directory watcher
+2025-07-28 05:54:04 INFO file/dir modified: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/output.log
+2025-07-28 05:54:04 INFO scan: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files
+2025-07-28 05:54:04 INFO scan save: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/config.yaml config.yaml
+2025-07-28 05:54:04 INFO scan save: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/wandb-metadata.json wandb-metadata.json
+2025-07-28 05:54:04 INFO scan save: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/requirements.txt requirements.txt
+2025-07-28 05:54:04 INFO scan save: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/wandb-summary.json wandb-summary.json
+2025-07-28 05:54:04 INFO scan save: /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/output.log output.log
+2025-07-28 05:54:04 INFO shutting down file pusher
+2025-07-28 05:54:04 INFO waiting for file pusher
+2025-07-28 05:54:05 INFO Uploaded file /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/wandb-summary.json
+2025-07-28 05:54:05 INFO Uploaded file /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/config.yaml
+2025-07-28 05:54:05 INFO Uploaded file /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250728_055057-kqifjf7s/files/output.log
+2025-07-28 05:54:06 INFO file stream finish called
+2025-07-28 05:54:07 INFO file stream finish is done

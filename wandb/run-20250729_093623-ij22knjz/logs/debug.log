@@ -1,0 +1,105 @@
+2025-07-29 09:36:23,092 INFO    MainThread:2477986 [wandb_setup.py:_flush():68] Current SDK version is 0.19.6
+2025-07-29 09:36:23,093 INFO    MainThread:2477986 [wandb_setup.py:_flush():68] Configure stats pid to 2477986
+2025-07-29 09:36:23,093 INFO    MainThread:2477986 [wandb_setup.py:_flush():68] Loading settings from /home/sdef0001/.config/wandb/settings
+2025-07-29 09:36:23,093 INFO    MainThread:2477986 [wandb_setup.py:_flush():68] Loading settings from /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/settings
+2025-07-29 09:36:23,093 INFO    MainThread:2477986 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-07-29 09:36:23,093 INFO    MainThread:2477986 [wandb_init.py:setup_run_log_directory():637] Logging user logs to /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250729_093623-ij22knjz/logs/debug.log
+2025-07-29 09:36:23,093 INFO    MainThread:2477986 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250729_093623-ij22knjz/logs/debug-internal.log
+2025-07-29 09:36:23,093 INFO    MainThread:2477986 [wandb_init.py:init():756] calling init triggers
+2025-07-29 09:36:23,093 INFO    MainThread:2477986 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-07-29 09:36:23,093 INFO    MainThread:2477986 [wandb_init.py:init():789] starting backend
+2025-07-29 09:36:23,308 INFO    MainThread:2477986 [wandb_init.py:init():793] sending inform_init request
+2025-07-29 09:36:23,310 INFO    MainThread:2477986 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-07-29 09:36:23,311 INFO    MainThread:2477986 [wandb_init.py:init():808] backend started and connected
+2025-07-29 09:36:23,312 INFO    MainThread:2477986 [wandb_init.py:init():901] updated telemetry
+2025-07-29 09:36:23,331 INFO    MainThread:2477986 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-07-29 09:36:23,791 INFO    MainThread:2477986 [wandb_init.py:init():994] starting run threads in backend
+2025-07-29 09:36:24,208 INFO    MainThread:2477986 [wandb_run.py:_console_start():2385] atexit reg
+2025-07-29 09:36:24,208 INFO    MainThread:2477986 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-07-29 09:36:24,208 INFO    MainThread:2477986 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-07-29 09:36:24,208 INFO    MainThread:2477986 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-07-29 09:36:24,211 INFO    MainThread:2477986 [wandb_init.py:init():1036] run started, returning control to user process
+2025-07-29 09:36:58,123 INFO    Thread-5 (wrapped_target):2477986 [retry.py:__call__():175] Retry attempt failed:
+Traceback (most recent call last):
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/socket.py", line 976, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x7ffa481b32f0>: Failed to resolve 'api.wandb.ai' ([Errno -3] Temporary failure in name resolution)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7ffa481b32f0>: Failed to resolve 'api.wandb.ai' ([Errno -3] Temporary failure in name resolution)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/wandb/sdk/lib/retry.py", line 134, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/wandb/sdk/internal/internal_api.py", line 396, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7ffa481b32f0>: Failed to resolve 'api.wandb.ai' ([Errno -3] Temporary failure in name resolution)"))
+2025-07-29 19:29:57,493 INFO    MainThread:2477986 [wandb_run.py:_finish():2110] finishing run sheandefonseka/MLLM/ij22knjz
+2025-07-29 19:29:57,494 INFO    MainThread:2477986 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-07-29 19:29:57,494 INFO    MainThread:2477986 [wandb_run.py:_restore():2332] restore
+2025-07-29 19:29:57,495 INFO    MainThread:2477986 [wandb_run.py:_restore():2338] restore done
+2025-07-29 19:30:00,193 INFO    MainThread:2477986 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-07-29 19:30:00,194 INFO    MainThread:2477986 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-07-29 19:30:00,194 INFO    MainThread:2477986 [wandb_run.py:_footer_sync_info():3924] logging synced files
