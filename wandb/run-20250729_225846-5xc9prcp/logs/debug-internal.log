@@ -1,0 +1,17 @@
+{"time":"2025-07-29T22:58:47.733347883+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250729_225846-5xc9prcp/logs/debug-core.log"}
+{"time":"2025-07-29T22:58:47.848546924+10:00","level":"INFO","msg":"created new stream","id":"5xc9prcp"}
+{"time":"2025-07-29T22:58:47.848636107+10:00","level":"INFO","msg":"stream: started","id":"5xc9prcp"}
+{"time":"2025-07-29T22:58:47.848653632+10:00","level":"INFO","msg":"handler: started","stream_id":"5xc9prcp"}
+{"time":"2025-07-29T22:58:47.848652423+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"5xc9prcp"}
+{"time":"2025-07-29T22:58:47.848661488+10:00","level":"INFO","msg":"sender: started","stream_id":"5xc9prcp"}
+{"time":"2025-07-29T22:58:48.258286064+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-30T06:08:41.106734987+10:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-30T08:57:22.259470363+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-30T08:57:22.284266797+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-30T08:57:23.251590979+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.493936826,"progress":"198B/198B"},{"desc":"uploading output.log","runtime_seconds":0.491993168,"progress":"104.0KB/104.0KB"},{"desc":"uploading config.yaml","runtime_seconds":0.270412773,"progress":"967B/967B"}],"total_operations":3}}
+{"time":"2025-07-30T08:57:23.903969429+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-30T08:57:25.190148681+10:00","level":"INFO","msg":"stream: closing","id":"5xc9prcp"}
+{"time":"2025-07-30T08:57:25.190177862+10:00","level":"INFO","msg":"handler: closed","stream_id":"5xc9prcp"}
+{"time":"2025-07-30T08:57:25.190256883+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"5xc9prcp"}
+{"time":"2025-07-30T08:57:25.190577766+10:00","level":"INFO","msg":"sender: closed","stream_id":"5xc9prcp"}
+{"time":"2025-07-30T08:57:25.190955143+10:00","level":"INFO","msg":"stream: closed","id":"5xc9prcp"}
