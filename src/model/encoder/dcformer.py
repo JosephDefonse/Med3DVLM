@@ -362,12 +362,17 @@ class ConvBlock(nn.Module):
         self.drop_path = DropPath(drop_path) if drop_path > 0.0 else nn.Identity()
 
     def forward(self, x):
+
+        # PATCH EMBEDDING 
         if self.downsample:
             x = self.proj(self.pool(x))
         input = x
+
+        # DCFORMER BLOCK
         x = self.dwconv(x)
         x = x.permute(0, 2, 3, 4, 1)  # (N, C, H, W, T) -> (N, H, W, T, C)
 
+        # INSIDE THE DCFOREMR BLOCK - AT THE END (REFERENCE DIAGRAM)
         x = self.mlp(x)
 
         if self.scale is not None:

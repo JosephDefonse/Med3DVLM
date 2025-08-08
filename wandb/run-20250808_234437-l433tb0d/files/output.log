@@ -1,0 +1,59 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_18/checkpoint-200
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+Warning: The following arguments do not match the ones in the `trainer_state.json` within the checkpoint directory:
+	logging_steps: 0.001 (from args) != 2 (from trainer_state.json)
+	eval_steps: 270 (from args) != 100 (from trainer_state.json)
+	save_steps: 270 (from args) != 100 (from trainer_state.json)
+                                                                                                   
+{'loss': 0.4028, 'grad_norm': 0.5838480020463642, 'learning_rate': 9.44538677628128e-06, 'epoch': 0.73}
+{'loss': 0.3765, 'grad_norm': 0.5080371586715718, 'learning_rate': 8.992522451644823e-06, 'epoch': 0.73}
+{'loss': 0.4202, 'grad_norm': 0.7746769501561975, 'learning_rate': 8.548391023908403e-06, 'epoch': 0.74}
+{'loss': 0.443, 'grad_norm': 0.5680284417286342, 'learning_rate': 8.11323478945861e-06, 'epoch': 0.75}
+{'loss': 0.3967, 'grad_norm': 0.5665417900067828, 'learning_rate': 7.687291148255527e-06, 'epoch': 0.76}
+{'loss': 0.3896, 'grad_norm': 0.6432400857198272, 'learning_rate': 7.270792474318888e-06, 'epoch': 0.76}
+{'loss': 0.4791, 'grad_norm': 0.7444875813796801, 'learning_rate': 6.863965988956203e-06, 'epoch': 0.77}
+{'loss': 0.4121, 'grad_norm': 0.7249743726958815, 'learning_rate': 6.467033636801928e-06, 'epoch': 0.78}
+{'loss': 0.4208, 'grad_norm': 0.6033195032851754, 'learning_rate': 6.080211964735291e-06, 'epoch': 0.78}
+{'loss': 0.4045, 'grad_norm': 0.6224250374471998, 'learning_rate': 5.7037120037429645e-06, 'epoch': 0.79}
+{'loss': 0.4272, 'grad_norm': 0.5129557377477953, 'learning_rate': 5.3377391537908135e-06, 'epoch': 0.8}
+{'loss': 0.4407, 'grad_norm': 0.6481999978390003, 'learning_rate': 4.9824930717677576e-06, 'epoch': 0.81}
+{'loss': 0.4146, 'grad_norm': 0.740038364992949, 'learning_rate': 4.638167562562751e-06, 'epoch': 0.81}
+{'loss': 0.3977, 'grad_norm': 0.6440449533814611, 'learning_rate': 4.3049504733342685e-06, 'epoch': 0.82}
+{'loss': 0.42, 'grad_norm': 0.5340248603637692, 'learning_rate': 3.983023591030113e-06, 'epoch': 0.83}
+{'loss': 0.4081, 'grad_norm': 0.6457006113925203, 'learning_rate': 3.672562543213337e-06, 'epoch': 0.83}
+{'loss': 0.416, 'grad_norm': 0.48841191752785995, 'learning_rate': 3.3737367022484508e-06, 'epoch': 0.84}
+{'loss': 0.4123, 'grad_norm': 0.6724799667814775, 'learning_rate': 3.08670909290012e-06, 'epoch': 0.85}
+{'loss': 0.4399, 'grad_norm': 0.9875631039022574, 'learning_rate': 2.811636303394835e-06, 'epoch': 0.86}
+{'loss': 0.4335, 'grad_norm': 0.5434656045101194, 'learning_rate': 2.5486683999940335e-06, 'epoch': 0.86}
+{'loss': 0.4017, 'grad_norm': 0.48856872215558095, 'learning_rate': 2.2979488451252835e-06, 'epoch': 0.87}
+{'loss': 0.4253, 'grad_norm': 0.5905045874117567, 'learning_rate': 2.059614419116218e-06, 'epoch': 0.88}
+{'loss': 0.4264, 'grad_norm': 0.7055351799490985, 'learning_rate': 1.8337951455738466e-06, 'epoch': 0.88}
+{'loss': 0.392, 'grad_norm': 0.6412349327133267, 'learning_rate': 1.6206142204500618e-06, 'epoch': 0.89}
+{'loss': 0.3975, 'grad_norm': 0.7700819185470623, 'learning_rate': 1.4201879448319355e-06, 'epoch': 0.9}
+{'loss': 0.4396, 'grad_norm': 0.7000001511478844, 'learning_rate': 1.2326256614935306e-06, 'epoch': 0.91}
+{'loss': 0.4057, 'grad_norm': 0.5187361227260268, 'learning_rate': 1.0580296952438617e-06, 'epoch': 0.91}
+{'loss': 0.4053, 'grad_norm': 0.41807924512811584, 'learning_rate': 8.964952971034418e-07, 'epoch': 0.92}
+{'loss': 0.4058, 'grad_norm': 0.5378033460891141, 'learning_rate': 7.481105923400039e-07, 'epoch': 0.93}
+{'loss': 0.4122, 'grad_norm': 0.5891180096428517, 'learning_rate': 6.129565323916813e-07, 'epoch': 0.94}
+{'loss': 0.3846, 'grad_norm': 0.6237070092067276, 'learning_rate': 4.911068507038235e-07, 'epoch': 0.94}
+{'loss': 0.4233, 'grad_norm': 0.6433912476009962, 'learning_rate': 3.826280225036727e-07, 'epoch': 0.95}
+{'loss': 0.4245, 'grad_norm': 0.780143452686789, 'learning_rate': 2.875792285347012e-07, 'epoch': 0.96}
+{'loss': 0.3572, 'grad_norm': 0.7630646178100104, 'learning_rate': 2.060123227705102e-07, 'epoch': 0.96}
+{'loss': 0.3926, 'grad_norm': 0.7788008023869336, 'learning_rate': 1.3797180412583322e-07, 'epoch': 0.97}
+{'loss': 0.4196, 'grad_norm': 0.714871235881493, 'learning_rate': 8.349479218009992e-08, 'epoch': 0.98}
+{'loss': 0.3967, 'grad_norm': 0.7200814541679618, 'learning_rate': 4.261100692681264e-08, 'epoch': 0.99}
+{'loss': 0.4264, 'grad_norm': 0.4693697423758301, 'learning_rate': 1.534275255977713e-08, 'epoch': 0.99}
+{'loss': 0.3603, 'grad_norm': 0.710003539126976, 'learning_rate': 1.7049053050083309e-09, 'epoch': 1.0}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+100%|████████████████████████████████████████████████████████████| 278/278 [08:47<00:00,  1.90s/it]
+{'train_runtime': 527.2833, 'train_samples_per_second': 4.21, 'train_steps_per_second': 0.527, 'train_loss': 0.11547990111138323, 'epoch': 1.0}
+==================== Save model ====================
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+LoRA-only keys: 392
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+disk check – lora keys: 392

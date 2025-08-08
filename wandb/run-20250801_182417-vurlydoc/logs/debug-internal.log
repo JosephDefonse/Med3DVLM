@@ -1,0 +1,16 @@
+{"time":"2025-08-01T18:24:17.842690558+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250801_182417-vurlydoc/logs/debug-core.log"}
+{"time":"2025-08-01T18:24:17.950375485+10:00","level":"INFO","msg":"created new stream","id":"vurlydoc"}
+{"time":"2025-08-01T18:24:17.950426466+10:00","level":"INFO","msg":"stream: started","id":"vurlydoc"}
+{"time":"2025-08-01T18:24:17.950440628+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"vurlydoc"}
+{"time":"2025-08-01T18:24:17.950472061+10:00","level":"INFO","msg":"sender: started","stream_id":"vurlydoc"}
+{"time":"2025-08-01T18:24:17.95045257+10:00","level":"INFO","msg":"handler: started","stream_id":"vurlydoc"}
+{"time":"2025-08-01T18:24:18.339716909+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-01T19:23:39.910823602+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-01T19:23:39.911479206+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-01T19:23:40.911002378+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.442248573,"progress":"29.0KB/29.0KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.442230263,"progress":"195B/195B"},{"desc":"uploading config.yaml","runtime_seconds":0.206040001,"progress":"967B/967B"}],"total_operations":3}}
+{"time":"2025-08-01T19:23:40.974869438+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-01T19:23:42.335685071+10:00","level":"INFO","msg":"stream: closing","id":"vurlydoc"}
+{"time":"2025-08-01T19:23:42.335718724+10:00","level":"INFO","msg":"handler: closed","stream_id":"vurlydoc"}
+{"time":"2025-08-01T19:23:42.33573009+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"vurlydoc"}
+{"time":"2025-08-01T19:23:42.335736317+10:00","level":"INFO","msg":"sender: closed","stream_id":"vurlydoc"}
+{"time":"2025-08-01T19:23:42.335986995+10:00","level":"INFO","msg":"stream: closed","id":"vurlydoc"}

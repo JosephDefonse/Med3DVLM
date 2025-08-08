@@ -7,13 +7,19 @@ import numpy as np
 import torch
 import torch.distributed as dist
 import transformers
-from transformers import AutoTokenizer, LlamaForCausalLM
+from transformers import AutoTokenizer, LlamaForCausalLM, EarlyStoppingCallback
 
 import wandb
 from src.dataset.mllm_dataset import CapDataset, TextDatasets, TextYNDatasets, QADatasets
 from src.model.llm.qwen import VLMQwenForCausalLM
 from src.train.trainer import MLLMTrainer
 
+from peft import get_peft_model_state_dict
+from safetensors.torch import save_file
+
+import torch.distributed as dist
+
+tokenizer = None
 
 def is_rank_zero():
     if "RANK" in os.environ:
@@ -123,7 +129,7 @@ class TrainingArguments(transformers.TrainingArguments):
     lora_enable: bool = False
     lora_r: int = 16
     lora_alpha: int = 32
-    lora_dropout: float = 0.4
+    lora_dropout: float = 0.05
     lora_weight_path: str = ""
     lora_bias: str = "none"
 
@@ -138,7 +144,7 @@ class TrainingArguments(transformers.TrainingArguments):
     seed: int = 42
     ddp_backend: str = "nccl"
     ddp_timeout: int = 128000
-    ddp_find_unused_parameters: bool = False
+    ddp_find_unused_parameters: bool = True
     optim: str = field(default="adamw_torch")
 
     # This is set up to facilitate debugging, pls config these in bash file in training.
@@ -163,7 +169,11 @@ class TrainingArguments(transformers.TrainingArguments):
     dataloader_pin_memory: bool = True  # fast
     dataloader_num_workers: int = 0
     report_to: str = "tensorboard"
-
+    
+    metric_for_best_model: str = "eval_loss"
+    greater_is_better: bool = True
+    load_best_model_at_end: bool = True
+    
 
 def compute_metrics(eval_preds):
     labels_ids = eval_preds.label_ids
@@ -305,6 +315,7 @@ def main():
 
     rank0_print("=" * 20 + " Tokenizer preparation " + "=" * 20)
     # Load tokenizer from the given path with specified configurations
+    global tokenizer
     tokenizer = AutoTokenizer.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=training_args.cache_dir,
@@ -395,16 +406,16 @@ def main():
         )
         rank0_print("Adding LoRA adapters only on LLM.")
         model = get_peft_model(model, lora_config)
-
+    
         for n, p in model.named_parameters():
             if any(
                 [
                     x in n
                     for x in [
-                        "vision_tower",
+                        # "vision_tower",
                         "mm_projector",
-                        "embed_tokens",
-                        "lm_head",
+                        # "embed_tokens",
+                        # "lm_head",
                     ]
                 ]
             ):
@@ -412,6 +423,16 @@ def main():
 
         model.print_trainable_parameters()
 
+    # total, trainable = 0, 0
+    # for n, p in model.named_parameters():
+    #     total += p.numel()
+    #     if p.requires_grad:
+    #         print("🟢 TRAIN:", n)
+    #         trainable += p.numel()
+    #     else:
+    #         print("🔴 FROZEN:", n)
+    # print(f"Trainable parameters: {trainable:,}/{total:,}")
+    
     rank0_print("=" * 20 + " Dataset preparation " + "=" * 20)
     data_args.max_length = training_args.model_max_length
     data_args.proj_out_num = model.get_model().mm_projector.proj_out_num
@@ -422,7 +443,7 @@ def main():
     else:
         train_dataset = QADatasets(data_args, tokenizer, mode="train")
 
-    # sample = train_dataset[0]
+    # sample = train_dataset[1]
     # ids = sample["input_id"].tolist()
     # print(len(ids))
     # print("First token IDs: ", ids)
@@ -455,6 +476,33 @@ def main():
                                torch.nn.BatchNorm3d)):
             module.running_mean = module.running_mean.to(device)
             module.running_var  = module.running_var.to(device)
+
+    # model = model.to(device)
+    # sample = train_dataset[0]
+    # batch  = data_collator([sample])
+    # move to device
+    # device = torch.device("cuda")
+    # for k in ("images","input_ids","attention_mask","labels"):
+    #     batch[k] = batch[k].to(device)
+    
+    # # call the fusion util
+    # (
+    #     fake_input_ids,
+    #     fake_pos_ids,
+    #     fake_attn_mask,
+    #     fake_past,
+    #     inputs_embeds,
+    #     fake_labels,
+    # ) = model.prepare_inputs_for_multimodal(
+    #     batch["input_ids"],
+    #     None,
+    #     batch["attention_mask"],
+    #     None,
+    #     batch["labels"],
+    #     batch["images"],
+    # )
+    
+    # print("🤖 multimodal embeds shape:", inputs_embeds.shape)
     
     rank0_print("=" * 20 + " Training " + "=" * 20)
     trainer = MLLMTrainer(
@@ -465,6 +513,7 @@ def main():
         eval_dataset=eval_dataset,
         compute_metrics=compute_metrics,
         preprocess_logits_for_metrics=preprocess_logits_for_metrics,
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
     )
 
     if is_rank_zero():
@@ -495,12 +544,82 @@ def main():
     model.config.use_cache = True
 
     rank0_print("=" * 20 + " Save model " + "=" * 20)
+
+    def is_lora_param(n: str) -> bool:
+        return "lora_" in n
+    
     if training_args.lora_enable:
-        state_dict_with_lora = model.state_dict()
-        torch.save(
-            state_dict_with_lora,
-            os.path.join(training_args.output_dir, "model_with_lora.bin"),
-        )
+        
+        peft_model = model.module if hasattr(model, "module") else model
+        
+        # 1) Collect LoRA-only weights (safe under ZeRO-3)
+        peft_sd = get_peft_model_state_dict(peft_model)
+        peft_sd = {k: v for k, v in peft_sd.items() if is_lora_param(k)}
+        print("LoRA-only keys:", len(peft_sd))
+        assert len(peft_sd) > 0, "No LoRA keys found!"
+        
+        adapter_out = os.path.join(training_args.output_dir, "ADAPTER_ONLY")
+        os.makedirs(adapter_out, exist_ok=True)
+
+        # ---- build LoRA state on rank0 under ZeRO gather ----
+        def is_rank0():
+            return (not dist.is_initialized()) or dist.get_rank() == 0
+        
+        lora_params = [p for n,p in peft_model.named_parameters() if "lora_" in n]
+        try:
+            from deepspeed import zero
+            ctx = zero.GatheredParameters(lora_params, modifier_rank=0)
+        except Exception:
+            class _Noop:
+                def __enter__(self): pass
+                def __exit__(self,*a): pass
+            ctx = _Noop()
+        
+        with ctx:
+            state_full = get_peft_model_state_dict(peft_model, adapter_name="default")
+        
+        # keep only real LoRA tensors
+        lora_state = {k: v.cpu() for k, v in state_full.items() if "lora_" in k}
+        
+        # normalize keys to include adapter name segment ('.default.')
+        def add_default_segment(k: str) -> str:
+            k = k.replace(".lora_A.weight",              ".lora_A.default.weight")
+            k = k.replace(".lora_B.weight",              ".lora_B.default.weight")
+            k = k.replace(".lora_embedding_A.weight",    ".lora_embedding_A.default.weight")
+            k = k.replace(".lora_embedding_B.weight",    ".lora_embedding_B.default.weight")
+            return k
+        
+        lora_state = {add_default_segment(k): v for k, v in lora_state.items()}
+        assert len(lora_state) > 0
+        
+        adapter_out = os.path.join(training_args.output_dir, "ADAPTER_ONLY")
+        if is_rank0():
+            os.makedirs(adapter_out, exist_ok=True)
+        
+        # ---- 1) write ONLY config (forces adapter_config.json) ----
+        if is_rank0():
+            peft_model.save_pretrained(adapter_out, state_dict={}, safe_serialization=True)
+        
+        # ---- 2) write weights yourself to adapter_model.safetensors ----
+        if is_rank0():
+            from safetensors.torch import save_file, load_file
+            save_file(lora_state, os.path.join(adapter_out, "adapter_model.safetensors"))
+        
+            # sanity
+            ad = load_file(os.path.join(adapter_out, "adapter_model.safetensors"))
+            n_lora = sum(1 for k in ad if "lora_" in k)
+            print("disk check – lora keys:", n_lora)
+            assert n_lora > 0
+        if dist.is_initialized():
+            dist.barrier()
+        
+        # 4) Save NON-LoRA finetuned params (projector/vision etc.)
+        non_lora_state = {}
+        for n, p in peft_model.named_parameters():
+            if not is_lora_param(n) and p.requires_grad:
+                non_lora_state[n] = maybe_zero_3(p, ignore_status=True)
+        torch.save(non_lora_state, os.path.join(training_args.output_dir, "non_lora_weights.bin"))
+    
     else:
         safe_save_model_for_hf_trainer(
             trainer=trainer, output_dir=training_args.output_dir

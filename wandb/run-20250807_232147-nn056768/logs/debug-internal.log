@@ -1,0 +1,16 @@
+{"time":"2025-08-07T23:21:47.938764188+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250807_232147-nn056768/logs/debug-core.log"}
+{"time":"2025-08-07T23:21:48.059803102+10:00","level":"INFO","msg":"created new stream","id":"nn056768"}
+{"time":"2025-08-07T23:21:48.059852482+10:00","level":"INFO","msg":"stream: started","id":"nn056768"}
+{"time":"2025-08-07T23:21:48.059866151+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"nn056768"}
+{"time":"2025-08-07T23:21:48.059876751+10:00","level":"INFO","msg":"sender: started","stream_id":"nn056768"}
+{"time":"2025-08-07T23:21:48.059883449+10:00","level":"INFO","msg":"handler: started","stream_id":"nn056768"}
+{"time":"2025-08-07T23:21:48.461537915+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-08T00:21:27.261384384+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-08T00:21:27.277209549+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-08T00:21:28.252386701+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.516031319,"progress":"30.0KB/30.0KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.514458022,"progress":"195B/195B"},{"desc":"uploading config.yaml","runtime_seconds":0.228586279,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-08-08T00:21:28.390271678+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-08T00:21:29.704490539+10:00","level":"INFO","msg":"stream: closing","id":"nn056768"}
+{"time":"2025-08-08T00:21:29.704514508+10:00","level":"INFO","msg":"handler: closed","stream_id":"nn056768"}
+{"time":"2025-08-08T00:21:29.704592038+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"nn056768"}
+{"time":"2025-08-08T00:21:29.705030471+10:00","level":"INFO","msg":"sender: closed","stream_id":"nn056768"}
+{"time":"2025-08-08T00:21:29.705064849+10:00","level":"INFO","msg":"stream: closed","id":"nn056768"}

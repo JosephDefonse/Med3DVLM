@@ -1,0 +1,20 @@
+{"time":"2025-08-01T11:49:54.172605812+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250801_114953-wm710i69/logs/debug-core.log"}
+{"time":"2025-08-01T11:49:54.280029198+10:00","level":"INFO","msg":"created new stream","id":"wm710i69"}
+{"time":"2025-08-01T11:49:54.280076312+10:00","level":"INFO","msg":"stream: started","id":"wm710i69"}
+{"time":"2025-08-01T11:49:54.280090962+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"wm710i69"}
+{"time":"2025-08-01T11:49:54.280096723+10:00","level":"INFO","msg":"sender: started","stream_id":"wm710i69"}
+{"time":"2025-08-01T11:49:54.280105983+10:00","level":"INFO","msg":"handler: started","stream_id":"wm710i69"}
+{"time":"2025-08-01T11:49:54.62030013+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-01T11:57:10.547036269+10:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/files/sheandefonseka/MLLM/wm710i69/file_stream"}
+{"time":"2025-08-01T11:57:10.547161112+10:00","level":"ERROR+4","msg":"filestream: fatal error: filestream: failed to upload: 404 Not Found path=files/sheandefonseka/MLLM/wm710i69/file_stream: {\"error\":\"run MLLM/wm710i69 not found while streaming file\"}"}
+{"time":"2025-08-01T11:58:07.563119814+10:00","level":"INFO","msg":"stream: closing","id":"wm710i69"}
+{"time":"2025-08-01T11:58:07.563147918+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-01T11:58:07.563530916+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-01T11:58:07.812184619+10:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"run wm710i69 was previously created and deleted; try a new run id\",\"path\":[\"upsertBucket\"]}],\"data\":{\"upsertBucket\":null}}"}
+{"time":"2025-08-01T11:58:07.827512207+10:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-08-01T11:58:07.82756127+10:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404 Not Found: {\"errors\":[{\"message\":\"run MLLM/wm710i69 not found during createRunFiles\",\"path\":[\"createRunFiles\"]}],\"data\":{\"createRunFiles\":null}}"}
+{"time":"2025-08-01T11:58:10.035658327+10:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"run wm710i69 was previously created and deleted; try a new run id\",\"path\":[\"upsertBucket\"]}],\"data\":{\"upsertBucket\":null}}"}
+{"time":"2025-08-01T11:58:14.64620661+10:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"run wm710i69 was previously created and deleted; try a new run id\",\"path\":[\"upsertBucket\"]}],\"data\":{\"upsertBucket\":null}}"}
+{"time":"2025-08-01T11:58:23.302274052+10:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"run wm710i69 was previously created and deleted; try a new run id\",\"path\":[\"upsertBucket\"]}],\"data\":{\"upsertBucket\":null}}"}
+{"time":"2025-08-01T11:58:41.85113088+10:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"run wm710i69 was previously created and deleted; try a new run id\",\"path\":[\"upsertBucket\"]}],\"data\":{\"upsertBucket\":null}}"}
+{"time":"2025-08-01T11:59:14.630230183+10:00","level":"INFO","msg":"api: retrying HTTP error","status":409,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"run wm710i69 was previously created and deleted; try a new run id\",\"path\":[\"upsertBucket\"]}],\"data\":{\"upsertBucket\":null}}"}

@@ -1,134 +1,110 @@
+#!/usr/bin/env python3
+import argparse
 import os
-import random
-from dataclasses import dataclass, field
 
-import numpy as np
 import SimpleITK as sitk
+import numpy as np
 import torch
-import transformers
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-# NEW
+import monai.transforms as mtf
 from transformers import AutoTokenizer
+
 from src.model.llm import VLMQwenForCausalLM
 
+# 1) Resample exactly as in your VQADataset
 def resample_volume(img: sitk.Image, target_size=(256,256,128)) -> np.ndarray:
-    """
-    Resample a sitk.Image to the given (W,H,D)=target_size
-    and return a numpy array of shape (D,H,W).
-    """
     orig_size    = img.GetSize()    # (W,H,D)
     orig_spacing = img.GetSpacing() # (sx,sy,sz)
-    
-    # compute new spacing so physical extent is preserved
-    new_size    = list(target_size)
-    new_spacing = [
-        (orig_size[i] * orig_spacing[i]) / new_size[i]
-        for i in range(3)
-    ]
-    
-    resampler = sitk.ResampleImageFilter()
+    new_size     = list(target_size)
+    new_spacing  = [(orig_size[i] * orig_spacing[i]) / new_size[i] for i in range(3)]
+    resampler    = sitk.ResampleImageFilter()
     resampler.SetSize(new_size)
     resampler.SetOutputSpacing(new_spacing)
     resampler.SetOutputOrigin(img.GetOrigin())
     resampler.SetOutputDirection(img.GetDirection())
     resampler.SetInterpolator(sitk.sitkLinear)
-    
-    out_img = resampler.Execute(img)           # still (W,H,D)
-    out_np  = sitk.GetArrayFromImage(out_img)  # numpy shape (D,H,W)
+    out_img = resampler.Execute(img)            # still (W,H,D)
+    out_np  = sitk.GetArrayFromImage(out_img)   # numpy (D,H,W)
     return out_np
 
-def seed_everything(seed):
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    np.random.seed(seed)
-    random.seed(seed)
-    torch.backends.cudnn.benchmark = False
-    torch.backends.cudnn.deterministic = True
-    torch.cuda.manual_seed_all(seed)
+# 2) Build the same “val” transform you used in VQADataset
+val_transform = mtf.Compose([
+    mtf.ToTensor(dtype=torch.float),   # -> Tensor shape (1, D, H, W)
+])
 
-
-@dataclass
-class AllArguments:
-    model_name_or_path: str = field(default="./Med3DVLM-Qwen-2.5-7B")
-
-    image_path: str = field(
-        default="./data/demo/024421/Axial_C__portal_venous_phase.nii.gz"
-    )
-
-    question: str = field(
-        default="Describe the findings of the medical image you see.",
-        metadata={"help": "Question to ask the model."},
-    )
-
-    model_max_length: int = field(
-        default=512, metadata={"help": "Maximum length of the input sequence."}
-    )
-
-
-def main():
-    seed_everything(42)
-    device = torch.device("cuda")  # 'cpu', 'cuda'
-    dtype = torch.bfloat16  # or bfloat16, float16, float32
-
-    parser = transformers.HfArgumentParser(AllArguments)
-    args = parser.parse_args_into_dataclasses()[0]
-
+def predict_single(image_path, model_dir, proj_out_num=256, max_length=512, device="cuda"):
+    # load tokenizer & model
     tokenizer = AutoTokenizer.from_pretrained(
-        args.model_name_or_path,
-        model_max_length=args.model_max_length,
+        model_dir,
+        model_max_length=max_length,
         padding_side="right",
         use_fast=False,
         trust_remote_code=True,
     )
-    model = VLMQwenForCausalLM.from_pretrained( # ADDED VLMQwenForCausalLM
-        args.model_name_or_path,
-        torch_dtype=dtype,
-        device_map=device,
-        # trust_remote_code=True, # REMOVED
+    model = VLMQwenForCausalLM.from_pretrained(
+        model_dir,
+        trust_remote_code=True,
+        device_map="auto",
     )
+    model.to(device)
 
-    proj_out_num = (
-        model.get_model().config.proj_out_num
-        if hasattr(model.get_model().config, "proj_out_num")
-        else 256
-    )
-
-    question = args.question
-
-    image_tokens = "<im_patch>" * proj_out_num
-    input_txt = image_tokens + question
-    input_id = tokenizer(input_txt, return_tensors="pt")["input_ids"].to(device=device)
-
-    # image_np = np.expand_dims(
-    #     sitk.GetArrayFromImage(sitk.ReadImage(args.image_path)), axis=0
-    # )
-
-    # --- insert preprocessing here ---
-    # read as SimpleITK image
-    sitk_img = sitk.ReadImage(args.image_path)
-    # resample to W=256,H=256,D=128
+    # 3) Read + preprocess the volume
+    sitk_img = sitk.ReadImage(image_path)
     vol_np   = resample_volume(sitk_img, target_size=(256,256,128))
-    # add channel + batch dims: (1,1,128,256,256)
-    image_np = vol_np[np.newaxis, ...]
-    # ---
-    
-    image_pt = torch.from_numpy(image_np).unsqueeze(0).to(dtype=dtype, device=device)
+    # expand to (C=1, D, H, W) and transform
+    image_tensor = val_transform(vol_np[np.newaxis, ...]).to(device)
 
-    generation = model.generate(
-        images=image_pt,
-        inputs=input_id,
-        max_new_tokens=args.model_max_length,
-        do_sample=True,
-        top_p=0.9,
-        temperature=1.0,
+    # 4) Build your single-case prompt
+    image_tokens  = "<im_patch>" * proj_out_num
+    QUESTION_TEXT = (
+        "What is the cause of death? " 
+        "Choices: A. Asphyxia  B. Blood disorders  C. Cardiac arrhythmia  D. Cerebrovascular  E. Chronic obstructive pulmonary disease  F. Drowning  G. Emboli  H. Ethanol intoxication  I. Ethanolism  J. Exposure  K. Gaserointestinal hemorrhage  L. Gunshot wound  M. Hanging  N. Head and neck injuries  O. Hepatic failure  P. Hypertension  Q. Malnutrition  R. Multiple injuries  S. Natural  T. Obesity  U. Pneumonia  V. Renal failure  W. Respiratory Distress Syndrome  X. Sepsis  Y. Substance intoxication  Z. TBD\n"
+        "(please respond with ONLY the single letter)\n\n"
+        "Please respond exactly like this:\n"
+        "The answer is:\n"
     )
+    prompt = image_tokens + " " + QUESTION_TEXT
 
-    generated_texts = tokenizer.batch_decode(generation, skip_special_tokens=True)
+    # tokenize prompt (no label, since we’re generating)
+    tokenized = tokenizer(
+        prompt,
+        max_length=max_length,
+        truncation=True,
+        padding="max_length",
+        return_tensors="pt"
+    ).to(device)
 
-    print("question: ", question)
-    print("generated_texts: ", generated_texts[0])
-
+    # 5) Generate
+    with torch.inference_mode():
+        generated = model.generate(
+            image_tensor.unsqueeze(0),               # add batch dim
+            tokenized["input_ids"],
+            attention_mask=tokenized["attention_mask"],
+            temperature=1.0,
+            max_new_tokens=10,
+            do_sample=False,
+            top_p=None,
+            top_k=0,
+            pad_token_id=tokenizer.eos_token_id,
+            eos_token_id=tokenizer.convert_tokens_to_ids("."),
+        )
+    decoded = tokenizer.batch_decode(generated, skip_special_tokens=True)[0]
+    return decoded
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(
+        description="Single-case VQA prediction"
+    )
+    parser.add_argument("--image_path", required=True,
+                        help="Path to your .nii/.dcm file")
+    parser.add_argument("--model_dir", required=True,
+                        help="Directory of Med3DVLM-Qwen-… model")
+    parser.add_argument("--device", default="cuda",
+                        choices=["cuda","cpu"])
+    args = parser.parse_args()
+
+    pred = predict_single(
+        args.image_path,
+        args.model_dir,
+        device=args.device
+    )
+    print(f"The answer is: {pred}")

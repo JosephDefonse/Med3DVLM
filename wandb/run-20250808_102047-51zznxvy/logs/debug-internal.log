@@ -1,0 +1,16 @@
+{"time":"2025-08-08T10:20:47.744703793+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250808_102047-51zznxvy/logs/debug-core.log"}
+{"time":"2025-08-08T10:20:47.968926041+10:00","level":"INFO","msg":"created new stream","id":"51zznxvy"}
+{"time":"2025-08-08T10:20:47.969353935+10:00","level":"INFO","msg":"stream: started","id":"51zznxvy"}
+{"time":"2025-08-08T10:20:47.969366771+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"51zznxvy"}
+{"time":"2025-08-08T10:20:47.969374646+10:00","level":"INFO","msg":"sender: started","stream_id":"51zznxvy"}
+{"time":"2025-08-08T10:20:47.969389116+10:00","level":"INFO","msg":"handler: started","stream_id":"51zznxvy"}
+{"time":"2025-08-08T10:20:48.328492669+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-08T10:52:50.396585177+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-08T10:52:50.397416074+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-08T10:52:51.396830049+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.485586929,"progress":"31.6KB/31.6KB"},{"desc":"uploading config.yaml","runtime_seconds":0.295324129,"progress":"972B/972B"}],"total_operations":2}}
+{"time":"2025-08-08T10:52:51.713303183+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-08T10:52:53.002289447+10:00","level":"INFO","msg":"stream: closing","id":"51zznxvy"}
+{"time":"2025-08-08T10:52:53.002324986+10:00","level":"INFO","msg":"handler: closed","stream_id":"51zznxvy"}
+{"time":"2025-08-08T10:52:53.002336495+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"51zznxvy"}
+{"time":"2025-08-08T10:52:53.002342487+10:00","level":"INFO","msg":"sender: closed","stream_id":"51zznxvy"}
+{"time":"2025-08-08T10:52:53.002680766+10:00","level":"INFO","msg":"stream: closed","id":"51zznxvy"}

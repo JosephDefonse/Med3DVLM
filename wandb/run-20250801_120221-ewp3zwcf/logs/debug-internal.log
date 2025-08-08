@@ -1,0 +1,16 @@
+{"time":"2025-08-01T12:02:21.706533309+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250801_120221-ewp3zwcf/logs/debug-core.log"}
+{"time":"2025-08-01T12:02:21.813611351+10:00","level":"INFO","msg":"created new stream","id":"ewp3zwcf"}
+{"time":"2025-08-01T12:02:21.81365931+10:00","level":"INFO","msg":"stream: started","id":"ewp3zwcf"}
+{"time":"2025-08-01T12:02:21.81367318+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"ewp3zwcf"}
+{"time":"2025-08-01T12:02:21.813686258+10:00","level":"INFO","msg":"sender: started","stream_id":"ewp3zwcf"}
+{"time":"2025-08-01T12:02:21.813689523+10:00","level":"INFO","msg":"handler: started","stream_id":"ewp3zwcf"}
+{"time":"2025-08-01T12:02:22.177995409+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-01T12:54:28.865322976+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-01T12:54:28.866117621+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-01T12:54:29.865505309+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.27379683,"progress":"25.1KB/25.1KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.273778393,"progress":"195B/195B"},{"desc":"uploading config.yaml","runtime_seconds":0.026488156,"progress":"967B/967B"}],"total_operations":3}}
+{"time":"2025-08-01T12:54:30.939401934+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-01T12:54:32.411457424+10:00","level":"INFO","msg":"stream: closing","id":"ewp3zwcf"}
+{"time":"2025-08-01T12:54:32.411502565+10:00","level":"INFO","msg":"handler: closed","stream_id":"ewp3zwcf"}
+{"time":"2025-08-01T12:54:32.411514218+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ewp3zwcf"}
+{"time":"2025-08-01T12:54:32.411519078+10:00","level":"INFO","msg":"sender: closed","stream_id":"ewp3zwcf"}
+{"time":"2025-08-01T12:54:32.411865426+10:00","level":"INFO","msg":"stream: closed","id":"ewp3zwcf"}

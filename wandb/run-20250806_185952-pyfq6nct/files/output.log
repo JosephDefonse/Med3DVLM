@@ -1,0 +1,6 @@
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+  1%|▎                                                          | 8/1390 [01:19<2:35:22,  6.75s/it]
+{'loss': 2.9987, 'grad_norm': 33.02969712419628, 'learning_rate': 1.1904761904761904e-06, 'epoch': 0.01}
+{'loss': 2.9367, 'grad_norm': 28.73933642495497, 'learning_rate': 3.5714285714285714e-06, 'epoch': 0.01}
+{'loss': 2.8507, 'grad_norm': 45.18344065958029, 'learning_rate': 5.9523809523809525e-06, 'epoch': 0.02}
+{'loss': 2.2677, 'grad_norm': 25.707477462930846, 'learning_rate': 8.333333333333334e-06, 'epoch': 0.03}

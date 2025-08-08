@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 529, in <module>
+    main()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 482, in main
+    input_ids, position_ids, attention_mask, past_key_values, labels, images
+    ^^^^^^^^^
+NameError: name 'input_ids' is not defined
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 529, in <module>
+[rank0]:     main()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 482, in main
+[rank0]:     input_ids, position_ids, attention_mask, past_key_values, labels, images
+[rank0]:     ^^^^^^^^^
+[rank0]: NameError: name 'input_ids' is not defined. Did you mean: 'inputs'?

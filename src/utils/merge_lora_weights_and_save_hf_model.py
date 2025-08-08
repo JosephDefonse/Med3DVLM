@@ -91,7 +91,7 @@ class TrainingArguments(transformers.TrainingArguments):
     lora_enable: bool = True
     lora_r: int = 16
     lora_alpha: int = 32
-    lora_dropout: float = 0.4
+    lora_dropout: float = 0.05
     lora_weight_path: str = ""
     lora_bias: str = "none"
 
@@ -182,23 +182,10 @@ def main():
         model = get_peft_model(model, lora_config)
         model.print_trainable_parameters()
 
-    # print("Load weights with LoRA")
-    # state_dict = torch.load(model_args.model_with_lora, map_location="cpu")
-    # model.load_state_dict(state_dict, strict=True)
-
-    print("Load weights with LoRA (LoRA‑only .bin → PeftModel)")
+    print("Load weights with LoRA")
     state_dict = torch.load(model_args.model_with_lora, map_location="cpu")
+    model.load_state_dict(state_dict, strict=True)
 
-    # print("LoRA .bin contains:")
-    # for k, v in state_dict.items():
-    #     print(f"  {k}: {tuple(v.shape)}")
-    # import sys; sys.exit(0)
-
-    # Option A: keep only non‑empty tensors
-    lora_sd = {k: v for k, v in state_dict.items() if v.numel() > 0}
-    missing, unexpected = model.load_state_dict(lora_sd, strict=False)
-    print(f"  → loaded {len(lora_sd)} keys  missing {len(missing)}  unexpected {len(unexpected)}")
-    
     print("Merge weights with LoRA")
     model = model.merge_and_unload()
     state_dict = model.state_dict()

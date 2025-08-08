@@ -175,6 +175,9 @@ class VQADataset(Dataset):
 
         self.image_tokens = "<im_patch>" * args.proj_out_num
 
+        # tok = self.tokenizer.tokenize(self.image_tokens)
+        # print(len(tok), tok[:5], tok[-5:])
+        
         if mode == "train":
             self.data_list = pd.read_csv(args.vqa_data_train_path)
         elif mode == "validation":
@@ -255,35 +258,32 @@ class VQADataset(Dataset):
                 image    = np.expand_dims(vol_np, axis=0)
                 image    = self.transform(image)
 
-                letters = ["A","B","C","D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-
-                instruction = (
-                    "\n(please respond with ONLY the single letter)\n\n"
-                    "Please respond exactly like this:\n"
-                    "The answer is:\n"
-                )
-
-
-                question_text = (
-                    data["Question"]
-                    + " Choices: "
-                    + "  ".join(f"{letter}. {data[f'Choice {letter}']}"
-                                for letter in letters)
-                    + instruction
-                )
-                
                 if self.close_ended:
-                    # and only feed the single‑letter as target
-                    # answer = data["Answer Choice"]  # e.g. "L" or "N"
-                    answer = f"{data['Answer Choice']}"
+                    question = data["Question"]
+                    choices = "Choices: A. {} B. {} C. {} D. {} E. {} F. {} G. {} H. {} I. {} J. {} K. {} L. {}".format(
+                        data["Choice A"],
+                        data["Choice B"],
+                        data["Choice C"],
+                        data["Choice D"],
+                        data["Choice E"],
+                        data["Choice F"],
+                        data["Choice G"],
+                        data["Choice H"],
+                        data["Choice I"],
+                        data["Choice J"],
+                        data["Choice K"],
+                        data["Choice L"],
+                        
+                    )
+                    question = question + " " + choices
+                    answer = "{}. {}".format(data["Answer Choice"], data["Answer"])
                 else:
                     question = data["Question"]
                     answer = str(data["Answer"])
 
-                question = self.image_tokens + " " + question_text
-                
+                question = self.image_tokens + " " + question
                 text_tensor = self.tokenizer(
-                    question + answer,
+                    question + " " + answer,
                     max_length=self.args.max_length,
                     truncation=True,
                     padding="max_length",
@@ -325,7 +325,7 @@ class VQADataset(Dataset):
                     "answer_choice": data["Answer Choice"],
                     "question_type": data["Question Type"],
                 }
-
+                
                 # if self.args.seg_enable:
                 #     ret.update({"seg": torch.zeros_like(image)})
 

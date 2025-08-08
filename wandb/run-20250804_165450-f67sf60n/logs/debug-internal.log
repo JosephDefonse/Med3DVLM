@@ -1,0 +1,16 @@
+{"time":"2025-08-04T16:54:50.875005697+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250804_165450-f67sf60n/logs/debug-core.log"}
+{"time":"2025-08-04T16:54:51.191898526+10:00","level":"INFO","msg":"created new stream","id":"f67sf60n"}
+{"time":"2025-08-04T16:54:51.191949378+10:00","level":"INFO","msg":"stream: started","id":"f67sf60n"}
+{"time":"2025-08-04T16:54:51.191960257+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"f67sf60n"}
+{"time":"2025-08-04T16:54:51.19197004+10:00","level":"INFO","msg":"handler: started","stream_id":"f67sf60n"}
+{"time":"2025-08-04T16:54:51.191994063+10:00","level":"INFO","msg":"sender: started","stream_id":"f67sf60n"}
+{"time":"2025-08-04T16:54:51.563747199+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-04T18:54:00.675836167+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-04T18:54:00.798455202+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-04T18:54:01.66718378+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.444716247,"progress":"38.8KB/38.8KB"},{"desc":"uploading config.yaml","runtime_seconds":0.140029913,"progress":"972B/972B"}],"total_operations":2}}
+{"time":"2025-08-04T18:54:02.397067037+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-04T18:54:03.715811611+10:00","level":"INFO","msg":"stream: closing","id":"f67sf60n"}
+{"time":"2025-08-04T18:54:03.715841526+10:00","level":"INFO","msg":"handler: closed","stream_id":"f67sf60n"}
+{"time":"2025-08-04T18:54:03.715850505+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"f67sf60n"}
+{"time":"2025-08-04T18:54:03.716169447+10:00","level":"INFO","msg":"sender: closed","stream_id":"f67sf60n"}
+{"time":"2025-08-04T18:54:03.716461227+10:00","level":"INFO","msg":"stream: closed","id":"f67sf60n"}

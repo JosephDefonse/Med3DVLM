@@ -1,0 +1,87 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2000064
+                                                                                                   
+{'loss': 3.6806, 'grad_norm': 250.05809528886513, 'learning_rate': 2.1582733812949643e-07, 'epoch': 0.01}
+{'loss': 3.5535, 'grad_norm': 414.2811287956671, 'learning_rate': 4.3165467625899287e-07, 'epoch': 0.01}
+{'loss': 4.4534, 'grad_norm': 239.70284466925386, 'learning_rate': 6.474820143884893e-07, 'epoch': 0.02}
+{'loss': 3.5873, 'grad_norm': 326.46586729780137, 'learning_rate': 8.633093525179857e-07, 'epoch': 0.02}
+{'loss': 3.9169, 'grad_norm': 241.57554047940909, 'learning_rate': 1.079136690647482e-06, 'epoch': 0.03}
+{'loss': 3.1635, 'grad_norm': 241.60203052530133, 'learning_rate': 1.2949640287769785e-06, 'epoch': 0.03}
+{'loss': 2.8741, 'grad_norm': 158.71784529534207, 'learning_rate': 1.510791366906475e-06, 'epoch': 0.04}
+{'loss': 3.3829, 'grad_norm': 154.75669369568482, 'learning_rate': 1.7266187050359715e-06, 'epoch': 0.04}
+{'loss': 2.2368, 'grad_norm': 123.06349332825822, 'learning_rate': 1.942446043165468e-06, 'epoch': 0.05}
+{'loss': 2.1744, 'grad_norm': 200.23219252552667, 'learning_rate': 2.158273381294964e-06, 'epoch': 0.05}
+{'loss': 2.2188, 'grad_norm': 163.0420367286169, 'learning_rate': 2.3741007194244605e-06, 'epoch': 0.06}
+{'loss': 2.2526, 'grad_norm': 116.42918968912636, 'learning_rate': 2.589928057553957e-06, 'epoch': 0.06}
+{'loss': 1.6063, 'grad_norm': 80.2901608273432, 'learning_rate': 2.805755395683453e-06, 'epoch': 0.07}
+{'loss': 1.8879, 'grad_norm': 95.87453957608865, 'learning_rate': 3.02158273381295e-06, 'epoch': 0.08}
+{'loss': 1.5174, 'grad_norm': 59.78848783954346, 'learning_rate': 3.237410071942446e-06, 'epoch': 0.08}
+{'loss': 1.5496, 'grad_norm': 94.46216305716504, 'learning_rate': 3.453237410071943e-06, 'epoch': 0.09}
+{'loss': 1.2424, 'grad_norm': 67.77267530091702, 'learning_rate': 3.669064748201439e-06, 'epoch': 0.09}
+{'loss': 1.3122, 'grad_norm': 79.63504676868304, 'learning_rate': 3.884892086330936e-06, 'epoch': 0.1}
+{'loss': 1.4292, 'grad_norm': 73.73685575699814, 'learning_rate': 4.100719424460432e-06, 'epoch': 0.1}
+{'loss': 1.4281, 'grad_norm': 78.97313028714191, 'learning_rate': 4.316546762589928e-06, 'epoch': 0.11}
+{'loss': 1.3451, 'grad_norm': 88.21719350869805, 'learning_rate': 4.5323741007194245e-06, 'epoch': 0.11}
+{'loss': 1.4019, 'grad_norm': 82.57403507476667, 'learning_rate': 4.748201438848921e-06, 'epoch': 0.12}
+{'loss': 1.1695, 'grad_norm': 59.60478142791774, 'learning_rate': 4.9640287769784175e-06, 'epoch': 0.12}
+{'loss': 1.442, 'grad_norm': 65.75468526498176, 'learning_rate': 5.179856115107914e-06, 'epoch': 0.13}
+{'loss': 1.255, 'grad_norm': 75.54240280889783, 'learning_rate': 5.3956834532374105e-06, 'epoch': 0.14}
+{'loss': 1.4212, 'grad_norm': 95.88185606368792, 'learning_rate': 5.611510791366906e-06, 'epoch': 0.14}
+{'loss': 1.371, 'grad_norm': 80.74674891909855, 'learning_rate': 5.8273381294964035e-06, 'epoch': 0.15}
+{'loss': 1.3397, 'grad_norm': 65.86375097436816, 'learning_rate': 6.0431654676259e-06, 'epoch': 0.15}
+{'loss': 1.2142, 'grad_norm': 49.194497642944675, 'learning_rate': 6.2589928057553964e-06, 'epoch': 0.16}
+{'loss': 1.3214, 'grad_norm': 84.05020063927083, 'learning_rate': 6.474820143884892e-06, 'epoch': 0.16}
+{'loss': 1.1991, 'grad_norm': 52.360819860776736, 'learning_rate': 6.6906474820143886e-06, 'epoch': 0.17}
+{'loss': 1.3252, 'grad_norm': 56.37543697258346, 'learning_rate': 6.906474820143886e-06, 'epoch': 0.17}
+{'loss': 1.3231, 'grad_norm': 64.64335879864022, 'learning_rate': 7.122302158273382e-06, 'epoch': 0.18}
+ 32%|███████████████████▉                                          | 17/53 [00:24<00:39,  1.09s/it]Traceback (most recent call last):
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 529, in <module>
+    main()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 502, in main
+    trainer.train()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2171, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2598, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3071, in _maybe_log_save_evaluate
+    metrics = self._evaluate(trial, ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3025, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4073, in evaluate
+    output = eval_loop(
+             ^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4362, in evaluation_loop
+    metrics = self.compute_metrics(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 182, in compute_metrics
+    eos_id = tokenizer.eos_token_id
+             ^^^^^^^^^
+NameError: name 'tokenizer' is not defined. Did you mean: 'AutoTokenizer'?
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 529, in <module>
+[rank0]:     main()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 502, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2171, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2598, in _inner_training_loop
+[rank0]:     self._maybe_log_save_evaluate(
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3071, in _maybe_log_save_evaluate
+[rank0]:     metrics = self._evaluate(trial, ignore_keys_for_eval)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3025, in _evaluate
+[rank0]:     metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4073, in evaluate
+[rank0]:     output = eval_loop(
+[rank0]:              ^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4362, in evaluation_loop
+[rank0]:     metrics = self.compute_metrics(
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 182, in compute_metrics
+[rank0]:     eos_id = tokenizer.eos_token_id
+[rank0]:              ^^^^^^^^^
+[rank0]: NameError: name 'tokenizer' is not defined. Did you mean: 'AutoTokenizer'?

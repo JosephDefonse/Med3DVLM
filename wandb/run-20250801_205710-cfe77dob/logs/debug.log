@@ -1,0 +1,29 @@
+2025-08-01 20:57:10,038 INFO    MainThread:593139 [wandb_setup.py:_flush():68] Current SDK version is 0.19.6
+2025-08-01 20:57:10,039 INFO    MainThread:593139 [wandb_setup.py:_flush():68] Configure stats pid to 593139
+2025-08-01 20:57:10,039 INFO    MainThread:593139 [wandb_setup.py:_flush():68] Loading settings from /home/sdef0001/.config/wandb/settings
+2025-08-01 20:57:10,039 INFO    MainThread:593139 [wandb_setup.py:_flush():68] Loading settings from /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/settings
+2025-08-01 20:57:10,039 INFO    MainThread:593139 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-08-01 20:57:10,039 INFO    MainThread:593139 [wandb_init.py:setup_run_log_directory():637] Logging user logs to /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250801_205710-cfe77dob/logs/debug.log
+2025-08-01 20:57:10,039 INFO    MainThread:593139 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to /fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250801_205710-cfe77dob/logs/debug-internal.log
+2025-08-01 20:57:10,039 INFO    MainThread:593139 [wandb_init.py:init():756] calling init triggers
+2025-08-01 20:57:10,039 INFO    MainThread:593139 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-08-01 20:57:10,039 INFO    MainThread:593139 [wandb_init.py:init():789] starting backend
+2025-08-01 20:57:10,247 INFO    MainThread:593139 [wandb_init.py:init():793] sending inform_init request
+2025-08-01 20:57:10,249 INFO    MainThread:593139 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-08-01 20:57:10,249 INFO    MainThread:593139 [wandb_init.py:init():808] backend started and connected
+2025-08-01 20:57:10,250 INFO    MainThread:593139 [wandb_init.py:init():901] updated telemetry
+2025-08-01 20:57:10,260 INFO    MainThread:593139 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-08-01 20:57:10,779 INFO    MainThread:593139 [wandb_init.py:init():994] starting run threads in backend
+2025-08-01 20:57:11,045 INFO    MainThread:593139 [wandb_run.py:_console_start():2385] atexit reg
+2025-08-01 20:57:11,045 INFO    MainThread:593139 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-08-01 20:57:11,046 INFO    MainThread:593139 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-08-01 20:57:11,046 INFO    MainThread:593139 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-08-01 20:57:11,048 INFO    MainThread:593139 [wandb_init.py:init():1036] run started, returning control to user process
+2025-08-01 21:57:00,517 INFO    MainThread:593139 [wandb_run.py:_finish():2110] finishing run sheandefonseka/MLLM/cfe77dob
+2025-08-01 21:57:00,518 INFO    MainThread:593139 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-08-01 21:57:00,519 INFO    MainThread:593139 [wandb_run.py:_restore():2332] restore
+2025-08-01 21:57:00,520 INFO    MainThread:593139 [wandb_run.py:_restore():2338] restore done
+2025-08-01 21:57:02,893 INFO    MainThread:593139 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-08-01 21:57:02,894 INFO    MainThread:593139 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-08-01 21:57:02,894 INFO    MainThread:593139 [wandb_run.py:_footer_sync_info():3924] logging synced files

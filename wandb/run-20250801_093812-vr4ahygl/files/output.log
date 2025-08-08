@@ -1,0 +1,22 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2000064
+  2%|█▎                                                        | 61/2775 [04:14<3:04:00,  4.07s/it]
+{'loss': 2.5709, 'grad_norm': 151.89083546152952, 'learning_rate': 2.1582733812949643e-07, 'epoch': 0.01}
+{'loss': 3.0192, 'grad_norm': 206.79978376972545, 'learning_rate': 4.3165467625899287e-07, 'epoch': 0.01}
+{'loss': 3.7403, 'grad_norm': 230.03725249129076, 'learning_rate': 6.474820143884893e-07, 'epoch': 0.02}
+{'loss': 4.3218, 'grad_norm': 311.82954703842245, 'learning_rate': 8.633093525179857e-07, 'epoch': 0.02}
+{'loss': 4.2339, 'grad_norm': 231.66266818164272, 'learning_rate': 1.079136690647482e-06, 'epoch': 0.03}
+{'loss': 3.413, 'grad_norm': 145.53347968053998, 'learning_rate': 1.2949640287769785e-06, 'epoch': 0.03}
+{'loss': 3.4063, 'grad_norm': 224.23890008134168, 'learning_rate': 1.510791366906475e-06, 'epoch': 0.04}
+{'loss': 3.677, 'grad_norm': 260.7732189302922, 'learning_rate': 1.7266187050359715e-06, 'epoch': 0.04}
+{'loss': 2.7796, 'grad_norm': 199.32718814238694, 'learning_rate': 1.942446043165468e-06, 'epoch': 0.05}
+{'loss': 1.9877, 'grad_norm': 106.25651642154493, 'learning_rate': 2.158273381294964e-06, 'epoch': 0.05}
+{'loss': 2.2378, 'grad_norm': 157.4872714531139, 'learning_rate': 2.3741007194244605e-06, 'epoch': 0.06}
+{'loss': 2.2407, 'grad_norm': 115.93874618993232, 'learning_rate': 2.589928057553957e-06, 'epoch': 0.06}
+{'loss': 1.6658, 'grad_norm': 88.27054035342445, 'learning_rate': 2.805755395683453e-06, 'epoch': 0.07}
+{'loss': 1.714, 'grad_norm': 75.79934005609653, 'learning_rate': 3.02158273381295e-06, 'epoch': 0.08}
+{'loss': 1.3334, 'grad_norm': 77.99396325967967, 'learning_rate': 3.237410071942446e-06, 'epoch': 0.08}
+{'loss': 1.6452, 'grad_norm': 117.80069542736122, 'learning_rate': 3.453237410071943e-06, 'epoch': 0.09}
+{'loss': 1.231, 'grad_norm': 70.91484317963209, 'learning_rate': 3.669064748201439e-06, 'epoch': 0.09}
+{'loss': 1.4537, 'grad_norm': 94.7301675763318, 'learning_rate': 3.884892086330936e-06, 'epoch': 0.1}
+{'loss': 1.2138, 'grad_norm': 70.9563215941086, 'learning_rate': 4.100719424460432e-06, 'epoch': 0.1}
+{'loss': 1.5648, 'grad_norm': 93.27038470258123, 'learning_rate': 4.316546762589928e-06, 'epoch': 0.11}

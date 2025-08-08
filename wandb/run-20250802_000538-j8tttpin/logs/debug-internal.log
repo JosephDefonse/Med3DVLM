@@ -1,0 +1,16 @@
+{"time":"2025-08-02T00:05:39.908896068+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250802_000538-j8tttpin/logs/debug-core.log"}
+{"time":"2025-08-02T00:05:40.016410344+10:00","level":"INFO","msg":"created new stream","id":"j8tttpin"}
+{"time":"2025-08-02T00:05:40.016458987+10:00","level":"INFO","msg":"stream: started","id":"j8tttpin"}
+{"time":"2025-08-02T00:05:40.016470609+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"j8tttpin"}
+{"time":"2025-08-02T00:05:40.016483971+10:00","level":"INFO","msg":"handler: started","stream_id":"j8tttpin"}
+{"time":"2025-08-02T00:05:40.016486399+10:00","level":"INFO","msg":"sender: started","stream_id":"j8tttpin"}
+{"time":"2025-08-02T00:05:40.496808551+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-02T01:07:53.126933793+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-02T01:07:53.128167803+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-02T01:07:54.127085202+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.524537059,"progress":"31.3KB/31.3KB"},{"desc":"uploading config.yaml","runtime_seconds":0.247251127,"progress":"967B/967B"}],"total_operations":2}}
+{"time":"2025-08-02T01:07:54.180033718+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-02T01:07:55.45884539+10:00","level":"INFO","msg":"stream: closing","id":"j8tttpin"}
+{"time":"2025-08-02T01:07:55.458882898+10:00","level":"INFO","msg":"handler: closed","stream_id":"j8tttpin"}
+{"time":"2025-08-02T01:07:55.458893857+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"j8tttpin"}
+{"time":"2025-08-02T01:07:55.458898052+10:00","level":"INFO","msg":"sender: closed","stream_id":"j8tttpin"}
+{"time":"2025-08-02T01:07:55.459140382+10:00","level":"INFO","msg":"stream: closed","id":"j8tttpin"}

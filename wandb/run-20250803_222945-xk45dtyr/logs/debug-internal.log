@@ -1,0 +1,16 @@
+{"time":"2025-08-03T22:29:46.864179718+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250803_222945-xk45dtyr/logs/debug-core.log"}
+{"time":"2025-08-03T22:29:47.092066833+10:00","level":"INFO","msg":"created new stream","id":"xk45dtyr"}
+{"time":"2025-08-03T22:29:47.092116877+10:00","level":"INFO","msg":"stream: started","id":"xk45dtyr"}
+{"time":"2025-08-03T22:29:47.092128589+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"xk45dtyr"}
+{"time":"2025-08-03T22:29:47.092137057+10:00","level":"INFO","msg":"sender: started","stream_id":"xk45dtyr"}
+{"time":"2025-08-03T22:29:47.092147983+10:00","level":"INFO","msg":"handler: started","stream_id":"xk45dtyr"}
+{"time":"2025-08-03T22:29:47.617154652+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-04T02:09:54.849686518+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-04T02:09:54.960650853+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-04T02:09:55.837734831+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.512924664,"progress":"73.0KB/73.0KB"},{"desc":"uploading config.yaml","runtime_seconds":0.268088353,"progress":"967B/967B"}],"total_operations":2}}
+{"time":"2025-08-04T02:09:56.06424461+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-04T02:09:57.390872435+10:00","level":"INFO","msg":"stream: closing","id":"xk45dtyr"}
+{"time":"2025-08-04T02:09:57.390906627+10:00","level":"INFO","msg":"handler: closed","stream_id":"xk45dtyr"}
+{"time":"2025-08-04T02:09:57.39098208+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"xk45dtyr"}
+{"time":"2025-08-04T02:09:57.39131046+10:00","level":"INFO","msg":"sender: closed","stream_id":"xk45dtyr"}
+{"time":"2025-08-04T02:09:57.391351302+10:00","level":"INFO","msg":"stream: closed","id":"xk45dtyr"}
