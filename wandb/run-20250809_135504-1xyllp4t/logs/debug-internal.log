@@ -1,0 +1,16 @@
+{"time":"2025-08-09T13:55:04.503406418+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250809_135504-1xyllp4t/logs/debug-core.log"}
+{"time":"2025-08-09T13:55:04.611404412+10:00","level":"INFO","msg":"created new stream","id":"1xyllp4t"}
+{"time":"2025-08-09T13:55:04.611450239+10:00","level":"INFO","msg":"stream: started","id":"1xyllp4t"}
+{"time":"2025-08-09T13:55:04.611464645+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"1xyllp4t"}
+{"time":"2025-08-09T13:55:04.611508761+10:00","level":"INFO","msg":"sender: started","stream_id":"1xyllp4t"}
+{"time":"2025-08-09T13:55:04.611469234+10:00","level":"INFO","msg":"handler: started","stream_id":"1xyllp4t"}
+{"time":"2025-08-09T13:55:05.038087319+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-09T14:31:13.996555369+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-09T14:31:13.99707625+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-09T14:31:14.996721586+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.465227023,"progress":"194B/194B"},{"desc":"uploading output.log","runtime_seconds":0.465221094,"progress":"18.6KB/18.6KB"},{"desc":"uploading config.yaml","runtime_seconds":0.171460203,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-08-09T14:31:15.109430226+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-09T14:31:16.423927091+10:00","level":"INFO","msg":"stream: closing","id":"1xyllp4t"}
+{"time":"2025-08-09T14:31:16.423963871+10:00","level":"INFO","msg":"handler: closed","stream_id":"1xyllp4t"}
+{"time":"2025-08-09T14:31:16.423973364+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"1xyllp4t"}
+{"time":"2025-08-09T14:31:16.423980318+10:00","level":"INFO","msg":"sender: closed","stream_id":"1xyllp4t"}
+{"time":"2025-08-09T14:31:16.424328673+10:00","level":"INFO","msg":"stream: closed","id":"1xyllp4t"}

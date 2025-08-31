@@ -1,0 +1,16 @@
+{"time":"2025-08-12T22:16:09.520520763+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250812_221608-hdqhz88j/logs/debug-core.log"}
+{"time":"2025-08-12T22:16:09.628248505+10:00","level":"INFO","msg":"created new stream","id":"hdqhz88j"}
+{"time":"2025-08-12T22:16:09.628301834+10:00","level":"INFO","msg":"stream: started","id":"hdqhz88j"}
+{"time":"2025-08-12T22:16:09.628316504+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"hdqhz88j"}
+{"time":"2025-08-12T22:16:09.628322239+10:00","level":"INFO","msg":"sender: started","stream_id":"hdqhz88j"}
+{"time":"2025-08-12T22:16:09.628363844+10:00","level":"INFO","msg":"handler: started","stream_id":"hdqhz88j"}
+{"time":"2025-08-12T22:16:10.008880169+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-12T22:33:15.799061045+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-12T22:33:15.799552739+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-12T22:33:16.799312706+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.392504623,"progress":"7.5KB/7.5KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.392497382,"progress":"193B/193B"},{"desc":"uploading config.yaml","runtime_seconds":0.119385837,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-08-12T22:33:17.036297753+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-12T22:33:18.387312651+10:00","level":"INFO","msg":"stream: closing","id":"hdqhz88j"}
+{"time":"2025-08-12T22:33:18.387352301+10:00","level":"INFO","msg":"handler: closed","stream_id":"hdqhz88j"}
+{"time":"2025-08-12T22:33:18.387361569+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hdqhz88j"}
+{"time":"2025-08-12T22:33:18.387365+10:00","level":"INFO","msg":"sender: closed","stream_id":"hdqhz88j"}
+{"time":"2025-08-12T22:33:18.387658045+10:00","level":"INFO","msg":"stream: closed","id":"hdqhz88j"}

@@ -13,7 +13,8 @@ from src.dataset.prompt_templates import Caption_templates
 from monai.transforms import Compose, RandAffine, RandFlip, ToTensor
 from monai.transforms import (
     RandScaleIntensity, RandShiftIntensity,
-    RandGaussianNoise, RandAdjustContrast, RandBiasField
+    RandGaussianNoise, RandAdjustContrast, RandBiasField,
+    ScaleIntensityRangePercentiles, NormalizeIntensity
 )
 
 def resample_volume(img: sitk.Image, target_size=(256,256,128)) -> np.ndarray:
@@ -145,7 +146,7 @@ class CapDataset(Dataset):
                         label[valid_len] = self.tokenizer.eos_token_id
                 else:
                     label[label == self.tokenizer.pad_token_id] = -100
-
+                
                 ret = {
                     "image": image,
                     "input_id": input_id,
@@ -187,28 +188,25 @@ class VQADataset(Dataset):
         else:
             print("The mode is not desired ! ")
 
-        train_transform = Compose([
-            # 1) spatial jitter: translate ±10% of each axis, rotate ±5°, scale [0.8,1.2]
-            RandAffine(
-                prob=1.0,
-                translate_range=(0.25, 0.25, 0.25),   # relative fractions of image size
-                rotate_range=(np.deg2rad(5),)*3,   # 3‑tuple: max ±5° around each axis
-                scale_range=(0.3,)*3,              # ±20% → [0.8,1.2]
-                mode='bilinear',
-            ),
-            # 2) small flips or intensity shifts if you like
-            RandFlip(prob=0.2, spatial_axis=0),
-            RandFlip(prob=0.2, spatial_axis=1),
-            RandFlip(prob=0.2, spatial_axis=2),
-            
-            RandScaleIntensity(factors=0.4, prob=0.5),
-            RandShiftIntensity(offsets=0.3, prob=0.5),
-            RandGaussianNoise(prob=0.55, mean=0.0, std=0.02),
-            RandAdjustContrast(prob=0.55, gamma=(0.7,1.3)),
-            RandBiasField(prob=0.35, coeff_range=(0.2,0.8)),
-            
-            ToTensor(dtype=torch.float),
-        ])
+        # train_transform = Compose([            
+        #     RandAffine(
+        #         prob=1.0,
+        #         translate_range=(0.05, 0.05, 0.05),   # 5% shift
+        #         rotate_range=(np.deg2rad(3),)*3,      # ±3°
+        #         scale_range=(0.1,)*3,                 # ±10%
+        #         mode='bilinear',
+        #     ),
+        #     RandFlip(prob=0.15, spatial_axis=0),
+        #     RandFlip(prob=0.15, spatial_axis=1),
+        #     RandFlip(prob=0.15, spatial_axis=2),
+        
+        #     RandScaleIntensity(factors=0.1, prob=0.3),
+        #     RandShiftIntensity(offsets=0.1, prob=0.3),
+        #     RandGaussianNoise(prob=0.25, mean=0.0, std=0.01),
+        #     RandAdjustContrast(prob=0.25, gamma=(0.9, 1.1)),
+        
+        #     ToTensor(dtype=torch.float),
+        # ])
         
         # train_transform = mtf.Compose(
         #     [
@@ -222,11 +220,39 @@ class VQADataset(Dataset):
         #     ]
         # )
 
-        val_transform = mtf.Compose(
-            [
-                mtf.ToTensor(dtype=torch.float),
-            ]
-        )
+        # val_transform = mtf.Compose(
+        #     [
+        #         ScaleIntensityRangePercentiles(lower=1, upper=99, b_min=0.0, b_max=1.0, clip=True),
+        #         NormalizeIntensity(nonzero=True, channel_wise=True),
+                
+        #         mtf.ToTensor(dtype=torch.float),
+        #     ]
+        # )
+
+        base_norm = mtf.Compose([
+            ScaleIntensityRangePercentiles(lower=1, upper=99, b_min=0.0, b_max=1.0, clip=True),
+            NormalizeIntensity(nonzero=True, channel_wise=True),
+        ])
+        
+        train_transform = mtf.Compose([
+            base_norm,
+            # (optional) mild augs AFTER normalization:
+            # mtf.RandFlip(prob=0.10, spatial_axis=0),
+            # mtf.RandFlip(prob=0.10, spatial_axis=1),
+            # mtf.RandFlip(prob=0.10, spatial_axis=2),
+
+            mtf.RandScaleIntensity(factors=0.05, prob=0.30),
+            mtf.RandShiftIntensity(offsets=0.05, prob=0.30),
+            mtf.RandGaussianNoise(prob=0.20, mean=0.0, std=0.01),
+                    
+            mtf.ToTensor(dtype=torch.float),
+        ])
+        
+        val_transform = mtf.Compose([
+            base_norm,
+            mtf.ToTensor(dtype=torch.float),
+        ])
+        
         set_track_meta(False)
 
         if mode == "train":
@@ -254,34 +280,40 @@ class VQADataset(Dataset):
                 # image = self.transform(image)
 
                 img_sitk = sitk.ReadImage(image_abs_path)
+                
+                # Print original image info
+                # orig_size = img_sitk.GetSize()         # (W, H, D)
+                # orig_spacing = img_sitk.GetSpacing()   # (sx, sy, sz)
+                # print(f"Original size: {orig_size}, spacing: {orig_spacing}")
+                                
                 vol_np   = resample_volume(img_sitk, target_size=(256,256,128))
+
+                # Print resampled shape
+                # print(f"Resampled shape (D,H,W): {vol_np.shape}")
+                
                 image    = np.expand_dims(vol_np, axis=0)
+
+                # print(f"After adding channel dim: {image.shape}")
+                
                 image    = self.transform(image)
+
+                # print(f"After adding channel dim: {image.shape}")
 
                 if self.close_ended:
                     question = data["Question"]
-                    choices = "Choices: A. {} B. {} C. {} D. {} E. {} F. {} G. {} H. {} I. {} J. {} K. {} L. {}".format(
+                    choices = "Choices: A. {} B. {}".format(
                         data["Choice A"],
-                        data["Choice B"],
-                        data["Choice C"],
-                        data["Choice D"],
-                        data["Choice E"],
-                        data["Choice F"],
-                        data["Choice G"],
-                        data["Choice H"],
-                        data["Choice I"],
-                        data["Choice J"],
-                        data["Choice K"],
-                        data["Choice L"],
+                        data["Choice B"]
                         
                     )
                     question = question + " " + choices
-                    answer = "{}. {}".format(data["Answer Choice"], data["Answer"])
+                    # answer = "{}. {}".format(data["Answer Choice"], data["Answer"])
+                    answer   = data["Answer Choice"]
                 else:
                     question = data["Question"]
                     answer = str(data["Answer"])
 
-                question = self.image_tokens + " " + question
+                question = data['Text'] + " " + self.image_tokens + " " + question
                 text_tensor = self.tokenizer(
                     question + " " + answer,
                     max_length=self.args.max_length,
@@ -315,6 +347,9 @@ class VQADataset(Dataset):
                 else:
                     label[label == self.tokenizer.pad_token_id] = -100
 
+                # if self.mode in ("validation", "val", "test"):
+                #     image = torch.zeros_like(image)
+                
                 ret = {
                     "image": image,
                     "input_id": input_id,

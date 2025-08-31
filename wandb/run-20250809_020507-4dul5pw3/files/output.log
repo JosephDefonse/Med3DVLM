@@ -1,0 +1,18 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_18/checkpoint-100
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+Warning: The following arguments do not match the ones in the `trainer_state.json` within the checkpoint directory:
+	logging_steps: 0.001 (from args) != 2 (from trainer_state.json)
+  9%|█████▏                                                   | 126/1390 [02:33<1:19:25,  3.77s/it]
+{'loss': 0.4255, 'grad_norm': 0.7633107765390484, 'learning_rate': 4.9764033897020654e-05, 'epoch': 0.37}
+{'loss': 0.4348, 'grad_norm': 0.9332527605920194, 'learning_rate': 4.9747792455374985e-05, 'epoch': 0.37}
+{'loss': 0.4305, 'grad_norm': 0.8446403016468342, 'learning_rate': 4.973101334394461e-05, 'epoch': 0.38}
+{'loss': 0.3937, 'grad_norm': 0.7979092424575239, 'learning_rate': 4.971369692727198e-05, 'epoch': 0.39}
+{'loss': 0.4281, 'grad_norm': 2.1736459284169634, 'learning_rate': 4.9695843581573056e-05, 'epoch': 0.4}
+{'loss': 0.387, 'grad_norm': 0.7351360406140638, 'learning_rate': 4.967745369472906e-05, 'epoch': 0.4}
+{'loss': 0.3646, 'grad_norm': 0.5797900166754988, 'learning_rate': 4.9658527666278135e-05, 'epoch': 0.41}
+{'loss': 0.4379, 'grad_norm': 1.188378331011219, 'learning_rate': 4.963906590740659e-05, 'epoch': 0.42}
+{'loss': 0.425, 'grad_norm': 1.16164606064418, 'learning_rate': 4.9619068840939995e-05, 'epoch': 0.42}
+{'loss': 0.4374, 'grad_norm': 0.6604023776784205, 'learning_rate': 4.9598536901334015e-05, 'epoch': 0.43}
+{'loss': 0.4181, 'grad_norm': 1.0216260623598203, 'learning_rate': 4.957747053466495e-05, 'epoch': 0.44}
+{'loss': 0.4278, 'grad_norm': 0.7727683508427146, 'learning_rate': 4.955587019862003e-05, 'epoch': 0.45}
+{'loss': 0.3961, 'grad_norm': 0.8463667228431704, 'learning_rate': 4.95337363624875e-05, 'epoch': 0.45}

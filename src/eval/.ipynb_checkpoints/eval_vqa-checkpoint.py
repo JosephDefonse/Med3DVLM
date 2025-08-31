@@ -38,7 +38,7 @@ def parse_args(args=None):
         "--model_name_or_path", type=str, default="./models/Med3DVLM-Qwen-2.5-7B"
     )
     parser.add_argument("--max_length", type=int, default=512)
-    parser.add_argument("--max_new_tokens", type=int, default=5)
+    parser.add_argument("--max_new_tokens", type=int, default=1)
     parser.add_argument("--do_sample", action="store_true", default=False)
     parser.add_argument("--top_p", type=float, default=None)
     parser.add_argument("--temperature", type=float, default=1.0)
@@ -82,7 +82,8 @@ def main():
     model = VLMQwenForCausalLM.from_pretrained(
         args.model_name_or_path, device_map="auto", trust_remote_code=True
     )
-    # model = model.to(device=device)
+    model = model.to(device=device)
+    model.eval()
 
     test_dataset = VQADataset(
         args, tokenizer=tokenizer, close_ended=args.close_ended, mode="test"
@@ -127,6 +128,10 @@ def main():
 
                 input_id = tokenizer(question, return_tensors="pt")["input_ids"]
 
+                image = sample["image"].to(device=args.device, non_blocking=True)
+                tok = tokenizer(question, return_tensors="pt")
+                input_id = tok["input_ids"].to(device=args.device, non_blocking=True)
+                
                 with torch.inference_mode():
                     generation = model.generate(
                         image,
@@ -140,7 +145,7 @@ def main():
                     generation, skip_special_tokens=True
                 )
 
-                if answer_choice[0] + "." in generated_texts[0]:
+                if answer_choice[0] in generated_texts[0]:
                     correct = 1
                 else:
                     correct = 0

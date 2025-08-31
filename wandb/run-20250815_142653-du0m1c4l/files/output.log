@@ -1,0 +1,57 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_18/checkpoint-10
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+Warning: The following arguments do not match the ones in the `trainer_state.json` within the checkpoint directory:
+	logging_steps: 0.001 (from args) != 2 (from trainer_state.json)
+  2%|█▍                                                                                | 20/1190 [01:47<1:54:25,  5.87s/it]
+{'loss': 0.3437, 'grad_norm': 3.35863049806075, 'learning_rate': 9.166666666666668e-06, 'epoch': 0.05}
+{'loss': 0.3537, 'grad_norm': 3.0311863057268185, 'learning_rate': 1.0833333333333334e-05, 'epoch': 0.06}
+{'loss': 0.2865, 'grad_norm': 3.280837861071479, 'learning_rate': 1.25e-05, 'epoch': 0.07}
+{'loss': 0.2453, 'grad_norm': 2.1085050119653697, 'learning_rate': 1.4166666666666666e-05, 'epoch': 0.08}
+{'loss': 0.2698, 'grad_norm': 2.155778449929842, 'learning_rate': 1.5833333333333333e-05, 'epoch': 0.08}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+
+=== compute_metrics DEBUG ===
+[0] REF:  B. Cardiac arrhythmia
+[0] HYP:  D. Cardiac arrhythmia
+[0] ref_letter=B  hyp_letter=D
+---
+[1] REF:  B. Cardiac arrhythmia
+[1] HYP:  D. Cardiac arrhythmia
+[1] ref_letter=B  hyp_letter=D
+---
+[2] REF:  A. Cardiac arrhythmia
+[2] HYP:  C. Cardiac arrhythmia
+[2] ref_letter=A  hyp_letter=C
+---
+[3] REF:  B. Cardiac arrhythmia
+[3] HYP:  B. Cardiac arrhythmia
+[3] ref_letter=B  hyp_letter=B
+---
+[4] REF:  D. Cardiac arrhythmia
+[4] HYP:  B. Cardiac arrhythmia
+[4] ref_letter=D  hyp_letter=B
+---
+[5] REF:  B. Cardiac arrhythmia
+[5] HYP:  C. Cardiac arrhythmia
+[5] ref_letter=B  hyp_letter=C
+---
+{'eval_loss': 0.2812979817390442, 'eval_token_acc': 0.873806275579809, 'eval_string_acc': 0.2264957264957265, 'eval_choice_acc': 0.2264957264957265, 'eval_runtime': 190.4171, 'eval_samples_per_second': 1.229, 'eval_steps_per_second': 0.31, 'epoch': 0.08}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+  3%|██                                                                                | 30/1190 [08:57<2:12:14,  6.84s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+{'loss': 0.2842, 'grad_norm': 1.7589077336144627, 'learning_rate': 1.7500000000000002e-05, 'epoch': 0.09}
+{'loss': 0.2527, 'grad_norm': 1.5446807578058508, 'learning_rate': 1.9166666666666667e-05, 'epoch': 0.1}
+{'loss': 0.2235, 'grad_norm': 1.1989505570306838, 'learning_rate': 2.0833333333333333e-05, 'epoch': 0.11}
+{'loss': 0.2259, 'grad_norm': 1.3905041746137359, 'learning_rate': 2.25e-05, 'epoch': 0.12}
+{'loss': 0.2247, 'grad_norm': 1.0430424730714918, 'learning_rate': 2.4166666666666667e-05, 'epoch': 0.13}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.24483034014701843, 'eval_token_acc': 0.8758526603001364, 'eval_string_acc': 0.2222222222222222, 'eval_choice_acc': 0.2222222222222222, 'eval_runtime': 186.4106, 'eval_samples_per_second': 1.255, 'eval_steps_per_second': 0.317, 'epoch': 0.13}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+  3%|██▊                                                                               | 40/1190 [09:48<1:51:30,  5.82s/it]
+{'loss': 0.2417, 'grad_norm': 0.8102630505408801, 'learning_rate': 2.5833333333333336e-05, 'epoch': 0.13}
+{'loss': 0.1918, 'grad_norm': 0.7980848479901106, 'learning_rate': 2.75e-05, 'epoch': 0.14}
+{'loss': 0.2221, 'grad_norm': 0.7984340210881959, 'learning_rate': 2.9166666666666666e-05, 'epoch': 0.15}
+{'loss': 0.2383, 'grad_norm': 1.0134281514637402, 'learning_rate': 2.9999944416086244e-05, 'epoch': 0.16}
+{'loss': 0.21, 'grad_norm': 0.543993538870038, 'learning_rate': 2.9999499747247845e-05, 'epoch': 0.17}
+  3%|██▉                                                                                    | 2/59 [00:01<00:32,  1.73it/s]

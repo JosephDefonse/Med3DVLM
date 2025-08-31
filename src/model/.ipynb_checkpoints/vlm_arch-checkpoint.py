@@ -24,20 +24,20 @@ class VLMMetaModel:
         return vision_tower
 
     def initialize_vision_modules(self, model_args):
-        self.config.input_size = model_args.input_size
-        self.config.patch_size = model_args.patch_size
-        self.config.dim = model_args.dim
-        self.config.depth = model_args.depth
+        self.config.input_size = model_args.input_size # 256, 256, 128
+        self.config.patch_size = model_args.patch_size # 16, 16, 16
+        self.config.dim = model_args.dim # 768
+        self.config.depth = model_args.depth # 12
+        
+        self.config.vision_tower = model_args.vision_tower # dcformer
+        self.config.vision_select_layer = model_args.vision_select_layer # -2
+        self.config.vision_select_feature = model_args.vision_select_feature # cls_patch
 
-        self.config.vision_tower = model_args.vision_tower
-        self.config.vision_select_layer = model_args.vision_select_layer
-        self.config.vision_select_feature = model_args.vision_select_feature
+        self.config.mm_projector_type = model_args.mm_projector_type # mlp
+        self.config.mm_mlp_depth = model_args.mm_mlp_depth # 2
+        self.config.proj_out_num = model_args.proj_out_num # 256
 
-        self.config.mm_projector_type = model_args.mm_projector_type
-        self.config.mm_mlp_depth = model_args.mm_mlp_depth
-        self.config.proj_out_num = model_args.proj_out_num
-
-        # vision tower
+        # vision tower - it is NOT NONE (we use DCFORMER) SKIP
         if self.get_vision_tower() is None:
             self.vision_tower = build_vision_tower(self.config)
             self.vision_tower.requires_grad_(not model_args.freeze_vision_tower)
@@ -51,6 +51,7 @@ class VLMMetaModel:
                 self.config.low_input_size = (256, 384)
                 self.config.high_input_size = (32, 768)
 
+        # USING DCFormer_SigLIP/pretrained_ViT.bin
         if model_args.pretrain_vision_model is not None:
             vision_model_weights = torch.load(
                 model_args.pretrain_vision_model, map_location="cpu"
@@ -58,22 +59,24 @@ class VLMMetaModel:
             self.vision_tower.vision_tower.load_state_dict(
                 vision_model_weights, strict=True
             )
-
+            
+        # SKIP
         if model_args.pretrain_clip_model is not None:
             clip_model = AutoModel.from_pretrained(model_args.pretrain_clip_model)
             self.vision_tower.vision_tower = clip_model.vision_encoder
 
-        self.config.mm_hidden_size = self.vision_tower.hidden_size
+        self.config.mm_hidden_size = self.vision_tower.hidden_size # 768
 
         # mm_projector
         if getattr(self, "mm_projector", None) is None:
             self.mm_projector = build_mm_projector(self.config)
 
+        # USING Med3DVLM-Qwen-2.5-7B/mm_projector.bin
         if model_args.pretrain_mm_mlp_adapter is not None:
             mm_projector_weights = torch.load(
                 model_args.pretrain_mm_mlp_adapter, map_location="cpu"
             )
-
+            # SKIP
             if self.config.mm_projector_type == "mlp":
 
                 def get_w(weights, keyword):
@@ -82,7 +85,7 @@ class VLMMetaModel:
                         for k, v in weights.items()
                         if keyword in k
                     }
-
+            # SKIP
             elif self.config.mm_projector_type == "low_high_mlp":
 
                 def get_w(weights, keyword):
@@ -97,6 +100,7 @@ class VLMMetaModel:
                                 result[part] = v
                     return result
 
+            # THIS ONE
             elif self.config.mm_projector_type == "mixer":
 
                 def get_w(weights, keyword):
@@ -161,6 +165,23 @@ class VLMMetaForCausalLM(ABC):
         else:
             image_features = self.encode_images(images)
             inputs_embeds = self.get_model().embed_tokens(input_ids)
+
+            with torch.no_grad():
+                need = image_features.shape[1]
+                # try to get the img token id (works because you set model_args.img_token_id)
+                img_tok_id = getattr(self.config, "img_token_id", None)
+                if img_tok_id is None and hasattr(self.get_model(), "config"):
+                    img_tok_id = getattr(self.get_model().config, "img_token_id", None)
+            
+                if img_tok_id is not None and input_ids is not None:
+                    window = input_ids[:, 1:1+need]
+                    ok = (window == img_tok_id).all(dim=1)
+                    if not bool(ok.all()):
+                        bad = (~ok).nonzero(as_tuple=False).flatten().tolist()
+                        print(f"WARNING: samples {bad} do not have <im_patch> x {need} after BOS; "
+                              f"their ids there will be overwritten by image features.")
+
+            
             inputs_embeds = torch.cat(
                 (
                     inputs_embeds[:, :1, :],

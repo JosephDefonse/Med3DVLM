@@ -1,0 +1,84 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2917568
+  4%|██                                                        | 50/1390 [05:48<1:45:24,  4.72s/it]Traceback (most recent call last):
+{'loss': 2.2427, 'grad_norm': 31.42255813156666, 'learning_rate': 7.142857142857143e-07, 'epoch': 0.01}
+{'loss': 2.144, 'grad_norm': 25.917347368689885, 'learning_rate': 2.1428571428571427e-06, 'epoch': 0.01}
+{'loss': 2.3352, 'grad_norm': 36.099011807471705, 'learning_rate': 3.5714285714285714e-06, 'epoch': 0.02}
+{'loss': 1.6542, 'grad_norm': 16.562451139721997, 'learning_rate': 4.9999999999999996e-06, 'epoch': 0.03}
+{'loss': 2.1256, 'grad_norm': 18.955158176092837, 'learning_rate': 6.428571428571429e-06, 'epoch': 0.04}
+{'loss': 0.9974, 'grad_norm': 7.987794557899911, 'learning_rate': 7.857142857142858e-06, 'epoch': 0.04}
+{'loss': 1.1893, 'grad_norm': 9.24659287652492, 'learning_rate': 9.285714285714286e-06, 'epoch': 0.05}
+{'loss': 1.0721, 'grad_norm': 22.919513511315177, 'learning_rate': 1.0714285714285714e-05, 'epoch': 0.06}
+{'loss': 0.5081, 'grad_norm': 6.257437752068791, 'learning_rate': 1.2142857142857144e-05, 'epoch': 0.06}
+{'loss': 0.7115, 'grad_norm': 12.770539305210907, 'learning_rate': 1.3571428571428572e-05, 'epoch': 0.07}
+{'loss': 0.6087, 'grad_norm': 4.657718280334359, 'learning_rate': 1.5e-05, 'epoch': 0.08}
+{'loss': 0.5649, 'grad_norm': 3.4027871359071376, 'learning_rate': 1.6428571428571432e-05, 'epoch': 0.09}
+{'loss': 0.4911, 'grad_norm': 2.4785650249475175, 'learning_rate': 1.785714285714286e-05, 'epoch': 0.09}
+{'loss': 0.4772, 'grad_norm': 2.990323310232756, 'learning_rate': 1.928571428571429e-05, 'epoch': 0.1}
+{'loss': 0.4964, 'grad_norm': 2.242600664219867, 'learning_rate': 2.0714285714285715e-05, 'epoch': 0.11}
+{'loss': 0.3814, 'grad_norm': 1.5426471881904806, 'learning_rate': 2.2142857142857145e-05, 'epoch': 0.12}
+{'loss': 0.5446, 'grad_norm': 11.035182116897001, 'learning_rate': 2.357142857142857e-05, 'epoch': 0.12}
+{'loss': 0.4074, 'grad_norm': 2.1890949968193123, 'learning_rate': 2.5e-05, 'epoch': 0.13}
+{'loss': 0.4461, 'grad_norm': 1.868270185141194, 'learning_rate': 2.6428571428571428e-05, 'epoch': 0.14}
+{'loss': 0.4118, 'grad_norm': 1.8839628165298403, 'learning_rate': 2.7857142857142858e-05, 'epoch': 0.14}
+{'loss': 0.437, 'grad_norm': 2.8319472928204057, 'learning_rate': 2.9285714285714284e-05, 'epoch': 0.15}
+{'loss': 0.4262, 'grad_norm': 1.5127985121076482, 'learning_rate': 2.9999959263751825e-05, 'epoch': 0.16}
+{'loss': 0.4431, 'grad_norm': 1.768932756378676, 'learning_rate': 2.9999633375093975e-05, 'epoch': 0.17}
+{'loss': 0.4403, 'grad_norm': 2.2723647187861507, 'learning_rate': 2.9998981604858526e-05, 'epoch': 0.17}
+{'loss': 0.419, 'grad_norm': 1.0940857104427584, 'learning_rate': 2.999800396720582e-05, 'epoch': 0.18}
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 754, in <module>
+    main()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 657, in main
+    trainer.train()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2237, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2663, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3136, in _maybe_log_save_evaluate
+    metrics = self._evaluate(trial, ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3085, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4253, in evaluate
+    output = eval_loop(
+             ^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4543, in evaluation_loop
+    metrics = self.compute_metrics(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 250, in compute_metrics
+    ref_text = tokenizer.decode(trim_ids(ref_ids.tolist()), skip_special_tokens=True)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 211, in trim_ids
+    eos_pos = np.where(ids == eos_id)[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Calling nonzero on 0d arrays is not allowed. Use np.atleast_1d(scalar).nonzero() instead. If the context of this error is of the form `arr[nonzero(cond)]`, just use `arr[cond]`.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 754, in <module>
+[rank0]:     main()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 657, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2237, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2663, in _inner_training_loop
+[rank0]:     self._maybe_log_save_evaluate(
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3136, in _maybe_log_save_evaluate
+[rank0]:     metrics = self._evaluate(trial, ignore_keys_for_eval)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3085, in _evaluate
+[rank0]:     metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4253, in evaluate
+[rank0]:     output = eval_loop(
+[rank0]:              ^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4543, in evaluation_loop
+[rank0]:     metrics = self.compute_metrics(
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 250, in compute_metrics
+[rank0]:     ref_text = tokenizer.decode(trim_ids(ref_ids.tolist()), skip_special_tokens=True)
+[rank0]:                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 211, in trim_ids
+[rank0]:     eos_pos = np.where(ids == eos_id)[0]
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: ValueError: Calling nonzero on 0d arrays is not allowed. Use np.atleast_1d(scalar).nonzero() instead. If the context of this error is of the form `arr[nonzero(cond)]`, just use `arr[cond]`.

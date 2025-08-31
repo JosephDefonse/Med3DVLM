@@ -1,0 +1,78 @@
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+  2%|█▍                                                                                | 21/1190 [02:16<1:21:18,  4.17s/it]
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.1045
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0645
+{'loss': 0.3092, 'grad_norm': 3.382132052817593, 'learning_rate': 8.333333333333333e-07, 'epoch': 0.01}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0649
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0845
+{'loss': 0.3426, 'grad_norm': 3.6532839343514905, 'learning_rate': 2.4999999999999998e-06, 'epoch': 0.02}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0796
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0791
+{'loss': 0.3918, 'grad_norm': 4.7772517782663675, 'learning_rate': 4.166666666666667e-06, 'epoch': 0.03}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0605
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0664
+{'loss': 0.2907, 'grad_norm': 3.729765146044915, 'learning_rate': 5.833333333333334e-06, 'epoch': 0.03}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0698
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0664
+{'loss': 0.2729, 'grad_norm': 3.8422978012436135, 'learning_rate': 7.5e-06, 'epoch': 0.04}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0664
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0640
+{'loss': 0.3326, 'grad_norm': 3.34045405400263, 'learning_rate': 9.166666666666668e-06, 'epoch': 0.05}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0732
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0537
+{'loss': 0.3372, 'grad_norm': 2.9631568821319405, 'learning_rate': 1.0833333333333334e-05, 'epoch': 0.06}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0586
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0576
+{'loss': 0.2826, 'grad_norm': 3.0907139000598716, 'learning_rate': 1.25e-05, 'epoch': 0.07}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0596
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0508
+{'loss': 0.2622, 'grad_norm': 2.6371451817406224, 'learning_rate': 1.4166666666666666e-05, 'epoch': 0.08}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0503
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0481
+{'loss': 0.2722, 'grad_norm': 2.267052148466742, 'learning_rate': 1.5833333333333333e-05, 'epoch': 0.08}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0601
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0378
+{'loss': 0.2773, 'grad_norm': 1.6972632916715906, 'learning_rate': 1.7500000000000002e-05, 'epoch': 0.09}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0347
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0310
+{'loss': 0.2475, 'grad_norm': 1.4841756073030976, 'learning_rate': 1.9166666666666667e-05, 'epoch': 0.1}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0225
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0222
+{'loss': 0.2149, 'grad_norm': 1.1359437029391874, 'learning_rate': 2.0833333333333333e-05, 'epoch': 0.11}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0248
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0219
+{'loss': 0.2251, 'grad_norm': 1.2498154277211622, 'learning_rate': 2.25e-05, 'epoch': 0.12}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0167
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0181
+{'loss': 0.2215, 'grad_norm': 1.0719487514233843, 'learning_rate': 2.4166666666666667e-05, 'epoch': 0.13}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0165
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0142
+{'loss': 0.2373, 'grad_norm': 0.8186669308137741, 'learning_rate': 2.5833333333333336e-05, 'epoch': 0.13}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0117
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0110
+{'loss': 0.1931, 'grad_norm': 0.8213687126082533, 'learning_rate': 2.75e-05, 'epoch': 0.14}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0126
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0132
+{'loss': 0.219, 'grad_norm': 0.8280224919823611, 'learning_rate': 2.9166666666666666e-05, 'epoch': 0.15}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0123
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0150
+{'loss': 0.2348, 'grad_norm': 1.0648976257661678, 'learning_rate': 2.9999944416086244e-05, 'epoch': 0.16}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0138
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0115
+{'loss': 0.2079, 'grad_norm': 0.557629342961728, 'learning_rate': 2.9999499747247845e-05, 'epoch': 0.17}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0120
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0135
+{'loss': 0.2441, 'grad_norm': 0.8236537803870543, 'learning_rate': 2.9998610422753126e-05, 'epoch': 0.18}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0131
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0135
+{'loss': 0.2277, 'grad_norm': 0.5995403247634845, 'learning_rate': 2.9997276468965835e-05, 'epoch': 0.18}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0129
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0132
+{'loss': 0.2546, 'grad_norm': 0.6850690900686769, 'learning_rate': 2.9995497925430633e-05, 'epoch': 0.19}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0107
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0123
+{'loss': 0.2186, 'grad_norm': 0.7658341755658638, 'learning_rate': 2.9993274844871917e-05, 'epoch': 0.2}
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0071
+[grad] mm_projector: shape=(8, 256, 3584)  norm=0.0085
+{'loss': 0.2015, 'grad_norm': 0.6150954623429445, 'learning_rate': 2.9990607293192228e-05, 'epoch': 0.21}
+ 37%|████████████████████████████████                                                      | 22/59 [01:03<01:49,  2.95s/it]

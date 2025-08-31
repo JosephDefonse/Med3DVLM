@@ -1,0 +1,117 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2000064
+                                                                                                                             
+{'loss': 13.2154, 'grad_norm': 121.52713518639642, 'learning_rate': 0.0, 'epoch': 0.01}
+{'loss': 13.6769, 'grad_norm': 96.23209070238562, 'learning_rate': 6.060606060606061e-07, 'epoch': 0.03}
+{'loss': 14.3693, 'grad_norm': 120.00614341319967, 'learning_rate': 1.2121212121212122e-06, 'epoch': 0.04}
+{'loss': 14.1644, 'grad_norm': 145.74457094001335, 'learning_rate': 1.8181818181818183e-06, 'epoch': 0.06}
+{'loss': 14.3122, 'grad_norm': 122.76588263848905, 'learning_rate': 2.4242424242424244e-06, 'epoch': 0.07}
+{'loss': 13.9428, 'grad_norm': 146.63576185573902, 'learning_rate': 3.0303030303030305e-06, 'epoch': 0.09}
+{'loss': 14.0592, 'grad_norm': 113.88048311085667, 'learning_rate': 3.6363636363636366e-06, 'epoch': 0.1}
+{'loss': 13.4089, 'grad_norm': 116.84070575372625, 'learning_rate': 4.242424242424243e-06, 'epoch': 0.12}
+{'loss': 12.4307, 'grad_norm': 184.8971065288807, 'learning_rate': 4.848484848484849e-06, 'epoch': 0.13}
+{'loss': 12.0574, 'grad_norm': 255.00767996243243, 'learning_rate': 5.4545454545454545e-06, 'epoch': 0.15}
+{'loss': 12.7324, 'grad_norm': 107.37556419051278, 'learning_rate': 6.060606060606061e-06, 'epoch': 0.16}
+{'loss': 10.1773, 'grad_norm': 105.62787223752596, 'learning_rate': 6.666666666666667e-06, 'epoch': 0.18}
+{'loss': 9.4713, 'grad_norm': 75.79071028105719, 'learning_rate': 7.272727272727273e-06, 'epoch': 0.19}
+{'loss': 9.0248, 'grad_norm': 99.9792548047282, 'learning_rate': 7.87878787878788e-06, 'epoch': 0.21}
+{'loss': 8.4068, 'grad_norm': 61.26264113753024, 'learning_rate': 8.484848484848486e-06, 'epoch': 0.22}
+{'loss': 8.3814, 'grad_norm': 68.39207243080608, 'learning_rate': 9.090909090909091e-06, 'epoch': 0.24}
+{'loss': 6.9657, 'grad_norm': 56.498141160245666, 'learning_rate': 9.696969696969698e-06, 'epoch': 0.25}
+{'loss': 6.1605, 'grad_norm': 64.52376378459056, 'learning_rate': 1.0303030303030304e-05, 'epoch': 0.27}
+{'loss': 5.0531, 'grad_norm': 65.0428006186421, 'learning_rate': 1.0909090909090909e-05, 'epoch': 0.28}
+{'loss': 3.7399, 'grad_norm': 80.17224329765875, 'learning_rate': 1.1515151515151517e-05, 'epoch': 0.3}
+{'loss': 2.9534, 'grad_norm': 66.23493391805742, 'learning_rate': 1.2121212121212122e-05, 'epoch': 0.31}
+{'loss': 2.3853, 'grad_norm': 54.37058298465897, 'learning_rate': 1.2727272727272728e-05, 'epoch': 0.33}
+{'loss': 1.7655, 'grad_norm': 31.099892823215573, 'learning_rate': 1.3333333333333333e-05, 'epoch': 0.34}
+{'loss': 0.6829, 'grad_norm': 20.302033330879205, 'learning_rate': 1.3939393939393942e-05, 'epoch': 0.36}
+{'loss': 0.6701, 'grad_norm': 15.470923404314712, 'learning_rate': 1.4545454545454546e-05, 'epoch': 0.37}
+{'loss': 0.6755, 'grad_norm': 16.19873822579025, 'learning_rate': 1.5151515151515153e-05, 'epoch': 0.39}
+{'loss': 0.3898, 'grad_norm': 9.327724945237806, 'learning_rate': 1.575757575757576e-05, 'epoch': 0.4}
+{'loss': 0.3649, 'grad_norm': 8.866173557770368, 'learning_rate': 1.6363636363636366e-05, 'epoch': 0.42}
+{'loss': 0.376, 'grad_norm': 8.465358970064242, 'learning_rate': 1.6969696969696972e-05, 'epoch': 0.43}
+{'loss': 0.3516, 'grad_norm': 7.976935232360561, 'learning_rate': 1.7575757575757576e-05, 'epoch': 0.45}
+{'loss': 0.3929, 'grad_norm': 8.225245411357507, 'learning_rate': 1.8181818181818182e-05, 'epoch': 0.46}
+{'loss': 0.3719, 'grad_norm': 13.799669863379407, 'learning_rate': 1.8787878787878792e-05, 'epoch': 0.48}
+{'loss': 0.2679, 'grad_norm': 6.305735165784869, 'learning_rate': 1.9393939393939395e-05, 'epoch': 0.49}
+{'loss': 0.2856, 'grad_norm': 7.078699352870453, 'learning_rate': 2e-05, 'epoch': 0.51}
+{'loss': 0.6295, 'grad_norm': 21.536310713091776, 'learning_rate': 1.9999804956102004e-05, 'epoch': 0.52}
+{'loss': 0.398, 'grad_norm': 11.605551014050448, 'learning_rate': 1.9999219832016444e-05, 'epoch': 0.54}
+{'loss': 0.4048, 'grad_norm': 17.28654763803432, 'learning_rate': 1.999824465056829e-05, 'epoch': 0.55}
+{'loss': 0.3779, 'grad_norm': 12.225697891081781, 'learning_rate': 1.999687944979819e-05, 'epoch': 0.57}
+{'loss': 0.3735, 'grad_norm': 15.232248539560405, 'learning_rate': 1.9995124282960944e-05, 'epoch': 0.58}
+{'loss': 0.3678, 'grad_norm': 11.186554769803791, 'learning_rate': 1.9992979218523488e-05, 'epoch': 0.6}
+{'loss': 0.2643, 'grad_norm': 10.592957182513087, 'learning_rate': 1.999044434016215e-05, 'epoch': 0.61}
+{'loss': 0.4084, 'grad_norm': 19.50727064331721, 'learning_rate': 1.9987519746759456e-05, 'epoch': 0.63}
+{'loss': 0.4883, 'grad_norm': 15.966137094105477, 'learning_rate': 1.9984205552400215e-05, 'epoch': 0.64}
+{'loss': 0.342, 'grad_norm': 5.719645138333674, 'learning_rate': 1.998050188636711e-05, 'epoch': 0.66}
+{'loss': 0.2668, 'grad_norm': 6.3313249519427055, 'learning_rate': 1.9976408893135632e-05, 'epoch': 0.67}
+{'loss': 0.3737, 'grad_norm': 7.28479360054259, 'learning_rate': 1.9971926732368446e-05, 'epoch': 0.69}
+{'loss': 0.3592, 'grad_norm': 5.771804644420044, 'learning_rate': 1.9967055578909185e-05, 'epoch': 0.7}
+{'loss': 0.294, 'grad_norm': 11.849283967263448, 'learning_rate': 1.996179562277559e-05, 'epoch': 0.72}
+{'loss': 0.3589, 'grad_norm': 9.367692772851765, 'learning_rate': 1.9956147069152138e-05, 'epoch': 0.73}
+{'loss': 0.3388, 'grad_norm': 9.51069664702077, 'learning_rate': 1.9950110138382007e-05, 'epoch': 0.75}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+
+=== compute_metrics DEBUG ===
+[0] REF:  A
+[0] HYP:  B
+[0] ref_letter=A  hyp_letter=B
+---
+[1] REF:  A
+[1] HYP:  B
+[1] ref_letter=A  hyp_letter=B
+---
+[2] REF:  B
+[2] HYP:  B
+[2] ref_letter=B  hyp_letter=B
+---
+[3] REF:  A
+[3] HYP:  A
+[3] ref_letter=A  hyp_letter=A
+---
+[4] REF:  B
+[4] HYP:  A
+[4] ref_letter=B  hyp_letter=A
+---
+[5] REF:  A
+[5] HYP:  B
+[5] ref_letter=A  hyp_letter=B
+---
+{'eval_loss': 0.3663947582244873, 'eval_token_acc': 0.746031746031746, 'eval_string_acc': 0.49206349206349204, 'eval_choice_acc': 0.49206349206349204, 'eval_runtime': 48.6809, 'eval_samples_per_second': 1.294, 'eval_steps_per_second': 0.329, 'epoch': 0.75}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 10%|████████▏                                                                            | 52/536 [06:34<2:47:44, 20.79s/it]wandb: WARNING Tried to log to step 50 that is less than the current step 51. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3845, 'grad_norm': 12.05092188656602, 'learning_rate': 1.99436850659585e-05, 'epoch': 0.76}
+{'loss': 0.5636, 'grad_norm': 11.49372840567281, 'learning_rate': 1.9936872102515854e-05, 'epoch': 0.78}
+wandb: WARNING Tried to log to step 51 that is less than the current step 52. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 10%|████████▌                                                                            | 54/536 [06:44<1:41:44, 12.66s/it]wandb: WARNING Tried to log to step 52 that is less than the current step 53. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.4257, 'grad_norm': 5.9968470881419815, 'learning_rate': 1.9929671513819456e-05, 'epoch': 0.79}
+{'loss': 0.3199, 'grad_norm': 9.966635632880982, 'learning_rate': 1.9922083580755483e-05, 'epoch': 0.81}
+wandb: WARNING Tried to log to step 53 that is less than the current step 54. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 54 that is less than the current step 55. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 10%|████████▉                                                                            | 56/536 [06:54<1:09:25,  8.68s/it]wandb: WARNING Tried to log to step 55 that is less than the current step 56. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2687, 'grad_norm': 4.905245708743892, 'learning_rate': 1.9914108599319942e-05, 'epoch': 0.82}
+{'loss': 0.452, 'grad_norm': 8.42800032334063, 'learning_rate': 1.9905746880607135e-05, 'epoch': 0.84}
+wandb: WARNING Tried to log to step 56 that is less than the current step 57. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 11%|█████████▍                                                                             | 58/536 [07:04<53:37,  6.73s/it]wandb: WARNING Tried to log to step 57 that is less than the current step 58. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3137, 'grad_norm': 5.607674975649649, 'learning_rate': 1.9896998750797493e-05, 'epoch': 0.85}
+{'loss': 0.3359, 'grad_norm': 4.300388092573668, 'learning_rate': 1.9887864551144892e-05, 'epoch': 0.87}
+wandb: WARNING Tried to log to step 58 that is less than the current step 59. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 11%|█████████▋                                                                             | 60/536 [07:13<45:49,  5.78s/it]wandb: WARNING Tried to log to step 59 that is less than the current step 60. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3032, 'grad_norm': 5.740222460751948, 'learning_rate': 1.9878344637963304e-05, 'epoch': 0.88}
+{'loss': 0.4888, 'grad_norm': 10.8582770300279, 'learning_rate': 1.9868439382612935e-05, 'epoch': 0.9}
+wandb: WARNING Tried to log to step 60 that is less than the current step 61. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 11%|█████████▉                                                                             | 61/536 [07:18<43:35,  5.51s/it]wandb: WARNING Tried to log to step 61 that is less than the current step 62. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3535, 'grad_norm': 5.120548762906161, 'learning_rate': 1.98581491714857e-05, 'epoch': 0.91}
+ 12%|██████████▏                                                                            | 63/536 [07:31<46:25,  5.89s/it]wandb: WARNING Tried to log to step 62 that is less than the current step 63. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3767, 'grad_norm': 6.987667737427, 'learning_rate': 1.9847474405990178e-05, 'epoch': 0.93}
+{'loss': 0.3256, 'grad_norm': 10.461359229996466, 'learning_rate': 1.983641550253595e-05, 'epoch': 0.94}
+wandb: WARNING Tried to log to step 63 that is less than the current step 64. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 12%|██████████▌                                                                            | 65/536 [07:41<42:08,  5.37s/it]wandb: WARNING Tried to log to step 64 that is less than the current step 65. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3995, 'grad_norm': 6.6146284344147865, 'learning_rate': 1.9824972892517333e-05, 'epoch': 0.96}
+{'loss': 0.3863, 'grad_norm': 12.746048413589483, 'learning_rate': 1.9813147022296584e-05, 'epoch': 0.97}
+ 12%|██████████▋                                                                            | 66/536 [07:53<58:32,  7.47s/it]wandb: WARNING Tried to log to step 65 that is less than the current step 66. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3235, 'grad_norm': 3.1761227488430417, 'learning_rate': 1.980093835318647e-05, 'epoch': 0.99}
+wandb: WARNING Tried to log to step 66 that is less than the current step 67. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 12%|██████████▉                                                                            | 67/536 [07:56<47:30,  6.08s/it]
+{'loss': 0.3188, 'grad_norm': 9.753729984053152, 'learning_rate': 1.9788347361432276e-05, 'epoch': 1.0}

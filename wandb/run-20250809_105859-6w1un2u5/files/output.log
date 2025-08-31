@@ -1,0 +1,48 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_18/checkpoint-200
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2917568
+Traceback (most recent call last):
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 638, in <module>
+    main()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 539, in main
+    trainer.train(resume_from_checkpoint=resume_ckpt)
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2237, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2416, in _inner_training_loop
+    deepspeed_load_checkpoint(
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/integrations/deepspeed.py", line 494, in deepspeed_load_checkpoint
+    load_path, _ = deepspeed_engine.load_checkpoint(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/engine.py", line 3045, in load_checkpoint
+    success = self._load_zero_checkpoint(load_dir, tag, load_optimizer_states=load_optimizer_states)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/engine.py", line 3235, in _load_zero_checkpoint
+    self.optimizer.load_state_dict(state_dict_list=zero_sd_list,
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/zero/stage3.py", line 2840, in load_state_dict
+    self._rigid_load_state_dict(state_dict_list[dist.get_rank(group=self.dp_process_group)],
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/zero/stage3.py", line 2783, in _rigid_load_state_dict
+    curr_param.data.copy_(saved_param.data)
+RuntimeError: The size of tensor a (208660480) must match the size of tensor b (87549952) at non-singleton dimension 0
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 638, in <module>
+[rank0]:     main()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 539, in main
+[rank0]:     trainer.train(resume_from_checkpoint=resume_ckpt)
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2237, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2416, in _inner_training_loop
+[rank0]:     deepspeed_load_checkpoint(
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/integrations/deepspeed.py", line 494, in deepspeed_load_checkpoint
+[rank0]:     load_path, _ = deepspeed_engine.load_checkpoint(
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/engine.py", line 3045, in load_checkpoint
+[rank0]:     success = self._load_zero_checkpoint(load_dir, tag, load_optimizer_states=load_optimizer_states)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/engine.py", line 3235, in _load_zero_checkpoint
+[rank0]:     self.optimizer.load_state_dict(state_dict_list=zero_sd_list,
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/zero/stage3.py", line 2840, in load_state_dict
+[rank0]:     self._rigid_load_state_dict(state_dict_list[dist.get_rank(group=self.dp_process_group)],
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/zero/stage3.py", line 2783, in _rigid_load_state_dict
+[rank0]:     curr_param.data.copy_(saved_param.data)
+[rank0]: RuntimeError: The size of tensor a (208660480) must match the size of tensor b (87549952) at non-singleton dimension 0

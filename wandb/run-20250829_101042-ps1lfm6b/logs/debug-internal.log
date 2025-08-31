@@ -1,0 +1,16 @@
+{"time":"2025-08-29T10:10:42.854582361+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250829_101042-ps1lfm6b/logs/debug-core.log"}
+{"time":"2025-08-29T10:10:42.962296978+10:00","level":"INFO","msg":"created new stream","id":"ps1lfm6b"}
+{"time":"2025-08-29T10:10:42.962344401+10:00","level":"INFO","msg":"stream: started","id":"ps1lfm6b"}
+{"time":"2025-08-29T10:10:42.962358977+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"ps1lfm6b"}
+{"time":"2025-08-29T10:10:42.962366288+10:00","level":"INFO","msg":"sender: started","stream_id":"ps1lfm6b"}
+{"time":"2025-08-29T10:10:42.962374584+10:00","level":"INFO","msg":"handler: started","stream_id":"ps1lfm6b"}
+{"time":"2025-08-29T10:10:43.298944383+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-29T10:49:22.264889531+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-29T10:49:22.26591987+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-29T10:49:23.26505774+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.517527311,"progress":"41.2KB/41.2KB"},{"desc":"uploading config.yaml","runtime_seconds":0.338037631,"progress":"972B/972B"}],"total_operations":2}}
+{"time":"2025-08-29T10:49:23.453814522+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-29T10:49:24.754878948+10:00","level":"INFO","msg":"stream: closing","id":"ps1lfm6b"}
+{"time":"2025-08-29T10:49:24.754925064+10:00","level":"INFO","msg":"handler: closed","stream_id":"ps1lfm6b"}
+{"time":"2025-08-29T10:49:24.754936066+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ps1lfm6b"}
+{"time":"2025-08-29T10:49:24.754942525+10:00","level":"INFO","msg":"sender: closed","stream_id":"ps1lfm6b"}
+{"time":"2025-08-29T10:49:24.755181144+10:00","level":"INFO","msg":"stream: closed","id":"ps1lfm6b"}

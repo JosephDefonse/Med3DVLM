@@ -1,0 +1,15 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2917568
+  2%|█▏                                                        | 27/1390 [03:44<2:10:25,  5.74s/it]
+{'loss': 2.2354, 'grad_norm': 30.29578332175738, 'learning_rate': 7.142857142857143e-07, 'epoch': 0.01}
+{'loss': 2.0857, 'grad_norm': 26.89475078824679, 'learning_rate': 2.1428571428571427e-06, 'epoch': 0.01}
+{'loss': 2.2105, 'grad_norm': 32.40444797703549, 'learning_rate': 3.5714285714285714e-06, 'epoch': 0.02}
+{'loss': 1.6708, 'grad_norm': 16.56002094820379, 'learning_rate': 4.9999999999999996e-06, 'epoch': 0.03}
+{'loss': 2.1156, 'grad_norm': 19.64786771167291, 'learning_rate': 6.428571428571429e-06, 'epoch': 0.04}
+{'loss': 1.0407, 'grad_norm': 8.73512318503754, 'learning_rate': 7.857142857142858e-06, 'epoch': 0.04}
+{'loss': 1.1192, 'grad_norm': 8.20881731884599, 'learning_rate': 9.285714285714286e-06, 'epoch': 0.05}
+{'loss': 1.0286, 'grad_norm': 16.333313797622832, 'learning_rate': 1.0714285714285714e-05, 'epoch': 0.06}
+{'loss': 0.5553, 'grad_norm': 7.480331804212291, 'learning_rate': 1.2142857142857144e-05, 'epoch': 0.06}
+{'loss': 0.7803, 'grad_norm': 12.94306142430012, 'learning_rate': 1.3571428571428572e-05, 'epoch': 0.07}
+{'loss': 0.6277, 'grad_norm': 4.691306042410481, 'learning_rate': 1.5e-05, 'epoch': 0.08}
+{'loss': 0.5666, 'grad_norm': 3.377020829327872, 'learning_rate': 1.6428571428571432e-05, 'epoch': 0.09}
+{'loss': 0.4885, 'grad_norm': 2.3879189542185246, 'learning_rate': 1.785714285714286e-05, 'epoch': 0.09}

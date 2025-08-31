@@ -1,0 +1,16 @@
+{"time":"2025-08-09T02:13:21.24494108+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250809_021320-qq2ymss8/logs/debug-core.log"}
+{"time":"2025-08-09T02:13:21.352585402+10:00","level":"INFO","msg":"created new stream","id":"qq2ymss8"}
+{"time":"2025-08-09T02:13:21.352633954+10:00","level":"INFO","msg":"stream: started","id":"qq2ymss8"}
+{"time":"2025-08-09T02:13:21.352647912+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"qq2ymss8"}
+{"time":"2025-08-09T02:13:21.352665585+10:00","level":"INFO","msg":"handler: started","stream_id":"qq2ymss8"}
+{"time":"2025-08-09T02:13:21.352670049+10:00","level":"INFO","msg":"sender: started","stream_id":"qq2ymss8"}
+{"time":"2025-08-09T02:13:21.756403284+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-09T03:00:11.278218595+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-09T03:00:11.279498287+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-09T03:00:12.278342094+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.498868983,"progress":"24.6KB/24.6KB"},{"desc":"uploading config.yaml","runtime_seconds":0.222993752,"progress":"972B/972B"}],"total_operations":2}}
+{"time":"2025-08-09T03:00:12.872044537+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-09T03:00:14.240330793+10:00","level":"INFO","msg":"stream: closing","id":"qq2ymss8"}
+{"time":"2025-08-09T03:00:14.240371378+10:00","level":"INFO","msg":"handler: closed","stream_id":"qq2ymss8"}
+{"time":"2025-08-09T03:00:14.240384402+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"qq2ymss8"}
+{"time":"2025-08-09T03:00:14.240396223+10:00","level":"INFO","msg":"sender: closed","stream_id":"qq2ymss8"}
+{"time":"2025-08-09T03:00:14.240853569+10:00","level":"INFO","msg":"stream: closed","id":"qq2ymss8"}

@@ -1,0 +1,15 @@
+{"time":"2025-08-09T10:58:59.754942372+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250809_105859-6w1un2u5/logs/debug-core.log"}
+{"time":"2025-08-09T10:58:59.874657162+10:00","level":"INFO","msg":"created new stream","id":"6w1un2u5"}
+{"time":"2025-08-09T10:58:59.874729045+10:00","level":"INFO","msg":"stream: started","id":"6w1un2u5"}
+{"time":"2025-08-09T10:58:59.87474631+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"6w1un2u5"}
+{"time":"2025-08-09T10:58:59.874750099+10:00","level":"INFO","msg":"sender: started","stream_id":"6w1un2u5"}
+{"time":"2025-08-09T10:58:59.87476264+10:00","level":"INFO","msg":"handler: started","stream_id":"6w1un2u5"}
+{"time":"2025-08-09T10:59:00.308466026+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-09T10:59:09.76389+10:00","level":"INFO","msg":"stream: closing","id":"6w1un2u5"}
+{"time":"2025-08-09T10:59:09.763933362+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-09T10:59:09.764376469+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-09T10:59:10.66099196+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-09T10:59:10.960639636+10:00","level":"INFO","msg":"handler: closed","stream_id":"6w1un2u5"}
+{"time":"2025-08-09T10:59:10.960680117+10:00","level":"INFO","msg":"sender: closed","stream_id":"6w1un2u5"}
+{"time":"2025-08-09T10:59:10.960676972+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"6w1un2u5"}
+{"time":"2025-08-09T10:59:10.961237729+10:00","level":"INFO","msg":"stream: closed","id":"6w1un2u5"}

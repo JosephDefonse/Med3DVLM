@@ -1,0 +1,16 @@
+{"time":"2025-08-11T19:47:35.031690702+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250811_194734-9gv15uug/logs/debug-core.log"}
+{"time":"2025-08-11T19:47:35.177454375+10:00","level":"INFO","msg":"created new stream","id":"9gv15uug"}
+{"time":"2025-08-11T19:47:35.177506508+10:00","level":"INFO","msg":"stream: started","id":"9gv15uug"}
+{"time":"2025-08-11T19:47:35.177522803+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"9gv15uug"}
+{"time":"2025-08-11T19:47:35.17757072+10:00","level":"INFO","msg":"sender: started","stream_id":"9gv15uug"}
+{"time":"2025-08-11T19:47:35.177532981+10:00","level":"INFO","msg":"handler: started","stream_id":"9gv15uug"}
+{"time":"2025-08-11T19:47:35.501865623+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-11T21:42:02.042656325+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-11T21:42:02.196070324+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-11T21:42:03.033603918+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.364964355,"progress":"52.3KB/52.3KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.36340344,"progress":"195B/195B"},{"desc":"uploading config.yaml","runtime_seconds":0.150661474,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-08-11T21:42:03.431744946+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-11T21:42:04.760605301+10:00","level":"INFO","msg":"stream: closing","id":"9gv15uug"}
+{"time":"2025-08-11T21:42:04.760634795+10:00","level":"INFO","msg":"handler: closed","stream_id":"9gv15uug"}
+{"time":"2025-08-11T21:42:04.760675117+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"9gv15uug"}
+{"time":"2025-08-11T21:42:04.761012065+10:00","level":"INFO","msg":"sender: closed","stream_id":"9gv15uug"}
+{"time":"2025-08-11T21:42:04.761329153+10:00","level":"INFO","msg":"stream: closed","id":"9gv15uug"}

@@ -1,0 +1,16 @@
+{"time":"2025-08-15T19:15:56.373655968+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250815_191556-mv964ugp/logs/debug-core.log"}
+{"time":"2025-08-15T19:15:56.482690426+10:00","level":"INFO","msg":"created new stream","id":"mv964ugp"}
+{"time":"2025-08-15T19:15:56.48273654+10:00","level":"INFO","msg":"stream: started","id":"mv964ugp"}
+{"time":"2025-08-15T19:15:56.482751734+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"mv964ugp"}
+{"time":"2025-08-15T19:15:56.482803326+10:00","level":"INFO","msg":"sender: started","stream_id":"mv964ugp"}
+{"time":"2025-08-15T19:15:56.482756932+10:00","level":"INFO","msg":"handler: started","stream_id":"mv964ugp"}
+{"time":"2025-08-15T19:15:56.848422387+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-15T19:50:19.481520755+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-15T19:50:19.482544662+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-15T19:50:20.481676382+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.412586166,"progress":"15.8KB/15.8KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.412570417,"progress":"196B/196B"},{"desc":"uploading config.yaml","runtime_seconds":0.171005722,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-08-15T19:50:20.64406499+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-15T19:50:21.962850242+10:00","level":"INFO","msg":"stream: closing","id":"mv964ugp"}
+{"time":"2025-08-15T19:50:21.96306653+10:00","level":"INFO","msg":"handler: closed","stream_id":"mv964ugp"}
+{"time":"2025-08-15T19:50:21.963086272+10:00","level":"INFO","msg":"sender: closed","stream_id":"mv964ugp"}
+{"time":"2025-08-15T19:50:21.963075632+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"mv964ugp"}
+{"time":"2025-08-15T19:50:21.963932332+10:00","level":"INFO","msg":"stream: closed","id":"mv964ugp"}

@@ -1,0 +1,84 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2917568
+  4%|██                                                        | 50/1390 [05:49<1:47:35,  4.82s/it]Traceback (most recent call last):
+{'loss': 2.2462, 'grad_norm': 28.472861604462803, 'learning_rate': 7.142857142857143e-07, 'epoch': 0.01}
+{'loss': 2.0988, 'grad_norm': 29.095160202984136, 'learning_rate': 2.1428571428571427e-06, 'epoch': 0.01}
+{'loss': 2.3513, 'grad_norm': 32.517592769121606, 'learning_rate': 3.5714285714285714e-06, 'epoch': 0.02}
+{'loss': 1.7094, 'grad_norm': 17.439462930627784, 'learning_rate': 4.9999999999999996e-06, 'epoch': 0.03}
+{'loss': 1.9845, 'grad_norm': 15.622745975486303, 'learning_rate': 6.428571428571429e-06, 'epoch': 0.04}
+{'loss': 0.9897, 'grad_norm': 8.404318597272578, 'learning_rate': 7.857142857142858e-06, 'epoch': 0.04}
+{'loss': 1.2401, 'grad_norm': 9.250432802522706, 'learning_rate': 9.285714285714286e-06, 'epoch': 0.05}
+{'loss': 1.0575, 'grad_norm': 19.35322702709818, 'learning_rate': 1.0714285714285714e-05, 'epoch': 0.06}
+{'loss': 0.5233, 'grad_norm': 7.505075540644198, 'learning_rate': 1.2142857142857144e-05, 'epoch': 0.06}
+{'loss': 0.7382, 'grad_norm': 13.176932882793482, 'learning_rate': 1.3571428571428572e-05, 'epoch': 0.07}
+{'loss': 0.6204, 'grad_norm': 4.130262927146408, 'learning_rate': 1.5e-05, 'epoch': 0.08}
+{'loss': 0.5604, 'grad_norm': 3.5822940673562402, 'learning_rate': 1.6428571428571432e-05, 'epoch': 0.09}
+{'loss': 0.491, 'grad_norm': 2.5440036211091077, 'learning_rate': 1.785714285714286e-05, 'epoch': 0.09}
+{'loss': 0.4871, 'grad_norm': 2.980383325430939, 'learning_rate': 1.928571428571429e-05, 'epoch': 0.1}
+{'loss': 0.4989, 'grad_norm': 2.0596505853284013, 'learning_rate': 2.0714285714285715e-05, 'epoch': 0.11}
+{'loss': 0.3946, 'grad_norm': 2.2343276493864392, 'learning_rate': 2.2142857142857145e-05, 'epoch': 0.12}
+{'loss': 0.563, 'grad_norm': 8.984303798791807, 'learning_rate': 2.357142857142857e-05, 'epoch': 0.12}
+{'loss': 0.4115, 'grad_norm': 2.114117940159802, 'learning_rate': 2.5e-05, 'epoch': 0.13}
+{'loss': 0.437, 'grad_norm': 1.8440951306243702, 'learning_rate': 2.6428571428571428e-05, 'epoch': 0.14}
+{'loss': 0.4203, 'grad_norm': 2.5524041689511425, 'learning_rate': 2.7857142857142858e-05, 'epoch': 0.14}
+{'loss': 0.4449, 'grad_norm': 2.834429678562807, 'learning_rate': 2.9285714285714284e-05, 'epoch': 0.15}
+{'loss': 0.4225, 'grad_norm': 1.2990195059938676, 'learning_rate': 2.9999959263751825e-05, 'epoch': 0.16}
+{'loss': 0.4429, 'grad_norm': 1.691380221966413, 'learning_rate': 2.9999633375093975e-05, 'epoch': 0.17}
+{'loss': 0.4335, 'grad_norm': 1.9088409981959014, 'learning_rate': 2.9998981604858526e-05, 'epoch': 0.17}
+{'loss': 0.419, 'grad_norm': 1.0155489307254246, 'learning_rate': 2.999800396720582e-05, 'epoch': 0.18}
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 769, in <module>
+    main()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 672, in main
+    trainer.train()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2237, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2663, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3136, in _maybe_log_save_evaluate
+    metrics = self._evaluate(trial, ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3085, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4253, in evaluate
+    output = eval_loop(
+             ^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4543, in evaluation_loop
+    metrics = self.compute_metrics(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 261, in compute_metrics
+    if norm_text(hyp_text) == norm_text(ref_text):
+       ^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 229, in norm_text
+    def norm_text(s): return re.sub(r"\s+", " ", s).strip().lower()
+                             ^^
+NameError: name 're' is not defined. Did you forget to import 're'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 769, in <module>
+[rank0]:     main()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 672, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2237, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2663, in _inner_training_loop
+[rank0]:     self._maybe_log_save_evaluate(
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3136, in _maybe_log_save_evaluate
+[rank0]:     metrics = self._evaluate(trial, ignore_keys_for_eval)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 3085, in _evaluate
+[rank0]:     metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4253, in evaluate
+[rank0]:     output = eval_loop(
+[rank0]:              ^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 4543, in evaluation_loop
+[rank0]:     metrics = self.compute_metrics(
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 261, in compute_metrics
+[rank0]:     if norm_text(hyp_text) == norm_text(ref_text):
+[rank0]:        ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 229, in norm_text
+[rank0]:     def norm_text(s): return re.sub(r"\s+", " ", s).strip().lower()
+[rank0]:                              ^^
+[rank0]: NameError: name 're' is not defined. Did you forget to import 're'?

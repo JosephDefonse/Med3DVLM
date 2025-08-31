@@ -3,6 +3,8 @@ import os
 from dataclasses import dataclass, field
 from typing import List, Optional
 
+import json
+
 import numpy as np
 import torch
 import torch.distributed as dist
@@ -18,6 +20,8 @@ from peft import get_peft_model_state_dict
 from safetensors.torch import save_file
 
 import torch.distributed as dist
+
+import re
 
 tokenizer = None
 
@@ -45,11 +49,11 @@ class ModelArguments:
     )
     model_type: Optional[str] = field(default="vlm_qwen")
 
-    freeze_backbone: bool = field(default=False)
+    freeze_backbone: bool = field(default=True)
     pretrain_mllm: Optional[str] = field(default=None)
 
     tune_mm_mlp_adapter: bool = field(
-        default=False,
+        default=True,
         metadata={"help": "Used in pretrain: tune mm_projector and embed_tokens"},
     )
     pretrain_mm_mlp_adapter: Optional[str] = field(
@@ -127,8 +131,8 @@ class DataArguments:
 class TrainingArguments(transformers.TrainingArguments):
     # lora
     lora_enable: bool = False
-    lora_r: int = 16
-    lora_alpha: int = 32
+    lora_r: int = 8
+    lora_alpha: int = 16
     lora_dropout: float = 0.05
     lora_weight_path: str = ""
     lora_bias: str = "none"
@@ -174,24 +178,114 @@ class TrainingArguments(transformers.TrainingArguments):
     greater_is_better: bool = True
     load_best_model_at_end: bool = True
     
+    max_grad_norm: float = 0.5
+    label_smoothing_factor: float = 0.0
+
+# def compute_metrics(eval_preds):
+#     labels_ids = eval_preds.label_ids
+#     pred_ids = eval_preds.predictions
+
+#     labels = labels_ids[:, 1:]
+#     preds = pred_ids[:, :-1]
+
+#     labels_flatten = labels.reshape(-1)
+#     preds_flatten = preds.reshape(-1)
+#     valid_indices = np.where(labels_flatten != -100)
+#     filtered_preds = preds_flatten[valid_indices]
+#     filtered_labels = labels_flatten[valid_indices]
+#     acc_score = sum(filtered_preds == filtered_labels) / len(filtered_labels)
+
+#     return {"accuracy": acc_score}
+
+DEBUG_METRICS_N = 6
 
 def compute_metrics(eval_preds):
+    pred_ids   = eval_preds.predictions   # from preprocess_logits_for_metrics (argmax ids)
     labels_ids = eval_preds.label_ids
-    pred_ids = eval_preds.predictions
 
+    # shift like LM loss
+    preds  = pred_ids[:, :-1]
     labels = labels_ids[:, 1:]
-    preds = pred_ids[:, :-1]
 
-    labels_flatten = labels.reshape(-1)
-    preds_flatten = preds.reshape(-1)
-    valid_indices = np.where(labels_flatten != -100)
-    filtered_preds = preds_flatten[valid_indices]
-    filtered_labels = labels_flatten[valid_indices]
-    acc_score = sum(filtered_preds == filtered_labels) / len(filtered_labels)
+    eos_id = tokenizer.eos_token_id
+    pad_id = tokenizer.pad_token_id
 
-    return {"accuracy": acc_score}
+    def trim_ids(ids):
+        # accept list/int/np array and make it at least 1D
+        arr = np.atleast_1d(np.array(ids, dtype=np.int64))
+        if arr.size == 0:
+            return arr
+        if eos_id is not None:
+            eos_idx = np.nonzero(arr == eos_id)[0]
+            if eos_idx.size:
+                arr = arr[:eos_idx[0]]
+        if pad_id is not None:
+            arr = arr[arr != pad_id]
+        arr = arr[arr != -100]
+        return arr
 
+    def safe_decode(arr):
+        arr = trim_ids(arr)
+        if arr.size == 0:
+            return ""
+        return tokenizer.decode(arr.tolist(), skip_special_tokens=True)
 
+    def norm_text(s): return re.sub(r"\s+", " ", s).strip().lower()
+    def extract_letter(s):
+        m = re.match(r"^\s*([A-La-l])\s*[\.\)]?", s)
+        return m.group(1).upper() if m else None
+
+    n = labels.shape[0]
+    token_hits = token_total = 0
+    string_hits = choice_hits = 0
+
+    # limited debug
+    already = getattr(compute_metrics, "_printed", 0)
+    todo = max(0, min(DEBUG_METRICS_N - already, n))
+    if todo > 0:
+        print("\n=== compute_metrics DEBUG ===")
+
+    for i in range(n):
+        mask = labels[i] != -100
+        if not np.any(mask):
+            continue
+
+        ref_ids = labels[i][mask]
+        hyp_ids = preds[i][mask]
+
+        # token-level acc on the masked window
+        L = min(ref_ids.shape[0], hyp_ids.shape[0])
+        if L > 0:
+            token_hits  += int((hyp_ids[:L] == ref_ids[:L]).sum())
+            token_total += L
+
+        ref_text = safe_decode(ref_ids)
+        hyp_text = safe_decode(hyp_ids)
+
+        if norm_text(hyp_text) == norm_text(ref_text):
+            string_hits += 1
+
+        ref_letter = extract_letter(ref_text)
+        hyp_letter = extract_letter(hyp_text)
+        if ref_letter is not None and hyp_letter == ref_letter:
+            choice_hits += 1
+
+        if todo > 0:
+            print(f"[{i}] REF: {ref_text}")
+            print(f"[{i}] HYP: {hyp_text}")
+            print(f"[{i}] ref_letter={ref_letter}  hyp_letter={hyp_letter}")
+            print("---")
+            todo -= 1
+
+    if DEBUG_METRICS_N:
+        compute_metrics._printed = already + (DEBUG_METRICS_N - max(0, todo))
+
+    return {
+        "token_acc":  token_hits / max(1, token_total),
+        "string_acc": string_hits / max(1, n),
+        "choice_acc": choice_hits / max(1, n),
+    }
+    
 def preprocess_logits_for_metrics(logits, labels):
     pred_ids = torch.argmax(logits, dim=-1)
     return pred_ids
@@ -314,6 +408,7 @@ def main():
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
 
     rank0_print("=" * 20 + " Tokenizer preparation " + "=" * 20)
+    
     # Load tokenizer from the given path with specified configurations
     global tokenizer
     tokenizer = AutoTokenizer.from_pretrained(
@@ -324,21 +419,53 @@ def main():
         use_fast=False,
     )
 
-    # Define and add special tokens
-    special_token = {"additional_special_tokens": ["<im_patch>"]}
-    tokenizer.add_special_tokens(special_token)
+    print(tokenizer)
 
+    def snap(tag, tok):
+        base = tok.vocab_size
+        added_map = tok.get_added_vocab()  # dict[str->id] for added tokens
+        total = len(tok)                   # base + added
+        print(f"[{tag}] base={base} added_count={len(added_map)} total={total}")
+        # show a few added tokens with ids
+        for k in list(added_map.keys())[:]:
+            print(f"  added: {k!r} -> {added_map[k]}")
+        print("all_special_tokens:", tok.all_special_tokens)
+        print("eos_id:", tok.eos_token_id, "pad_id:", tok.pad_token_id)
+    
+    # snap("before", tokenizer)
+        
+    # Define and add special tokens
+    # special_token = {"additional_special_tokens": ["<im_patch>"]}
+    # tokenizer.add_special_tokens(special_token)
+    extras = list(dict.fromkeys((tokenizer.additional_special_tokens or []) + ["<im_patch>"]))
+    tokenizer.add_special_tokens({"additional_special_tokens": extras})
+
+    # print("---------------------------------------------------------------------")
+    # print(tokenizer)
+    
+    # It doesn't look like unk_token exists (is None), hence it won't go through this
     if tokenizer.unk_token is not None and tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.unk_token
+
+    # type is vlm_qwen, hence it won't go through this
     if "llama3" in model_args.model_type:
         tokenizer.eos_token_id = 128001
         tokenizer.pad_token = tokenizer.eos_token
 
+    """
+    INITIALISING MODEL ARGUMENTS FROM TOKENIZER FOR MODEL PREPARATION
+    """
+
     # Convert special tokens to token IDs and set related arguments
     model_args.img_token_id = tokenizer.convert_tokens_to_ids("<im_patch>")
+    # print(model_args.img_token_id) # this represents the numerical id of <img_patch>
+    
     model_args.vocab_size = len(tokenizer)
+    # print(model_args.vocab_size)
     rank0_print("vocab_size: ", model_args.vocab_size)
-
+    # snap("after", tokenizer)
+    
+    # mm_projector_type = mixer, hence, = 256
     if model_args.mm_projector_type is not None:
         if model_args.mm_projector_type == "low_high_mlp":
             model_args.proj_out_num = 288
@@ -364,14 +491,16 @@ def main():
         model = LlamaForCausalLM.from_pretrained(
             model_args.model_name_or_path, cache_dir=training_args.cache_dir
         )
-
+    
+    
     model.config.use_cache = False
 
-    if model_args.freeze_backbone:
+    if model_args.freeze_backbone: # SET TO TRUE
         model.model.requires_grad_(False)
 
     model.enable_input_require_grads()
-    if training_args.gradient_checkpointing:
+    
+    if training_args.gradient_checkpointing: # SET TO TRUE IN SH SCRIPT
         model.gradient_checkpointing_enable()
 
     if model_args.vision_tower is not None:
@@ -388,11 +517,13 @@ def main():
     model_args.num_new_tokens = 1
     model.initialize_vision_tokenizer(model_args, tokenizer)
 
+    # IGNORE - NOT USING
     if model_args.pretrain_mllm:
         ckpt = torch.load(model_args.pretrain_mllm, map_location="cpu")
         model.load_state_dict(ckpt, strict=True)
         rank0_print("load pretrained MLLM weights.")
 
+    # USING FOR FINE_TUNING
     if training_args.lora_enable:
         from peft import LoraConfig, get_peft_model
 
@@ -406,7 +537,7 @@ def main():
         )
         rank0_print("Adding LoRA adapters only on LLM.")
         model = get_peft_model(model, lora_config)
-    
+        
         for n, p in model.named_parameters():
             if any(
                 [
@@ -421,18 +552,30 @@ def main():
             ):
                 p.requires_grad = True
 
+        vt = model.get_model().get_vision_tower()
+        vt.eval()
+        for p in vt.parameters():
+            p.requires_grad = False
+        
         model.print_trainable_parameters()
 
-    # total, trainable = 0, 0
-    # for n, p in model.named_parameters():
-    #     total += p.numel()
-    #     if p.requires_grad:
-    #         print("🟢 TRAIN:", n)
-    #         trainable += p.numel()
-    #     else:
-    #         print("🔴 FROZEN:", n)
-    # print(f"Trainable parameters: {trainable:,}/{total:,}")
+
+    # def hook_shape(name):
+    #     def _h(mod, inp, out):
+    #         def _shape(o):
+    #             if isinstance(o, torch.Tensor): return tuple(o.shape)
+    #             if isinstance(o, (list, tuple)): return [tuple(t.shape) for t in o]
+    #             return type(o).__name__
+    #         print(f"[hook] {name}: { _shape(out) }")
+    #     return _h
     
+    # vt   = model.get_model().get_vision_tower()
+    # proj = model.get_model().mm_projector
+        # # VisionTower returns a list of tensors (two last scales)
+    # h1 = vt.register_forward_hook(hook_shape("vision_tower"))
+    # # Projector returns the fused vision tokens (B, 256, hidden)
+    # h2 = proj.register_forward_hook(hook_shape("mm_projector"))
+        
     rank0_print("=" * 20 + " Dataset preparation " + "=" * 20)
     data_args.max_length = training_args.model_max_length
     data_args.proj_out_num = model.get_model().mm_projector.proj_out_num
@@ -442,7 +585,15 @@ def main():
         train_dataset = QADatasets(data_args, tokenizer, mode="train")
     else:
         train_dataset = QADatasets(data_args, tokenizer, mode="train")
-
+        
+    # sample = train_dataset[0]
+    # ids = sample["input_id"]
+    # img_tok = tokenizer.convert_tokens_to_ids("<im_patch>")
+    # n_img_tokens = (ids == img_tok).sum().item()
+    # print(f"#<im_patch> in sample[0]:", n_img_tokens, " expected:", data_args.proj_out_num)
+    # print("Decoded prompt (truncated):")
+    # print(tokenizer.decode(ids[:300], skip_special_tokens=False))
+    
     # sample = train_dataset[1]
     # ids = sample["input_id"].tolist()
     # print(len(ids))
@@ -468,7 +619,7 @@ def main():
     
     eval_dataset  = QADatasets(data_args, tokenizer, mode="validation")
     data_collator = DataCollator()
-
+    
     device = torch.device("cuda")
     for module in model.modules():
         if isinstance(module, (torch.nn.BatchNorm1d, 
@@ -476,7 +627,7 @@ def main():
                                torch.nn.BatchNorm3d)):
             module.running_mean = module.running_mean.to(device)
             module.running_var  = module.running_var.to(device)
-
+        
     # model = model.to(device)
     # sample = train_dataset[0]
     # batch  = data_collator([sample])
@@ -503,7 +654,32 @@ def main():
     # )
     
     # print("🤖 multimodal embeds shape:", inputs_embeds.shape)
+
+    # def attach_grad_probes(model):
+    #     hooks = []
+    #     def mk(name):
+    #         def _hook(mod, _, grad_out):
+    #             if grad_out and grad_out[0] is not None:
+    #                 g = grad_out[0]
+    #                 print(f"[grad] {name}: shape={tuple(g.shape)}  norm={g.norm().item():.4f}")
+    #         return _hook
     
+    #     # projector always trains in your setup
+    #     hooks.append(model.get_model().mm_projector.register_full_backward_hook(mk("mm_projector")))
+    
+    #     # optionally probe a vision block if it's not frozen
+    #     vt = model.get_model().get_vision_tower()
+    #     if any(p.requires_grad for p in vt.parameters()):
+    #         # grab the first leaf module with params
+    #         for n, m in vt.named_modules():
+    #             if any(p.requires_grad for p in m.parameters(recurse=False)):
+    #                 hooks.append(m.register_full_backward_hook(mk(f"vision:{n}")))
+    #                 break
+    #     return hooks
+    
+    # # before trainer.train():
+    # grad_hooks = attach_grad_probes(model)
+        
     rank0_print("=" * 20 + " Training " + "=" * 20)
     trainer = MLLMTrainer(
         model=model,
@@ -513,7 +689,7 @@ def main():
         eval_dataset=eval_dataset,
         compute_metrics=compute_metrics,
         preprocess_logits_for_metrics=preprocess_logits_for_metrics,
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=5)]
     )
 
     if is_rank_zero():
@@ -625,6 +801,36 @@ def main():
             trainer=trainer, output_dir=training_args.output_dir
         )
 
+    # --- WRITE RUN SUMMARY FOR GRID SEARCH ---
+    if is_rank_zero():
+        summary = {
+            "best_metric_name": training_args.metric_for_best_model,
+            "best_metric_value": float(trainer.state.best_metric) if trainer.state.best_metric is not None else None,
+            "best_model_checkpoint": trainer.state.best_model_checkpoint,
+            "global_step": trainer.state.global_step,
+            "hparams": {
+                "learning_rate": training_args.learning_rate,
+                "warmup_ratio": training_args.warmup_ratio,
+                "weight_decay": training_args.weight_decay,
+                "max_grad_norm": training_args.max_grad_norm,
+                "label_smoothing_factor": training_args.label_smoothing_factor,
+                "lr_scheduler_type": training_args.lr_scheduler_type,
+                "lora_enable": training_args.lora_enable,
+                "lora_r": training_args.lora_r,
+                "lora_alpha": training_args.lora_alpha,
+                "lora_dropout": training_args.lora_dropout,
+                "model_max_length": training_args.model_max_length,
+                "num_train_epochs": training_args.num_train_epochs,
+                "seed": training_args.seed,
+                "vision_select_layer": model_args.vision_select_layer,
+                "mm_projector_type": model_args.mm_projector_type,
+            },
+        }
+        with open(os.path.join(training_args.output_dir, "run_summary.json"), "w") as f:
+            json.dump(summary, f, indent=2)
+        rank0_print(f"[RUN SUMMARY] best={summary['best_metric_value']} ({summary['best_metric_name']})")
+
+    
     if is_rank_zero():
         wandb.finish()
 

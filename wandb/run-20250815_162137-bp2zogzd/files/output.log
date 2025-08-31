@@ -1,0 +1,11 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_18/checkpoint-70
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+Warning: The following arguments do not match the ones in the `trainer_state.json` within the checkpoint directory:
+	logging_steps: 0.001 (from args) != 2 (from trainer_state.json)
+  7%|█████▌                                                                            | 80/1190 [01:34<1:10:11,  3.79s/it]
+{'loss': 0.2356, 'grad_norm': 0.5839909954029711, 'learning_rate': 2.9931961162385537e-05, 'epoch': 0.3}
+{'loss': 0.2088, 'grad_norm': 0.3440693179956573, 'learning_rate': 2.9923969890666696e-05, 'epoch': 0.31}
+{'loss': 0.2167, 'grad_norm': 0.6677372990689936, 'learning_rate': 2.99155362023514e-05, 'epoch': 0.32}
+{'loss': 0.2085, 'grad_norm': 0.3946961530762087, 'learning_rate': 2.9906660347453803e-05, 'epoch': 0.33}
+{'loss': 0.21, 'grad_norm': 0.46389703075519095, 'learning_rate': 2.9897342589095952e-05, 'epoch': 0.34}
+ 41%|██████████████████████████████████▉                                                   | 24/59 [01:05<01:11,  2.06s/it]

@@ -1,0 +1,7 @@
+{"time":"2025-08-29T16:13:45.233876278+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250829_161344-c71qwtgi/logs/debug-core.log"}
+{"time":"2025-08-29T16:13:45.342172767+10:00","level":"INFO","msg":"created new stream","id":"c71qwtgi"}
+{"time":"2025-08-29T16:13:45.34245494+10:00","level":"INFO","msg":"stream: started","id":"c71qwtgi"}
+{"time":"2025-08-29T16:13:45.34246695+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"c71qwtgi"}
+{"time":"2025-08-29T16:13:45.342477048+10:00","level":"INFO","msg":"sender: started","stream_id":"c71qwtgi"}
+{"time":"2025-08-29T16:13:45.342481272+10:00","level":"INFO","msg":"handler: started","stream_id":"c71qwtgi"}
+{"time":"2025-08-29T16:13:45.869319082+10:00","level":"INFO","msg":"Starting system monitor"}

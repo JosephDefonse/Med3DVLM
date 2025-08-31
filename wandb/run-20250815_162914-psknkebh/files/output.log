@@ -1,0 +1,47 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_18/checkpoint-70
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+Warning: The following arguments do not match the ones in the `trainer_state.json` within the checkpoint directory:
+	logging_steps: 0.001 (from args) != 2 (from trainer_state.json)
+  7%|█████▌                                                                            | 80/1190 [01:32<1:09:45,  3.77s/it]
+{'loss': 0.2405, 'grad_norm': 0.6002749383395397, 'learning_rate': 2.9931961162385537e-05, 'epoch': 0.3}
+{'loss': 0.2086, 'grad_norm': 0.3237168676473347, 'learning_rate': 2.9923969890666696e-05, 'epoch': 0.31}
+{'loss': 0.2167, 'grad_norm': 0.7022912149694616, 'learning_rate': 2.99155362023514e-05, 'epoch': 0.32}
+{'loss': 0.2085, 'grad_norm': 0.3786899647242165, 'learning_rate': 2.9906660347453803e-05, 'epoch': 0.33}
+{'loss': 0.2081, 'grad_norm': 0.4652984529790802, 'learning_rate': 2.9897342589095952e-05, 'epoch': 0.34}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+
+=== compute_metrics DEBUG ===
+[0] REF:  B. Cardiac arrhythmia
+[0] HYP:  B. Cardiac arrhythmia
+[0] ref_letter=B  hyp_letter=B
+---
+[1] REF:  B. Cardiac arrhythmia
+[1] HYP:  B. Cardiac arrhythmia
+[1] ref_letter=B  hyp_letter=B
+---
+[2] REF:  A. Cardiac arrhythmia
+[2] HYP:  A. Cardiac arrhythmia
+[2] ref_letter=A  hyp_letter=A
+---
+[3] REF:  B. Cardiac arrhythmia
+[3] HYP:  A. Cardiac arrhythmia
+[3] ref_letter=B  hyp_letter=A
+---
+[4] REF:  D. Cardiac arrhythmia
+[4] HYP:  B. Cardiac arrhythmia
+[4] ref_letter=D  hyp_letter=B
+---
+[5] REF:  B. Cardiac arrhythmia
+[5] HYP:  A. Cardiac arrhythmia
+[5] ref_letter=B  hyp_letter=A
+---
+{'eval_loss': 0.23004774749279022, 'eval_token_acc': 0.8778990450204639, 'eval_string_acc': 0.23504273504273504, 'eval_choice_acc': 0.23504273504273504, 'eval_runtime': 188.0911, 'eval_samples_per_second': 1.244, 'eval_steps_per_second': 0.314, 'epoch': 0.34}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+  8%|██████▏                                                                           | 90/1190 [05:34<1:45:21,  5.75s/it]
+{'loss': 0.2044, 'grad_norm': 0.4417169142661715, 'learning_rate': 2.9887583203499986e-05, 'epoch': 0.34}
+{'loss': 0.2264, 'grad_norm': 0.5770002285838266, 'learning_rate': 2.9877382479979955e-05, 'epoch': 0.35}
+{'loss': 0.2072, 'grad_norm': 0.6434346809689492, 'learning_rate': 2.986674072093324e-05, 'epoch': 0.36}
+{'loss': 0.2368, 'grad_norm': 0.6518719145976197, 'learning_rate': 2.985565824183159e-05, 'epoch': 0.37}
+{'loss': 0.2175, 'grad_norm': 0.5286338563731663, 'learning_rate': 2.984413537121176e-05, 'epoch': 0.38}
+ 14%|███████████▊                                                                           | 8/59 [00:27<04:12,  4.96s/it]

@@ -1,0 +1,5 @@
+Resuming from checkpoint: output/GS_runs/r32_a64_p005_lr2e-05_wr006/checkpoint-50
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2000064
+Warning: The following arguments do not match the ones in the `trainer_state.json` within the checkpoint directory:
+	logging_steps: 0.001 (from args) != 1 (from trainer_state.json)
+  0%|                                                                                                | 0/536 [00:00<?, ?it/s]

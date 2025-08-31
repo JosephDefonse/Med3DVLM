@@ -1,0 +1,16 @@
+{"time":"2025-08-12T09:10:34.792320068+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250812_091034-m65epl2g/logs/debug-core.log"}
+{"time":"2025-08-12T09:10:34.899805602+10:00","level":"INFO","msg":"created new stream","id":"m65epl2g"}
+{"time":"2025-08-12T09:10:34.899856411+10:00","level":"INFO","msg":"stream: started","id":"m65epl2g"}
+{"time":"2025-08-12T09:10:34.899865534+10:00","level":"INFO","msg":"handler: started","stream_id":"m65epl2g"}
+{"time":"2025-08-12T09:10:34.899872299+10:00","level":"INFO","msg":"sender: started","stream_id":"m65epl2g"}
+{"time":"2025-08-12T09:10:34.899878553+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"m65epl2g"}
+{"time":"2025-08-12T09:10:35.356452458+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-12T09:51:58.787524728+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-12T09:51:58.804725242+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-12T09:51:59.777797742+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.464265883,"progress":"16.3KB/16.3KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.462623153,"progress":"194B/194B"},{"desc":"uploading config.yaml","runtime_seconds":0.138415137,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-08-12T09:52:00.890757243+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-12T09:52:02.18562121+10:00","level":"INFO","msg":"stream: closing","id":"m65epl2g"}
+{"time":"2025-08-12T09:52:02.185658381+10:00","level":"INFO","msg":"handler: closed","stream_id":"m65epl2g"}
+{"time":"2025-08-12T09:52:02.18575209+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"m65epl2g"}
+{"time":"2025-08-12T09:52:02.186080611+10:00","level":"INFO","msg":"sender: closed","stream_id":"m65epl2g"}
+{"time":"2025-08-12T09:52:02.186130078+10:00","level":"INFO","msg":"stream: closed","id":"m65epl2g"}

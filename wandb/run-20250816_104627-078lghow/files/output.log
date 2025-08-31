@@ -1,0 +1,61 @@
+Parameter Offload - Persistent parameters statistics: param_count = 739, numel = 15992000
+  1%|▊                                                                                 | 12/1190 [01:42<3:02:14,  9.28s/it]
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.7867, 'grad_norm': 10.694410424908083, 'learning_rate': 8.333333333333333e-07, 'epoch': 0.01}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.6565, 'grad_norm': 8.590416330117478, 'learning_rate': 2.4999999999999998e-06, 'epoch': 0.02}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.7871, 'grad_norm': 12.368139881190478, 'learning_rate': 4.166666666666667e-06, 'epoch': 0.03}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.7887, 'grad_norm': 13.444466962854404, 'learning_rate': 5.833333333333334e-06, 'epoch': 0.03}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.6069, 'grad_norm': 13.591326092674725, 'learning_rate': 7.5e-06, 'epoch': 0.04}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.655, 'grad_norm': 6.13569785695836, 'learning_rate': 9.166666666666668e-06, 'epoch': 0.05}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.4916, 'grad_norm': 5.208416033720368, 'learning_rate': 1.0833333333333334e-05, 'epoch': 0.06}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.4127, 'grad_norm': 5.554833107798696, 'learning_rate': 1.25e-05, 'epoch': 0.07}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.3297, 'grad_norm': 3.5528039990506235, 'learning_rate': 1.4166666666666666e-05, 'epoch': 0.08}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.2389, 'grad_norm': 2.1037666762620493, 'learning_rate': 1.5833333333333333e-05, 'epoch': 0.08}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+{'loss': 0.3025, 'grad_norm': 2.2542652824718865, 'learning_rate': 1.7500000000000002e-05, 'epoch': 0.09}
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)
+[hook] vision_tower: [(8, 256, 384), (8, 32, 768)]
+[hook] mm_projector: (8, 256, 3584)

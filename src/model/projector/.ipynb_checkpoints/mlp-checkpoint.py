@@ -86,7 +86,7 @@ class MixerLayer(nn.Module):
 
         return x
 
-
+# USING THIS
 class MixerLowHighHybridMLP(nn.Module):
     def __init__(
         self,

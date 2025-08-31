@@ -147,11 +147,13 @@ def main():
     peft_cfg = PeftConfig.from_pretrained(adapter_dir)
     model = PeftModel(model, peft_cfg)
 
+    # -------------------- DEBUG ---------------------------------------
     # 1) Inspect what PEFT expects (the wrapped model's LoRA keys)
-    # msd = model.state_dict()
-    # expected_lora = [k for k in msd.keys() if "lora_" in k]
-    # print("expected lora keys:", len(expected_lora))
-    # print("sample expected:", expected_lora[:5])
+    msd = model.state_dict()
+    expected_lora = [k for k in msd.keys() if "lora_" in k]
+    print("expected lora keys:", len(expected_lora))
+    print("sample expected:", expected_lora[:5])
+    # ----------------------------------------------------------------
     
     # load the adapter weights explicitly
     if adapter_file.endswith(".safetensors"):
@@ -161,35 +163,38 @@ def main():
         adapter_sd = torch.load(adapter_file, map_location="cpu")
 
     load_result = model.load_state_dict(adapter_sd, strict=False)
+
+    # -------------------- DEBUG ---------------------------------------
     
-    # bad = [(k, tuple(v.shape)) for k, v in adapter_sd.items() if any(d == 0 for d in v.shape)]
-    # print("zero-sized adapter tensors:", len(bad))
-    # print("sample:", bad[:5])
+    bad = [(k, tuple(v.shape)) for k, v in adapter_sd.items() if any(d == 0 for d in v.shape)]
+    print("zero-sized adapter tensors:", len(bad))
+    print("sample:", bad[:5])
 
     # 2) Inspect what's in the adapter file
-    # adapter_lora = [k for k in adapter_sd.keys() if "lora_" in k]
-    # print("adapter lora keys:", len(adapter_lora))
-    # print("sample adapter:", adapter_lora[:5])
+    adapter_lora = [k for k in adapter_sd.keys() if "lora_" in k]
+    print("adapter lora keys:", len(adapter_lora))
+    print("sample adapter:", adapter_lora[:5])
     
     # 3) Show the first few 'unexpected' and whether any missing are actually LoRA
-    # missing = getattr(load_result, "missing_keys", load_result[0])
-    # unexpected = getattr(load_result, "unexpected_keys", load_result[1])
+    missing = getattr(load_result, "missing_keys", load_result[0])
+    unexpected = getattr(load_result, "unexpected_keys", load_result[1])
     
-    # missing_lora = [k for k in missing if "lora_" in k]
-    # print("LoRA load -> missing:", len(missing), "unexpected:", len(unexpected))
-    # print("missing_lora (first 5):", missing_lora[:5])
-    # print("unexpected (first 5):", unexpected[:5])
+    missing_lora = [k for k in missing if "lora_" in k]
+    print("LoRA load -> missing:", len(missing), "unexpected:", len(unexpected))
+    print("missing_lora (first 5):", missing_lora[:5])
+    print("unexpected (first 5):", unexpected[:5])
     
-    # missing = getattr(load_result, "missing_keys", load_result[0])
-    # unexpected = getattr(load_result, "unexpected_keys", load_result[1])
+    missing = getattr(load_result, "missing_keys", load_result[0])
+    unexpected = getattr(load_result, "unexpected_keys", load_result[1])
     
-    # print(f"LoRA load -> missing: {len(missing)}, unexpected: {len(unexpected)}")
+    print(f"LoRA load -> missing: {len(missing)}, unexpected: {len(unexpected)}")
     
     # sanity: keys should be LoRA keys; no embed_tokens/lm_head full weights
     bad = [k for k in adapter_sd.keys() if "lora_" not in k]
     if bad:
         print("WARNING: adapter file contains non-LoRA keys (first 10):", bad[:10])
-
+    # ----------------------------------------------------------------
+    
     print("==> Merging LoRA into base (merge_and_unload)")
     model = model.merge_and_unload()
 
@@ -206,14 +211,6 @@ def main():
     model.config.vocab_size = tok_len
     if hasattr(model.config, "num_new_tokens"):
         model.config.num_new_tokens = 0  # <— IMPORTANT
-    
-    # (Optional but recommended) sanity guard before saving
-    # emb_rows = model.get_input_embeddings().weight.size(0)
-    # print("Final sizes before save:",
-    #       "emb_rows =", emb_rows,
-    #       "config.vocab_size =", model.config.vocab_size,
-    #       "len(tokenizer) =", len(tokenizer))
-    # assert emb_rows == model.config.vocab_size == len(tokenizer), "Vocab/embeddings mismatch — refusing to save."
     
     # 3) save final
     print(f"==> Save merged model to: {targs.output_dir}")

@@ -1,0 +1,16 @@
+{"time":"2025-08-15T15:46:27.686924123+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250815_154627-q3g3d1kk/logs/debug-core.log"}
+{"time":"2025-08-15T15:46:27.794845079+10:00","level":"INFO","msg":"created new stream","id":"q3g3d1kk"}
+{"time":"2025-08-15T15:46:27.79489298+10:00","level":"INFO","msg":"stream: started","id":"q3g3d1kk"}
+{"time":"2025-08-15T15:46:27.794901586+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"q3g3d1kk"}
+{"time":"2025-08-15T15:46:27.79490848+10:00","level":"INFO","msg":"sender: started","stream_id":"q3g3d1kk"}
+{"time":"2025-08-15T15:46:27.794918988+10:00","level":"INFO","msg":"handler: started","stream_id":"q3g3d1kk"}
+{"time":"2025-08-15T15:46:28.175204619+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-15T16:00:01.049562949+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-15T16:00:01.050365949+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-15T16:00:02.049827469+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.438482922,"progress":"6.4KB/6.4KB"},{"desc":"uploading config.yaml","runtime_seconds":0.221586616,"progress":"972B/972B"}],"total_operations":2}}
+{"time":"2025-08-15T16:00:02.205622506+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-15T16:00:03.494859081+10:00","level":"INFO","msg":"stream: closing","id":"q3g3d1kk"}
+{"time":"2025-08-15T16:00:03.494931215+10:00","level":"INFO","msg":"handler: closed","stream_id":"q3g3d1kk"}
+{"time":"2025-08-15T16:00:03.49495421+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"q3g3d1kk"}
+{"time":"2025-08-15T16:00:03.495023693+10:00","level":"INFO","msg":"sender: closed","stream_id":"q3g3d1kk"}
+{"time":"2025-08-15T16:00:03.503609389+10:00","level":"INFO","msg":"stream: closed","id":"q3g3d1kk"}

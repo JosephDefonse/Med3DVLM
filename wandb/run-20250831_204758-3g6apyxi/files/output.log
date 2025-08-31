@@ -1,0 +1,772 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2000064
+                                                                                                                             
+{'loss': 13.2879, 'grad_norm': 118.21159181733967, 'learning_rate': 0.0, 'epoch': 0.01}
+{'loss': 13.6501, 'grad_norm': 102.89447115022186, 'learning_rate': 1.4285714285714286e-06, 'epoch': 0.03}
+{'loss': 14.3056, 'grad_norm': 122.51052685123928, 'learning_rate': 2.8571428571428573e-06, 'epoch': 0.04}
+{'loss': 14.1652, 'grad_norm': 151.23453117106843, 'learning_rate': 4.2857142857142855e-06, 'epoch': 0.06}
+{'loss': 14.1418, 'grad_norm': 120.66530720520686, 'learning_rate': 5.7142857142857145e-06, 'epoch': 0.07}
+{'loss': 13.2099, 'grad_norm': 175.7130004828501, 'learning_rate': 7.142857142857143e-06, 'epoch': 0.09}
+{'loss': 12.7986, 'grad_norm': 138.20856765734896, 'learning_rate': 8.571428571428571e-06, 'epoch': 0.1}
+{'loss': 11.6983, 'grad_norm': 136.20678189318838, 'learning_rate': 9.999999999999999e-06, 'epoch': 0.12}
+{'loss': 8.8884, 'grad_norm': 68.90627444608985, 'learning_rate': 1.1428571428571429e-05, 'epoch': 0.13}
+{'loss': 8.1944, 'grad_norm': 61.43614494009561, 'learning_rate': 1.2857142857142857e-05, 'epoch': 0.15}
+{'loss': 8.3158, 'grad_norm': 60.438054583311654, 'learning_rate': 1.4285714285714285e-05, 'epoch': 0.16}
+{'loss': 5.9467, 'grad_norm': 58.21887939947416, 'learning_rate': 1.5714285714285715e-05, 'epoch': 0.18}
+{'loss': 5.0324, 'grad_norm': 67.11336177826549, 'learning_rate': 1.7142857142857142e-05, 'epoch': 0.19}
+{'loss': 3.6908, 'grad_norm': 61.557436516907245, 'learning_rate': 1.8571428571428572e-05, 'epoch': 0.21}
+{'loss': 2.5602, 'grad_norm': 54.00036045252366, 'learning_rate': 1.9999999999999998e-05, 'epoch': 0.22}
+{'loss': 1.8022, 'grad_norm': 37.87233048735174, 'learning_rate': 2.1428571428571428e-05, 'epoch': 0.24}
+{'loss': 0.7943, 'grad_norm': 20.343772708658186, 'learning_rate': 2.2857142857142858e-05, 'epoch': 0.25}
+{'loss': 0.5055, 'grad_norm': 13.678317572152102, 'learning_rate': 2.4285714285714288e-05, 'epoch': 0.27}
+{'loss': 0.4222, 'grad_norm': 7.5562385347182, 'learning_rate': 2.5714285714285714e-05, 'epoch': 0.28}
+{'loss': 0.4316, 'grad_norm': 12.882451853078393, 'learning_rate': 2.7142857142857144e-05, 'epoch': 0.3}
+{'loss': 0.4044, 'grad_norm': 9.24225899349854, 'learning_rate': 2.857142857142857e-05, 'epoch': 0.31}
+{'loss': 0.3878, 'grad_norm': 6.58807791665543, 'learning_rate': 3e-05, 'epoch': 0.33}
+{'loss': 0.3723, 'grad_norm': 7.296454803276463, 'learning_rate': 2.999924924524794e-05, 'epoch': 0.34}
+{'loss': 0.4493, 'grad_norm': 18.1740032300932, 'learning_rate': 2.999699705614279e-05, 'epoch': 0.36}
+{'loss': 0.4559, 'grad_norm': 12.806549520346156, 'learning_rate': 2.99932436581301e-05, 'epoch': 0.37}
+{'loss': 0.4424, 'grad_norm': 17.580305272702, 'learning_rate': 2.99879894269274e-05, 'epoch': 0.39}
+{'loss': 0.3389, 'grad_norm': 17.36403141673557, 'learning_rate': 2.998123488848655e-05, 'epoch': 0.4}
+{'loss': 0.2105, 'grad_norm': 8.574570116890172, 'learning_rate': 2.9972980718941133e-05, 'epoch': 0.42}
+{'loss': 0.3316, 'grad_norm': 7.245470484815617, 'learning_rate': 2.9963227744538754e-05, 'epoch': 0.43}
+{'loss': 0.371, 'grad_norm': 9.486437969009877, 'learning_rate': 2.9951976941558322e-05, 'epoch': 0.45}
+{'loss': 0.3383, 'grad_norm': 10.644333748678678, 'learning_rate': 2.9939229436212358e-05, 'epoch': 0.46}
+{'loss': 0.4245, 'grad_norm': 14.555950289887653, 'learning_rate': 2.992498650453421e-05, 'epoch': 0.48}
+{'loss': 0.199, 'grad_norm': 4.5294918218353715, 'learning_rate': 2.9909249572250366e-05, 'epoch': 0.49}
+{'loss': 0.2927, 'grad_norm': 5.4355992427159405, 'learning_rate': 2.9892020214637724e-05, 'epoch': 0.51}
+{'loss': 0.6849, 'grad_norm': 20.043764227648122, 'learning_rate': 2.9873300156365898e-05, 'epoch': 0.52}
+{'loss': 0.4168, 'grad_norm': 5.209029452192107, 'learning_rate': 2.9853091271324574e-05, 'epoch': 0.54}
+{'loss': 0.394, 'grad_norm': 7.699398786999578, 'learning_rate': 2.9831395582435955e-05, 'epoch': 0.55}
+{'loss': 0.3506, 'grad_norm': 4.399588888339138, 'learning_rate': 2.9808215261452245e-05, 'epoch': 0.57}
+{'loss': 0.3453, 'grad_norm': 7.712454637511375, 'learning_rate': 2.978355262873826e-05, 'epoch': 0.58}
+{'loss': 0.3808, 'grad_norm': 5.038070128178177, 'learning_rate': 2.9757410153039167e-05, 'epoch': 0.6}
+{'loss': 0.4102, 'grad_norm': 7.190533567844465, 'learning_rate': 2.9729790451233337e-05, 'epoch': 0.61}
+{'loss': 0.346, 'grad_norm': 3.3233342638409544, 'learning_rate': 2.970069628807043e-05, 'epoch': 0.63}
+{'loss': 0.3877, 'grad_norm': 6.096121672035183, 'learning_rate': 2.9670130575894612e-05, 'epoch': 0.64}
+{'loss': 0.3129, 'grad_norm': 2.268202657143815, 'learning_rate': 2.963809637435303e-05, 'epoch': 0.66}
+{'loss': 0.2758, 'grad_norm': 4.947333385873007, 'learning_rate': 2.9604596890089567e-05, 'epoch': 0.67}
+{'loss': 0.3527, 'grad_norm': 2.9084605911510995, 'learning_rate': 2.9569635476423813e-05, 'epoch': 0.69}
+{'loss': 0.3571, 'grad_norm': 2.717138314186092, 'learning_rate': 2.9533215633015434e-05, 'epoch': 0.7}
+{'loss': 0.3775, 'grad_norm': 6.9091239130550575, 'learning_rate': 2.9495341005513836e-05, 'epoch': 0.72}
+{'loss': 0.3545, 'grad_norm': 2.6042725718017903, 'learning_rate': 2.9456015385193215e-05, 'epoch': 0.73}
+{'loss': 0.3365, 'grad_norm': 3.8561172148313143, 'learning_rate': 2.9415242708573094e-05, 'epoch': 0.75}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+
+=== compute_metrics DEBUG ===
+[0] REF:  A
+[0] HYP:  B
+[0] ref_letter=A  hyp_letter=B
+---
+[1] REF:  A
+[1] HYP:  A
+[1] ref_letter=A  hyp_letter=A
+---
+[2] REF:  B
+[2] HYP:  A
+[2] ref_letter=B  hyp_letter=A
+---
+[3] REF:  A
+[3] HYP:  A
+[3] ref_letter=A  hyp_letter=A
+---
+[4] REF:  B
+[4] HYP:  A
+[4] ref_letter=B  hyp_letter=A
+---
+[5] REF:  A
+[5] HYP:  A
+[5] ref_letter=A  hyp_letter=A
+---
+{'eval_loss': 0.3560066521167755, 'eval_token_acc': 0.7380952380952381, 'eval_string_acc': 0.47619047619047616, 'eval_choice_acc': 0.47619047619047616, 'eval_runtime': 48.2321, 'eval_samples_per_second': 1.306, 'eval_steps_per_second': 0.332, 'epoch': 0.75}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 16%|█████████████▏                                                                       | 52/335 [06:23<1:32:58, 19.71s/it]wandb: WARNING Tried to log to step 50 that is less than the current step 51. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3204, 'grad_norm': 2.1903662955168643, 'learning_rate': 2.9373027057024232e-05, 'epoch': 0.76}
+{'loss': 0.4223, 'grad_norm': 5.565799160027386, 'learning_rate': 2.93293726563601e-05, 'epoch': 0.78}
+wandb: WARNING Tried to log to step 51 that is less than the current step 52. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 52 that is less than the current step 53. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 16%|██████████████▎                                                                        | 55/335 [06:33<41:39,  8.93s/it]wandb: WARNING Tried to log to step 53 that is less than the current step 54. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3522, 'grad_norm': 2.0190333799927522, 'learning_rate': 2.928428387641386e-05, 'epoch': 0.79}
+{'loss': 0.3175, 'grad_norm': 3.8115188703851324, 'learning_rate': 2.9237765230600956e-05, 'epoch': 0.81}
+{'loss': 0.2819, 'grad_norm': 4.010676223370255, 'learning_rate': 2.918982137546731e-05, 'epoch': 0.82}
+wandb: WARNING Tried to log to step 54 that is less than the current step 55. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 55 that is less than the current step 56. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 17%|███████████████                                                                        | 58/335 [06:43<24:09,  5.23s/it]wandb: WARNING Tried to log to step 56 that is less than the current step 57. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.4122, 'grad_norm': 5.256805515061986, 'learning_rate': 2.9140457110223197e-05, 'epoch': 0.84}
+{'loss': 0.3165, 'grad_norm': 3.2080441170145817, 'learning_rate': 2.908967737626284e-05, 'epoch': 0.85}
+{'loss': 0.3262, 'grad_norm': 2.80872468770341, 'learning_rate': 2.9037487256669793e-05, 'epoch': 0.87}
+wandb: WARNING Tried to log to step 57 that is less than the current step 58. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 58 that is less than the current step 59. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 18%|███████████████▌                                                                       | 60/335 [06:50<19:27,  4.25s/it]wandb: WARNING Tried to log to step 59 that is less than the current step 60. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3284, 'grad_norm': 5.404914977835893, 'learning_rate': 2.8983891975708088e-05, 'epoch': 0.88}
+{'loss': 0.4472, 'grad_norm': 10.166170743507468, 'learning_rate': 2.8928896898299307e-05, 'epoch': 0.9}
+wandb: WARNING Tried to log to step 60 that is less than the current step 61. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 19%|████████████████▎                                                                      | 63/335 [07:15<30:07,  6.64s/it]wandb: WARNING Tried to log to step 61 that is less than the current step 62. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3664, 'grad_norm': 2.02832496366017, 'learning_rate': 2.8872507529485555e-05, 'epoch': 0.91}
+{'loss': 0.3809, 'grad_norm': 4.629432069731948, 'learning_rate': 2.8814729513878365e-05, 'epoch': 0.93}
+{'loss': 0.2873, 'grad_norm': 6.583602827222353, 'learning_rate': 2.8755568635093715e-05, 'epoch': 0.94}
+wandb: WARNING Tried to log to step 62 that is less than the current step 63. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 19%|████████████████▉                                                                      | 65/335 [07:21<22:11,  4.93s/it]wandb: WARNING Tried to log to step 63 that is less than the current step 64. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.405, 'grad_norm': 5.102140615642488, 'learning_rate': 2.8695030815173054e-05, 'epoch': 0.96}
+{'loss': 0.4169, 'grad_norm': 6.524609251339944, 'learning_rate': 2.8633122113990518e-05, 'epoch': 0.97}
+wandb: WARNING Tried to log to step 64 that is less than the current step 65. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 20%|█████████████████▍                                                                     | 67/335 [07:40<29:31,  6.61s/it]wandb: WARNING Tried to log to step 65 that is less than the current step 66. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3537, 'grad_norm': 2.4275995157827244, 'learning_rate': 2.8569848728646313e-05, 'epoch': 0.99}
+{'loss': 0.2821, 'grad_norm': 6.608455297947834, 'learning_rate': 2.850521699284641e-05, 'epoch': 1.0}
+wandb: WARNING Tried to log to step 66 that is less than the current step 67. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 67 that is less than the current step 68. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 21%|██████████████████▏                                                                    | 70/335 [08:12<33:56,  7.69s/it]wandb: WARNING Tried to log to step 68 that is less than the current step 69. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.4085, 'grad_norm': 5.533288417211404, 'learning_rate': 2.843923337626851e-05, 'epoch': 1.01}
+{'loss': 0.3473, 'grad_norm': 1.6663824105168903, 'learning_rate': 2.837190448391444e-05, 'epoch': 1.03}
+{'loss': 0.3399, 'grad_norm': 1.7538177083721154, 'learning_rate': 2.8303237055448984e-05, 'epoch': 1.04}
+wandb: WARNING Tried to log to step 69 that is less than the current step 70. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 21%|██████████████████▍                                                                    | 71/335 [08:21<35:13,  8.01s/it]wandb: WARNING Tried to log to step 70 that is less than the current step 71. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3219, 'grad_norm': 1.4601795625656973, 'learning_rate': 2.8233237964525244e-05, 'epoch': 1.06}
+wandb: WARNING Tried to log to step 71 that is less than the current step 72. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 22%|██████████████████▉                                                                    | 73/335 [08:31<28:12,  6.46s/it]wandb: WARNING Tried to log to step 72 that is less than the current step 73. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3706, 'grad_norm': 2.8903987608975124, 'learning_rate': 2.8161914218096568e-05, 'epoch': 1.07}
+{'loss': 0.3579, 'grad_norm': 3.1320974638932206, 'learning_rate': 2.8089272955715168e-05, 'epoch': 1.09}
+ 22%|███████████████████▍                                                                   | 75/335 [08:44<27:16,  6.29s/it]wandb: WARNING Tried to log to step 73 that is less than the current step 74. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3384, 'grad_norm': 2.8208118858926143, 'learning_rate': 2.8015321448817436e-05, 'epoch': 1.1}
+{'loss': 0.3494, 'grad_norm': 2.0217778571726397, 'learning_rate': 2.7940067099996068e-05, 'epoch': 1.12}
+wandb: WARNING Tried to log to step 74 that is less than the current step 75. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 23%|███████████████████▋                                                                   | 76/335 [08:54<31:59,  7.41s/it]wandb: WARNING Tried to log to step 75 that is less than the current step 76. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.349, 'grad_norm': 3.860536833701612, 'learning_rate': 2.7863517442259058e-05, 'epoch': 1.13}
+wandb: WARNING Tried to log to step 76 that is less than the current step 77. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 24%|████████████████████▌                                                                  | 79/335 [09:04<20:06,  4.71s/it]wandb: WARNING Tried to log to step 77 that is less than the current step 78. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3457, 'grad_norm': 4.111586918446088, 'learning_rate': 2.7785680138275655e-05, 'epoch': 1.15}
+{'loss': 0.3343, 'grad_norm': 2.119954916706335, 'learning_rate': 2.7706562979609297e-05, 'epoch': 1.16}
+{'loss': 0.3348, 'grad_norm': 2.174689886882962, 'learning_rate': 2.7626173885937705e-05, 'epoch': 1.18}
+wandb: WARNING Tried to log to step 78 that is less than the current step 79. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 79 that is less than the current step 80. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 24%|█████████████████████                                                                  | 81/335 [09:11<16:56,  4.00s/it]wandb: WARNING Tried to log to step 80 that is less than the current step 81. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3321, 'grad_norm': 1.4162790699916599, 'learning_rate': 2.7544520904260087e-05, 'epoch': 1.19}
+{'loss': 0.3755, 'grad_norm': 3.6533331645963885, 'learning_rate': 2.7461612208091642e-05, 'epoch': 1.21}
+ 24%|█████████████████████▎                                                                 | 82/335 [09:23<27:48,  6.60s/it]wandb: WARNING Tried to log to step 81 that is less than the current step 82. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3657, 'grad_norm': 2.3764237375882855, 'learning_rate': 2.7377456096645395e-05, 'epoch': 1.22}
+wandb: WARNING Tried to log to step 82 that is less than the current step 83. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 25%|█████████████████████▌                                                                 | 83/335 [09:27<23:32,  5.61s/it]wandb: WARNING Tried to log to step 83 that is less than the current step 84. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3557, 'grad_norm': 3.4086652090611396, 'learning_rate': 2.7292060994001417e-05, 'epoch': 1.24}
+ 26%|██████████████████████▎                                                                | 86/335 [09:54<27:38,  6.66s/it]wandb: WARNING Tried to log to step 84 that is less than the current step 85. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3438, 'grad_norm': 1.3466885278666707, 'learning_rate': 2.7205435448263596e-05, 'epoch': 1.25}
+{'loss': 0.3588, 'grad_norm': 3.051309011780922, 'learning_rate': 2.7117588130703936e-05, 'epoch': 1.27}
+{'loss': 0.3689, 'grad_norm': 3.2041370890704863, 'learning_rate': 2.70285278348946e-05, 'epoch': 1.28}
+wandb: WARNING Tried to log to step 85 that is less than the current step 86. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 86 that is less than the current step 87. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 27%|███████████████████████▎                                                               | 90/335 [10:15<21:26,  5.25s/it]wandb: WARNING Tried to log to step 87 that is less than the current step 88. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3258, 'grad_norm': 2.6783034011872577, 'learning_rate': 2.6938263475827617e-05, 'epoch': 1.3}
+{'loss': 0.3635, 'grad_norm': 1.9233958613812723, 'learning_rate': 2.684680408902253e-05, 'epoch': 1.31}
+{'loss': 0.3486, 'grad_norm': 3.9872761085219666, 'learning_rate': 2.6754158829621894e-05, 'epoch': 1.33}
+{'loss': 0.3333, 'grad_norm': 2.4332059555122076, 'learning_rate': 2.6660336971474892e-05, 'epoch': 1.34}
+wandb: WARNING Tried to log to step 88 that is less than the current step 89. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 89 that is less than the current step 90. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 28%|████████████████████████▏                                                              | 93/335 [10:25<16:01,  3.97s/it]wandb: WARNING Tried to log to step 90 that is less than the current step 91. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3324, 'grad_norm': 2.378180001231689, 'learning_rate': 2.6565347906208963e-05, 'epoch': 1.36}
+{'loss': 0.3597, 'grad_norm': 1.7068391363343645, 'learning_rate': 2.646920114228972e-05, 'epoch': 1.37}
+{'loss': 0.3485, 'grad_norm': 2.54957985193544, 'learning_rate': 2.6371906304069162e-05, 'epoch': 1.39}
+wandb: WARNING Tried to log to step 91 that is less than the current step 92. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 92 that is less than the current step 93. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 28%|████████████████████████▋                                                              | 95/335 [10:31<14:31,  3.63s/it]wandb: WARNING Tried to log to step 93 that is less than the current step 94. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3479, 'grad_norm': 2.6862075212924195, 'learning_rate': 2.6273473130822238e-05, 'epoch': 1.4}
+{'loss': 0.3558, 'grad_norm': 2.5903767921464658, 'learning_rate': 2.6173911475771956e-05, 'epoch': 1.42}
+wandb: WARNING Tried to log to step 94 that is less than the current step 95. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 29%|█████████████████████████▏                                                             | 97/335 [11:02<34:00,  8.57s/it]wandb: WARNING Tried to log to step 95 that is less than the current step 96. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3478, 'grad_norm': 2.236086386094611, 'learning_rate': 2.607323130510307e-05, 'epoch': 1.43}
+{'loss': 0.3559, 'grad_norm': 2.0761284739776715, 'learning_rate': 2.5971442696964457e-05, 'epoch': 1.45}
+wandb: WARNING Tried to log to step 96 that is less than the current step 97. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 97 that is less than the current step 98. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 30%|█████████████████████████▋                                                             | 99/335 [11:09<23:07,  5.88s/it]wandb: WARNING Tried to log to step 98 that is less than the current step 99. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.353, 'grad_norm': 2.21148446321345, 'learning_rate': 2.5868555840460282e-05, 'epoch': 1.46}
+{'loss': 0.3559, 'grad_norm': 1.8330796105109932, 'learning_rate': 2.5764581034630077e-05, 'epoch': 1.48}
+wandb: WARNING Tried to log to step 99 that is less than the current step 100. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 30%|█████████████████████████▋                                                            | 100/335 [11:16<24:26,  6.24s/it]wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3675, 'grad_norm': 2.4955238613008053, 'learning_rate': 2.5659528687417785e-05, 'epoch': 1.49}
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 30%|█████████████████████████▋                                                            | 100/335 [12:04<24:26,  6.24s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.3526456952095032, 'eval_token_acc': 0.746031746031746, 'eval_string_acc': 0.49206349206349204, 'eval_choice_acc': 0.49206349206349204, 'eval_runtime': 47.9485, 'eval_samples_per_second': 1.314, 'eval_steps_per_second': 0.334, 'epoch': 1.49}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 100 that is less than the current step 102. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 31%|██████████████████████████▍                                                           | 103/335 [12:33<54:53, 14.20s/it]wandb: WARNING Tried to log to step 101 that is less than the current step 103. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3405, 'grad_norm': 3.4961662964391307, 'learning_rate': 2.5553409314629914e-05, 'epoch': 1.51}
+{'loss': 0.349, 'grad_norm': 2.0300315420121042, 'learning_rate': 2.5446233538882924e-05, 'epoch': 1.52}
+{'loss': 0.3376, 'grad_norm': 1.082955770264316, 'learning_rate': 2.533801208853988e-05, 'epoch': 1.54}
+wandb: WARNING Tried to log to step 102 that is less than the current step 104. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 103 that is less than the current step 105. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 32%|███████████████████████████▏                                                          | 106/335 [12:43<26:51,  7.04s/it]wandb: WARNING Tried to log to step 104 that is less than the current step 106. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3758, 'grad_norm': 3.8471331826206203, 'learning_rate': 2.5228755796636525e-05, 'epoch': 1.55}
+{'loss': 0.3414, 'grad_norm': 1.8324150038669638, 'learning_rate': 2.511847559979691e-05, 'epoch': 1.57}
+{'loss': 0.3652, 'grad_norm': 3.745470884439437, 'learning_rate': 2.5007182537138602e-05, 'epoch': 1.58}
+wandb: WARNING Tried to log to step 105 that is less than the current step 107. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 106 that is less than the current step 108. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 32%|███████████████████████████▋                                                          | 108/335 [12:50<19:24,  5.13s/it]wandb: WARNING Tried to log to step 107 that is less than the current step 109. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3404, 'grad_norm': 1.8999658071222305, 'learning_rate': 2.48948877491677e-05, 'epoch': 1.6}
+{'loss': 0.3411, 'grad_norm': 2.3437254887571175, 'learning_rate': 2.478160247666363e-05, 'epoch': 1.61}
+ 33%|███████████████████████████▉                                                          | 109/335 [13:04<29:17,  7.78s/it]wandb: WARNING Tried to log to step 108 that is less than the current step 110. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.348, 'grad_norm': 3.603871138984702, 'learning_rate': 2.4667338059553942e-05, 'epoch': 1.63}
+wandb: WARNING Tried to log to step 109 that is less than the current step 111. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 33%|████████████████████████████▊                                                         | 112/335 [13:14<17:57,  4.83s/it]wandb: WARNING Tried to log to step 110 that is less than the current step 112. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3448, 'grad_norm': 2.191537833843028, 'learning_rate': 2.455210593577919e-05, 'epoch': 1.64}
+{'loss': 0.3562, 'grad_norm': 2.6110664109195327, 'learning_rate': 2.4435917640147983e-05, 'epoch': 1.66}
+{'loss': 0.3443, 'grad_norm': 1.8107522797030742, 'learning_rate': 2.4318784803182317e-05, 'epoch': 1.67}
+wandb: WARNING Tried to log to step 111 that is less than the current step 113. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 112 that is less than the current step 114. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 34%|█████████████████████████████▌                                                        | 115/335 [13:34<19:33,  5.33s/it]wandb: WARNING Tried to log to step 113 that is less than the current step 115. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3332, 'grad_norm': 3.1065083951276082, 'learning_rate': 2.42007191499534e-05, 'epoch': 1.69}
+{'loss': 0.3499, 'grad_norm': 2.4526459466912662, 'learning_rate': 2.4081732498907923e-05, 'epoch': 1.7}
+{'loss': 0.3454, 'grad_norm': 2.1427347571354183, 'learning_rate': 2.3961836760685047e-05, 'epoch': 1.72}
+wandb: WARNING Tried to log to step 114 that is less than the current step 116. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 115 that is less than the current step 117. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 35%|██████████████████████████████                                                        | 117/335 [13:44<19:18,  5.31s/it]wandb: WARNING Tried to log to step 116 that is less than the current step 118. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3437, 'grad_norm': 2.1797975630697506, 'learning_rate': 2.3841043936924138e-05, 'epoch': 1.73}
+{'loss': 0.3613, 'grad_norm': 3.739643779454785, 'learning_rate': 2.3719366119063385e-05, 'epoch': 1.75}
+wandb: WARNING Tried to log to step 117 that is less than the current step 119. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 36%|██████████████████████████████▊                                                       | 120/335 [13:54<14:19,  4.00s/it]wandb: WARNING Tried to log to step 118 that is less than the current step 120. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3522, 'grad_norm': 2.1560775397897736, 'learning_rate': 2.3596815487129456e-05, 'epoch': 1.76}
+{'loss': 0.3111, 'grad_norm': 1.5617909424282834, 'learning_rate': 2.347340430851826e-05, 'epoch': 1.78}
+{'loss': 0.3488, 'grad_norm': 6.568555679273926, 'learning_rate': 2.3349144936766957e-05, 'epoch': 1.79}
+wandb: WARNING Tried to log to step 119 that is less than the current step 121. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 120 that is less than the current step 122. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 37%|███████████████████████████████▊                                                      | 124/335 [14:26<18:58,  5.40s/it]wandb: WARNING Tried to log to step 121 that is less than the current step 123. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.322, 'grad_norm': 1.9209965941290794, 'learning_rate': 2.3224049810317404e-05, 'epoch': 1.81}
+{'loss': 0.3906, 'grad_norm': 3.287162703727356, 'learning_rate': 2.3098131451271016e-05, 'epoch': 1.82}
+{'loss': 0.3596, 'grad_norm': 3.455806517810019, 'learning_rate': 2.297140246413531e-05, 'epoch': 1.84}
+{'loss': 0.3813, 'grad_norm': 2.4016318098568523, 'learning_rate': 2.2843875534562207e-05, 'epoch': 1.85}
+wandb: WARNING Tried to log to step 122 that is less than the current step 124. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 123 that is less than the current step 125. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 38%|████████████████████████████████▎                                                     | 126/335 [14:34<16:27,  4.72s/it]wandb: WARNING Tried to log to step 124 that is less than the current step 126. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3371, 'grad_norm': 1.659742672624578, 'learning_rate': 2.2715563428078148e-05, 'epoch': 1.87}
+{'loss': 0.3659, 'grad_norm': 2.397631041448581, 'learning_rate': 2.2586478988806298e-05, 'epoch': 1.88}
+wandb: WARNING Tried to log to step 125 that is less than the current step 127. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 38%|████████████████████████████████▌                                                     | 127/335 [14:44<21:34,  6.22s/it]wandb: WARNING Tried to log to step 126 that is less than the current step 128. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3528, 'grad_norm': 4.733767701309368, 'learning_rate': 2.2456635138180815e-05, 'epoch': 1.9}
+wandb: WARNING Tried to log to step 127 that is less than the current step 129. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 39%|█████████████████████████████████▎                                                    | 130/335 [14:54<14:41,  4.30s/it]wandb: WARNING Tried to log to step 128 that is less than the current step 130. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3299, 'grad_norm': 4.547504386857571, 'learning_rate': 2.2326044873653417e-05, 'epoch': 1.91}
+{'loss': 0.3491, 'grad_norm': 4.029590597320385, 'learning_rate': 2.2194721267392327e-05, 'epoch': 1.93}
+{'loss': 0.3428, 'grad_norm': 1.6147524652918015, 'learning_rate': 2.2062677464973737e-05, 'epoch': 1.94}
+wandb: WARNING Tried to log to step 129 that is less than the current step 131. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 39%|█████████████████████████████████▋                                                    | 131/335 [15:03<19:50,  5.84s/it]wandb: WARNING Tried to log to step 130 that is less than the current step 132. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3809, 'grad_norm': 5.491077066407913, 'learning_rate': 2.1929926684065932e-05, 'epoch': 1.96}
+wandb: WARNING Tried to log to step 131 that is less than the current step 133. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 40%|██████████████████████████████████▍                                                   | 134/335 [15:12<12:51,  3.84s/it]wandb: WARNING Tried to log to step 132 that is less than the current step 134. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3454, 'grad_norm': 2.3185295712783196, 'learning_rate': 2.1796482213106203e-05, 'epoch': 1.97}
+{'loss': 0.3601, 'grad_norm': 1.3374799650298177, 'learning_rate': 2.166235740997063e-05, 'epoch': 1.99}
+{'loss': 0.38, 'grad_norm': 4.607938488079681, 'learning_rate': 2.1527565700637005e-05, 'epoch': 2.0}
+wandb: WARNING Tried to log to step 133 that is less than the current step 135. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 41%|██████████████████████████████████▉                                                   | 136/335 [15:43<28:45,  8.67s/it]wandb: WARNING Tried to log to step 134 that is less than the current step 136. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3327, 'grad_norm': 2.7974709719394792, 'learning_rate': 2.139212057784082e-05, 'epoch': 2.01}
+{'loss': 0.3406, 'grad_norm': 2.3367364412285054, 'learning_rate': 2.1256035599724704e-05, 'epoch': 2.03}
+wandb: WARNING Tried to log to step 135 that is less than the current step 137. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 136 that is less than the current step 138. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 41%|███████████████████████████████████▍                                                  | 138/335 [15:49<19:28,  5.93s/it]wandb: WARNING Tried to log to step 137 that is less than the current step 139. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.332, 'grad_norm': 4.6262389247776685, 'learning_rate': 2.1119324388481174e-05, 'epoch': 2.04}
+{'loss': 0.3606, 'grad_norm': 3.8045088166213827, 'learning_rate': 2.098200062898911e-05, 'epoch': 2.06}
+wandb: WARNING Tried to log to step 138 that is less than the current step 140. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 42%|████████████████████████████████████▏                                                 | 141/335 [16:14<20:30,  6.34s/it]wandb: WARNING Tried to log to step 139 that is less than the current step 141. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.337, 'grad_norm': 3.055760146749257, 'learning_rate': 2.0844078067443835e-05, 'epoch': 2.07}
+{'loss': 0.3585, 'grad_norm': 2.3916010582193685, 'learning_rate': 2.0705570509981158e-05, 'epoch': 2.09}
+{'loss': 0.3493, 'grad_norm': 1.8331957004103365, 'learning_rate': 2.0566491821295335e-05, 'epoch': 2.1}
+wandb: WARNING Tried to log to step 140 that is less than the current step 142. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 141 that is less than the current step 143. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 43%|████████████████████████████████████▋                                                 | 143/335 [16:35<28:50,  9.01s/it]wandb: WARNING Tried to log to step 142 that is less than the current step 144. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3932, 'grad_norm': 4.829940663140994, 'learning_rate': 2.042685592325123e-05, 'epoch': 2.12}
+{'loss': 0.3236, 'grad_norm': 1.312990833700291, 'learning_rate': 2.0286676793490708e-05, 'epoch': 2.13}
+wandb: WARNING Tried to log to step 143 that is less than the current step 145. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 43%|█████████████████████████████████████▏                                                | 145/335 [16:41<19:17,  6.09s/it]wandb: WARNING Tried to log to step 144 that is less than the current step 146. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3465, 'grad_norm': 2.565723037205223, 'learning_rate': 2.014596846403348e-05, 'epoch': 2.15}
+{'loss': 0.3708, 'grad_norm': 2.842338271782366, 'learning_rate': 2.0004745019872472e-05, 'epoch': 2.16}
+wandb: WARNING Tried to log to step 145 that is less than the current step 147. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 44%|█████████████████████████████████████▉                                                | 148/335 [16:53<14:04,  4.52s/it]wandb: WARNING Tried to log to step 146 that is less than the current step 148. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3573, 'grad_norm': 3.8602756461040144, 'learning_rate': 1.9863020597563934e-05, 'epoch': 2.18}
+{'loss': 0.3506, 'grad_norm': 1.4516708657520143, 'learning_rate': 1.9720809383812327e-05, 'epoch': 2.19}
+{'loss': 0.3269, 'grad_norm': 1.6902120420906548, 'learning_rate': 1.9578125614050257e-05, 'epoch': 2.21}
+wandb: WARNING Tried to log to step 147 that is less than the current step 149. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 148 that is less than the current step 150. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 44%|██████████████████████████████████████▎                                               | 149/335 [16:56<12:52,  4.15s/it]wandb: WARNING Tried to log to step 149 that is less than the current step 151. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3479, 'grad_norm': 2.11316072963883, 'learning_rate': 1.9434983571013488e-05, 'epoch': 2.22}
+ 45%|██████████████████████████████████████▌                                               | 150/335 [17:06<18:23,  5.96s/it]wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3399, 'grad_norm': 2.378426263005022, 'learning_rate': 1.929139758331122e-05, 'epoch': 2.24}
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 45%|██████████████████████████████████████▌                                               | 150/335 [17:55<18:23,  5.96s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'eval_loss': 0.34305164217948914, 'eval_token_acc': 0.8095238095238095, 'eval_string_acc': 0.6190476190476191, 'eval_choice_acc': 0.6190476190476191, 'eval_runtime': 48.2946, 'eval_samples_per_second': 1.304, 'eval_steps_per_second': 0.331, 'epoch': 2.24}
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 150 that is less than the current step 152. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 45%|███████████████████████████████████████                                               | 152/335 [18:24<59:32, 19.52s/it]wandb: WARNING Tried to log to step 150 that is less than the current step 153. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3405, 'grad_norm': 3.335411887515796, 'learning_rate': 1.9147382023991795e-05, 'epoch': 2.25}
+{'loss': 0.3406, 'grad_norm': 1.877824197299495, 'learning_rate': 1.900295130910396e-05, 'epoch': 2.27}
+wandb: WARNING Tried to log to step 151 that is less than the current step 154. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 152 that is less than the current step 155. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 46%|███████████████████████████████████████▊                                              | 155/335 [18:34<26:34,  8.86s/it]wandb: WARNING Tried to log to step 153 that is less than the current step 156. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3369, 'grad_norm': 1.940160887906719, 'learning_rate': 1.8858119896253775e-05, 'epoch': 2.28}
+{'loss': 0.3524, 'grad_norm': 2.7724055245288093, 'learning_rate': 1.871290228315744e-05, 'epoch': 2.3}
+{'loss': 0.311, 'grad_norm': 1.7930930227280168, 'learning_rate': 1.8567313006190042e-05, 'epoch': 2.31}
+wandb: WARNING Tried to log to step 154 that is less than the current step 157. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 155 that is less than the current step 158. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 47%|████████████████████████████████████████▌                                             | 158/335 [18:44<15:22,  5.21s/it]wandb: WARNING Tried to log to step 156 that is less than the current step 159. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3413, 'grad_norm': 2.135889184142174, 'learning_rate': 1.8421366638930447e-05, 'epoch': 2.33}
+{'loss': 0.334, 'grad_norm': 1.4746179349654143, 'learning_rate': 1.8275077790702482e-05, 'epoch': 2.34}
+{'loss': 0.3608, 'grad_norm': 3.4704695111122175, 'learning_rate': 1.812846110511256e-05, 'epoch': 2.36}
+wandb: WARNING Tried to log to step 157 that is less than the current step 160. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 158 that is less than the current step 161. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 48%|█████████████████████████████████████████▎                                            | 161/335 [18:54<11:28,  3.96s/it]wandb: WARNING Tried to log to step 159 that is less than the current step 162. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3475, 'grad_norm': 1.5881011474084807, 'learning_rate': 1.7981531258583796e-05, 'epoch': 2.37}
+{'loss': 0.3382, 'grad_norm': 1.4951446446323189, 'learning_rate': 1.7834302958886926e-05, 'epoch': 2.39}
+{'loss': 0.354, 'grad_norm': 2.943705634972604, 'learning_rate': 1.7686790943668037e-05, 'epoch': 2.4}
+wandb: WARNING Tried to log to step 160 that is less than the current step 163. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 161 that is less than the current step 164. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 49%|██████████████████████████████████████████                                            | 164/335 [19:04<10:03,  3.53s/it]wandb: WARNING Tried to log to step 162 that is less than the current step 165. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3336, 'grad_norm': 1.9473535900912877, 'learning_rate': 1.7539009978973312e-05, 'epoch': 2.42}
+{'loss': 0.3568, 'grad_norm': 1.6149881715379353, 'learning_rate': 1.7390974857770956e-05, 'epoch': 2.43}
+{'loss': 0.3376, 'grad_norm': 2.4908343913442166, 'learning_rate': 1.7242700398470394e-05, 'epoch': 2.45}
+wandb: WARNING Tried to log to step 163 that is less than the current step 166. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 164 that is less than the current step 167. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 50%|██████████████████████████████████████████▌                                           | 166/335 [19:21<16:08,  5.73s/it]wandb: WARNING Tried to log to step 165 that is less than the current step 168. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3303, 'grad_norm': 2.007747728268172, 'learning_rate': 1.7094201443438955e-05, 'epoch': 2.46}
+{'loss': 0.3178, 'grad_norm': 2.040516282889996, 'learning_rate': 1.6945492857516126e-05, 'epoch': 2.48}
+ 50%|███████████████████████████████████████████▏                                          | 168/335 [19:45<22:33,  8.10s/it]wandb: WARNING Tried to log to step 166 that is less than the current step 169. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3301, 'grad_norm': 2.0120208748525052, 'learning_rate': 1.6796589526525578e-05, 'epoch': 2.49}
+{'loss': 0.3394, 'grad_norm': 2.280335978644376, 'learning_rate': 1.6647506355785093e-05, 'epoch': 2.51}
+wandb: WARNING Tried to log to step 167 that is less than the current step 170. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 51%|███████████████████████████████████████████▉                                          | 171/335 [19:55<13:31,  4.95s/it]wandb: WARNING Tried to log to step 168 that is less than the current step 171. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3119, 'grad_norm': 1.3808699023909192, 'learning_rate': 1.6498258268614516e-05, 'epoch': 2.52}
+{'loss': 0.3267, 'grad_norm': 2.4405512207426816, 'learning_rate': 1.6348860204841948e-05, 'epoch': 2.54}
+{'loss': 0.3559, 'grad_norm': 2.649681099391392, 'learning_rate': 1.6199327119308226e-05, 'epoch': 2.55}
+wandb: WARNING Tried to log to step 169 that is less than the current step 172. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 170 that is less than the current step 173. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 52%|████████████████████████████████████████████▋                                         | 174/335 [20:05<10:22,  3.87s/it]wandb: WARNING Tried to log to step 171 that is less than the current step 174. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3711, 'grad_norm': 1.762646999876086, 'learning_rate': 1.604967398036996e-05, 'epoch': 2.57}
+{'loss': 0.3337, 'grad_norm': 2.0508985602946015, 'learning_rate': 1.5899915768401172e-05, 'epoch': 2.58}
+{'loss': 0.3331, 'grad_norm': 1.5514277646720667, 'learning_rate': 1.5750067474293778e-05, 'epoch': 2.6}
+wandb: WARNING Tried to log to step 172 that is less than the current step 175. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 173 that is less than the current step 176. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 174 that is less than the current step 177. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 52%|████████████████████████████████████████████▉                                         | 175/335 [20:27<24:53,  9.33s/it]wandb: WARNING Tried to log to step 175 that is less than the current step 178. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3441, 'grad_norm': 2.014852636794675, 'learning_rate': 1.5600144097956955e-05, 'epoch': 2.61}
+ 53%|█████████████████████████████████████████████▋                                        | 178/335 [20:44<16:42,  6.39s/it]wandb: WARNING Tried to log to step 176 that is less than the current step 179. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3357, 'grad_norm': 2.5902109118680605, 'learning_rate': 1.545016064681567e-05, 'epoch': 2.63}
+{'loss': 0.3408, 'grad_norm': 1.4568218004996538, 'learning_rate': 1.5300132134308414e-05, 'epoch': 2.64}
+{'loss': 0.3303, 'grad_norm': 2.3822292373206198, 'learning_rate': 1.5150073578384353e-05, 'epoch': 2.66}
+wandb: WARNING Tried to log to step 177 that is less than the current step 180. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 53%|█████████████████████████████████████████████▉                                        | 179/335 [20:55<20:35,  7.92s/it]wandb: WARNING Tried to log to step 178 that is less than the current step 181. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.337, 'grad_norm': 2.83307922148825, 'learning_rate': 1.5e-05, 'epoch': 2.67}
+ 54%|██████████████████████████████████████████████▋                                       | 182/335 [21:05<12:27,  4.89s/it]wandb: WARNING Tried to log to step 179 that is less than the current step 182. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3221, 'grad_norm': 1.8455265417230413, 'learning_rate': 1.484992642161565e-05, 'epoch': 2.69}
+{'loss': 0.3343, 'grad_norm': 4.3603544894237976, 'learning_rate': 1.4699867865691587e-05, 'epoch': 2.7}
+{'loss': 0.3615, 'grad_norm': 3.111623829855747, 'learning_rate': 1.454983935318433e-05, 'epoch': 2.72}
+wandb: WARNING Tried to log to step 180 that is less than the current step 183. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 181 that is less than the current step 184. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 182 that is less than the current step 185. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 55%|███████████████████████████████████████████████▍                                      | 185/335 [21:23<12:25,  4.97s/it]wandb: WARNING Tried to log to step 183 that is less than the current step 186. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3346, 'grad_norm': 3.226254227372076, 'learning_rate': 1.4399855902043047e-05, 'epoch': 2.73}
+{'loss': 0.3335, 'grad_norm': 1.846586496467738, 'learning_rate': 1.4249932525706226e-05, 'epoch': 2.75}
+{'loss': 0.3527, 'grad_norm': 2.873717685102278, 'learning_rate': 1.410008423159883e-05, 'epoch': 2.76}
+wandb: WARNING Tried to log to step 184 that is less than the current step 187. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 185 that is less than the current step 188. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 56%|████████████████████████████████████████████████▎                                     | 188/335 [21:33<09:29,  3.87s/it]wandb: WARNING Tried to log to step 186 that is less than the current step 189. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3414, 'grad_norm': 3.2324057505154142, 'learning_rate': 1.3950326019630043e-05, 'epoch': 2.78}
+{'loss': 0.3691, 'grad_norm': 4.378884949775099, 'learning_rate': 1.3800672880691777e-05, 'epoch': 2.79}
+{'loss': 0.3337, 'grad_norm': 1.942513147493008, 'learning_rate': 1.3651139795158051e-05, 'epoch': 2.81}
+wandb: WARNING Tried to log to step 187 that is less than the current step 190. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 56%|████████████████████████████████████████████████▌                                     | 189/335 [21:45<15:51,  6.52s/it]wandb: WARNING Tried to log to step 188 that is less than the current step 191. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3137, 'grad_norm': 4.372773279765552, 'learning_rate': 1.3501741731385484e-05, 'epoch': 2.82}
+ 57%|████████████████████████████████████████████████▊                                     | 190/335 [21:49<13:30,  5.59s/it]wandb: WARNING Tried to log to step 189 that is less than the current step 192. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3439, 'grad_norm': 3.4780520617591866, 'learning_rate': 1.335249364421491e-05, 'epoch': 2.84}
+ 57%|█████████████████████████████████████████████████▎                                    | 192/335 [22:02<13:40,  5.74s/it]wandb: WARNING Tried to log to step 190 that is less than the current step 193. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3254, 'grad_norm': 4.233485745092144, 'learning_rate': 1.3203410473474425e-05, 'epoch': 2.85}
+{'loss': 0.3417, 'grad_norm': 2.8155695070170412, 'learning_rate': 1.3054507142483875e-05, 'epoch': 2.87}
+wandb: WARNING Tried to log to step 191 that is less than the current step 194. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 58%|██████████████████████████████████████████████████                                    | 195/335 [22:16<11:04,  4.74s/it]wandb: WARNING Tried to log to step 192 that is less than the current step 195. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3143, 'grad_norm': 2.620617670865286, 'learning_rate': 1.2905798556561049e-05, 'epoch': 2.88}
+{'loss': 0.3171, 'grad_norm': 4.386369624244022, 'learning_rate': 1.2757299601529607e-05, 'epoch': 2.9}
+{'loss': 0.3187, 'grad_norm': 3.005105619431693, 'learning_rate': 1.2609025142229049e-05, 'epoch': 2.91}
+wandb: WARNING Tried to log to step 193 that is less than the current step 196. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 194 that is less than the current step 197. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 59%|██████████████████████████████████████████████████▎                                   | 196/335 [22:19<09:58,  4.31s/it]wandb: WARNING Tried to log to step 195 that is less than the current step 198. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3347, 'grad_norm': 2.507214119327962, 'learning_rate': 1.246099002102669e-05, 'epoch': 2.93}
+ 59%|██████████████████████████████████████████████████▌                                   | 197/335 [22:33<16:26,  7.15s/it]wandb: WARNING Tried to log to step 196 that is less than the current step 199. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3337, 'grad_norm': 4.254713452545106, 'learning_rate': 1.2313209056331969e-05, 'epoch': 2.94}
+wandb: WARNING Tried to log to step 197 that is less than the current step 200. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 60%|███████████████████████████████████████████████████▎                                  | 200/335 [22:42<10:21,  4.60s/it]wandb: WARNING Tried to log to step 198 that is less than the current step 201. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3445, 'grad_norm': 3.672054578884951, 'learning_rate': 1.2165697041113075e-05, 'epoch': 2.96}
+{'loss': 0.3221, 'grad_norm': 4.525681604314801, 'learning_rate': 1.2018468741416207e-05, 'epoch': 2.97}
+{'loss': 0.3187, 'grad_norm': 4.357248495683209, 'learning_rate': 1.1871538894887443e-05, 'epoch': 2.99}
+wandb: WARNING Tried to log to step 199 that is less than the current step 202. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 60%|███████████████████████████████████████████████████▎                                  | 200/335 [23:30<10:21,  4.60s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.33690014481544495, 'eval_token_acc': 0.7777777777777778, 'eval_string_acc': 0.5555555555555556, 'eval_choice_acc': 0.5555555555555556, 'eval_runtime': 47.8277, 'eval_samples_per_second': 1.317, 'eval_steps_per_second': 0.335, 'epoch': 2.99}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 200 that is less than the current step 203. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 60%|███████████████████████████████████████████████████▌                                  | 201/335 [23:52<53:49, 24.10s/it]wandb: WARNING Tried to log to step 200 that is less than the current step 204. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3257, 'grad_norm': 3.1703974342139563, 'learning_rate': 1.172492220929752e-05, 'epoch': 3.0}
+ 61%|████████████████████████████████████████████████████                                  | 203/335 [24:34<46:02, 20.93s/it]wandb: WARNING Tried to log to step 201 that is less than the current step 205. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3638, 'grad_norm': 4.693994085585824, 'learning_rate': 1.1578633361069559e-05, 'epoch': 3.01}
+{'loss': 0.3958, 'grad_norm': 9.972175167248537, 'learning_rate': 1.1432686993809964e-05, 'epoch': 3.03}
+wandb: WARNING Tried to log to step 202 that is less than the current step 206. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 203 that is less than the current step 207. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 61%|████████████████████████████████████████████████████▋                                 | 205/335 [24:41<25:50, 11.93s/it]wandb: WARNING Tried to log to step 204 that is less than the current step 208. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3329, 'grad_norm': 5.947796259967341, 'learning_rate': 1.1287097716842561e-05, 'epoch': 3.04}
+{'loss': 0.3132, 'grad_norm': 4.446607831860364, 'learning_rate': 1.114188010374623e-05, 'epoch': 3.06}
+ 62%|█████████████████████████████████████████████████████▏                                | 207/335 [24:54<18:52,  8.85s/it]wandb: WARNING Tried to log to step 205 that is less than the current step 209. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3011, 'grad_norm': 3.0061453173929507, 'learning_rate': 1.0997048690896047e-05, 'epoch': 3.07}
+{'loss': 0.3124, 'grad_norm': 2.2388769553983425, 'learning_rate': 1.085261797600821e-05, 'epoch': 3.09}
+wandb: WARNING Tried to log to step 206 that is less than the current step 210. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 207 that is less than the current step 211. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 62%|█████████████████████████████████████████████████████▋                                | 209/335 [25:00<12:37,  6.01s/it]wandb: WARNING Tried to log to step 208 that is less than the current step 212. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2902, 'grad_norm': 4.277292848897013, 'learning_rate': 1.0708602416688785e-05, 'epoch': 3.1}
+{'loss': 0.3108, 'grad_norm': 2.244827811803792, 'learning_rate': 1.0565016428986518e-05, 'epoch': 3.12}
+ 63%|██████████████████████████████████████████████████████▏                               | 211/335 [25:13<12:09,  5.88s/it]wandb: WARNING Tried to log to step 209 that is less than the current step 213. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3001, 'grad_norm': 3.042137178826926, 'learning_rate': 1.0421874385949744e-05, 'epoch': 3.13}
+{'loss': 0.2879, 'grad_norm': 3.782039378832694, 'learning_rate': 1.0279190616187678e-05, 'epoch': 3.15}
+wandb: WARNING Tried to log to step 210 that is less than the current step 214. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 211 that is less than the current step 215. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 64%|██████████████████████████████████████████████████████▉                               | 214/335 [25:35<14:00,  6.94s/it]wandb: WARNING Tried to log to step 212 that is less than the current step 216. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3889, 'grad_norm': 7.551378449366882, 'learning_rate': 1.0136979402436069e-05, 'epoch': 3.16}
+{'loss': 0.3042, 'grad_norm': 2.6531611834471853, 'learning_rate': 9.99525498012753e-06, 'epoch': 3.18}
+{'loss': 0.3058, 'grad_norm': 2.83655335327132, 'learning_rate': 9.854031535966522e-06, 'epoch': 3.19}
+wandb: WARNING Tried to log to step 213 that is less than the current step 217. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 214 that is less than the current step 218. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 65%|███████████████████████████████████████████████████████▋                              | 217/335 [25:45<08:56,  4.55s/it]wandb: WARNING Tried to log to step 215 that is less than the current step 219. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3397, 'grad_norm': 4.462614673146729, 'learning_rate': 9.713323206509292e-06, 'epoch': 3.21}
+{'loss': 0.2859, 'grad_norm': 4.5905511922241145, 'learning_rate': 9.57314407674877e-06, 'epoch': 3.22}
+{'loss': 0.3075, 'grad_norm': 4.87079548585441, 'learning_rate': 9.433508178704667e-06, 'epoch': 3.24}
+wandb: WARNING Tried to log to step 216 that is less than the current step 220. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 217 that is less than the current step 221. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 66%|████████████████████████████████████████████████████████▍                             | 220/335 [25:54<07:09,  3.74s/it]wandb: WARNING Tried to log to step 218 that is less than the current step 222. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3143, 'grad_norm': 5.914768876840413, 'learning_rate': 9.294429490018846e-06, 'epoch': 3.25}
+{'loss': 0.2987, 'grad_norm': 5.496785326805874, 'learning_rate': 9.15592193255617e-06, 'epoch': 3.27}
+{'loss': 0.2849, 'grad_norm': 3.950170405335472, 'learning_rate': 9.017999371010896e-06, 'epoch': 3.28}
+wandb: WARNING Tried to log to step 219 that is less than the current step 223. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 220 that is less than the current step 224. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 67%|█████████████████████████████████████████████████████████▏                            | 223/335 [26:04<06:27,  3.46s/it]wandb: WARNING Tried to log to step 221 that is less than the current step 225. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3043, 'grad_norm': 6.822561689675908, 'learning_rate': 8.880675611518829e-06, 'epoch': 3.3}
+{'loss': 0.2999, 'grad_norm': 5.991076173879701, 'learning_rate': 8.743964400275304e-06, 'epoch': 3.31}
+{'loss': 0.3155, 'grad_norm': 6.1779514101882445, 'learning_rate': 8.607879422159183e-06, 'epoch': 3.33}
+wandb: WARNING Tried to log to step 222 that is less than the current step 226. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 67%|█████████████████████████████████████████████████████████▊                            | 225/335 [26:14<07:12,  3.94s/it]wandb: WARNING Tried to log to step 223 that is less than the current step 227. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3442, 'grad_norm': 8.594100254691977, 'learning_rate': 8.472434299362999e-06, 'epoch': 3.34}
+{'loss': 0.3013, 'grad_norm': 6.929260845523187, 'learning_rate': 8.33764259002937e-06, 'epoch': 3.36}
+wandb: WARNING Tried to log to step 224 that is less than the current step 228. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 225 that is less than the current step 229. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 68%|██████████████████████████████████████████████████████████▌                           | 228/335 [26:44<11:31,  6.46s/it]wandb: WARNING Tried to log to step 226 that is less than the current step 230. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2793, 'grad_norm': 5.291080838856003, 'learning_rate': 8.203517786893803e-06, 'epoch': 3.37}
+{'loss': 0.287, 'grad_norm': 4.260156968989195, 'learning_rate': 8.07007331593407e-06, 'epoch': 3.39}
+{'loss': 0.3369, 'grad_norm': 10.457253230945748, 'learning_rate': 7.937322535026265e-06, 'epoch': 3.4}
+wandb: WARNING Tried to log to step 227 that is less than the current step 231. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 228 that is less than the current step 232. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 69%|███████████████████████████████████████████████████████████▌                          | 232/335 [27:15<11:39,  6.79s/it]wandb: WARNING Tried to log to step 229 that is less than the current step 233. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2513, 'grad_norm': 10.49662937505655, 'learning_rate': 7.805278732607678e-06, 'epoch': 3.42}
+{'loss': 0.2679, 'grad_norm': 4.136314913888093, 'learning_rate': 7.673955126346589e-06, 'epoch': 3.43}
+{'loss': 0.3165, 'grad_norm': 8.178357620538755, 'learning_rate': 7.543364861819193e-06, 'epoch': 3.45}
+{'loss': 0.3204, 'grad_norm': 9.508015907035583, 'learning_rate': 7.413521011193705e-06, 'epoch': 3.46}
+wandb: WARNING Tried to log to step 230 that is less than the current step 234. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 231 that is less than the current step 235. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 70%|███████████████████████████████████████████████████████████▊                          | 233/335 [27:19<09:46,  5.75s/it]wandb: WARNING Tried to log to step 232 that is less than the current step 236. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3289, 'grad_norm': 5.4783606318740015, 'learning_rate': 7.2844365719218555e-06, 'epoch': 3.48}
+wandb: WARNING Tried to log to step 233 that is less than the current step 237. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 70%|████████████████████████████████████████████████████████████▌                         | 236/335 [27:34<08:07,  4.92s/it]wandb: WARNING Tried to log to step 234 that is less than the current step 238. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2832, 'grad_norm': 5.402480810568514, 'learning_rate': 7.156124465437799e-06, 'epoch': 3.49}
+{'loss': 0.2933, 'grad_norm': 7.190084076897081, 'learning_rate': 7.028597535864695e-06, 'epoch': 3.51}
+{'loss': 0.2979, 'grad_norm': 4.032449764900511, 'learning_rate': 6.901868548728988e-06, 'epoch': 3.52}
+wandb: WARNING Tried to log to step 235 that is less than the current step 239. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 236 that is less than the current step 240. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 71%|█████████████████████████████████████████████████████████████                         | 238/335 [27:46<09:05,  5.62s/it]wandb: WARNING Tried to log to step 237 that is less than the current step 241. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3498, 'grad_norm': 5.491280962457143, 'learning_rate': 6.775950189682599e-06, 'epoch': 3.54}
+{'loss': 0.2753, 'grad_norm': 5.875294140354224, 'learning_rate': 6.650855063233045e-06, 'epoch': 3.55}
+ 72%|█████████████████████████████████████████████████████████████▊                        | 241/335 [27:55<06:25,  4.10s/it]wandb: WARNING Tried to log to step 238 that is less than the current step 242. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3015, 'grad_norm': 11.094330563487349, 'learning_rate': 6.5265956914817475e-06, 'epoch': 3.57}
+{'loss': 0.3949, 'grad_norm': 9.112761284997752, 'learning_rate': 6.403184512870544e-06, 'epoch': 3.58}
+{'loss': 0.3098, 'grad_norm': 5.173183441597862, 'learning_rate': 6.280633880936615e-06, 'epoch': 3.6}
+wandb: WARNING Tried to log to step 239 that is less than the current step 243. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 240 that is less than the current step 244. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 72%|██████████████████████████████████████████████████████████████▏                       | 242/335 [27:59<05:59,  3.86s/it]wandb: WARNING Tried to log to step 241 that is less than the current step 245. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.436, 'grad_norm': 14.895101658124878, 'learning_rate': 6.1589560630758656e-06, 'epoch': 3.61}
+ 73%|██████████████████████████████████████████████████████████████▉                       | 245/335 [28:16<06:46,  4.52s/it]wandb: WARNING Tried to log to step 242 that is less than the current step 246. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3187, 'grad_norm': 9.205843118762376, 'learning_rate': 6.038163239314957e-06, 'epoch': 3.63}
+{'loss': 0.3603, 'grad_norm': 6.710964582165321, 'learning_rate': 5.918267501092079e-06, 'epoch': 3.64}
+{'loss': 0.3364, 'grad_norm': 7.806938275067465, 'learning_rate': 5.799280850046603e-06, 'epoch': 3.66}
+wandb: WARNING Tried to log to step 243 that is less than the current step 247. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 244 that is less than the current step 248. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 73%|███████████████████████████████████████████████████████████████▏                      | 246/335 [28:19<06:09,  4.16s/it]wandb: WARNING Tried to log to step 245 that is less than the current step 249. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2772, 'grad_norm': 10.438253362836337, 'learning_rate': 5.681215196817688e-06, 'epoch': 3.67}
+ 74%|███████████████████████████████████████████████████████████████▍                      | 247/335 [28:35<11:09,  7.61s/it]wandb: WARNING Tried to log to step 246 that is less than the current step 250. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3381, 'grad_norm': 3.7066199815505056, 'learning_rate': 5.564082359852025e-06, 'epoch': 3.69}
+ 75%|████████████████████████████████████████████████████████████████▏                     | 250/335 [28:45<06:46,  4.78s/it]wandb: WARNING Tried to log to step 247 that is less than the current step 251. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.318, 'grad_norm': 12.749790640212208, 'learning_rate': 5.447894064220811e-06, 'epoch': 3.7}
+{'loss': 0.2477, 'grad_norm': 3.1117642394281604, 'learning_rate': 5.3326619404460605e-06, 'epoch': 3.72}
+{'loss': 0.5644, 'grad_norm': 43.070224656405315, 'learning_rate': 5.218397523336375e-06, 'epoch': 3.73}
+wandb: WARNING Tried to log to step 248 that is less than the current step 252. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 249 that is less than the current step 253. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 75%|████████████████████████████████████████████████████████████████▏                     | 250/335 [29:33<06:46,  4.78s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'eval_loss': 0.3403055667877197, 'eval_token_acc': 0.7936507936507936, 'eval_string_acc': 0.5873015873015873, 'eval_choice_acc': 0.5873015873015873, 'eval_runtime': 48.015, 'eval_samples_per_second': 1.312, 'eval_steps_per_second': 0.333, 'epoch': 3.73}
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 250 that is less than the current step 254. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 76%|████████████████████████████████████████████████████████████████▉                     | 253/335 [30:05<19:24, 14.20s/it]wandb: WARNING Tried to log to step 250 that is less than the current step 255. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3053, 'grad_norm': 7.203228818563911, 'learning_rate': 5.105112250832304e-06, 'epoch': 3.75}
+{'loss': 0.2751, 'grad_norm': 7.640681493132314, 'learning_rate': 4.992817462861397e-06, 'epoch': 3.76}
+{'loss': 0.3264, 'grad_norm': 6.023862742131216, 'learning_rate': 4.881524400203095e-06, 'epoch': 3.78}
+wandb: WARNING Tried to log to step 251 that is less than the current step 256. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 252 that is less than the current step 257. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 76%|█████████████████████████████████████████████████████████████████▋                    | 256/335 [30:15<09:16,  7.04s/it]wandb: WARNING Tried to log to step 253 that is less than the current step 258. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.4434, 'grad_norm': 17.88695672016698, 'learning_rate': 4.7712442033634785e-06, 'epoch': 3.79}
+{'loss': 0.3252, 'grad_norm': 9.788597519945998, 'learning_rate': 4.6619879114601255e-06, 'epoch': 3.81}
+{'loss': 0.3153, 'grad_norm': 8.662501400120716, 'learning_rate': 4.553766461117076e-06, 'epoch': 3.82}
+wandb: WARNING Tried to log to step 254 that is less than the current step 259. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 255 that is less than the current step 260. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 77%|██████████████████████████████████████████████████████████████████▏                   | 258/335 [30:22<06:35,  5.13s/it]wandb: WARNING Tried to log to step 256 that is less than the current step 261. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.321, 'grad_norm': 5.373154057387231, 'learning_rate': 4.4465906853700915e-06, 'epoch': 3.84}
+{'loss': 0.3704, 'grad_norm': 7.694261505873597, 'learning_rate': 4.340471312582219e-06, 'epoch': 3.85}
+wandb: WARNING Tried to log to step 257 that is less than the current step 262. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 78%|███████████████████████████████████████████████████████████████████                   | 261/335 [30:35<05:29,  4.46s/it]wandb: WARNING Tried to log to step 258 that is less than the current step 263. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2993, 'grad_norm': 7.440317774277166, 'learning_rate': 4.235418965369924e-06, 'epoch': 3.87}
+{'loss': 0.3236, 'grad_norm': 3.987972302044556, 'learning_rate': 4.1314441595397156e-06, 'epoch': 3.88}
+{'loss': 0.3097, 'grad_norm': 5.485794323427959, 'learning_rate': 4.028557303035543e-06, 'epoch': 3.9}
+wandb: WARNING Tried to log to step 259 that is less than the current step 264. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 260 that is less than the current step 265. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 78%|███████████████████████████████████████████████████████████████████▎                  | 262/335 [30:40<05:26,  4.48s/it]wandb: WARNING Tried to log to step 261 that is less than the current step 266. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3272, 'grad_norm': 7.402098092172327, 'learning_rate': 3.926768694896931e-06, 'epoch': 3.91}
+ 79%|███████████████████████████████████████████████████████████████████▌                  | 263/335 [31:05<12:55, 10.77s/it]wandb: WARNING Tried to log to step 262 that is less than the current step 267. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3125, 'grad_norm': 6.5337440393456, 'learning_rate': 3.826088524228047e-06, 'epoch': 3.93}
+ 79%|████████████████████████████████████████████████████████████████████▎                 | 266/335 [31:15<06:43,  5.84s/it]wandb: WARNING Tried to log to step 263 that is less than the current step 268. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3121, 'grad_norm': 6.416347957658132, 'learning_rate': 3.7265268691777602e-06, 'epoch': 3.94}
+{'loss': 0.2536, 'grad_norm': 9.07209307199009, 'learning_rate': 3.628093695930836e-06, 'epoch': 3.96}
+{'loss': 0.2665, 'grad_norm': 4.584300240324043, 'learning_rate': 3.53079885771028e-06, 'epoch': 3.97}
+wandb: WARNING Tried to log to step 264 that is less than the current step 269. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 265 that is less than the current step 270. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 80%|████████████████████████████████████████████████████████████████████▊                 | 268/335 [31:20<04:42,  4.22s/it]wandb: WARNING Tried to log to step 266 that is less than the current step 271. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3435, 'grad_norm': 8.226857167584031, 'learning_rate': 3.434652093791043e-06, 'epoch': 3.99}
+{'loss': 0.4203, 'grad_norm': 13.951032747874557, 'learning_rate': 3.3396630285251084e-06, 'epoch': 4.0}
+wandb: WARNING Tried to log to step 267 that is less than the current step 272. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 268 that is less than the current step 273. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 81%|█████████████████████████████████████████████████████████████████████▌                | 271/335 [32:04<09:10,  8.60s/it]wandb: WARNING Tried to log to step 269 that is less than the current step 274. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2602, 'grad_norm': 4.218845585431845, 'learning_rate': 3.245841170378106e-06, 'epoch': 4.01}
+{'loss': 0.2217, 'grad_norm': 4.6723680441225, 'learning_rate': 3.153195910977475e-06, 'epoch': 4.03}
+{'loss': 0.2891, 'grad_norm': 8.453432120406552, 'learning_rate': 3.0617365241723854e-06, 'epoch': 4.04}
+wandb: WARNING Tried to log to step 270 that is less than the current step 275. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 82%|██████████████████████████████████████████████████████████████████████▎               | 274/335 [32:16<05:24,  5.32s/it]wandb: WARNING Tried to log to step 271 that is less than the current step 276. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3855, 'grad_norm': 8.443419069207323, 'learning_rate': 2.9714721651054e-06, 'epoch': 4.06}
+{'loss': 0.2456, 'grad_norm': 6.242237319680878, 'learning_rate': 2.882411869296063e-06, 'epoch': 4.07}
+{'loss': 0.2727, 'grad_norm': 6.430653592053486, 'learning_rate': 2.7945645517364064e-06, 'epoch': 4.09}
+wandb: WARNING Tried to log to step 272 that is less than the current step 277. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 273 that is less than the current step 278. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 82%|██████████████████████████████████████████████████████████████████████▌               | 275/335 [32:19<04:43,  4.72s/it]wandb: WARNING Tried to log to step 274 that is less than the current step 279. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3072, 'grad_norm': 6.724222719472655, 'learning_rate': 2.7079390059985835e-06, 'epoch': 4.1}
+ 82%|██████████████████████████████████████████████████████████████████████▊               | 276/335 [32:35<07:56,  8.08s/it]wandb: WARNING Tried to log to step 275 that is less than the current step 280. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2616, 'grad_norm': 3.3807191165811195, 'learning_rate': 2.6225439033546044e-06, 'epoch': 4.12}
+ 83%|███████████████████████████████████████████████████████████████████████▌              | 279/335 [32:45<04:36,  4.94s/it]wandb: WARNING Tried to log to step 276 that is less than the current step 281. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2764, 'grad_norm': 7.744069364730316, 'learning_rate': 2.538387791908355e-06, 'epoch': 4.13}
+{'loss': 0.3341, 'grad_norm': 6.020253604725458, 'learning_rate': 2.4554790957399147e-06, 'epoch': 4.15}
+{'loss': 0.2354, 'grad_norm': 8.295538819222605, 'learning_rate': 2.3738261140622964e-06, 'epoch': 4.16}
+wandb: WARNING Tried to log to step 277 that is less than the current step 282. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 278 that is less than the current step 283. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 84%|████████████████████████████████████████████████████████████████████████▏             | 281/335 [32:55<04:25,  4.92s/it]wandb: WARNING Tried to log to step 279 that is less than the current step 284. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2833, 'grad_norm': 3.854876467647137, 'learning_rate': 2.293437020390701e-06, 'epoch': 4.18}
+{'loss': 0.2391, 'grad_norm': 4.111096823084085, 'learning_rate': 2.2143198617243466e-06, 'epoch': 4.19}
+wandb: WARNING Tried to log to step 280 that is less than the current step 285. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 84%|████████████████████████████████████████████████████████████████████████▋             | 283/335 [33:02<03:32,  4.10s/it]wandb: WARNING Tried to log to step 281 that is less than the current step 286. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3781, 'grad_norm': 7.506124155411695, 'learning_rate': 2.1364825577409424e-06, 'epoch': 4.21}
+{'loss': 0.2699, 'grad_norm': 11.435837316070034, 'learning_rate': 2.059932900003935e-06, 'epoch': 4.22}
+wandb: WARNING Tried to log to step 282 that is less than the current step 287. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 85%|████████████████████████████████████████████████████████████████████████▉             | 284/335 [33:12<05:09,  6.07s/it]wandb: WARNING Tried to log to step 283 that is less than the current step 288. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.321, 'grad_norm': 5.983811905043901, 'learning_rate': 1.9846785511825623e-06, 'epoch': 4.24}
+wandb: WARNING Tried to log to step 284 that is less than the current step 289. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 86%|█████████████████████████████████████████████████████████████████████████▋            | 287/335 [33:22<03:24,  4.25s/it]wandb: WARNING Tried to log to step 285 that is less than the current step 290. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2272, 'grad_norm': 3.8932242497605865, 'learning_rate': 1.9107270442848305e-06, 'epoch': 4.25}
+{'loss': 0.3471, 'grad_norm': 5.598727380055752, 'learning_rate': 1.838085781903433e-06, 'epoch': 4.27}
+{'loss': 0.3562, 'grad_norm': 11.250855453151605, 'learning_rate': 1.7667620354747588e-06, 'epoch': 4.28}
+wandb: WARNING Tried to log to step 286 that is less than the current step 291. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 287 that is less than the current step 292. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 87%|██████████████████████████████████████████████████████████████████████████▋           | 291/335 [33:46<03:20,  4.56s/it]wandb: WARNING Tried to log to step 288 that is less than the current step 293. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.273, 'grad_norm': 9.390550231480075, 'learning_rate': 1.6967629445510157e-06, 'epoch': 4.3}
+{'loss': 0.4278, 'grad_norm': 9.283624788707387, 'learning_rate': 1.6280955160855632e-06, 'epoch': 4.31}
+{'loss': 0.3166, 'grad_norm': 9.590676517070776, 'learning_rate': 1.5607666237314927e-06, 'epoch': 4.33}
+{'loss': 0.1774, 'grad_norm': 6.791150372481252, 'learning_rate': 1.494783007153594e-06, 'epoch': 4.34}
+wandb: WARNING Tried to log to step 289 that is less than the current step 294. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 290 that is less than the current step 295. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 87%|██████████████████████████████████████████████████████████████████████████▉           | 292/335 [34:05<06:20,  8.86s/it]wandb: WARNING Tried to log to step 291 that is less than the current step 296. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2638, 'grad_norm': 4.86828461088324, 'learning_rate': 1.4301512713536873e-06, 'epoch': 4.36}
+wandb: WARNING Tried to log to step 292 that is less than the current step 297. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 88%|███████████████████████████████████████████████████████████████████████████▋          | 295/335 [34:14<03:28,  5.21s/it]wandb: WARNING Tried to log to step 293 that is less than the current step 298. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2366, 'grad_norm': 6.3945889494513, 'learning_rate': 1.3668778860094849e-06, 'epoch': 4.37}
+{'loss': 0.3261, 'grad_norm': 10.222589547916982, 'learning_rate': 1.3049691848269462e-06, 'epoch': 4.39}
+{'loss': 0.236, 'grad_norm': 6.465951476955564, 'learning_rate': 1.2444313649062877e-06, 'epoch': 4.4}
+wandb: WARNING Tried to log to step 294 that is less than the current step 299. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 295 that is less than the current step 300. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 88%|███████████████████████████████████████████████████████████████████████████▉          | 296/335 [34:18<03:00,  4.63s/it]wandb: WARNING Tried to log to step 296 that is less than the current step 301. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2134, 'grad_norm': 4.717105684194472, 'learning_rate': 1.1852704861216352e-06, 'epoch': 4.42}
+ 89%|████████████████████████████████████████████████████████████████████████████▊         | 299/335 [34:43<03:38,  6.07s/it]wandb: WARNING Tried to log to step 297 that is less than the current step 302. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2051, 'grad_norm': 6.547016915593246, 'learning_rate': 1.1274924705144474e-06, 'epoch': 4.43}
+{'loss': 0.2625, 'grad_norm': 9.539513314021958, 'learning_rate': 1.0711031017006923e-06, 'epoch': 4.45}
+{'loss': 0.3396, 'grad_norm': 10.337227307393391, 'learning_rate': 1.016108024291913e-06, 'epoch': 4.46}
+wandb: WARNING Tried to log to step 298 that is less than the current step 303. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 299 that is less than the current step 304. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 90%|█████████████████████████████████████████████████████████████████████████████         | 300/335 [34:47<03:08,  5.38s/it]wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3237, 'grad_norm': 8.74237126432328, 'learning_rate': 9.625127433302082e-07, 'epoch': 4.48}
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+                                                                                                                             wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 90%|█████████████████████████████████████████████████████████████████████████████         | 300/335 [35:35<03:08,  5.38s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'eval_loss': 0.348204106092453, 'eval_token_acc': 0.753968253968254, 'eval_string_acc': 0.5079365079365079, 'eval_choice_acc': 0.5079365079365079, 'eval_runtime': 48.1168, 'eval_samples_per_second': 1.309, 'eval_steps_per_second': 0.333, 'epoch': 4.48}
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 300 that is less than the current step 305. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 90%|█████████████████████████████████████████████████████████████████████████████▌        | 302/335 [36:05<10:34, 19.23s/it]wandb: WARNING Tried to log to step 300 that is less than the current step 306. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3245, 'grad_norm': 10.94316102011377, 'learning_rate': 9.103226237371604e-07, 'epoch': 4.49}
+{'loss': 0.2977, 'grad_norm': 8.745007877942136, 'learning_rate': 8.595428897768071e-07, 'epoch': 4.51}
+wandb: WARNING Tried to log to step 301 that is less than the current step 307. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 302 that is less than the current step 308. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 91%|██████████████████████████████████████████████████████████████████████████████▎       | 305/335 [36:15<04:23,  8.77s/it]wandb: WARNING Tried to log to step 303 that is less than the current step 309. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2315, 'grad_norm': 11.338880824784045, 'learning_rate': 8.101786245326908e-07, 'epoch': 4.52}
+{'loss': 0.2239, 'grad_norm': 7.107644617493887, 'learning_rate': 7.622347693990439e-07, 'epoch': 4.54}
+{'loss': 0.3249, 'grad_norm': 8.797387146392026, 'learning_rate': 7.157161235861404e-07, 'epoch': 4.55}
+wandb: WARNING Tried to log to step 304 that is less than the current step 310. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 305 that is less than the current step 311. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 92%|███████████████████████████████████████████████████████████████████████████████       | 308/335 [36:25<02:19,  5.17s/it]wandb: WARNING Tried to log to step 306 that is less than the current step 312. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3553, 'grad_norm': 5.117363741249448, 'learning_rate': 6.706273436399024e-07, 'epoch': 4.57}
+{'loss': 0.2954, 'grad_norm': 9.087116394976439, 'learning_rate': 6.269729429757682e-07, 'epoch': 4.58}
+{'loss': 0.3459, 'grad_norm': 11.719866439064958, 'learning_rate': 5.847572914269062e-07, 'epoch': 4.6}
+wandb: WARNING Tried to log to step 307 that is less than the current step 313. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 92%|███████████████████████████████████████████████████████████████████████████████▎      | 309/335 [36:36<02:59,  6.91s/it]wandb: WARNING Tried to log to step 308 that is less than the current step 314. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2967, 'grad_norm': 7.204143695489469, 'learning_rate': 5.439846148067856e-07, 'epoch': 4.61}
+ 93%|████████████████████████████████████████████████████████████████████████████████      | 312/335 [36:45<01:44,  4.54s/it]wandb: WARNING Tried to log to step 309 that is less than the current step 315. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3339, 'grad_norm': 9.725926953273579, 'learning_rate': 5.046589944861679e-07, 'epoch': 4.63}
+{'loss': 0.269, 'grad_norm': 6.777504358237259, 'learning_rate': 4.6678436698456337e-07, 'epoch': 4.64}
+{'loss': 0.1694, 'grad_norm': 6.04664080733458, 'learning_rate': 4.303645235761866e-07, 'epoch': 4.66}
+wandb: WARNING Tried to log to step 310 that is less than the current step 316. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 311 that is less than the current step 317. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 94%|████████████████████████████████████████████████████████████████████████████████▊     | 315/335 [36:55<01:14,  3.73s/it]wandb: WARNING Tried to log to step 312 that is less than the current step 318. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3075, 'grad_norm': 9.849422032252866, 'learning_rate': 3.9540310991043496e-07, 'epoch': 4.67}
+{'loss': 0.1903, 'grad_norm': 5.228594815091753, 'learning_rate': 3.6190362564697043e-07, 'epoch': 4.69}
+{'loss': 0.299, 'grad_norm': 10.016246594122238, 'learning_rate': 3.298694241053901e-07, 'epoch': 4.7}
+wandb: WARNING Tried to log to step 313 that is less than the current step 319. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 314 that is less than the current step 320. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 95%|█████████████████████████████████████████████████████████████████████████████████▍    | 317/335 [37:05<01:18,  4.35s/it]wandb: WARNING Tried to log to step 315 that is less than the current step 321. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3038, 'grad_norm': 6.524264634609144, 'learning_rate': 2.9930371192956943e-07, 'epoch': 4.72}
+{'loss': 0.2431, 'grad_norm': 9.080141774346048, 'learning_rate': 2.7020954876666226e-07, 'epoch': 4.73}
+wandb: WARNING Tried to log to step 316 that is less than the current step 322. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 95%|█████████████████████████████████████████████████████████████████████████████████▉    | 319/335 [37:16<01:19,  4.95s/it]wandb: WARNING Tried to log to step 317 that is less than the current step 323. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.235, 'grad_norm': 5.386872050660155, 'learning_rate': 2.425898469608362e-07, 'epoch': 4.75}
+{'loss': 0.2147, 'grad_norm': 5.796362172746279, 'learning_rate': 2.1644737126173874e-07, 'epoch': 4.76}
+wandb: WARNING Tried to log to step 318 that is less than the current step 324. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 96%|██████████████████████████████████████████████████████████████████████████████████▍   | 321/335 [37:23<00:57,  4.11s/it]wandb: WARNING Tried to log to step 319 that is less than the current step 325. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2236, 'grad_norm': 4.871049516585618, 'learning_rate': 1.9178473854775558e-07, 'epoch': 4.78}
+{'loss': 0.1977, 'grad_norm': 6.432199770344898, 'learning_rate': 1.6860441756404665e-07, 'epoch': 4.79}
+wandb: WARNING Tried to log to step 320 that is less than the current step 326. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 96%|██████████████████████████████████████████████████████████████████████████████████▋   | 322/335 [37:34<01:22,  6.34s/it]wandb: WARNING Tried to log to step 321 that is less than the current step 327. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.3545, 'grad_norm': 6.062444557994766, 'learning_rate': 1.4690872867542892e-07, 'epoch': 4.81}
+wandb: WARNING Tried to log to step 322 that is less than the current step 328. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 97%|███████████████████████████████████████████████████████████████████████████████████▏  | 324/335 [37:42<00:54,  4.98s/it]wandb: WARNING Tried to log to step 323 that is less than the current step 329. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2227, 'grad_norm': 5.99965357856868, 'learning_rate': 1.2669984363410546e-07, 'epoch': 4.82}
+{'loss': 0.2535, 'grad_norm': 5.570512880804692, 'learning_rate': 1.0797978536227604e-07, 'epoch': 4.84}
+wandb: WARNING Tried to log to step 324 that is less than the current step 330. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 97%|███████████████████████████████████████████████████████████████████████████████████▋  | 326/335 [37:54<00:50,  5.63s/it]wandb: WARNING Tried to log to step 325 that is less than the current step 331. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2956, 'grad_norm': 10.742929006137176, 'learning_rate': 9.075042774963405e-08, 'epoch': 4.85}
+{'loss': 0.1815, 'grad_norm': 4.400251823500713, 'learning_rate': 7.501349546579328e-08, 'epoch': 4.87}
+wandb: WARNING Tried to log to step 326 that is less than the current step 332. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 98%|████████████████████████████████████████████████████████████████████████████████████▏ | 328/335 [38:01<00:31,  4.45s/it]wandb: WARNING Tried to log to step 327 that is less than the current step 333. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.198, 'grad_norm': 5.945333203768369, 'learning_rate': 6.077056378764434e-08, 'epoch': 4.88}
+{'loss': 0.2472, 'grad_norm': 11.008262289561646, 'learning_rate': 4.802305844167576e-08, 'epoch': 4.9}
+wandb: WARNING Tried to log to step 328 that is less than the current step 334. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 99%|████████████████████████████████████████████████████████████████████████████████████▉ | 331/335 [38:26<00:26,  6.69s/it]wandb: WARNING Tried to log to step 329 that is less than the current step 335. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2783, 'grad_norm': 8.820406833251814, 'learning_rate': 3.6772255461248183e-08, 'epoch': 4.91}
+{'loss': 0.2364, 'grad_norm': 7.238732943746703, 'learning_rate': 2.701928105886653e-08, 'epoch': 4.93}
+{'loss': 0.339, 'grad_norm': 6.830613865328336, 'learning_rate': 1.8765111513451837e-08, 'epoch': 4.94}
+wandb: WARNING Tried to log to step 330 that is less than the current step 336. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 99%|█████████████████████████████████████████████████████████████████████████████████████▍| 333/335 [38:34<00:10,  5.37s/it]wandb: WARNING Tried to log to step 331 that is less than the current step 337. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+{'loss': 0.2664, 'grad_norm': 6.767064567440318, 'learning_rate': 1.2010573072602783e-08, 'epoch': 4.96}
+{'loss': 0.2988, 'grad_norm': 8.440850847077774, 'learning_rate': 6.756341869898486e-09, 'epoch': 4.97}
+wandb: WARNING Tried to log to step 332 that is less than the current step 338. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 333 that is less than the current step 339. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+100%|██████████████████████████████████████████████████████████████████████████████████████| 335/335 [38:39<00:00,  3.99s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+{'loss': 0.1994, 'grad_norm': 10.04501415771026, 'learning_rate': 3.0029438572110044e-09, 'epoch': 4.99}
+{'loss': 0.2589, 'grad_norm': 11.606951788799233, 'learning_rate': 7.507547520591018e-10, 'epoch': 5.0}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+wandb: WARNING Tried to log to step 334 that is less than the current step 340. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+100%|██████████████████████████████████████████████████████████████████████████████████████| 335/335 [39:00<00:00,  6.99s/it]
+{'train_runtime': 2340.7388, 'train_samples_per_second': 1.136, 'train_steps_per_second': 0.143, 'train_loss': 0.7677025130880413, 'epoch': 5.0}
+==================== Save model ====================
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+LoRA-only keys: 392
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+disk check – lora keys: 392
+[RUN SUMMARY] best=0.6190476190476191 (eval_choice_acc)
