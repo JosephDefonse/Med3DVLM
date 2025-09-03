@@ -89,9 +89,9 @@ class ModelArguments:
 @dataclass
 class TrainingArguments(transformers.TrainingArguments):
     lora_enable: bool = True
-    lora_r: int = 16
-    lora_alpha: int = 32
-    lora_dropout: float = 0.05
+    lora_r: int = 64
+    lora_alpha: int = 128
+    lora_dropout: float = 0.10
     lora_weight_path: str = ""
     lora_bias: str = "none"
 

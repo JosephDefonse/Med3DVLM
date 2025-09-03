@@ -3,84 +3,72 @@ import os, re, json, itertools, csv, sys
 from pathlib import Path
 import subprocess
 
-# ---------- ENV like your .sh ----------
 HF_HOME = "/home/sdef0001/iq38_scratch/nmdid/cache/huggingface"
 TRITON_CACHE_DIR = "/home/sdef0001/iq38_scratch/nmdid/cache/triton"
 
 BASE_ENV = os.environ.copy()
 BASE_ENV["PYTHONPATH"] = str(Path.cwd())
 BASE_ENV.setdefault("HF_HOME", HF_HOME)
-BASE_ENV.setdefault("TRANSFORMERS_CACHE", HF_HOME)  # transformers warns but still respects HF_HOME
+BASE_ENV.setdefault("TRANSFORMERS_CACHE", HF_HOME)
 BASE_ENV.setdefault("TRITON_CACHE_DIR", TRITON_CACHE_DIR)
 BASE_ENV.setdefault("PYTHONUNBUFFERED", "1")
-# Uncomment if you want guaranteed W&B online naming (or set WANDB_MODE=offline)
-# BASE_ENV["WANDB_PROJECT"] = "MLLM"
 
-OUT_ROOT = Path("./output/GS_runs")
+OUT_ROOT = Path("./output/GS_runs_v2")
 OUT_ROOT.mkdir(parents=True, exist_ok=True)
 RESULTS_CSV = OUT_ROOT / "grid_results.csv"
-BEST_LINK = Path("./output/GS_BEST")  # symlink -> best run’s output_dir
+BEST_LINK = Path("./output/GS_BEST")  # symlink to best run
 
-# ---------- GRID ----------
-lrs           = [2e-5, 3e-5, 5e-5]
-warmups       = [0.06, 0.10]
-lora_rs       = [32, 64]
-lora_dropouts = [0.05, 0.10]
-# keep alpha modest: alpha = 2 * r
-def alpha_for(r): return 2 * r
+# ---- grid (24 runs) ----
+lrs                 = [3e-5]
+warmups             = [0.06, 0.10]
+weight_decays       = [0.01, 0.5, 0.1]
+label_smoothings    = [0.05, 0.1, 0.2]
 
-def fmt_lr(x: float) -> str:
-    # readable tag for lr
-    s = f"{x:.0e}"
-    # keep '2e-05' style (no plus sign)
-    return s.replace("+", "")
+# fixed (best-so-far neighborhood)
+lora_r = 64
+lora_alpha = 128
+lora_dropout = 0.10
+max_grad_norms = [0.5, 1.0]  # try [0.5, 1.0] later if still stuck
 
-def tag_for(hp: dict) -> str:
-    # p005 for 0.05; wr006 for 0.06
-    p   = int(round(hp["lora_dropout"] * 100))
-    wr  = int(round(hp["warmup_ratio"] * 100))
-    lr  = fmt_lr(hp["lr"])
-    return f"r{hp['lora_r']}_a{hp['lora_alpha']}_p{p:03d}_lr{lr}_wr{wr:03d}"
+def tag_for(hp):
+    lr = f"{hp['lr']:.0e}".replace("+","")
+    wr = int(round(hp["warmup_ratio"]*100))
+    wd = f"{hp['weight_decay']:.3f}".replace("0.", "")
+    ls = f"{hp['label_smoothing']:.2f}".replace("0.", "")
+    mgn = f"{hp['max_grad_norm']:.1f}".replace(".","p")
+    return f"r{lora_r}_a{lora_alpha}_p{int(lora_dropout*100):03d}_lr{lr}_wr{wr:03d}_wd{wd}_ls{ls}_mgn{mgn}"
 
-def harvest_from_trainer_state(out_dir: Path):
-    state_p = out_dir / "trainer_state.json"
-    if not state_p.exists():
-        return None, None
+def harvest_trainer_state(out_dir: Path):
+    p = out_dir / "trainer_state.json"
+    if not p.exists(): return None, None
     try:
-        with open(state_p, "r") as f:
-            st = json.load(f)
+        st = json.loads(p.read_text())
         return st.get("best_metric", None), st.get("best_model_checkpoint", None)
     except Exception:
         return None, None
 
 def harvest_from_log(log_path: Path):
-    if not log_path.exists():
-        return None
-    # Parse max eval_choice_acc from Trainer prints like: {'eval_choice_acc': 0.60317, ...}
+    if not log_path.exists(): return None
     pat = re.compile(r"eval_choice_acc[\"']?\s*:\s*([0-9]*\.?[0-9]+)")
     best = None
-    try:
-        with open(log_path, "r", errors="ignore") as f:
-            for line in f:
-                m = pat.search(line)
-                if m:
-                    val = float(m.group(1))
-                    best = val if (best is None or val > best) else best
-    except Exception:
-        pass
+    with open(log_path, "r", errors="ignore") as f:
+        for line in f:
+            m = pat.search(line)
+            if m:
+                v = float(m.group(1))
+                best = v if (best is None or v > best) else best
     return best
 
 def append_csv_row(row: dict):
     header = [
         "run_tag","output_dir","best_metric","best_model_checkpoint",
-        "learning_rate","warmup_ratio","lora_r","lora_alpha","lora_dropout"
+        "learning_rate","warmup_ratio","weight_decay","label_smoothing",
+        "max_grad_norm","lora_r","lora_alpha","lora_dropout"
     ]
     write_header = not RESULTS_CSV.exists()
     with open(RESULTS_CSV, "a", newline="") as f:
         w = csv.DictWriter(f, fieldnames=header)
-        if write_header:
-            w.writeheader()
-        # ensure only header keys get written
+        if write_header: w.writeheader()
         w.writerow({k: row.get(k) for k in header})
 
 def update_best_symlink(best_out_dir: Path):
@@ -91,18 +79,15 @@ def update_best_symlink(best_out_dir: Path):
     except Exception as e:
         print(f"[WARN] Could not update best symlink: {e}")
 
-def run_once(hp: dict) -> dict | None:
+def run_once(hp):
     tag = tag_for(hp)
     out_dir = OUT_ROOT / tag
     out_dir.mkdir(parents=True, exist_ok=True)
     log_path = out_dir / "train.log"
 
     cmd = [
-        "deepspeed",
-        "src/train/train_vlm.py",  # user script
+        "deepspeed", "src/train/train_vlm.py",
         "--deepspeed", "./scripts/zero9.json",
-
-        # fixed args from your .sh
         "--vision_tower", "dcformer",
         "--model_name_or_path", "Qwen/Qwen2.5-7B-Instruct",
         "--model_type", "vlm_qwen",
@@ -128,36 +113,34 @@ def run_once(hp: dict) -> dict | None:
         "--save_steps", "50",
         "--save_total_limit", "3",
         "--lr_scheduler_type", "cosine",
-        "--logging_steps", "0.001",
+        "--logging_steps", "10",             # <= integer to fix W&B warnings
         "--gradient_checkpointing", "True",
         "--dataloader_pin_memory", "True",
         "--dataloader_num_workers", "4",
         "--report_to", "wandb",
         "--num_train_epochs", "5",
-        "--weight_decay", "0.0",
-        "--label_smoothing_factor", "0.0",
-        "--max_grad_norm", "1.0",
         "--seed", "42",
 
-        # per-run vars
-        "--wb_name", f"GS_{tag}",
+        "--wb_name", f"GSv2_{tag}",
         "--output_dir", str(out_dir),
+
         "--learning_rate", str(hp["lr"]),
         "--warmup_ratio", str(hp["warmup_ratio"]),
-        "--lora_r", str(hp["lora_r"]),
-        "--lora_alpha", str(hp["lora_alpha"]),
-        "--lora_dropout", str(hp["lora_dropout"]),
+        "--weight_decay", str(hp["weight_decay"]),
+        "--label_smoothing_factor", str(hp["label_smoothing"]),
+        "--max_grad_norm", str(hp["max_grad_norm"]),
+
+        "--lora_r", str(lora_r),
+        "--lora_alpha", str(lora_alpha),
+        "--lora_dropout", str(lora_dropout),
     ]
 
     print(f"\n=== RUN {tag} ===")
     print(" ".join(cmd))
 
-    # Stream logs live to console and file
     with open(log_path, "w", buffering=1) as lf:
-        p = subprocess.Popen(
-            cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-            text=True, bufsize=1, env=BASE_ENV
-        )
+        p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                             text=True, bufsize=1, env=BASE_ENV)
         for line in p.stdout:
             sys.stdout.write(line)
             lf.write(line)
@@ -165,13 +148,11 @@ def run_once(hp: dict) -> dict | None:
 
     if rc != 0:
         print(f"[{tag}] exited with code {rc}")
-        # Try to harvest what we can anyway
-    best_metric, best_ckpt = harvest_from_trainer_state(out_dir)
+
+    best_metric, best_ckpt = harvest_trainer_state(out_dir)
     if best_metric is None:
         best_metric = harvest_from_log(log_path)
-
     if best_metric is None:
-        # failed run; return minimal info so main() can skip
         return None
 
     return {
@@ -181,31 +162,33 @@ def run_once(hp: dict) -> dict | None:
         "best_model_checkpoint": str(best_ckpt) if best_ckpt else "",
         "learning_rate": hp["lr"],
         "warmup_ratio": hp["warmup_ratio"],
-        "lora_r": hp["lora_r"],
-        "lora_alpha": hp["lora_alpha"],
-        "lora_dropout": hp["lora_dropout"],
+        "weight_decay": hp["weight_decay"],
+        "label_smoothing": hp["label_smoothing"],
+        "max_grad_norm": hp["max_grad_norm"],
+        "lora_r": lora_r,
+        "lora_alpha": lora_alpha,
+        "lora_dropout": lora_dropout,
     }
 
 def main():
     combos = []
-    for r, p, lr, wr in itertools.product(lora_rs, lora_dropouts, lrs, warmups):
+    for lr, wr, wd, ls, mgn in itertools.product(
+        lrs, warmups, weight_decays, label_smoothings, max_grad_norms
+    ):
         combos.append({
-            "lora_r": r,
-            "lora_alpha": alpha_for(r),
-            "lora_dropout": p,
             "lr": lr,
             "warmup_ratio": wr,
+            "weight_decay": wd,
+            "label_smoothing": ls,
+            "max_grad_norm": mgn,
         })
-
     print(f"Total runs: {len(combos)}")
-    best = None
 
+    best = None
     for hp in combos:
         res = run_once(hp)
-        if not res:
-            continue
+        if not res: continue
         append_csv_row(res)
-
         if (best is None) or (res["best_metric"] > best["best_metric"]):
             best = res
             update_best_symlink(Path(best["output_dir"]))

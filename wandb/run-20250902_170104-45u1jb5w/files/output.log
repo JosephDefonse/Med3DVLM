@@ -1,0 +1,111 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2917568
+ 15%|████████████▉                                                                          | 50/335 [05:57<31:43,  6.68s/it]
+{'loss': 12.3558, 'grad_norm': 106.06879830044406, 'learning_rate': 7.941176470588236e-06, 'epoch': 0.15}
+{'loss': 2.8295, 'grad_norm': 15.856319115886919, 'learning_rate': 1.6764705882352943e-05, 'epoch': 0.3}
+{'loss': 0.3671, 'grad_norm': 8.50177071762881, 'learning_rate': 2.5588235294117648e-05, 'epoch': 0.45}
+{'loss': 0.3945, 'grad_norm': 4.18346625619742, 'learning_rate': 2.9979579354694385e-05, 'epoch': 0.6}
+{'loss': 0.3559, 'grad_norm': 3.838547120500026, 'learning_rate': 2.9816547643067163e-05, 'epoch': 0.75}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+
+=== compute_metrics DEBUG ===
+[0] REF:  A
+[0] HYP:  B
+[0] ref_letter=A  hyp_letter=B
+---
+[1] REF:  A
+[1] HYP:  B
+[1] ref_letter=A  hyp_letter=B
+---
+[2] REF:  B
+[2] HYP:  B
+[2] ref_letter=B  hyp_letter=B
+---
+[3] REF:  A
+[3] HYP:  A
+[3] ref_letter=A  hyp_letter=A
+---
+[4] REF:  B
+[4] HYP:  A
+[4] ref_letter=B  hyp_letter=A
+---
+[5] REF:  A
+[5] HYP:  B
+[5] ref_letter=A  hyp_letter=B
+---
+{'eval_loss': 0.36532968282699585, 'eval_token_acc': 0.746031746031746, 'eval_string_acc': 0.49206349206349204, 'eval_choice_acc': 0.49206349206349204, 'eval_runtime': 48.1958, 'eval_samples_per_second': 1.307, 'eval_steps_per_second': 0.332, 'epoch': 0.75}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 15%|████████████▉                                                                        | 51/335 [07:17<2:15:53, 28.71s/it]wandb: WARNING Tried to log to step 50 that is less than the current step 51. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 30%|█████████████████████████▋                                                            | 100/335 [13:51<26:11,  6.69s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+{'loss': 0.3676, 'grad_norm': 9.243844514643348, 'learning_rate': 2.9492258591333224e-05, 'epoch': 0.9}
+{'loss': 0.3598, 'grad_norm': 3.2136441581468045, 'learning_rate': 2.901024163098822e-05, 'epoch': 1.04}
+{'loss': 0.3416, 'grad_norm': 1.7925919425187826, 'learning_rate': 2.837574284059135e-05, 'epoch': 1.19}
+{'loss': 0.3584, 'grad_norm': 2.167298636183953, 'learning_rate': 2.759566784955813e-05, 'epoch': 1.34}
+{'loss': 0.3517, 'grad_norm': 2.081810667222585, 'learning_rate': 2.6678506680069708e-05, 'epoch': 1.49}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.3504023551940918, 'eval_token_acc': 0.753968253968254, 'eval_string_acc': 0.5079365079365079, 'eval_choice_acc': 0.5079365079365079, 'eval_runtime': 48.113, 'eval_samples_per_second': 1.309, 'eval_steps_per_second': 0.333, 'epoch': 1.49}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 30%|█████████████████████████▎                                                          | 101/335 [14:22<1:51:36, 28.62s/it]wandb: WARNING Tried to log to step 100 that is less than the current step 101. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 45%|██████████████████████████████████████▌                                               | 150/335 [21:00<20:42,  6.72s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+{'loss': 0.3449, 'grad_norm': 1.9603108726798522, 'learning_rate': 2.563424134508915e-05, 'epoch': 1.64}
+{'loss': 0.3438, 'grad_norm': 5.7950817395680385, 'learning_rate': 2.4474237208150606e-05, 'epoch': 1.79}
+{'loss': 0.3557, 'grad_norm': 1.9153638063029748, 'learning_rate': 2.3211119287317785e-05, 'epoch': 1.94}
+{'loss': 0.361, 'grad_norm': 2.372204113868138, 'learning_rate': 2.1858634849569578e-05, 'epoch': 2.09}
+{'loss': 0.3538, 'grad_norm': 2.5730794877786667, 'learning_rate': 2.043150379108025e-05, 'epoch': 2.24}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.34682410955429077, 'eval_token_acc': 0.7619047619047619, 'eval_string_acc': 0.5238095238095238, 'eval_choice_acc': 0.5238095238095238, 'eval_runtime': 47.722, 'eval_samples_per_second': 1.32, 'eval_steps_per_second': 0.335, 'epoch': 2.24}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+wandb: WARNING Tried to log to step 150 that is less than the current step 151. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 60%|███████████████████████████████████████████████████▎                                  | 200/335 [27:46<14:57,  6.65s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+{'loss': 0.3446, 'grad_norm': 1.2619064033571041, 'learning_rate': 1.894525843179501e-05, 'epoch': 2.39}
+{'loss': 0.3425, 'grad_norm': 2.0800859548502912, 'learning_rate': 1.7416074467912323e-05, 'epoch': 2.54}
+{'loss': 0.3427, 'grad_norm': 1.3780378160527469, 'learning_rate': 1.586059492211805e-05, 'epoch': 2.69}
+{'loss': 0.3487, 'grad_norm': 2.8286652972813155, 'learning_rate': 1.4295749007626199e-05, 'epoch': 2.84}
+{'loss': 0.3408, 'grad_norm': 3.4211122806814154, 'learning_rate': 1.2738567877437247e-05, 'epoch': 2.99}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.34065020084381104, 'eval_token_acc': 0.7857142857142857, 'eval_string_acc': 0.5714285714285714, 'eval_choice_acc': 0.5714285714285714, 'eval_runtime': 47.7469, 'eval_samples_per_second': 1.319, 'eval_steps_per_second': 0.335, 'epoch': 2.99}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 60%|██████████████████████████████████████████████████▍                                 | 201/335 [28:15<1:02:18, 27.90s/it]wandb: WARNING Tried to log to step 200 that is less than the current step 201. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 75%|████████████████████████████████████████████████████████████████▏                     | 250/335 [35:05<09:26,  6.67s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+{'loss': 0.3324, 'grad_norm': 3.421384926292508, 'learning_rate': 1.1205999264124788e-05, 'epoch': 3.13}
+{'loss': 0.3414, 'grad_norm': 2.5140624088084857, 'learning_rate': 9.71472302753657e-06, 'epoch': 3.28}
+{'loss': 0.3316, 'grad_norm': 2.173372117059209, 'learning_rate': 8.280969617914427e-06, 'epoch': 3.43}
+{'loss': 0.3519, 'grad_norm': 3.4670908180170312, 'learning_rate': 6.920343430207455e-06, 'epoch': 3.58}
+{'loss': 0.3408, 'grad_norm': 5.625948857943458, 'learning_rate': 5.647652972118998e-06, 'epoch': 3.73}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.340564489364624, 'eval_token_acc': 0.7857142857142857, 'eval_string_acc': 0.5714285714285714, 'eval_choice_acc': 0.5714285714285714, 'eval_runtime': 47.8761, 'eval_samples_per_second': 1.316, 'eval_steps_per_second': 0.334, 'epoch': 3.73}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 75%|████████████████████████████████████████████████████████████████▍                     | 251/335 [35:37<39:55, 28.51s/it]wandb: WARNING Tried to log to step 250 that is less than the current step 251. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 90%|█████████████████████████████████████████████████████████████████████████████         | 300/335 [42:22<03:53,  6.68s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+{'loss': 0.3425, 'grad_norm': 2.3554919523730535, 'learning_rate': 4.476749694269972e-06, 'epoch': 3.88}
+{'loss': 0.3395, 'grad_norm': 2.3556625431070732, 'learning_rate': 3.4203772365862835e-06, 'epoch': 4.03}
+{'loss': 0.3345, 'grad_norm': 2.182201624899471, 'learning_rate': 2.490032731651833e-06, 'epoch': 4.18}
+{'loss': 0.3362, 'grad_norm': 2.5420133614971503, 'learning_rate': 1.6958416745456829e-06, 'epoch': 4.33}
+{'loss': 0.3305, 'grad_norm': 2.7149530594288644, 'learning_rate': 1.0464477210296752e-06, 'epoch': 4.48}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.34098905324935913, 'eval_token_acc': 0.7857142857142857, 'eval_string_acc': 0.5714285714285714, 'eval_choice_acc': 0.5714285714285714, 'eval_runtime': 47.9363, 'eval_samples_per_second': 1.314, 'eval_steps_per_second': 0.334, 'epoch': 4.48}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 90%|█████████████████████████████████████████████████████████████████████████████▎        | 301/335 [42:50<15:37, 27.56s/it]wandb: WARNING Tried to log to step 300 that is less than the current step 301. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+100%|██████████████████████████████████████████████████████████████████████████████████████| 335/335 [46:34<00:00,  5.75s/it] stage3_gather_16bit_weights_on_model_save=false. Saving the full checkpoint instead, use zero_to_fp32.py to recover weights
+{'loss': 0.3436, 'grad_norm': 3.026154613060485, 'learning_rate': 5.489186134786173e-07, 'epoch': 4.63}
+{'loss': 0.3265, 'grad_norm': 2.0452830958910666, 'learning_rate': 2.086692584174438e-07, 'epoch': 4.78}
+{'loss': 0.3325, 'grad_norm': 3.2981626342130768, 'learning_rate': 2.9402792858359007e-08, 'epoch': 4.93}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+100%|██████████████████████████████████████████████████████████████████████████████████████| 335/335 [47:00<00:00,  8.42s/it]
+{'train_runtime': 2820.794, 'train_samples_per_second': 0.943, 'train_steps_per_second': 0.119, 'train_loss': 0.7795008638011875, 'epoch': 5.0}
+==================== Save model ====================
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+LoRA-only keys: 392
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+disk check – lora keys: 392
+[RUN SUMMARY] best=0.5714285714285714 (eval_choice_acc)

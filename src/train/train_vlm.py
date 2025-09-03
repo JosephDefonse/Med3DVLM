@@ -12,7 +12,7 @@ import transformers
 from transformers import AutoTokenizer, LlamaForCausalLM, EarlyStoppingCallback
 
 import wandb
-from src.dataset.mllm_dataset import CapDataset, TextDatasets, TextYNDatasets, QADatasets
+from src.dataset.mllm_dataset import TextDatasets, TextYNDatasets, QADatasets
 from src.model.llm.qwen import VLMQwenForCausalLM
 from src.train.trainer import MLLMTrainer
 
@@ -131,16 +131,16 @@ class DataArguments:
 class TrainingArguments(transformers.TrainingArguments):
     # lora
     lora_enable: bool = False
-    lora_r: int = 8
-    lora_alpha: int = 16
-    lora_dropout: float = 0.05
+    lora_r: int = 64
+    lora_alpha: int = 128
+    lora_dropout: float = 0.1
     lora_weight_path: str = ""
     lora_bias: str = "none"
 
     cache_dir: Optional[str] = field(default=None)
     remove_unused_columns: bool = field(default=False)
     model_max_length: int = field(
-        default=512,  # 512
+        default=1024,  # 1024
         metadata={
             "help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."
         },
@@ -164,9 +164,9 @@ class TrainingArguments(transformers.TrainingArguments):
     save_strategy: str = "steps"
     save_steps: int = 2000
     save_total_limit: int = 2
-    learning_rate: float = 1e-4
-    weight_decay: float = 0.0
-    warmup_ratio: float = 0.03
+    learning_rate: float = 3e-5
+    weight_decay: float = 0.01
+    warmup_ratio: float = 0.1
     lr_scheduler_type: str = "cosine"
     logging_steps: float = 10  # 0.001
     gradient_checkpointing: bool = False  # train fast
@@ -179,7 +179,7 @@ class TrainingArguments(transformers.TrainingArguments):
     load_best_model_at_end: bool = True
     
     max_grad_norm: float = 0.5
-    label_smoothing_factor: float = 0.0
+    label_smoothing_factor: float = 0.05
 
 # def compute_metrics(eval_preds):
 #     labels_ids = eval_preds.label_ids
@@ -377,7 +377,6 @@ def find_all_linear_names(model):
             lora_module_names.add(name)
     return list(lora_module_names)
 
-
 @dataclass
 class DataCollator:
     def __call__(self, batch: list) -> dict:
@@ -551,7 +550,7 @@ def main():
                 ]
             ):
                 p.requires_grad = True
-
+        
         vt = model.get_model().get_vision_tower()
         vt.eval()
         for p in vt.parameters():
@@ -725,77 +724,13 @@ def main():
         return "lora_" in n
     
     if training_args.lora_enable:
-        
-        peft_model = model.module if hasattr(model, "module") else model
-        
-        # 1) Collect LoRA-only weights (safe under ZeRO-3)
-        peft_sd = get_peft_model_state_dict(peft_model)
-        peft_sd = {k: v for k, v in peft_sd.items() if is_lora_param(k)}
-        print("LoRA-only keys:", len(peft_sd))
-        assert len(peft_sd) > 0, "No LoRA keys found!"
-        
-        adapter_out = os.path.join(training_args.output_dir, "ADAPTER_ONLY")
-        os.makedirs(adapter_out, exist_ok=True)
 
-        # ---- build LoRA state on rank0 under ZeRO gather ----
-        def is_rank0():
-            return (not dist.is_initialized()) or dist.get_rank() == 0
+        state_dict_with_lora = model.state_dict()
+        torch.save(
+            state_dict_with_lora,
+            os.path.join(training_args.output_dir, "model_with_lora.bin"),
+        )
         
-        lora_params = [p for n,p in peft_model.named_parameters() if "lora_" in n]
-        try:
-            from deepspeed import zero
-            ctx = zero.GatheredParameters(lora_params, modifier_rank=0)
-        except Exception:
-            class _Noop:
-                def __enter__(self): pass
-                def __exit__(self,*a): pass
-            ctx = _Noop()
-        
-        with ctx:
-            state_full = get_peft_model_state_dict(peft_model, adapter_name="default")
-        
-        # keep only real LoRA tensors
-        lora_state = {k: v.cpu() for k, v in state_full.items() if "lora_" in k}
-        
-        # normalize keys to include adapter name segment ('.default.')
-        def add_default_segment(k: str) -> str:
-            k = k.replace(".lora_A.weight",              ".lora_A.default.weight")
-            k = k.replace(".lora_B.weight",              ".lora_B.default.weight")
-            k = k.replace(".lora_embedding_A.weight",    ".lora_embedding_A.default.weight")
-            k = k.replace(".lora_embedding_B.weight",    ".lora_embedding_B.default.weight")
-            return k
-        
-        lora_state = {add_default_segment(k): v for k, v in lora_state.items()}
-        assert len(lora_state) > 0
-        
-        adapter_out = os.path.join(training_args.output_dir, "ADAPTER_ONLY")
-        if is_rank0():
-            os.makedirs(adapter_out, exist_ok=True)
-        
-        # ---- 1) write ONLY config (forces adapter_config.json) ----
-        if is_rank0():
-            peft_model.save_pretrained(adapter_out, state_dict={}, safe_serialization=True)
-        
-        # ---- 2) write weights yourself to adapter_model.safetensors ----
-        if is_rank0():
-            from safetensors.torch import save_file, load_file
-            save_file(lora_state, os.path.join(adapter_out, "adapter_model.safetensors"))
-        
-            # sanity
-            ad = load_file(os.path.join(adapter_out, "adapter_model.safetensors"))
-            n_lora = sum(1 for k in ad if "lora_" in k)
-            print("disk check – lora keys:", n_lora)
-            assert n_lora > 0
-        if dist.is_initialized():
-            dist.barrier()
-        
-        # 4) Save NON-LoRA finetuned params (projector/vision etc.)
-        non_lora_state = {}
-        for n, p in peft_model.named_parameters():
-            if not is_lora_param(n) and p.requires_grad:
-                non_lora_state[n] = maybe_zero_3(p, ignore_status=True)
-        torch.save(non_lora_state, os.path.join(training_args.output_dir, "non_lora_weights.bin"))
-    
     else:
         safe_save_model_for_hf_trainer(
             trainer=trainer, output_dir=training_args.output_dir

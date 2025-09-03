@@ -1,0 +1,16 @@
+{"time":"2025-09-01T15:56:08.380096464+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250901_155607-psdeh5yu/logs/debug-core.log"}
+{"time":"2025-09-01T15:56:08.606749057+10:00","level":"INFO","msg":"created new stream","id":"psdeh5yu"}
+{"time":"2025-09-01T15:56:08.606798427+10:00","level":"INFO","msg":"stream: started","id":"psdeh5yu"}
+{"time":"2025-09-01T15:56:08.606813977+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"psdeh5yu"}
+{"time":"2025-09-01T15:56:08.606825036+10:00","level":"INFO","msg":"sender: started","stream_id":"psdeh5yu"}
+{"time":"2025-09-01T15:56:08.606833426+10:00","level":"INFO","msg":"handler: started","stream_id":"psdeh5yu"}
+{"time":"2025-09-01T15:56:09.003541489+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-01T16:36:07.406798239+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-01T16:36:07.407914737+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-01T16:36:08.407001919+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.477437913,"progress":"41.5KB/41.5KB"},{"desc":"uploading config.yaml","runtime_seconds":0.249206377,"progress":"972B/972B"}],"total_operations":2}}
+{"time":"2025-09-01T16:36:08.538819774+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-01T16:36:09.804367867+10:00","level":"INFO","msg":"stream: closing","id":"psdeh5yu"}
+{"time":"2025-09-01T16:36:09.804406406+10:00","level":"INFO","msg":"handler: closed","stream_id":"psdeh5yu"}
+{"time":"2025-09-01T16:36:09.804418915+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"psdeh5yu"}
+{"time":"2025-09-01T16:36:09.804426852+10:00","level":"INFO","msg":"sender: closed","stream_id":"psdeh5yu"}
+{"time":"2025-09-01T16:36:09.804633792+10:00","level":"INFO","msg":"stream: closed","id":"psdeh5yu"}

@@ -1,0 +1,61 @@
+Resuming from checkpoint: ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_20/checkpoint-335
+Traceback (most recent call last):
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 847, in <module>
+    main()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 712, in main
+    trainer.train(resume_from_checkpoint=resume_ckpt)
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2237, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2416, in _inner_training_loop
+    deepspeed_load_checkpoint(
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/integrations/deepspeed.py", line 494, in deepspeed_load_checkpoint
+    load_path, _ = deepspeed_engine.load_checkpoint(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/engine.py", line 3034, in load_checkpoint
+    load_path, client_states = self._load_checkpoint(load_dir,
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/engine.py", line 3084, in _load_checkpoint
+    sd_loader = SDLoaderFactory.get_sd_loader(ckpt_list, checkpoint_engine=self.checkpoint_engine)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/state_dict_factory.py", line 43, in get_sd_loader
+    return MegatronSDLoader(ckpt_list, version, checkpoint_engine)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/state_dict_factory.py", line 193, in __init__
+    super().__init__(ckpt_list, version, checkpoint_engine)
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/state_dict_factory.py", line 55, in __init__
+    self.check_ckpt_list()
+  File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/state_dict_factory.py", line 168, in check_ckpt_list
+    assert len(self.ckpt_list) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 847, in <module>
+[rank0]:     main()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/src/train/train_vlm.py", line 712, in main
+[rank0]:     trainer.train(resume_from_checkpoint=resume_ckpt)
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2237, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/trainer.py", line 2416, in _inner_training_loop
+[rank0]:     deepspeed_load_checkpoint(
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/transformers/integrations/deepspeed.py", line 494, in deepspeed_load_checkpoint
+[rank0]:     load_path, _ = deepspeed_engine.load_checkpoint(
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/engine.py", line 3034, in load_checkpoint
+[rank0]:     load_path, client_states = self._load_checkpoint(load_dir,
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/engine.py", line 3084, in _load_checkpoint
+[rank0]:     sd_loader = SDLoaderFactory.get_sd_loader(ckpt_list, checkpoint_engine=self.checkpoint_engine)
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/state_dict_factory.py", line 43, in get_sd_loader
+[rank0]:     return MegatronSDLoader(ckpt_list, version, checkpoint_engine)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/state_dict_factory.py", line 193, in __init__
+[rank0]:     super().__init__(ckpt_list, version, checkpoint_engine)
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/state_dict_factory.py", line 55, in __init__
+[rank0]:     self.check_ckpt_list()
+[rank0]:   File "/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/deepspeed/runtime/state_dict_factory.py", line 168, in check_ckpt_list
+[rank0]:     assert len(self.ckpt_list) > 0
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: AssertionError

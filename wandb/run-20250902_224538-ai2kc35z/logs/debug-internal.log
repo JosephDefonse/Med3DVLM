@@ -1,0 +1,12 @@
+{"time":"2025-09-02T22:45:38.601327167+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250902_224538-ai2kc35z/logs/debug-core.log"}
+{"time":"2025-09-02T22:45:38.709121187+10:00","level":"INFO","msg":"created new stream","id":"ai2kc35z"}
+{"time":"2025-09-02T22:45:38.709169708+10:00","level":"INFO","msg":"stream: started","id":"ai2kc35z"}
+{"time":"2025-09-02T22:45:38.709180848+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"ai2kc35z"}
+{"time":"2025-09-02T22:45:38.709194022+10:00","level":"INFO","msg":"handler: started","stream_id":"ai2kc35z"}
+{"time":"2025-09-02T22:45:38.709198515+10:00","level":"INFO","msg":"sender: started","stream_id":"ai2kc35z"}
+{"time":"2025-09-02T22:45:39.077945387+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-02T22:53:00.363624804+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":50,"current":51}
+{"time":"2025-09-02T23:00:06.193460748+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":100,"current":101}
+{"time":"2025-09-02T23:07:14.205231697+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":150,"current":151}
+{"time":"2025-09-02T23:14:00.210368641+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":200,"current":201}
+{"time":"2025-09-02T23:21:20.438565609+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":250,"current":251}

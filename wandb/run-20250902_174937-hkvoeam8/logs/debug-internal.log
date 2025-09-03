@@ -1,0 +1,22 @@
+{"time":"2025-09-02T17:49:37.824495014+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250902_174937-hkvoeam8/logs/debug-core.log"}
+{"time":"2025-09-02T17:49:37.932359851+10:00","level":"INFO","msg":"created new stream","id":"hkvoeam8"}
+{"time":"2025-09-02T17:49:37.932408692+10:00","level":"INFO","msg":"stream: started","id":"hkvoeam8"}
+{"time":"2025-09-02T17:49:37.932420573+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"hkvoeam8"}
+{"time":"2025-09-02T17:49:37.932436819+10:00","level":"INFO","msg":"handler: started","stream_id":"hkvoeam8"}
+{"time":"2025-09-02T17:49:37.9324866+10:00","level":"INFO","msg":"sender: started","stream_id":"hkvoeam8"}
+{"time":"2025-09-02T17:49:38.362346162+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-02T17:56:52.270704986+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":50,"current":51}
+{"time":"2025-09-02T18:03:58.147244113+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":100,"current":101}
+{"time":"2025-09-02T18:11:08.607970026+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":150,"current":151}
+{"time":"2025-09-02T18:17:53.96079824+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":200,"current":201}
+{"time":"2025-09-02T18:25:10.801229172+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":250,"current":251}
+{"time":"2025-09-02T18:32:28.209931657+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":300,"current":301}
+{"time":"2025-09-02T18:36:46.173697987+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-02T18:36:46.174345627+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-02T18:36:47.111797906+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-02T18:36:47.17391529+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 334-334, summary, console lines 100-110","runtime_seconds":0.061807843}],"total_operations":1}}
+{"time":"2025-09-02T18:36:48.439610379+10:00","level":"INFO","msg":"stream: closing","id":"hkvoeam8"}
+{"time":"2025-09-02T18:36:48.439641872+10:00","level":"INFO","msg":"handler: closed","stream_id":"hkvoeam8"}
+{"time":"2025-09-02T18:36:48.439651714+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hkvoeam8"}
+{"time":"2025-09-02T18:36:48.439659404+10:00","level":"INFO","msg":"sender: closed","stream_id":"hkvoeam8"}
+{"time":"2025-09-02T18:36:48.439913773+10:00","level":"INFO","msg":"stream: closed","id":"hkvoeam8"}

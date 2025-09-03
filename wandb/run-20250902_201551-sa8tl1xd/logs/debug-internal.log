@@ -1,0 +1,22 @@
+{"time":"2025-09-02T20:15:51.359770986+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250902_201551-sa8tl1xd/logs/debug-core.log"}
+{"time":"2025-09-02T20:15:51.46790044+10:00","level":"INFO","msg":"created new stream","id":"sa8tl1xd"}
+{"time":"2025-09-02T20:15:51.467946889+10:00","level":"INFO","msg":"stream: started","id":"sa8tl1xd"}
+{"time":"2025-09-02T20:15:51.467961332+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"sa8tl1xd"}
+{"time":"2025-09-02T20:15:51.467965841+10:00","level":"INFO","msg":"handler: started","stream_id":"sa8tl1xd"}
+{"time":"2025-09-02T20:15:51.467975191+10:00","level":"INFO","msg":"sender: started","stream_id":"sa8tl1xd"}
+{"time":"2025-09-02T20:15:51.840537911+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-02T20:23:07.184575871+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":50,"current":51}
+{"time":"2025-09-02T20:30:13.488910182+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":100,"current":101}
+{"time":"2025-09-02T20:37:23.819701574+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":150,"current":151}
+{"time":"2025-09-02T20:44:21.004388592+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":200,"current":201}
+{"time":"2025-09-02T20:51:39.122771546+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":250,"current":251}
+{"time":"2025-09-02T20:58:56.96298506+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":300,"current":301}
+{"time":"2025-09-02T21:03:11.382827103+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-02T21:03:11.38360064+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-02T21:03:12.271380146+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-02T21:03:12.383017601+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 334-334, summary, console lines 100-110","runtime_seconds":0.111543919}],"total_operations":1}}
+{"time":"2025-09-02T21:03:13.539564487+10:00","level":"INFO","msg":"stream: closing","id":"sa8tl1xd"}
+{"time":"2025-09-02T21:03:13.539598138+10:00","level":"INFO","msg":"handler: closed","stream_id":"sa8tl1xd"}
+{"time":"2025-09-02T21:03:13.539610587+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"sa8tl1xd"}
+{"time":"2025-09-02T21:03:13.539617742+10:00","level":"INFO","msg":"sender: closed","stream_id":"sa8tl1xd"}
+{"time":"2025-09-02T21:03:13.539887887+10:00","level":"INFO","msg":"stream: closed","id":"sa8tl1xd"}

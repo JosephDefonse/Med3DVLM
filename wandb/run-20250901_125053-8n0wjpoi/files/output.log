@@ -1,0 +1,536 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2000064
+                                                                                                                              
+{'loss': 13.4998, 'grad_norm': 135.44377673812767, 'learning_rate': 0.0, 'epoch': 0.01}
+{'loss': 13.6658, 'grad_norm': 100.18973345095532, 'learning_rate': 9.090909090909091e-07, 'epoch': 0.03}
+{'loss': 14.4083, 'grad_norm': 121.9438227407911, 'learning_rate': 1.8181818181818183e-06, 'epoch': 0.04}
+{'loss': 14.2647, 'grad_norm': 142.91810546875325, 'learning_rate': 2.7272727272727272e-06, 'epoch': 0.06}
+{'loss': 14.2208, 'grad_norm': 129.92608587715526, 'learning_rate': 3.6363636363636366e-06, 'epoch': 0.07}
+{'loss': 13.5705, 'grad_norm': 172.63546955140993, 'learning_rate': 4.5454545454545455e-06, 'epoch': 0.09}
+{'loss': 13.6796, 'grad_norm': 127.13914483363288, 'learning_rate': 5.4545454545454545e-06, 'epoch': 0.1}
+{'loss': 12.8993, 'grad_norm': 122.96639873667168, 'learning_rate': 6.363636363636364e-06, 'epoch': 0.12}
+{'loss': 11.0037, 'grad_norm': 194.89516749408713, 'learning_rate': 7.272727272727273e-06, 'epoch': 0.13}
+{'loss': 10.1359, 'grad_norm': 122.125729722004, 'learning_rate': 8.181818181818181e-06, 'epoch': 0.15}
+{'loss': 10.1736, 'grad_norm': 69.51061259987937, 'learning_rate': 9.090909090909091e-06, 'epoch': 0.16}
+{'loss': 8.4408, 'grad_norm': 59.436040684950555, 'learning_rate': 9.999999999999999e-06, 'epoch': 0.18}
+{'loss': 7.5796, 'grad_norm': 64.65376367329515, 'learning_rate': 1.0909090909090909e-05, 'epoch': 0.19}
+{'loss': 6.7602, 'grad_norm': 67.22500039381293, 'learning_rate': 1.1818181818181819e-05, 'epoch': 0.21}
+{'loss': 6.1205, 'grad_norm': 61.4495898256975, 'learning_rate': 1.2727272727272728e-05, 'epoch': 0.22}
+{'loss': 5.2588, 'grad_norm': 62.8260027311435, 'learning_rate': 1.3636363636363637e-05, 'epoch': 0.24}
+{'loss': 3.5623, 'grad_norm': 57.12862342302377, 'learning_rate': 1.4545454545454546e-05, 'epoch': 0.25}
+{'loss': 2.6672, 'grad_norm': 56.87938014630337, 'learning_rate': 1.5454545454545454e-05, 'epoch': 0.27}
+{'loss': 1.8113, 'grad_norm': 38.474304794580675, 'learning_rate': 1.6363636363636363e-05, 'epoch': 0.28}
+{'loss': 0.9005, 'grad_norm': 23.596741718850286, 'learning_rate': 1.7272727272727274e-05, 'epoch': 0.3}
+{'loss': 0.554, 'grad_norm': 14.443007002682885, 'learning_rate': 1.8181818181818182e-05, 'epoch': 0.31}
+{'loss': 0.5251, 'grad_norm': 9.43614388858507, 'learning_rate': 1.909090909090909e-05, 'epoch': 0.33}
+{'loss': 0.4631, 'grad_norm': 9.913796065822433, 'learning_rate': 1.9999999999999998e-05, 'epoch': 0.34}
+{'loss': 0.3779, 'grad_norm': 12.183060882457294, 'learning_rate': 2.090909090909091e-05, 'epoch': 0.36}
+{'loss': 0.4185, 'grad_norm': 10.948121481796521, 'learning_rate': 2.1818181818181818e-05, 'epoch': 0.37}
+{'loss': 0.3895, 'grad_norm': 9.220221133029133, 'learning_rate': 2.272727272727273e-05, 'epoch': 0.39}
+{'loss': 0.3208, 'grad_norm': 10.133635742949716, 'learning_rate': 2.3636363636363637e-05, 'epoch': 0.4}
+{'loss': 0.297, 'grad_norm': 11.394128202036777, 'learning_rate': 2.454545454545455e-05, 'epoch': 0.42}
+{'loss': 0.426, 'grad_norm': 14.796910524755384, 'learning_rate': 2.5454545454545457e-05, 'epoch': 0.43}
+{'loss': 0.3606, 'grad_norm': 10.714044488283204, 'learning_rate': 2.6363636363636365e-05, 'epoch': 0.45}
+{'loss': 0.3648, 'grad_norm': 13.462044598733844, 'learning_rate': 2.7272727272727273e-05, 'epoch': 0.46}
+{'loss': 0.4854, 'grad_norm': 29.401683434671014, 'learning_rate': 2.8181818181818185e-05, 'epoch': 0.48}
+{'loss': 0.1839, 'grad_norm': 5.150039367633622, 'learning_rate': 2.9090909090909093e-05, 'epoch': 0.49}
+{'loss': 0.2592, 'grad_norm': 5.191729052528027, 'learning_rate': 3e-05, 'epoch': 0.51}
+{'loss': 1.0015, 'grad_norm': 28.08363430463382, 'learning_rate': 2.9999707434153004e-05, 'epoch': 0.52}
+{'loss': 0.439, 'grad_norm': 12.84846745243907, 'learning_rate': 2.9998829748024663e-05, 'epoch': 0.54}
+{'loss': 0.4469, 'grad_norm': 11.829232300299177, 'learning_rate': 2.9997366975852434e-05, 'epoch': 0.55}
+{'loss': 0.3391, 'grad_norm': 5.391650754004145, 'learning_rate': 2.999531917469728e-05, 'epoch': 0.57}
+{'loss': 0.3395, 'grad_norm': 7.200486103150925, 'learning_rate': 2.9992686424441417e-05, 'epoch': 0.58}
+{'loss': 0.3318, 'grad_norm': 4.726059399464064, 'learning_rate': 2.998946882778523e-05, 'epoch': 0.6}
+{'loss': 0.511, 'grad_norm': 13.680792534450541, 'learning_rate': 2.9985666510243225e-05, 'epoch': 0.61}
+{'loss': 0.3379, 'grad_norm': 5.159407120144374, 'learning_rate': 2.998127962013918e-05, 'epoch': 0.63}
+{'loss': 0.4441, 'grad_norm': 8.774260910552105, 'learning_rate': 2.997630832860032e-05, 'epoch': 0.64}
+{'loss': 0.3512, 'grad_norm': 5.615547246448194, 'learning_rate': 2.997075282955066e-05, 'epoch': 0.66}
+{'loss': 0.2663, 'grad_norm': 3.6604502945918242, 'learning_rate': 2.9964613339703444e-05, 'epoch': 0.67}
+{'loss': 0.3581, 'grad_norm': 4.2665232687785, 'learning_rate': 2.995789009855267e-05, 'epoch': 0.69}
+{'loss': 0.3699, 'grad_norm': 4.713456368013289, 'learning_rate': 2.9950583368363774e-05, 'epoch': 0.7}
+{'loss': 0.3611, 'grad_norm': 7.168966816088243, 'learning_rate': 2.9942693434163384e-05, 'epoch': 0.72}
+{'loss': 0.3641, 'grad_norm': 2.989332797702354, 'learning_rate': 2.9934220603728202e-05, 'epoch': 0.73}
+{'loss': 0.3546, 'grad_norm': 3.369132858770324, 'learning_rate': 2.9925165207573007e-05, 'epoch': 0.75}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+
+=== compute_metrics DEBUG ===
+[0] REF:  A
+[0] HYP:  A
+[0] ref_letter=A  hyp_letter=A
+---
+[1] REF:  A
+[1] HYP:  B
+[1] ref_letter=A  hyp_letter=B
+---
+[2] REF:  B
+[2] HYP:  B
+[2] ref_letter=B  hyp_letter=B
+---
+[3] REF:  A
+[3] HYP:  A
+[3] ref_letter=A  hyp_letter=A
+---
+[4] REF:  B
+[4] HYP:  A
+[4] ref_letter=B  hyp_letter=A
+---
+[5] REF:  A
+[5] HYP:  B
+[5] ref_letter=A  hyp_letter=B
+---
+{'eval_loss': 0.35794246196746826, 'eval_token_acc': 0.746031746031746, 'eval_string_acc': 0.49206349206349204, 'eval_choice_acc': 0.49206349206349204, 'eval_runtime': 47.873, 'eval_samples_per_second': 1.316, 'eval_steps_per_second': 0.334, 'epoch': 0.75}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+                                                                                                                              
+{'loss': 0.3279, 'grad_norm': 2.664987895644045, 'learning_rate': 2.9915527598937748e-05, 'epoch': 0.76}
+{'loss': 0.4037, 'grad_norm': 4.892989473705346, 'learning_rate': 2.9905308153773778e-05, 'epoch': 0.78}
+{'loss': 0.3564, 'grad_norm': 3.3080664125049424, 'learning_rate': 2.989450727072918e-05, 'epoch': 0.79}
+{'loss': 0.3499, 'grad_norm': 3.6935232978719905, 'learning_rate': 2.9883125371133222e-05, 'epoch': 0.81}
+{'loss': 0.322, 'grad_norm': 3.9653649899763828, 'learning_rate': 2.9871162898979915e-05, 'epoch': 0.82}
+{'loss': 0.3729, 'grad_norm': 3.9121353645851626, 'learning_rate': 2.98586203209107e-05, 'epoch': 0.84}
+{'loss': 0.3261, 'grad_norm': 2.414947044897611, 'learning_rate': 2.984549812619624e-05, 'epoch': 0.85}
+{'loss': 0.3472, 'grad_norm': 2.9031572450194125, 'learning_rate': 2.9831796826717333e-05, 'epoch': 0.87}
+{'loss': 0.3143, 'grad_norm': 3.591595091201558, 'learning_rate': 2.9817516956944956e-05, 'epoch': 0.88}
+{'loss': 0.413, 'grad_norm': 6.781688021175261, 'learning_rate': 2.98026590739194e-05, 'epoch': 0.9}
+{'loss': 0.3536, 'grad_norm': 1.6682836835370163, 'learning_rate': 2.9787223757228547e-05, 'epoch': 0.91}
+{'loss': 0.3772, 'grad_norm': 4.535911230189005, 'learning_rate': 2.9771211608985268e-05, 'epoch': 0.93}
+{'loss': 0.2932, 'grad_norm': 5.880364563492528, 'learning_rate': 2.975462325380392e-05, 'epoch': 0.94}
+{'loss': 0.3718, 'grad_norm': 4.303934144664304, 'learning_rate': 2.9737459338776e-05, 'epoch': 0.96}
+{'loss': 0.4026, 'grad_norm': 5.88129474719158, 'learning_rate': 2.9719720533444874e-05, 'epoch': 0.97}
+{'loss': 0.3307, 'grad_norm': 1.669010883084465, 'learning_rate': 2.9701407529779707e-05, 'epoch': 0.99}
+{'loss': 0.3043, 'grad_norm': 6.247493297353202, 'learning_rate': 2.968252104214841e-05, 'epoch': 1.0}
+{'loss': 0.4081, 'grad_norm': 4.724791345711009, 'learning_rate': 2.9663061807289823e-05, 'epoch': 1.01}
+{'loss': 0.3574, 'grad_norm': 1.3389030076831046, 'learning_rate': 2.9643030584284946e-05, 'epoch': 1.03}
+{'loss': 0.3386, 'grad_norm': 1.7312049480041478, 'learning_rate': 2.9622428154527344e-05, 'epoch': 1.04}
+{'loss': 0.3234, 'grad_norm': 1.4020466475667126, 'learning_rate': 2.960125532169266e-05, 'epoch': 1.06}
+{'loss': 0.3531, 'grad_norm': 2.7661503706621846, 'learning_rate': 2.9579512911707257e-05, 'epoch': 1.07}
+{'loss': 0.3466, 'grad_norm': 2.6300883508414787, 'learning_rate': 2.9557201772716023e-05, 'epoch': 1.09}
+{'loss': 0.3453, 'grad_norm': 2.377929305811614, 'learning_rate': 2.9534322775049255e-05, 'epoch': 1.1}
+{'loss': 0.334, 'grad_norm': 1.7239814079315117, 'learning_rate': 2.9510876811188732e-05, 'epoch': 1.12}
+{'loss': 0.3445, 'grad_norm': 3.6896930999583333, 'learning_rate': 2.9486864795732894e-05, 'epoch': 1.13}
+{'loss': 0.3299, 'grad_norm': 3.4878620806857032, 'learning_rate': 2.946228766536116e-05, 'epoch': 1.15}
+{'loss': 0.3407, 'grad_norm': 1.8661222890072982, 'learning_rate': 2.943714637879738e-05, 'epoch': 1.16}
+{'loss': 0.334, 'grad_norm': 2.003845054553555, 'learning_rate': 2.9411441916772473e-05, 'epoch': 1.18}
+{'loss': 0.3272, 'grad_norm': 1.097820138543797, 'learning_rate': 2.9385175281986134e-05, 'epoch': 1.19}
+{'loss': 0.3845, 'grad_norm': 3.4463066665208157, 'learning_rate': 2.935834749906772e-05, 'epoch': 1.21}
+{'loss': 0.3449, 'grad_norm': 2.084259420004642, 'learning_rate': 2.9330959614536314e-05, 'epoch': 1.22}
+{'loss': 0.3462, 'grad_norm': 2.6866515829737274, 'learning_rate': 2.9303012696759853e-05, 'epoch': 1.24}
+{'loss': 0.3515, 'grad_norm': 1.828610453405701, 'learning_rate': 2.9274507835913507e-05, 'epoch': 1.25}
+{'loss': 0.3619, 'grad_norm': 2.7932676311487628, 'learning_rate': 2.9245446143937097e-05, 'epoch': 1.27}
+{'loss': 0.3703, 'grad_norm': 4.281951425251427, 'learning_rate': 2.9215828754491774e-05, 'epoch': 1.28}
+{'loss': 0.3291, 'grad_norm': 2.4661617964750238, 'learning_rate': 2.9185656822915748e-05, 'epoch': 1.3}
+{'loss': 0.3611, 'grad_norm': 1.728654266363302, 'learning_rate': 2.9154931526179248e-05, 'epoch': 1.31}
+{'loss': 0.3331, 'grad_norm': 3.6846778915687644, 'learning_rate': 2.9123654062838597e-05, 'epoch': 1.33}
+{'loss': 0.3489, 'grad_norm': 2.3755856209729935, 'learning_rate': 2.909182565298948e-05, 'epoch': 1.34}
+{'loss': 0.3403, 'grad_norm': 2.5011414715654374, 'learning_rate': 2.9059447538219314e-05, 'epoch': 1.36}
+{'loss': 0.3649, 'grad_norm': 1.6406616283049182, 'learning_rate': 2.9026520981558844e-05, 'epoch': 1.37}
+{'loss': 0.3458, 'grad_norm': 2.8051496486694383, 'learning_rate': 2.8993047267432866e-05, 'epoch': 1.39}
+{'loss': 0.323, 'grad_norm': 3.0339841532183076, 'learning_rate': 2.8959027701610108e-05, 'epoch': 1.4}
+{'loss': 0.3727, 'grad_norm': 2.6717374131040663, 'learning_rate': 2.892446361115232e-05, 'epoch': 1.42}
+{'loss': 0.3523, 'grad_norm': 2.574317158448805, 'learning_rate': 2.8889356344362493e-05, 'epoch': 1.43}
+{'loss': 0.3451, 'grad_norm': 2.1455347561765317, 'learning_rate': 2.8853707270732256e-05, 'epoch': 1.45}
+{'loss': 0.3613, 'grad_norm': 2.134453210555994, 'learning_rate': 2.881751778088846e-05, 'epoch': 1.46}
+{'loss': 0.3345, 'grad_norm': 2.083017978328764, 'learning_rate': 2.878078928653894e-05, 'epoch': 1.48}
+{'loss': 0.3727, 'grad_norm': 2.689916343466783, 'learning_rate': 2.8743523220417444e-05, 'epoch': 1.49}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.3538418114185333, 'eval_token_acc': 0.7380952380952381, 'eval_string_acc': 0.47619047619047616, 'eval_choice_acc': 0.47619047619047616, 'eval_runtime': 47.7967, 'eval_samples_per_second': 1.318, 'eval_steps_per_second': 0.335, 'epoch': 1.49}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+                                                                                                                              
+{'loss': 0.3268, 'grad_norm': 3.5363674669955416, 'learning_rate': 2.8705721036227727e-05, 'epoch': 1.51}
+{'loss': 0.3548, 'grad_norm': 2.082628845049188, 'learning_rate': 2.8667384208586863e-05, 'epoch': 1.52}
+{'loss': 0.335, 'grad_norm': 1.6410302641888326, 'learning_rate': 2.8628514232967705e-05, 'epoch': 1.54}
+{'loss': 0.3899, 'grad_norm': 4.671216772797754, 'learning_rate': 2.8589112625640578e-05, 'epoch': 1.55}
+{'loss': 0.3347, 'grad_norm': 2.1025210233862865, 'learning_rate': 2.854918092361408e-05, 'epoch': 1.57}
+{'loss': 0.3574, 'grad_norm': 4.011973032315989, 'learning_rate': 2.8508720684575187e-05, 'epoch': 1.58}
+{'loss': 0.3294, 'grad_norm': 2.517581280976691, 'learning_rate': 2.8467733486828448e-05, 'epoch': 1.6}
+{'loss': 0.345, 'grad_norm': 2.4231913344726665, 'learning_rate': 2.8426220929234422e-05, 'epoch': 1.61}
+{'loss': 0.3398, 'grad_norm': 3.365664341811835, 'learning_rate': 2.8384184631147313e-05, 'epoch': 1.63}
+{'loss': 0.3396, 'grad_norm': 2.9491576954458676, 'learning_rate': 2.8341626232351818e-05, 'epoch': 1.64}
+{'loss': 0.3274, 'grad_norm': 2.768761568182772, 'learning_rate': 2.8298547392999125e-05, 'epoch': 1.66}
+{'loss': 0.3373, 'grad_norm': 2.4872161880819887, 'learning_rate': 2.8254949793542197e-05, 'epoch': 1.67}
+{'loss': 0.3342, 'grad_norm': 3.5417603831836026, 'learning_rate': 2.821083513467017e-05, 'epoch': 1.69}
+{'loss': 0.3482, 'grad_norm': 2.9442826553966923, 'learning_rate': 2.8166205137242063e-05, 'epoch': 1.7}
+{'loss': 0.335, 'grad_norm': 2.4062961833395273, 'learning_rate': 2.8121061542219594e-05, 'epoch': 1.72}
+{'loss': 0.349, 'grad_norm': 2.9406185013096375, 'learning_rate': 2.807540611059932e-05, 'epoch': 1.73}
+{'loss': 0.3797, 'grad_norm': 5.921980183629833, 'learning_rate': 2.8029240623343908e-05, 'epoch': 1.75}
+{'loss': 0.3561, 'grad_norm': 2.3456741320591488, 'learning_rate': 2.7982566881312675e-05, 'epoch': 1.76}
+{'loss': 0.2975, 'grad_norm': 2.8396791362372378, 'learning_rate': 2.793538670519134e-05, 'epoch': 1.78}
+{'loss': 0.3785, 'grad_norm': 9.023473576943237, 'learning_rate': 2.7887701935420995e-05, 'epoch': 1.79}
+{'loss': 0.3332, 'grad_norm': 2.912532604919967, 'learning_rate': 2.783951443212631e-05, 'epoch': 1.81}
+{'loss': 0.3812, 'grad_norm': 3.384329343349835, 'learning_rate': 2.779082607504298e-05, 'epoch': 1.82}
+{'loss': 0.3505, 'grad_norm': 4.133413379022108, 'learning_rate': 2.77416387634444e-05, 'epoch': 1.84}
+{'loss': 0.3892, 'grad_norm': 3.16989986683981, 'learning_rate': 2.7691954416067567e-05, 'epoch': 1.85}
+{'loss': 0.333, 'grad_norm': 2.0177929326658792, 'learning_rate': 2.7641774971038234e-05, 'epoch': 1.87}
+{'loss': 0.3485, 'grad_norm': 2.3535247406061184, 'learning_rate': 2.7591102385795314e-05, 'epoch': 1.88}
+{'loss': 0.3645, 'grad_norm': 4.934967463392735, 'learning_rate': 2.7539938637014517e-05, 'epoch': 1.9}
+{'loss': 0.3332, 'grad_norm': 4.677805008822645, 'learning_rate': 2.748828572053124e-05, 'epoch': 1.91}
+{'loss': 0.3502, 'grad_norm': 3.727945545477333, 'learning_rate': 2.7436145651262725e-05, 'epoch': 1.93}
+{'loss': 0.3421, 'grad_norm': 2.5352643901611467, 'learning_rate': 2.7383520463129438e-05, 'epoch': 1.94}
+{'loss': 0.3842, 'grad_norm': 5.6106109045557595, 'learning_rate': 2.7330412208975738e-05, 'epoch': 1.96}
+{'loss': 0.3544, 'grad_norm': 2.6624193579109527, 'learning_rate': 2.7276822960489815e-05, 'epoch': 1.97}
+{'loss': 0.3537, 'grad_norm': 1.6240162479327784, 'learning_rate': 2.7222754808122846e-05, 'epoch': 1.99}
+{'loss': 0.3894, 'grad_norm': 5.044654361475392, 'learning_rate': 2.716820986100748e-05, 'epoch': 2.0}
+{'loss': 0.3352, 'grad_norm': 2.488558071904143, 'learning_rate': 2.7113190246875517e-05, 'epoch': 2.01}
+{'loss': 0.3366, 'grad_norm': 2.270682014613449, 'learning_rate': 2.7057698111974985e-05, 'epoch': 2.03}
+{'loss': 0.3075, 'grad_norm': 3.8517258651913266, 'learning_rate': 2.7001735620986323e-05, 'epoch': 2.04}
+{'loss': 0.3514, 'grad_norm': 3.6871959807467958, 'learning_rate': 2.694530495693802e-05, 'epoch': 2.06}
+{'loss': 0.3186, 'grad_norm': 2.5304155640390906, 'learning_rate': 2.6888408321121405e-05, 'epoch': 2.07}
+{'loss': 0.3769, 'grad_norm': 2.6108144088785594, 'learning_rate': 2.683104793300481e-05, 'epoch': 2.09}
+{'loss': 0.344, 'grad_norm': 2.482353046082422, 'learning_rate': 2.6773226030146964e-05, 'epoch': 2.1}
+{'loss': 0.3804, 'grad_norm': 4.360612120801004, 'learning_rate': 2.6714944868109744e-05, 'epoch': 2.12}
+{'loss': 0.3266, 'grad_norm': 1.581225394021078, 'learning_rate': 2.6656206720370145e-05, 'epoch': 2.13}
+{'loss': 0.3508, 'grad_norm': 2.3344027920508386, 'learning_rate': 2.6597013878231626e-05, 'epoch': 2.15}
+{'loss': 0.353, 'grad_norm': 2.5787972768394134, 'learning_rate': 2.653736865073473e-05, 'epoch': 2.16}
+{'loss': 0.3533, 'grad_norm': 3.6020177023384212, 'learning_rate': 2.647727336456698e-05, 'epoch': 2.18}
+{'loss': 0.3334, 'grad_norm': 1.916863676844784, 'learning_rate': 2.641673036397215e-05, 'epoch': 2.19}
+{'loss': 0.3256, 'grad_norm': 2.346406170939609, 'learning_rate': 2.6355742010658816e-05, 'epoch': 2.21}
+{'loss': 0.3213, 'grad_norm': 2.3528649724474495, 'learning_rate': 2.6294310683708197e-05, 'epoch': 2.22}
+{'loss': 0.3398, 'grad_norm': 2.6505475468385127, 'learning_rate': 2.62324387794814e-05, 'epoch': 2.24}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.34236279129981995, 'eval_token_acc': 0.7777777777777778, 'eval_string_acc': 0.5555555555555556, 'eval_choice_acc': 0.5555555555555556, 'eval_runtime': 47.5746, 'eval_samples_per_second': 1.324, 'eval_steps_per_second': 0.336, 'epoch': 2.24}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+                                                                                                                              
+{'loss': 0.3327, 'grad_norm': 3.1748111937705885, 'learning_rate': 2.6170128711525886e-05, 'epoch': 2.25}
+{'loss': 0.3294, 'grad_norm': 1.809403658408353, 'learning_rate': 2.6107382910481377e-05, 'epoch': 2.27}
+{'loss': 0.3384, 'grad_norm': 3.8094193274272956, 'learning_rate': 2.6044203823984986e-05, 'epoch': 2.28}
+{'loss': 0.3574, 'grad_norm': 3.136978863859296, 'learning_rate': 2.5980593916575783e-05, 'epoch': 2.3}
+{'loss': 0.3156, 'grad_norm': 1.7001878759944902, 'learning_rate': 2.591655566959862e-05, 'epoch': 2.31}
+{'loss': 0.3375, 'grad_norm': 2.5482840176662886, 'learning_rate': 2.5852091581107355e-05, 'epoch': 2.33}
+{'loss': 0.344, 'grad_norm': 1.9190150002171504, 'learning_rate': 2.5787204165767414e-05, 'epoch': 2.34}
+{'loss': 0.3551, 'grad_norm': 3.676774180836055, 'learning_rate': 2.5721895954757684e-05, 'epoch': 2.36}
+{'loss': 0.352, 'grad_norm': 2.3158476290790855, 'learning_rate': 2.5656169495671767e-05, 'epoch': 2.37}
+{'loss': 0.3564, 'grad_norm': 2.1259934016279627, 'learning_rate': 2.5590027352418623e-05, 'epoch': 2.39}
+{'loss': 0.3235, 'grad_norm': 2.422896376926598, 'learning_rate': 2.5523472105122542e-05, 'epoch': 2.4}
+{'loss': 0.3261, 'grad_norm': 2.4829071133012475, 'learning_rate': 2.5456506350022493e-05, 'epoch': 2.42}
+{'loss': 0.3683, 'grad_norm': 2.054345243150495, 'learning_rate': 2.538913269937086e-05, 'epoch': 2.43}
+{'loss': 0.3365, 'grad_norm': 3.4754599782465023, 'learning_rate': 2.532135378133153e-05, 'epoch': 2.45}
+{'loss': 0.3368, 'grad_norm': 4.164680156040677, 'learning_rate': 2.525317223987738e-05, 'epoch': 2.46}
+{'loss': 0.336, 'grad_norm': 3.7362230581607534, 'learning_rate': 2.518459073468713e-05, 'epoch': 2.48}
+{'loss': 0.3339, 'grad_norm': 3.0201439556071024, 'learning_rate': 2.511561194104161e-05, 'epoch': 2.49}
+{'loss': 0.305, 'grad_norm': 2.5925108181951986, 'learning_rate': 2.504623854971937e-05, 'epoch': 2.51}
+{'loss': 0.3447, 'grad_norm': 2.4575436944117524, 'learning_rate': 2.4976473266891743e-05, 'epoch': 2.52}
+{'loss': 0.3301, 'grad_norm': 3.496434261021515, 'learning_rate': 2.4906318814017268e-05, 'epoch': 2.54}
+{'loss': 0.3535, 'grad_norm': 3.45460804064077, 'learning_rate': 2.4835777927735547e-05, 'epoch': 2.55}
+{'loss': 0.371, 'grad_norm': 2.869545680927603, 'learning_rate': 2.4764853359760448e-05, 'epoch': 2.57}
+{'loss': 0.3463, 'grad_norm': 2.478029440243463, 'learning_rate': 2.4693547876772828e-05, 'epoch': 2.58}
+{'loss': 0.3235, 'grad_norm': 2.1553151814282465, 'learning_rate': 2.4621864260312544e-05, 'epoch': 2.6}
+{'loss': 0.3484, 'grad_norm': 2.1872274507931952, 'learning_rate': 2.4549805306669997e-05, 'epoch': 2.61}
+{'loss': 0.3431, 'grad_norm': 3.9723171642608475, 'learning_rate': 2.447737382677703e-05, 'epoch': 2.63}
+{'loss': 0.3595, 'grad_norm': 2.4072337642849324, 'learning_rate': 2.440457264609727e-05, 'epoch': 2.64}
+{'loss': 0.326, 'grad_norm': 2.9118751122852986, 'learning_rate': 2.4331404604515942e-05, 'epoch': 2.66}
+{'loss': 0.3182, 'grad_norm': 2.6426778398620336, 'learning_rate': 2.4257872556229044e-05, 'epoch': 2.67}
+{'loss': 0.3158, 'grad_norm': 3.2641430255372805, 'learning_rate': 2.418397936963205e-05, 'epoch': 2.69}
+{'loss': 0.3461, 'grad_norm': 5.556623315575043, 'learning_rate': 2.410972792720797e-05, 'epoch': 2.7}
+{'loss': 0.3387, 'grad_norm': 3.8086693961857914, 'learning_rate': 2.403512112541498e-05, 'epoch': 2.72}
+{'loss': 0.3038, 'grad_norm': 4.752758404516962, 'learning_rate': 2.396016187457335e-05, 'epoch': 2.73}
+{'loss': 0.3093, 'grad_norm': 2.4884662217023354, 'learning_rate': 2.3884853098751987e-05, 'epoch': 2.75}
+{'loss': 0.333, 'grad_norm': 3.449849203576231, 'learning_rate': 2.3809197735654326e-05, 'epoch': 2.76}
+{'loss': 0.3401, 'grad_norm': 5.390575841370243, 'learning_rate': 2.3733198736503746e-05, 'epoch': 2.78}
+{'loss': 0.3364, 'grad_norm': 5.708031511732567, 'learning_rate': 2.365685906592846e-05, 'epoch': 2.79}
+{'loss': 0.3288, 'grad_norm': 5.217579101033157, 'learning_rate': 2.3580181701845852e-05, 'epoch': 2.81}
+{'loss': 0.309, 'grad_norm': 9.0280466868353, 'learning_rate': 2.3503169635346313e-05, 'epoch': 2.82}
+{'loss': 0.2981, 'grad_norm': 6.0867500473168725, 'learning_rate': 2.3425825870576577e-05, 'epoch': 2.84}
+{'loss': 0.2777, 'grad_norm': 7.091494726016168, 'learning_rate': 2.3348153424622515e-05, 'epoch': 2.85}
+{'loss': 0.3429, 'grad_norm': 5.261860717253069, 'learning_rate': 2.327015532739145e-05, 'epoch': 2.87}
+{'loss': 0.2135, 'grad_norm': 3.379298356453639, 'learning_rate': 2.3191834621493972e-05, 'epoch': 2.88}
+{'loss': 0.3729, 'grad_norm': 14.807203525892595, 'learning_rate': 2.311319436212523e-05, 'epoch': 2.9}
+{'loss': 0.3715, 'grad_norm': 6.349201722458059, 'learning_rate': 2.3034237616945776e-05, 'epoch': 2.91}
+{'loss': 0.3258, 'grad_norm': 6.397514037591696, 'learning_rate': 2.2954967465961867e-05, 'epoch': 2.93}
+{'loss': 0.3231, 'grad_norm': 7.899883611647247, 'learning_rate': 2.2875387001405366e-05, 'epoch': 2.94}
+{'loss': 0.3874, 'grad_norm': 5.872050130821355, 'learning_rate': 2.2795499327613065e-05, 'epoch': 2.96}
+{'loss': 0.2737, 'grad_norm': 3.900500738219539, 'learning_rate': 2.271530756090563e-05, 'epoch': 2.97}
+{'loss': 0.5523, 'grad_norm': 13.263132577598268, 'learning_rate': 2.2634814829466016e-05, 'epoch': 2.99}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.366619735956192, 'eval_token_acc': 0.8015873015873016, 'eval_string_acc': 0.6031746031746031, 'eval_choice_acc': 0.6031746031746031, 'eval_runtime': 47.469, 'eval_samples_per_second': 1.327, 'eval_steps_per_second': 0.337, 'epoch': 2.99}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+                                                                                                                              
+{'loss': 0.3031, 'grad_norm': 4.86012616242061, 'learning_rate': 2.2554024273217433e-05, 'epoch': 3.0}
+{'loss': 0.3594, 'grad_norm': 5.906380688720838, 'learning_rate': 2.2472939043700896e-05, 'epoch': 3.01}
+{'loss': 0.4154, 'grad_norm': 11.521216125671025, 'learning_rate': 2.239156230395224e-05, 'epoch': 3.03}
+{'loss': 0.3294, 'grad_norm': 6.8263743295856605, 'learning_rate': 2.230989722837878e-05, 'epoch': 3.04}
+{'loss': 0.3161, 'grad_norm': 5.391076221456705, 'learning_rate': 2.2227947002635448e-05, 'epoch': 3.06}
+{'loss': 0.3242, 'grad_norm': 3.7831800670941664, 'learning_rate': 2.214571482350053e-05, 'epoch': 3.07}
+{'loss': 0.2848, 'grad_norm': 2.3664358893686797, 'learning_rate': 2.2063203898750987e-05, 'epoch': 3.09}
+{'loss': 0.2895, 'grad_norm': 4.1213009385110535, 'learning_rate': 2.1980417447037295e-05, 'epoch': 3.1}
+{'loss': 0.3181, 'grad_norm': 2.0755231945135026, 'learning_rate': 2.18973586977579e-05, 'epoch': 3.12}
+{'loss': 0.2811, 'grad_norm': 3.8985509466502273, 'learning_rate': 2.181403089093325e-05, 'epoch': 3.13}
+{'loss': 0.3145, 'grad_norm': 3.6642460833202315, 'learning_rate': 2.1730437277079394e-05, 'epoch': 3.15}
+{'loss': 0.4262, 'grad_norm': 6.210378807052888, 'learning_rate': 2.1646581117081185e-05, 'epoch': 3.16}
+{'loss': 0.334, 'grad_norm': 3.010420061671495, 'learning_rate': 2.1562465682065102e-05, 'epoch': 3.18}
+{'loss': 0.3247, 'grad_norm': 3.171340558399897, 'learning_rate': 2.1478094253271593e-05, 'epoch': 3.19}
+{'loss': 0.3404, 'grad_norm': 3.929605848298992, 'learning_rate': 2.1393470121927143e-05, 'epoch': 3.21}
+{'loss': 0.3103, 'grad_norm': 4.293897656574848, 'learning_rate': 2.1308596589115823e-05, 'epoch': 3.22}
+{'loss': 0.3019, 'grad_norm': 3.960377016537992, 'learning_rate': 2.1223476965650586e-05, 'epoch': 3.24}
+{'loss': 0.329, 'grad_norm': 4.275401265626519, 'learning_rate': 2.1138114571944058e-05, 'epoch': 3.25}
+{'loss': 0.3089, 'grad_norm': 3.8317127406834803, 'learning_rate': 2.1052512737879032e-05, 'epoch': 3.27}
+{'loss': 0.3078, 'grad_norm': 3.5272138186952127, 'learning_rate': 2.0966674802678598e-05, 'epoch': 3.28}
+{'loss': 0.2991, 'grad_norm': 4.35444129171607, 'learning_rate': 2.0880604114775843e-05, 'epoch': 3.3}
+{'loss': 0.2863, 'grad_norm': 3.5116944302858757, 'learning_rate': 2.0794304031683267e-05, 'epoch': 3.31}
+{'loss': 0.3233, 'grad_norm': 5.415599982377648, 'learning_rate': 2.0707777919861784e-05, 'epoch': 3.33}
+{'loss': 0.3393, 'grad_norm': 4.13900598303297, 'learning_rate': 2.0621029154589436e-05, 'epoch': 3.34}
+{'loss': 0.2956, 'grad_norm': 4.041349991132775, 'learning_rate': 2.0534061119829663e-05, 'epoch': 3.36}
+{'loss': 0.2861, 'grad_norm': 4.839266865433909, 'learning_rate': 2.0446877208099393e-05, 'epoch': 3.37}
+{'loss': 0.2581, 'grad_norm': 3.716629418634806, 'learning_rate': 2.0359480820336596e-05, 'epoch': 3.39}
+{'loss': 0.2801, 'grad_norm': 6.335151116445359, 'learning_rate': 2.0271875365767722e-05, 'epoch': 3.4}
+{'loss': 0.2262, 'grad_norm': 4.953310558941532, 'learning_rate': 2.0184064261774625e-05, 'epoch': 3.42}
+{'loss': 0.2295, 'grad_norm': 4.014158449448651, 'learning_rate': 2.0096050933761314e-05, 'epoch': 3.43}
+{'loss': 0.2889, 'grad_norm': 5.327585320054266, 'learning_rate': 2.00078388150203e-05, 'epoch': 3.45}
+{'loss': 0.3369, 'grad_norm': 7.341004302755792, 'learning_rate': 1.9919431346598688e-05, 'epoch': 3.46}
+{'loss': 0.3252, 'grad_norm': 5.795131096715607, 'learning_rate': 1.983083197716392e-05, 'epoch': 3.48}
+{'loss': 0.3584, 'grad_norm': 7.401529531253519, 'learning_rate': 1.9742044162869276e-05, 'epoch': 3.49}
+{'loss': 0.2926, 'grad_norm': 5.4318167012656575, 'learning_rate': 1.9653071367219036e-05, 'epoch': 3.51}
+{'loss': 0.2115, 'grad_norm': 2.885481689714328, 'learning_rate': 1.9563917060933366e-05, 'epoch': 3.52}
+{'loss': 0.2821, 'grad_norm': 6.663355891642399, 'learning_rate': 1.947458472181296e-05, 'epoch': 3.54}
+{'loss': 0.2253, 'grad_norm': 4.725793187733701, 'learning_rate': 1.9385077834603347e-05, 'epoch': 3.55}
+{'loss': 0.4118, 'grad_norm': 11.597367392337567, 'learning_rate': 1.929539989085896e-05, 'epoch': 3.57}
+{'loss': 0.3817, 'grad_norm': 8.597856769086542, 'learning_rate': 1.9205554388806932e-05, 'epoch': 3.58}
+{'loss': 0.3706, 'grad_norm': 9.06350896924234, 'learning_rate': 1.9115544833210668e-05, 'epoch': 3.6}
+{'loss': 0.3972, 'grad_norm': 12.60787234792692, 'learning_rate': 1.9025374735233067e-05, 'epoch': 3.61}
+{'loss': 0.3438, 'grad_norm': 7.409963341569769, 'learning_rate': 1.8935047612299626e-05, 'epoch': 3.63}
+{'loss': 0.3957, 'grad_norm': 7.283304299805289, 'learning_rate': 1.8844566987961153e-05, 'epoch': 3.64}
+{'loss': 0.2721, 'grad_norm': 5.152949962697621, 'learning_rate': 1.8753936391756403e-05, 'epoch': 3.66}
+{'loss': 0.1936, 'grad_norm': 4.028852679667477, 'learning_rate': 1.866315935907431e-05, 'epoch': 3.67}
+{'loss': 0.3245, 'grad_norm': 3.916712066275221, 'learning_rate': 1.8572239431016146e-05, 'epoch': 3.69}
+{'loss': 0.3206, 'grad_norm': 7.700671217607776, 'learning_rate': 1.848118015425734e-05, 'epoch': 3.7}
+{'loss': 0.3168, 'grad_norm': 4.133532471982429, 'learning_rate': 1.8389985080909157e-05, 'epoch': 3.72}
+{'loss': 0.4543, 'grad_norm': 11.656806987443012, 'learning_rate': 1.8298657768380104e-05, 'epoch': 3.73}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.36426061391830444, 'eval_token_acc': 0.7619047619047619, 'eval_string_acc': 0.5238095238095238, 'eval_choice_acc': 0.5238095238095238, 'eval_runtime': 47.8, 'eval_samples_per_second': 1.318, 'eval_steps_per_second': 0.335, 'epoch': 3.73}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+                                                                                                                              
+{'loss': 0.2052, 'grad_norm': 3.2309988652912627, 'learning_rate': 1.820720177923719e-05, 'epoch': 3.75}
+{'loss': 0.3045, 'grad_norm': 6.040773794631251, 'learning_rate': 1.8115620681066946e-05, 'epoch': 3.76}
+{'loss': 0.3416, 'grad_norm': 4.818748726019552, 'learning_rate': 1.802391804633623e-05, 'epoch': 3.78}
+{'loss': 0.3221, 'grad_norm': 8.68279536413651, 'learning_rate': 1.7932097452252933e-05, 'epoch': 3.79}
+{'loss': 0.3935, 'grad_norm': 7.863994103194067, 'learning_rate': 1.7840162480626344e-05, 'epoch': 3.81}
+{'loss': 0.3104, 'grad_norm': 6.372232480933491, 'learning_rate': 1.7748116717727534e-05, 'epoch': 3.82}
+{'loss': 0.3495, 'grad_norm': 4.85155567472389, 'learning_rate': 1.765596375414936e-05, 'epoch': 3.84}
+{'loss': 0.3166, 'grad_norm': 6.09573668313035, 'learning_rate': 1.756370718466648e-05, 'epoch': 3.85}
+{'loss': 0.3106, 'grad_norm': 6.167607579073373, 'learning_rate': 1.7471350608095077e-05, 'epoch': 3.87}
+{'loss': 0.3404, 'grad_norm': 4.846593425859388, 'learning_rate': 1.7378897627152494e-05, 'epoch': 3.88}
+{'loss': 0.2542, 'grad_norm': 5.276284736582867, 'learning_rate': 1.728635184831668e-05, 'epoch': 3.9}
+{'loss': 0.2803, 'grad_norm': 4.5097761364877735, 'learning_rate': 1.7193716881685534e-05, 'epoch': 3.91}
+{'loss': 0.2559, 'grad_norm': 4.470735427525739, 'learning_rate': 1.7100996340836043e-05, 'epoch': 3.93}
+{'loss': 0.2738, 'grad_norm': 5.475250746098684, 'learning_rate': 1.700819384268335e-05, 'epoch': 3.94}
+{'loss': 0.2338, 'grad_norm': 6.943117530932804, 'learning_rate': 1.6915313007339665e-05, 'epoch': 3.96}
+{'loss': 0.2304, 'grad_norm': 5.1115623325375275, 'learning_rate': 1.6822357457973007e-05, 'epoch': 3.97}
+{'loss': 0.2582, 'grad_norm': 5.174502799028471, 'learning_rate': 1.6729330820665924e-05, 'epoch': 3.99}
+{'loss': 0.5043, 'grad_norm': 13.24080238943166, 'learning_rate': 1.6636236724274e-05, 'epoch': 4.0}
+{'loss': 0.1942, 'grad_norm': 6.358469727876763, 'learning_rate': 1.654307880028433e-05, 'epoch': 4.01}
+{'loss': 0.1412, 'grad_norm': 4.450052485807305, 'learning_rate': 1.6449860682673834e-05, 'epoch': 4.03}
+{'loss': 0.2468, 'grad_norm': 7.745008505447704, 'learning_rate': 1.635658600776752e-05, 'epoch': 4.04}
+{'loss': 0.3581, 'grad_norm': 9.093918037682707, 'learning_rate': 1.626325841409662e-05, 'epoch': 4.06}
+{'loss': 0.1709, 'grad_norm': 4.9939212139640246, 'learning_rate': 1.6169881542256666e-05, 'epoch': 4.07}
+{'loss': 0.1764, 'grad_norm': 5.896743561954587, 'learning_rate': 1.6076459034765477e-05, 'epoch': 4.09}
+{'loss': 0.2372, 'grad_norm': 8.999642252132428, 'learning_rate': 1.598299453592105e-05, 'epoch': 4.1}
+{'loss': 0.1554, 'grad_norm': 7.306052197538402, 'learning_rate': 1.5889491691659427e-05, 'epoch': 4.12}
+{'loss': 0.1777, 'grad_norm': 6.185387459554936, 'learning_rate': 1.5795954149412445e-05, 'epoch': 4.13}
+{'loss': 0.2022, 'grad_norm': 7.753483525273316, 'learning_rate': 1.5702385557965484e-05, 'epoch': 4.15}
+{'loss': 0.1561, 'grad_norm': 4.766794268716347, 'learning_rate': 1.560878956731509e-05, 'epoch': 4.16}
+{'loss': 0.2058, 'grad_norm': 5.282727945405625, 'learning_rate': 1.5515169828526648e-05, 'epoch': 4.18}
+{'loss': 0.206, 'grad_norm': 11.662488255897218, 'learning_rate': 1.5421529993591908e-05, 'epoch': 4.19}
+{'loss': 0.7763, 'grad_norm': 42.55851043299022, 'learning_rate': 1.5327873715286553e-05, 'epoch': 4.21}
+{'loss': 0.3762, 'grad_norm': 18.836198506791202, 'learning_rate': 1.5234204647027702e-05, 'epoch': 4.22}
+{'loss': 0.264, 'grad_norm': 5.960880837871778, 'learning_rate': 1.5140526442731395e-05, 'epoch': 4.24}
+{'loss': 0.2852, 'grad_norm': 7.881358669804096, 'learning_rate': 1.5046842756670056e-05, 'epoch': 4.25}
+{'loss': 0.4066, 'grad_norm': 9.590801828972424, 'learning_rate': 1.4953157243329948e-05, 'epoch': 4.27}
+{'loss': 0.1322, 'grad_norm': 4.7959332145371105, 'learning_rate': 1.4859473557268607e-05, 'epoch': 4.28}
+{'loss': 0.2206, 'grad_norm': 5.400145424803095, 'learning_rate': 1.4765795352972298e-05, 'epoch': 4.3}
+{'loss': 0.5372, 'grad_norm': 12.668016783888016, 'learning_rate': 1.4672126284713446e-05, 'epoch': 4.31}
+{'loss': 0.2265, 'grad_norm': 5.760948362007911, 'learning_rate': 1.4578470006408095e-05, 'epoch': 4.33}
+{'loss': 0.2669, 'grad_norm': 8.900241047665624, 'learning_rate': 1.4484830171473356e-05, 'epoch': 4.34}
+{'loss': 0.2491, 'grad_norm': 4.702915462285815, 'learning_rate': 1.4391210432684912e-05, 'epoch': 4.36}
+{'loss': 0.3479, 'grad_norm': 9.387164200405792, 'learning_rate': 1.429761444203452e-05, 'epoch': 4.37}
+{'loss': 0.2703, 'grad_norm': 4.217259573903929, 'learning_rate': 1.4204045850587555e-05, 'epoch': 4.39}
+{'loss': 0.3429, 'grad_norm': 6.831928266283141, 'learning_rate': 1.4110508308340579e-05, 'epoch': 4.4}
+{'loss': 0.2599, 'grad_norm': 3.452598305568307, 'learning_rate': 1.4017005464078952e-05, 'epoch': 4.42}
+{'loss': 0.1969, 'grad_norm': 2.9678645848623684, 'learning_rate': 1.3923540965234527e-05, 'epoch': 4.43}
+{'loss': 0.3192, 'grad_norm': 7.387247340787225, 'learning_rate': 1.3830118457743333e-05, 'epoch': 4.45}
+{'loss': 0.4162, 'grad_norm': 6.042280354385248, 'learning_rate': 1.3736741585903387e-05, 'epoch': 4.46}
+{'loss': 0.3273, 'grad_norm': 5.528811451696688, 'learning_rate': 1.3643413992232483e-05, 'epoch': 4.48}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.3427128791809082, 'eval_token_acc': 0.8095238095238095, 'eval_string_acc': 0.6190476190476191, 'eval_choice_acc': 0.6190476190476191, 'eval_runtime': 47.7629, 'eval_samples_per_second': 1.319, 'eval_steps_per_second': 0.335, 'epoch': 4.48}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+                                                                                                                              
+{'loss': 0.3154, 'grad_norm': 5.049468788181761, 'learning_rate': 1.3550139317326168e-05, 'epoch': 4.49}
+{'loss': 0.2969, 'grad_norm': 4.716054418382905, 'learning_rate': 1.345692119971567e-05, 'epoch': 4.51}
+{'loss': 0.3048, 'grad_norm': 7.013815312333947, 'learning_rate': 1.3363763275726002e-05, 'epoch': 4.52}
+{'loss': 0.1978, 'grad_norm': 3.462743697157685, 'learning_rate': 1.327066917933408e-05, 'epoch': 4.54}
+{'loss': 0.2499, 'grad_norm': 3.6650390065035046, 'learning_rate': 1.3177642542026997e-05, 'epoch': 4.55}
+{'loss': 0.4037, 'grad_norm': 6.394656185464679, 'learning_rate': 1.3084686992660337e-05, 'epoch': 4.57}
+{'loss': 0.3484, 'grad_norm': 9.719556665573426, 'learning_rate': 1.2991806157316647e-05, 'epoch': 4.58}
+{'loss': 0.238, 'grad_norm': 3.6605282675446236, 'learning_rate': 1.2899003659163963e-05, 'epoch': 4.6}
+{'loss': 0.321, 'grad_norm': 7.2391326982155455, 'learning_rate': 1.2806283118314472e-05, 'epoch': 4.61}
+{'loss': 0.3961, 'grad_norm': 7.075995500107438, 'learning_rate': 1.2713648151683322e-05, 'epoch': 4.63}
+{'loss': 0.3178, 'grad_norm': 4.863656920796481, 'learning_rate': 1.262110237284751e-05, 'epoch': 4.64}
+{'loss': 0.1713, 'grad_norm': 3.164849516653453, 'learning_rate': 1.2528649391904928e-05, 'epoch': 4.66}
+{'loss': 0.3054, 'grad_norm': 5.8326537067022075, 'learning_rate': 1.2436292815333523e-05, 'epoch': 4.67}
+{'loss': 0.1879, 'grad_norm': 3.9423790877329083, 'learning_rate': 1.2344036245850645e-05, 'epoch': 4.69}
+{'loss': 0.319, 'grad_norm': 6.977398637075859, 'learning_rate': 1.225188328227247e-05, 'epoch': 4.7}
+{'loss': 0.3619, 'grad_norm': 4.098956699693845, 'learning_rate': 1.2159837519373655e-05, 'epoch': 4.72}
+{'loss': 0.2661, 'grad_norm': 5.678522542161879, 'learning_rate': 1.2067902547747076e-05, 'epoch': 4.73}
+{'loss': 0.1807, 'grad_norm': 6.195976035077908, 'learning_rate': 1.197608195366377e-05, 'epoch': 4.75}
+{'loss': 0.2358, 'grad_norm': 10.268611904613628, 'learning_rate': 1.1884379318933057e-05, 'epoch': 4.76}
+{'loss': 0.2027, 'grad_norm': 9.68109281265946, 'learning_rate': 1.179279822076281e-05, 'epoch': 4.78}
+{'loss': 0.2338, 'grad_norm': 5.413705237413202, 'learning_rate': 1.1701342231619902e-05, 'epoch': 4.79}
+{'loss': 0.3019, 'grad_norm': 4.090050945361831, 'learning_rate': 1.1610014919090847e-05, 'epoch': 4.81}
+{'loss': 0.2561, 'grad_norm': 4.115206024663751, 'learning_rate': 1.151881984574266e-05, 'epoch': 4.82}
+{'loss': 0.1596, 'grad_norm': 6.53156687402561, 'learning_rate': 1.1427760568983857e-05, 'epoch': 4.84}
+{'loss': 0.3048, 'grad_norm': 8.201367003714049, 'learning_rate': 1.1336840640925695e-05, 'epoch': 4.85}
+{'loss': 0.2669, 'grad_norm': 8.773833390969282, 'learning_rate': 1.1246063608243603e-05, 'epoch': 4.87}
+{'loss': 0.1291, 'grad_norm': 3.0738361699863455, 'learning_rate': 1.1155433012038847e-05, 'epoch': 4.88}
+{'loss': 0.0909, 'grad_norm': 2.3868679689234695, 'learning_rate': 1.1064952387700377e-05, 'epoch': 4.9}
+{'loss': 0.408, 'grad_norm': 8.039432116021972, 'learning_rate': 1.0974625264766929e-05, 'epoch': 4.91}
+{'loss': 0.1924, 'grad_norm': 11.999804458744176, 'learning_rate': 1.0884455166789336e-05, 'epoch': 4.93}
+{'loss': 0.2563, 'grad_norm': 8.07251317254457, 'learning_rate': 1.0794445611193068e-05, 'epoch': 4.94}
+{'loss': 0.2093, 'grad_norm': 9.75767474805883, 'learning_rate': 1.0704600109141043e-05, 'epoch': 4.96}
+{'loss': 0.261, 'grad_norm': 10.577890362279062, 'learning_rate': 1.0614922165396655e-05, 'epoch': 4.97}
+{'loss': 0.1416, 'grad_norm': 5.033211323345338, 'learning_rate': 1.0525415278187042e-05, 'epoch': 4.99}
+{'loss': 0.1178, 'grad_norm': 7.230436507340323, 'learning_rate': 1.0436082939066639e-05, 'epoch': 5.0}
+{'loss': 0.4285, 'grad_norm': 13.569426986753843, 'learning_rate': 1.0346928632780968e-05, 'epoch': 5.01}
+{'loss': 0.1727, 'grad_norm': 6.345812361183191, 'learning_rate': 1.0257955837130725e-05, 'epoch': 5.03}
+{'loss': 0.1299, 'grad_norm': 4.739191206070798, 'learning_rate': 1.0169168022836084e-05, 'epoch': 5.04}
+{'loss': 0.1324, 'grad_norm': 4.553938081966214, 'learning_rate': 1.0080568653401314e-05, 'epoch': 5.06}
+{'loss': 0.0958, 'grad_norm': 4.553555178509044, 'learning_rate': 9.9921611849797e-06, 'epoch': 5.07}
+{'loss': 0.0863, 'grad_norm': 4.725248786711943, 'learning_rate': 9.90394906623869e-06, 'epoch': 5.09}
+{'loss': 0.0952, 'grad_norm': 5.435142237217498, 'learning_rate': 9.815935738225376e-06, 'epoch': 5.1}
+{'loss': 0.1655, 'grad_norm': 10.706327449689113, 'learning_rate': 9.728124634232282e-06, 'epoch': 5.12}
+{'loss': 0.042, 'grad_norm': 3.376259868915384, 'learning_rate': 9.640519179663405e-06, 'epoch': 5.13}
+{'loss': 0.0634, 'grad_norm': 3.6432388117432444, 'learning_rate': 9.553122791900611e-06, 'epoch': 5.15}
+{'loss': 0.1741, 'grad_norm': 7.744721020528433, 'learning_rate': 9.465938880170332e-06, 'epoch': 5.16}
+{'loss': 0.4198, 'grad_norm': 8.809016019607286, 'learning_rate': 9.37897084541057e-06, 'epoch': 5.18}
+{'loss': 0.0837, 'grad_norm': 6.260558722500428, 'learning_rate': 9.292222080138215e-06, 'epoch': 5.19}
+{'loss': 0.2581, 'grad_norm': 23.135065666657514, 'learning_rate': 9.205695968316734e-06, 'epoch': 5.21}
+{'loss': 0.1594, 'grad_norm': 7.0636458802751205, 'learning_rate': 9.11939588522416e-06, 'epoch': 5.22}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.5397588014602661, 'eval_token_acc': 0.8015873015873016, 'eval_string_acc': 0.6031746031746031, 'eval_choice_acc': 0.6031746031746031, 'eval_runtime': 47.7081, 'eval_samples_per_second': 1.321, 'eval_steps_per_second': 0.335, 'epoch': 5.22}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+                                                                                                                              
+{'loss': 0.0922, 'grad_norm': 9.50589927456589, 'learning_rate': 9.033325197321403e-06, 'epoch': 5.24}
+{'loss': 0.1166, 'grad_norm': 10.665559500935796, 'learning_rate': 8.94748726212097e-06, 'epoch': 5.25}
+{'loss': 0.0837, 'grad_norm': 9.110401412426665, 'learning_rate': 8.861885428055948e-06, 'epoch': 5.27}
+{'loss': 0.0142, 'grad_norm': 0.722008489331346, 'learning_rate': 8.776523034349416e-06, 'epoch': 5.28}
+{'loss': 0.0762, 'grad_norm': 8.042885094987398, 'learning_rate': 8.691403410884176e-06, 'epoch': 5.3}
+{'loss': 0.0634, 'grad_norm': 2.3434189237951264, 'learning_rate': 8.606529878072863e-06, 'epoch': 5.31}
+{'loss': 0.2402, 'grad_norm': 16.671095496801634, 'learning_rate': 8.521905746728408e-06, 'epoch': 5.33}
+{'loss': 0.1856, 'grad_norm': 11.690767640549366, 'learning_rate': 8.437534317934902e-06, 'epoch': 5.34}
+{'loss': 0.1158, 'grad_norm': 4.785940206853082, 'learning_rate': 8.353418882918807e-06, 'epoch': 5.36}
+{'loss': 0.2767, 'grad_norm': 14.858551154959313, 'learning_rate': 8.26956272292061e-06, 'epoch': 5.37}
+{'loss': 0.2422, 'grad_norm': 22.68151018283477, 'learning_rate': 8.185969109066754e-06, 'epoch': 5.39}
+{'loss': 0.291, 'grad_norm': 14.05523469684376, 'learning_rate': 8.102641302242104e-06, 'epoch': 5.4}
+{'loss': 0.1635, 'grad_norm': 23.290261947940476, 'learning_rate': 8.019582552962703e-06, 'epoch': 5.42}
+{'loss': 0.2399, 'grad_norm': 9.738181822018621, 'learning_rate': 7.93679610124901e-06, 'epoch': 5.43}
+{'loss': 0.3133, 'grad_norm': 11.817797417231462, 'learning_rate': 7.854285176499473e-06, 'epoch': 5.45}
+{'loss': 0.1942, 'grad_norm': 21.77427680164132, 'learning_rate': 7.772052997364558e-06, 'epoch': 5.46}
+{'loss': 0.1664, 'grad_norm': 9.663751365803666, 'learning_rate': 7.69010277162122e-06, 'epoch': 5.48}
+{'loss': 0.1546, 'grad_norm': 6.916524398088215, 'learning_rate': 7.608437696047758e-06, 'epoch': 5.49}
+{'loss': 0.433, 'grad_norm': 24.82361208727062, 'learning_rate': 7.527060956299111e-06, 'epoch': 5.51}
+{'loss': 0.2678, 'grad_norm': 5.6802957100104, 'learning_rate': 7.445975726782565e-06, 'epoch': 5.52}
+{'loss': 0.1613, 'grad_norm': 6.541055915866493, 'learning_rate': 7.365185170533986e-06, 'epoch': 5.54}
+{'loss': 0.4239, 'grad_norm': 9.985591676111524, 'learning_rate': 7.284692439094369e-06, 'epoch': 5.55}
+{'loss': 0.0609, 'grad_norm': 2.415270967223841, 'learning_rate': 7.204500672386941e-06, 'epoch': 5.57}
+{'loss': 0.4628, 'grad_norm': 11.593607167949834, 'learning_rate': 7.124612998594638e-06, 'epoch': 5.58}
+{'loss': 0.0896, 'grad_norm': 4.514534654780173, 'learning_rate': 7.045032534038136e-06, 'epoch': 5.6}
+{'loss': 0.3426, 'grad_norm': 12.473456856439665, 'learning_rate': 6.9657623830542295e-06, 'epoch': 5.61}
+{'loss': 0.2153, 'grad_norm': 10.978446093584195, 'learning_rate': 6.8868056378747715e-06, 'epoch': 5.63}
+{'loss': 0.2464, 'grad_norm': 8.891111412815347, 'learning_rate': 6.808165378506031e-06, 'epoch': 5.64}
+{'loss': 0.35, 'grad_norm': 13.060942853284198, 'learning_rate': 6.7298446726085514e-06, 'epoch': 5.66}
+{'loss': 0.1074, 'grad_norm': 8.30138624011578, 'learning_rate': 6.651846575377488e-06, 'epoch': 5.67}
+{'loss': 0.2293, 'grad_norm': 9.326321279926846, 'learning_rate': 6.574174129423426e-06, 'epoch': 5.69}
+{'loss': 0.1054, 'grad_norm': 3.6430082287278207, 'learning_rate': 6.496830364653691e-06, 'epoch': 5.7}
+{'loss': 0.101, 'grad_norm': 8.105095401659868, 'learning_rate': 6.419818298154153e-06, 'epoch': 5.72}
+{'loss': 0.0995, 'grad_norm': 6.260805300841312, 'learning_rate': 6.343140934071544e-06, 'epoch': 5.73}
+{'loss': 0.1099, 'grad_norm': 4.034045506017742, 'learning_rate': 6.266801263496257e-06, 'epoch': 5.75}
+{'loss': 0.1183, 'grad_norm': 5.4705497531383385, 'learning_rate': 6.190802264345674e-06, 'epoch': 5.76}
+{'loss': 0.1118, 'grad_norm': 3.455953887765556, 'learning_rate': 6.115146901248015e-06, 'epoch': 5.78}
+{'loss': 0.14, 'grad_norm': 4.319434530782772, 'learning_rate': 6.0398381254266525e-06, 'epoch': 5.79}
+{'loss': 0.2239, 'grad_norm': 8.849419551377354, 'learning_rate': 5.964878874585022e-06, 'epoch': 5.81}
+{'loss': 0.1235, 'grad_norm': 7.0491427436230145, 'learning_rate': 5.890272072792027e-06, 'epoch': 5.82}
+{'loss': 0.146, 'grad_norm': 8.108760967066232, 'learning_rate': 5.81602063036796e-06, 'epoch': 5.84}
+{'loss': 0.0765, 'grad_norm': 6.480718032515561, 'learning_rate': 5.7421274437709586e-06, 'epoch': 5.85}
+{'loss': 0.161, 'grad_norm': 9.06916077297177, 'learning_rate': 5.668595395484056e-06, 'epoch': 5.87}
+{'loss': 0.3431, 'grad_norm': 21.118033355137904, 'learning_rate': 5.595427353902726e-06, 'epoch': 5.88}
+{'loss': 0.2844, 'grad_norm': 8.850463917895212, 'learning_rate': 5.522626173222976e-06, 'epoch': 5.9}
+{'loss': 0.107, 'grad_norm': 3.4613198558028833, 'learning_rate': 5.450194693330009e-06, 'epoch': 5.91}
+{'loss': 0.2001, 'grad_norm': 23.71036953722503, 'learning_rate': 5.378135739687457e-06, 'epoch': 5.93}
+{'loss': 0.2066, 'grad_norm': 13.24332229121593, 'learning_rate': 5.306452123227176e-06, 'epoch': 5.94}
+{'loss': 0.0758, 'grad_norm': 5.049689942523693, 'learning_rate': 5.235146640239553e-06, 'epoch': 5.96}
+{'loss': 0.1755, 'grad_norm': 5.854663311642667, 'learning_rate': 5.1642220722644565e-06, 'epoch': 5.97}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.44017335772514343, 'eval_token_acc': 0.7777777777777778, 'eval_string_acc': 0.5555555555555556, 'eval_choice_acc': 0.5555555555555556, 'eval_runtime': 47.5729, 'eval_samples_per_second': 1.324, 'eval_steps_per_second': 0.336, 'epoch': 5.97}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+                                                                                                                              
+{'loss': 0.2834, 'grad_norm': 30.49747629376992, 'learning_rate': 5.093681185982731e-06, 'epoch': 5.99}
+{'loss': 0.2039, 'grad_norm': 16.3240210900606, 'learning_rate': 5.023526733108258e-06, 'epoch': 6.0}
+{'loss': 0.1646, 'grad_norm': 16.502443056919144, 'learning_rate': 4.953761450280631e-06, 'epoch': 6.01}
+{'loss': 0.0851, 'grad_norm': 5.8496246922263335, 'learning_rate': 4.8843880589583905e-06, 'epoch': 6.03}
+{'loss': 0.3954, 'grad_norm': 13.354575075400255, 'learning_rate': 4.8154092653128674e-06, 'epoch': 6.04}
+{'loss': 0.1907, 'grad_norm': 7.761119254353368, 'learning_rate': 4.7468277601226215e-06, 'epoch': 6.06}
+{'loss': 0.1205, 'grad_norm': 4.527612855994227, 'learning_rate': 4.678646218668473e-06, 'epoch': 6.07}
+{'loss': 0.0693, 'grad_norm': 3.2815981840946424, 'learning_rate': 4.610867300629144e-06, 'epoch': 6.09}
+{'loss': 0.1091, 'grad_norm': 6.838656416655755, 'learning_rate': 4.54349364997751e-06, 'epoch': 6.1}
+{'loss': 0.0761, 'grad_norm': 4.674611586062305, 'learning_rate': 4.476527894877461e-06, 'epoch': 6.12}
+{'loss': 0.089, 'grad_norm': 4.378075835549559, 'learning_rate': 4.409972647581379e-06, 'epoch': 6.13}
+{'loss': 0.0714, 'grad_norm': 4.466896742282034, 'learning_rate': 4.3438305043282315e-06, 'epoch': 6.15}
+{'loss': 0.2728, 'grad_norm': 15.56478263670082, 'learning_rate': 4.27810404524232e-06, 'epoch': 6.16}
+{'loss': 0.0612, 'grad_norm': 4.446995503817843, 'learning_rate': 4.212795834232588e-06, 'epoch': 6.18}
+{'loss': 0.069, 'grad_norm': 5.669096907835413, 'learning_rate': 4.147908418892649e-06, 'epoch': 6.19}
+{'loss': 0.0382, 'grad_norm': 2.6092010696501964, 'learning_rate': 4.083444330401382e-06, 'epoch': 6.21}
+{'loss': 0.12, 'grad_norm': 9.460851591458857, 'learning_rate': 4.019406083424222e-06, 'epoch': 6.22}
+{'loss': 0.0793, 'grad_norm': 3.5027386484193817, 'learning_rate': 3.955796176015015e-06, 'epoch': 6.24}
+{'loss': 0.2097, 'grad_norm': 10.868783800103996, 'learning_rate': 3.892617089518622e-06, 'epoch': 6.25}
+{'loss': 0.1632, 'grad_norm': 6.961201972674255, 'learning_rate': 3.82987128847411e-06, 'epoch': 6.27}
+{'loss': 0.0444, 'grad_norm': 2.0543774277375726, 'learning_rate': 3.767561220518601e-06, 'epoch': 6.28}
+{'loss': 0.0319, 'grad_norm': 1.897431002138759, 'learning_rate': 3.7056893162918064e-06, 'epoch': 6.3}
+{'loss': 0.0541, 'grad_norm': 4.409043727820816, 'learning_rate': 3.6442579893411852e-06, 'epoch': 6.31}
+{'loss': 0.0516, 'grad_norm': 4.176904255885986, 'learning_rate': 3.5832696360278488e-06, 'epoch': 6.33}
+{'loss': 0.2314, 'grad_norm': 12.884618151111024, 'learning_rate': 3.522726635433022e-06, 'epoch': 6.34}
+{'loss': 0.0673, 'grad_norm': 4.790963236007809, 'learning_rate': 3.4626313492652727e-06, 'epoch': 6.36}
+{'loss': 0.1147, 'grad_norm': 15.464751771673125, 'learning_rate': 3.4029861217683743e-06, 'epoch': 6.37}
+{'loss': 0.0965, 'grad_norm': 9.621395194744348, 'learning_rate': 3.3437932796298583e-06, 'epoch': 6.39}
+{'loss': 0.1324, 'grad_norm': 6.969167661703223, 'learning_rate': 3.2850551318902592e-06, 'epoch': 6.4}
+{'loss': 0.2762, 'grad_norm': 8.897536828986645, 'learning_rate': 3.226773969853037e-06, 'epoch': 6.42}
+{'loss': 0.2024, 'grad_norm': 6.171006640158687, 'learning_rate': 3.168952066995194e-06, 'epoch': 6.43}
+{'loss': 0.0733, 'grad_norm': 8.116823071276983, 'learning_rate': 3.111591678878596e-06, 'epoch': 6.45}
+{'loss': 0.1888, 'grad_norm': 6.227349962416268, 'learning_rate': 3.0546950430619813e-06, 'epoch': 6.46}
+{'loss': 0.0421, 'grad_norm': 3.6441011107586547, 'learning_rate': 2.998264379013676e-06, 'epoch': 6.48}
+{'loss': 0.1575, 'grad_norm': 12.19996522501231, 'learning_rate': 2.9423018880250174e-06, 'epoch': 6.49}
+{'loss': 0.0719, 'grad_norm': 6.79353572008073, 'learning_rate': 2.88680975312448e-06, 'epoch': 6.51}
+{'loss': 0.0352, 'grad_norm': 2.9812915226763153, 'learning_rate': 2.831790138992526e-06, 'epoch': 6.52}
+{'loss': 0.0665, 'grad_norm': 6.212341495172812, 'learning_rate': 2.7772451918771526e-06, 'epoch': 6.54}
+{'loss': 0.2088, 'grad_norm': 7.301340116289204, 'learning_rate': 2.7231770395101902e-06, 'epoch': 6.55}
+{'loss': 0.0161, 'grad_norm': 0.8490184315480036, 'learning_rate': 2.669587791024266e-06, 'epoch': 6.57}
+{'loss': 0.1465, 'grad_norm': 9.941358413270727, 'learning_rate': 2.616479536870569e-06, 'epoch': 6.58}
+{'loss': 0.0438, 'grad_norm': 4.450791773289518, 'learning_rate': 2.563854348737275e-06, 'epoch': 6.6}
+{'loss': 0.0388, 'grad_norm': 6.227027787264826, 'learning_rate': 2.511714279468762e-06, 'epoch': 6.61}
+{'loss': 0.0463, 'grad_norm': 4.6119177509666445, 'learning_rate': 2.4600613629854866e-06, 'epoch': 6.63}
+{'loss': 0.0869, 'grad_norm': 6.25616608840889, 'learning_rate': 2.408897614204691e-06, 'epoch': 6.64}
+{'loss': 0.1007, 'grad_norm': 20.571972544662856, 'learning_rate': 2.358225028961768e-06, 'epoch': 6.66}
+{'loss': 0.0195, 'grad_norm': 1.18722807050492, 'learning_rate': 2.3080455839324342e-06, 'epoch': 6.67}
+{'loss': 0.2382, 'grad_norm': 19.160239659840986, 'learning_rate': 2.2583612365556043e-06, 'epoch': 6.69}
+{'loss': 0.025, 'grad_norm': 4.267633876727261, 'learning_rate': 2.2091739249570213e-06, 'epoch': 6.7}
+{'loss': 0.0547, 'grad_norm': 12.512775772698376, 'learning_rate': 2.160485567873693e-06, 'epoch': 6.72}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+{'eval_loss': 0.6349812746047974, 'eval_token_acc': 0.746031746031746, 'eval_string_acc': 0.49206349206349204, 'eval_choice_acc': 0.49206349206349204, 'eval_runtime': 47.8595, 'eval_samples_per_second': 1.316, 'eval_steps_per_second': 0.334, 'epoch': 6.72}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 86%|███████████████████████████████████████████████████████████████████████████▏           | 463/536 [54:21<04:22,  3.60s/it]
+{'loss': 0.0728, 'grad_norm': 7.828174486546246, 'learning_rate': 2.1122980645790074e-06, 'epoch': 6.73}
+{'loss': 0.1463, 'grad_norm': 8.359317645707884, 'learning_rate': 2.064613294808664e-06, 'epoch': 6.75}
+{'loss': 0.0206, 'grad_norm': 1.3032320634135541, 'learning_rate': 2.017433118687326e-06, 'epoch': 6.76}
+{'loss': 0.0299, 'grad_norm': 1.6779565009529542, 'learning_rate': 1.970759376656094e-06, 'epoch': 6.78}
+{'loss': 0.0883, 'grad_norm': 13.519104641757956, 'learning_rate': 1.924593889400682e-06, 'epoch': 6.79}
+{'loss': 0.0331, 'grad_norm': 2.8334788727679188, 'learning_rate': 1.8789384577804074e-06, 'epoch': 6.81}
+{'loss': 0.2666, 'grad_norm': 29.843163576457215, 'learning_rate': 1.8337948627579398e-06, 'epoch': 6.82}
+{'loss': 0.1442, 'grad_norm': 14.138327794106322, 'learning_rate': 1.7891648653298275e-06, 'epoch': 6.84}
+{'loss': 0.0984, 'grad_norm': 6.871487445923352, 'learning_rate': 1.745050206457804e-06, 'epoch': 6.85}
+{'loss': 0.4071, 'grad_norm': 19.706353264182148, 'learning_rate': 1.701452607000874e-06, 'epoch': 6.87}
+{'loss': 0.0153, 'grad_norm': 1.0142164364798685, 'learning_rate': 1.658373767648186e-06, 'epoch': 6.88}
+{'loss': 0.138, 'grad_norm': 12.892285158357323, 'learning_rate': 1.6158153688526893e-06, 'epoch': 6.9}
+{'loss': 0.113, 'grad_norm': 22.772961932992068, 'learning_rate': 1.573779070765583e-06, 'epoch': 6.91}

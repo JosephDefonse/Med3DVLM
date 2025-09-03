@@ -1,0 +1,22 @@
+{"time":"2025-09-01T23:07:42.234686114+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250901_230739-dxqd9eiv/logs/debug-core.log"}
+{"time":"2025-09-01T23:07:42.342327812+10:00","level":"INFO","msg":"created new stream","id":"dxqd9eiv"}
+{"time":"2025-09-01T23:07:42.34237307+10:00","level":"INFO","msg":"stream: started","id":"dxqd9eiv"}
+{"time":"2025-09-01T23:07:42.342386071+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"dxqd9eiv"}
+{"time":"2025-09-01T23:07:42.342393335+10:00","level":"INFO","msg":"sender: started","stream_id":"dxqd9eiv"}
+{"time":"2025-09-01T23:07:42.342414206+10:00","level":"INFO","msg":"handler: started","stream_id":"dxqd9eiv"}
+{"time":"2025-09-01T23:07:42.672383302+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-01T23:15:08.921589251+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":50,"current":51}
+{"time":"2025-09-01T23:22:14.856852301+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":100,"current":101}
+{"time":"2025-09-01T23:29:24.774051713+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":150,"current":151}
+{"time":"2025-09-01T23:36:10.681761286+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":200,"current":201}
+{"time":"2025-09-01T23:43:30.881462984+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":250,"current":251}
+{"time":"2025-09-01T23:50:44.578828079+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":300,"current":301}
+{"time":"2025-09-01T23:55:01.828322311+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-01T23:55:01.82895009+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-01T23:55:02.828555821+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.445895186,"progress":"12.6KB/12.6KB"}],"total_operations":1}}
+{"time":"2025-09-01T23:55:03.233338486+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-01T23:55:04.590135335+10:00","level":"INFO","msg":"stream: closing","id":"dxqd9eiv"}
+{"time":"2025-09-01T23:55:04.590158348+10:00","level":"INFO","msg":"handler: closed","stream_id":"dxqd9eiv"}
+{"time":"2025-09-01T23:55:04.590168978+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"dxqd9eiv"}
+{"time":"2025-09-01T23:55:04.590177711+10:00","level":"INFO","msg":"sender: closed","stream_id":"dxqd9eiv"}
+{"time":"2025-09-01T23:55:04.590396252+10:00","level":"INFO","msg":"stream: closed","id":"dxqd9eiv"}

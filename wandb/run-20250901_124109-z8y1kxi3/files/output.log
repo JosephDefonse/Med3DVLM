@@ -1,0 +1,39 @@
+Parameter Offload - Persistent parameters statistics: param_count = 487, numel = 2917568
+ 15%|████████████▉                                                                          | 50/335 [05:05<29:59,  6.31s/it]
+{'loss': 13.2851, 'grad_norm': 194.73884934083773, 'learning_rate': 4.390243902439025e-06, 'epoch': 0.15}
+{'loss': 6.0506, 'grad_norm': 52.64138108934687, 'learning_rate': 9.268292682926831e-06, 'epoch': 0.3}
+{'loss': 0.497, 'grad_norm': 9.107958110410598, 'learning_rate': 1.4146341463414635e-05, 'epoch': 0.45}
+{'loss': 0.3982, 'grad_norm': 6.150982672341509, 'learning_rate': 1.902439024390244e-05, 'epoch': 0.6}
+{'loss': 0.3492, 'grad_norm': 4.819405036375014, 'learning_rate': 1.996348338021207e-05, 'epoch': 0.75}
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+
+=== compute_metrics DEBUG ===
+[0] REF:  A
+[0] HYP:  B
+[0] ref_letter=A  hyp_letter=B
+---
+[1] REF:  A
+[1] HYP:  B
+[1] ref_letter=A  hyp_letter=B
+---
+[2] REF:  B
+[2] HYP:  B
+[2] ref_letter=B  hyp_letter=B
+---
+[3] REF:  A
+[3] HYP:  A
+[3] ref_letter=A  hyp_letter=A
+---
+[4] REF:  B
+[4] HYP:  A
+[4] ref_letter=B  hyp_letter=A
+---
+[5] REF:  A
+[5] HYP:  B
+[5] ref_letter=A  hyp_letter=B
+---
+{'eval_loss': 0.37655434012413025, 'eval_token_acc': 0.753968253968254, 'eval_string_acc': 0.5079365079365079, 'eval_choice_acc': 0.5079365079365079, 'eval_runtime': 48.1462, 'eval_samples_per_second': 1.309, 'eval_steps_per_second': 0.332, 'epoch': 0.75}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+  warnings.warn(
+ 16%|█████████████▏                                                                       | 52/335 [06:25<1:35:12, 20.19s/it]wandb: WARNING Tried to log to step 50 that is less than the current step 51. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+ 16%|█████████████▍                                                                       | 53/335 [06:28<1:11:14, 15.16s/it]

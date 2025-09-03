@@ -12,9 +12,12 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import argparse
+import csv
+import os
+import random
 
 from src.dataset.mllm_dataset import VQADataset
-from src.model.llm.qwen import VLMQwenForCausalLM
 
 bleu = evaluate.load("bleu")
 bertscore = evaluate.load("bertscore")
@@ -38,7 +41,7 @@ def parse_args(args=None):
         "--model_name_or_path", type=str, default="./models/Med3DVLM-Qwen-2.5-7B"
     )
     parser.add_argument("--max_length", type=int, default=512)
-    parser.add_argument("--max_new_tokens", type=int, default=1)
+    parser.add_argument("--max_new_tokens", type=int, default=256)
     parser.add_argument("--do_sample", action="store_true", default=False)
     parser.add_argument("--top_p", type=float, default=None)
     parser.add_argument("--temperature", type=float, default=1.0)
@@ -79,11 +82,10 @@ def main():
         use_fast=False,
         trust_remote_code=True,
     )
-    model = VLMQwenForCausalLM.from_pretrained(
+    model = AutoModelForCausalLM.from_pretrained(
         args.model_name_or_path, device_map="auto", trust_remote_code=True
     )
     model = model.to(device=device)
-    model.eval()
 
     test_dataset = VQADataset(
         args, tokenizer=tokenizer, close_ended=args.close_ended, mode="test"
@@ -124,14 +126,12 @@ def main():
                 answer_choice = sample["answer_choice"]
                 answer = sample["answer"]
 
-                image = sample["image"]
+                image = sample["image"].to(device=device)
 
-                input_id = tokenizer(question, return_tensors="pt")["input_ids"]
+                input_id = tokenizer(question, return_tensors="pt")["input_ids"].to(
+                    device=device
+                )
 
-                image = sample["image"].to(device=args.device, non_blocking=True)
-                tok = tokenizer(question, return_tensors="pt")
-                input_id = tok["input_ids"].to(device=args.device, non_blocking=True)
-                
                 with torch.inference_mode():
                     generation = model.generate(
                         image,

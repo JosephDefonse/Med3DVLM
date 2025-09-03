@@ -1,0 +1,22 @@
+{"time":"2025-09-01T20:39:12.154898699+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250901_203911-qfkabnqu/logs/debug-core.log"}
+{"time":"2025-09-01T20:39:12.262501924+10:00","level":"INFO","msg":"created new stream","id":"qfkabnqu"}
+{"time":"2025-09-01T20:39:12.262550735+10:00","level":"INFO","msg":"stream: started","id":"qfkabnqu"}
+{"time":"2025-09-01T20:39:12.262564606+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"qfkabnqu"}
+{"time":"2025-09-01T20:39:12.262577606+10:00","level":"INFO","msg":"handler: started","stream_id":"qfkabnqu"}
+{"time":"2025-09-01T20:39:12.262598881+10:00","level":"INFO","msg":"sender: started","stream_id":"qfkabnqu"}
+{"time":"2025-09-01T20:39:12.616326579+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-01T20:46:30.010100582+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":50,"current":51}
+{"time":"2025-09-01T20:53:35.416836868+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":100,"current":101}
+{"time":"2025-09-01T21:00:46.023027166+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":150,"current":151}
+{"time":"2025-09-01T21:07:31.21634522+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":200,"current":201}
+{"time":"2025-09-01T21:14:48.931245394+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":250,"current":251}
+{"time":"2025-09-01T21:22:06.387814451+10:00","level":"WARN","msg":"handler: ignoring partial history record","step":300,"current":301}
+{"time":"2025-09-01T21:26:20.33553682+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-01T21:26:20.336068765+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-01T21:26:21.260460645+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-01T21:26:21.335811625+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 334-334, summary, console lines 100-110","runtime_seconds":0.075247548}],"total_operations":1}}
+{"time":"2025-09-01T21:26:22.531650038+10:00","level":"INFO","msg":"stream: closing","id":"qfkabnqu"}
+{"time":"2025-09-01T21:26:22.531692426+10:00","level":"INFO","msg":"handler: closed","stream_id":"qfkabnqu"}
+{"time":"2025-09-01T21:26:22.531701874+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"qfkabnqu"}
+{"time":"2025-09-01T21:26:22.531706297+10:00","level":"INFO","msg":"sender: closed","stream_id":"qfkabnqu"}
+{"time":"2025-09-01T21:26:22.531992155+10:00","level":"INFO","msg":"stream: closed","id":"qfkabnqu"}

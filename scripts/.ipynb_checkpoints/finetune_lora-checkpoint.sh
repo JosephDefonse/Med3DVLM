@@ -12,7 +12,7 @@ export TRITON_CACHE_DIR=/home/sdef0001/iq38_scratch/nmdid/cache/triton
 mkdir -p $TRANSFORMERS_CACHE $TRITON_CACHE_DIR
 
 deepspeed src/train/train_vlm.py \
-    --deepspeed ./scripts/zero9.json \
+    --deepspeed ./scripts/zero2.json \
     --wb_name Med3DVLM-Qwen-2.5-7B-finetune \
     --vision_tower "dcformer" \
     --model_name_or_path Qwen/Qwen2.5-7B-Instruct \
@@ -40,11 +40,11 @@ deepspeed src/train/train_vlm.py \
     --save_strategy "steps" \
     --save_steps 50 \
     --save_total_limit 3 \
-    --learning_rate 5e-5 \
+    --learning_rate 3e-5 \
     --max_grad_norm 0.5 \
-    --label_smoothing_factor 0.0 \
+    --label_smoothing_factor 0.05 \
     --weight_decay 0.01 \
-    --warmup_ratio 0.06 \
+    --warmup_ratio 0.1 \
     --lr_scheduler_type "cosine" \
     --logging_steps 0.001 \
     --gradient_checkpointing True \

@@ -10,7 +10,7 @@ python src/eval/eval_vqa.py \
     --model_name_or_path ./models/Med3DVLM-Qwen-2.5-7B-vqa-20 \
     --data_root /home/sdef0001/iq38_scratch/nmdid \
     --vqa_data_test_path /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_8_test.csv \
-    --max_length 512 \
+    --max_length 1024 \
     --proj_out_num 256 \
     --do_sample \
     --output_dir ./output/eval
