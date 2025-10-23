@@ -21,13 +21,13 @@ BEST_LINK = Path("./output/GS_BEST")  # symlink to best run
 # ---- grid (24 runs) ----
 lrs                 = [3e-5]
 warmups             = [0.06, 0.10]
-weight_decays       = [0.01, 0.5, 0.1]
+weight_decays       = [0.05, 0.1]
 label_smoothings    = [0.05, 0.1, 0.2]
 
 # fixed (best-so-far neighborhood)
 lora_r = 64
 lora_alpha = 128
-lora_dropout = 0.10
+lora_dropout = 0.2
 max_grad_norms = [0.5, 1.0]  # try [0.5, 1.0] later if still stuck
 
 def tag_for(hp):

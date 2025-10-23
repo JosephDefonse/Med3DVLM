@@ -1,0 +1,15 @@
+{"time":"2025-09-30T12:29:18.743932471+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250930_122918-af67p3k1/logs/debug-core.log"}
+{"time":"2025-09-30T12:29:18.851678065+10:00","level":"INFO","msg":"created new stream","id":"af67p3k1"}
+{"time":"2025-09-30T12:29:18.851726087+10:00","level":"INFO","msg":"stream: started","id":"af67p3k1"}
+{"time":"2025-09-30T12:29:18.851742733+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"af67p3k1"}
+{"time":"2025-09-30T12:29:18.851753653+10:00","level":"INFO","msg":"handler: started","stream_id":"af67p3k1"}
+{"time":"2025-09-30T12:29:18.851758253+10:00","level":"INFO","msg":"sender: started","stream_id":"af67p3k1"}
+{"time":"2025-09-30T12:29:19.238607477+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-30T12:29:20.011841008+10:00","level":"INFO","msg":"stream: closing","id":"af67p3k1"}
+{"time":"2025-09-30T12:29:20.011883122+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-30T12:29:20.012294928+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-30T12:29:21.002063373+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-30T12:29:21.334618435+10:00","level":"INFO","msg":"handler: closed","stream_id":"af67p3k1"}
+{"time":"2025-09-30T12:29:21.334633157+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"af67p3k1"}
+{"time":"2025-09-30T12:29:21.334642174+10:00","level":"INFO","msg":"sender: closed","stream_id":"af67p3k1"}
+{"time":"2025-09-30T12:29:21.335087624+10:00","level":"INFO","msg":"stream: closed","id":"af67p3k1"}

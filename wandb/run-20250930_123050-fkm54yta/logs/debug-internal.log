@@ -1,0 +1,7 @@
+{"time":"2025-09-30T12:30:51.062393655+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250930_123050-fkm54yta/logs/debug-core.log"}
+{"time":"2025-09-30T12:30:51.170209429+10:00","level":"INFO","msg":"created new stream","id":"fkm54yta"}
+{"time":"2025-09-30T12:30:51.170260567+10:00","level":"INFO","msg":"stream: started","id":"fkm54yta"}
+{"time":"2025-09-30T12:30:51.170273253+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"fkm54yta"}
+{"time":"2025-09-30T12:30:51.170278343+10:00","level":"INFO","msg":"handler: started","stream_id":"fkm54yta"}
+{"time":"2025-09-30T12:30:51.170290213+10:00","level":"INFO","msg":"sender: started","stream_id":"fkm54yta"}
+{"time":"2025-09-30T12:30:51.539099298+10:00","level":"INFO","msg":"Starting system monitor"}

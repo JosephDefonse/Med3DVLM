@@ -23,11 +23,11 @@ deepspeed src/train/train_vlm.py \
     --pretrain_vision_model ./output/DCFormer_SigLIP/pretrained_ViT.bin \
     --pretrain_mm_mlp_adapter ./output/Med3DVLM-Qwen-2.5-7B/mm_projector.bin \
     --data_root /home/sdef0001/iq38_scratch/nmdid \
-    --vqa_data_train_path /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_8_train.csv \
-    --vqa_data_val_path   /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_8_val.csv \
-    --vqa_data_test_path  /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_8_test.csv \
+    --vqa_data_train_path /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_13_train.csv \
+    --vqa_data_val_path   /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_13_val.csv \
+    --vqa_data_test_path  /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_13_test.csv \
     --bf16 True \
-    --output_dir ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_20 \
+    --output_dir ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_31 \
     --num_train_epochs 5 \
     --per_device_train_batch_size 8 \
     --per_device_eval_batch_size 4 \
@@ -43,8 +43,8 @@ deepspeed src/train/train_vlm.py \
     --learning_rate 3e-5 \
     --max_grad_norm 0.5 \
     --label_smoothing_factor 0.05 \
-    --weight_decay 0.01 \
-    --warmup_ratio 0.1 \
+    --weight_decay 0.1 \
+    --warmup_ratio 0.10 \
     --lr_scheduler_type "cosine" \
     --logging_steps 0.001 \
     --gradient_checkpointing True \

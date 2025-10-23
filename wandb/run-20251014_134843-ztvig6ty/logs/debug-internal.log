@@ -1,0 +1,16 @@
+{"time":"2025-10-14T13:48:44.516878186+11:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20251014_134843-ztvig6ty/logs/debug-core.log"}
+{"time":"2025-10-14T13:48:44.725641946+11:00","level":"INFO","msg":"created new stream","id":"ztvig6ty"}
+{"time":"2025-10-14T13:48:44.725704699+11:00","level":"INFO","msg":"stream: started","id":"ztvig6ty"}
+{"time":"2025-10-14T13:48:44.725719287+11:00","level":"INFO","msg":"sender: started","stream_id":"ztvig6ty"}
+{"time":"2025-10-14T13:48:44.725728544+11:00","level":"INFO","msg":"writer: Do: started","stream_id":"ztvig6ty"}
+{"time":"2025-10-14T13:48:44.72571116+11:00","level":"INFO","msg":"handler: started","stream_id":"ztvig6ty"}
+{"time":"2025-10-14T13:48:45.160648219+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-10-14T16:35:07.468883853+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-10-14T16:35:07.713397552+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-10-14T16:35:07.995797052+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.228152017}],"total_operations":1}}
+{"time":"2025-10-14T16:35:09.313837985+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-14T16:35:10.767905934+11:00","level":"INFO","msg":"stream: closing","id":"ztvig6ty"}
+{"time":"2025-10-14T16:35:10.768148669+11:00","level":"INFO","msg":"handler: closed","stream_id":"ztvig6ty"}
+{"time":"2025-10-14T16:35:10.768169135+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ztvig6ty"}
+{"time":"2025-10-14T16:35:10.787757062+11:00","level":"INFO","msg":"sender: closed","stream_id":"ztvig6ty"}
+{"time":"2025-10-14T16:35:10.78784361+11:00","level":"INFO","msg":"stream: closed","id":"ztvig6ty"}

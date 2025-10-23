@@ -1,0 +1,16 @@
+{"time":"2025-10-20T22:35:49.98457902+11:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20251020_223547-ggelgacx/logs/debug-core.log"}
+{"time":"2025-10-20T22:35:50.120242641+11:00","level":"INFO","msg":"created new stream","id":"ggelgacx"}
+{"time":"2025-10-20T22:35:50.120294263+11:00","level":"INFO","msg":"stream: started","id":"ggelgacx"}
+{"time":"2025-10-20T22:35:50.120307156+11:00","level":"INFO","msg":"writer: Do: started","stream_id":"ggelgacx"}
+{"time":"2025-10-20T22:35:50.120316569+11:00","level":"INFO","msg":"sender: started","stream_id":"ggelgacx"}
+{"time":"2025-10-20T22:35:50.120326904+11:00","level":"INFO","msg":"handler: started","stream_id":"ggelgacx"}
+{"time":"2025-10-20T22:35:50.515186198+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-10-21T01:25:12.754744435+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-10-21T01:25:13.609548067+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-10-21T01:25:13.629369459+11:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-10-21T01:25:15.267534549+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-21T01:25:16.918697935+11:00","level":"INFO","msg":"stream: closing","id":"ggelgacx"}
+{"time":"2025-10-21T01:25:16.918874015+11:00","level":"INFO","msg":"handler: closed","stream_id":"ggelgacx"}
+{"time":"2025-10-21T01:25:16.918897828+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ggelgacx"}
+{"time":"2025-10-21T01:25:16.967952421+11:00","level":"INFO","msg":"sender: closed","stream_id":"ggelgacx"}
+{"time":"2025-10-21T01:25:16.9679871+11:00","level":"INFO","msg":"stream: closed","id":"ggelgacx"}

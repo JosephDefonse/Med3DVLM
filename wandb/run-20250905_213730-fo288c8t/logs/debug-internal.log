@@ -1,0 +1,17 @@
+{"time":"2025-09-05T21:37:32.507162946+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250905_213730-fo288c8t/logs/debug-core.log"}
+{"time":"2025-09-05T21:37:32.740187577+10:00","level":"INFO","msg":"created new stream","id":"fo288c8t"}
+{"time":"2025-09-05T21:37:32.740238507+10:00","level":"INFO","msg":"stream: started","id":"fo288c8t"}
+{"time":"2025-09-05T21:37:32.740252462+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"fo288c8t"}
+{"time":"2025-09-05T21:37:32.74027508+10:00","level":"INFO","msg":"sender: started","stream_id":"fo288c8t"}
+{"time":"2025-09-05T21:37:32.740260153+10:00","level":"INFO","msg":"handler: started","stream_id":"fo288c8t"}
+{"time":"2025-09-05T21:37:33.17569131+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-05T22:02:34.183877087+10:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/sheandefonseka/MLLM/fo288c8t/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-09-05T22:23:32.609909229+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-05T22:23:32.61144779+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-05T22:23:33.577132651+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.469007068,"progress":"35.4KB/35.4KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.468991929,"progress":"195B/195B"},{"desc":"uploading config.yaml","runtime_seconds":0.222730081,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-09-05T22:23:33.761804794+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-05T22:23:35.055641721+10:00","level":"INFO","msg":"stream: closing","id":"fo288c8t"}
+{"time":"2025-09-05T22:23:35.055843286+10:00","level":"INFO","msg":"handler: closed","stream_id":"fo288c8t"}
+{"time":"2025-09-05T22:23:35.055870235+10:00","level":"INFO","msg":"sender: closed","stream_id":"fo288c8t"}
+{"time":"2025-09-05T22:23:35.055858943+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fo288c8t"}
+{"time":"2025-09-05T22:23:35.056293142+10:00","level":"INFO","msg":"stream: closed","id":"fo288c8t"}

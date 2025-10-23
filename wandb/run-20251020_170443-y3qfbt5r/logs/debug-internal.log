@@ -1,0 +1,18 @@
+{"time":"2025-10-20T17:04:45.679598109+11:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20251020_170443-y3qfbt5r/logs/debug-core.log"}
+{"time":"2025-10-20T17:04:45.927500313+11:00","level":"INFO","msg":"created new stream","id":"y3qfbt5r"}
+{"time":"2025-10-20T17:04:45.927555183+11:00","level":"INFO","msg":"stream: started","id":"y3qfbt5r"}
+{"time":"2025-10-20T17:04:45.927564992+11:00","level":"INFO","msg":"handler: started","stream_id":"y3qfbt5r"}
+{"time":"2025-10-20T17:04:45.927579269+11:00","level":"INFO","msg":"writer: Do: started","stream_id":"y3qfbt5r"}
+{"time":"2025-10-20T17:04:45.927577639+11:00","level":"INFO","msg":"sender: started","stream_id":"y3qfbt5r"}
+{"time":"2025-10-20T17:04:46.371078915+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-10-20T17:48:02.464434412+11:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/sheandefonseka/MLLM/y3qfbt5r/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-10-20T17:48:05.256905476+11:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/sheandefonseka/MLLM/y3qfbt5r/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-10-20T18:57:14.166817525+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-10-20T18:57:14.468475331+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-10-20T18:57:14.758589277+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"updating run config","runtime_seconds":0.19859777}],"total_operations":1}}
+{"time":"2025-10-20T18:57:15.633848802+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-20T18:57:16.985950813+11:00","level":"INFO","msg":"stream: closing","id":"y3qfbt5r"}
+{"time":"2025-10-20T18:57:16.985991022+11:00","level":"INFO","msg":"handler: closed","stream_id":"y3qfbt5r"}
+{"time":"2025-10-20T18:57:16.985999354+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":"y3qfbt5r"}
+{"time":"2025-10-20T18:57:16.986523221+11:00","level":"INFO","msg":"sender: closed","stream_id":"y3qfbt5r"}
+{"time":"2025-10-20T18:57:16.986536001+11:00","level":"INFO","msg":"stream: closed","id":"y3qfbt5r"}

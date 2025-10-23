@@ -1,0 +1,16 @@
+{"time":"2025-10-22T13:46:52.615344848+11:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20251022_134651-0a7xsw4k/logs/debug-core.log"}
+{"time":"2025-10-22T13:46:52.837344393+11:00","level":"INFO","msg":"created new stream","id":"0a7xsw4k"}
+{"time":"2025-10-22T13:46:52.837391773+11:00","level":"INFO","msg":"stream: started","id":"0a7xsw4k"}
+{"time":"2025-10-22T13:46:52.83740107+11:00","level":"INFO","msg":"writer: Do: started","stream_id":"0a7xsw4k"}
+{"time":"2025-10-22T13:46:52.83742282+11:00","level":"INFO","msg":"handler: started","stream_id":"0a7xsw4k"}
+{"time":"2025-10-22T13:46:52.837416153+11:00","level":"INFO","msg":"sender: started","stream_id":"0a7xsw4k"}
+{"time":"2025-10-22T13:46:53.275591727+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-10-22T15:05:27.00764704+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-10-22T15:05:27.150766025+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-10-22T15:05:28.007858422+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.396641691,"progress":"27.7KB/27.7KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.396628408,"progress":"195B/195B"},{"desc":"uploading config.yaml","runtime_seconds":0.160638954,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-10-22T15:05:28.19251555+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-22T15:05:29.516438642+11:00","level":"INFO","msg":"stream: closing","id":"0a7xsw4k"}
+{"time":"2025-10-22T15:05:29.516473172+11:00","level":"INFO","msg":"handler: closed","stream_id":"0a7xsw4k"}
+{"time":"2025-10-22T15:05:29.516551712+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":"0a7xsw4k"}
+{"time":"2025-10-22T15:05:29.516563747+11:00","level":"INFO","msg":"sender: closed","stream_id":"0a7xsw4k"}
+{"time":"2025-10-22T15:05:29.517053839+11:00","level":"INFO","msg":"stream: closed","id":"0a7xsw4k"}

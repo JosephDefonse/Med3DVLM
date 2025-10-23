@@ -131,8 +131,8 @@ class DataArguments:
 class TrainingArguments(transformers.TrainingArguments):
     # lora
     lora_enable: bool = False
-    lora_r: int = 64
-    lora_alpha: int = 128
+    lora_r: int = 32
+    lora_alpha: int = 64
     lora_dropout: float = 0.1
     lora_weight_path: str = ""
     lora_bias: str = "none"
@@ -165,7 +165,7 @@ class TrainingArguments(transformers.TrainingArguments):
     save_steps: int = 2000
     save_total_limit: int = 2
     learning_rate: float = 3e-5
-    weight_decay: float = 0.01
+    weight_decay: float = 0.1
     warmup_ratio: float = 0.1
     lr_scheduler_type: str = "cosine"
     logging_steps: float = 10  # 0.001
@@ -542,7 +542,7 @@ def main():
                 [
                     x in n
                     for x in [
-                        # "vision_tower",
+                        "vision_tower",
                         "mm_projector",
                         # "embed_tokens",
                         # "lm_head",
@@ -550,12 +550,7 @@ def main():
                 ]
             ):
                 p.requires_grad = True
-        
-        vt = model.get_model().get_vision_tower()
-        vt.eval()
-        for p in vt.parameters():
-            p.requires_grad = False
-        
+
         model.print_trainable_parameters()
 
 
@@ -688,7 +683,7 @@ def main():
         eval_dataset=eval_dataset,
         compute_metrics=compute_metrics,
         preprocess_logits_for_metrics=preprocess_logits_for_metrics,
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=5)]
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=25)]
     )
 
     if is_rank_zero():

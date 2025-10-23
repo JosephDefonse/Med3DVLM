@@ -1,0 +1,60 @@
+  3%|██▎                                                                               | 50/1750 [09:35<4:21:07,  9.22s/it]
+{'loss': 7.3237, 'grad_norm': 45.0035400390625, 'learning_rate': 1.7142857142857143e-07, 'epoch': 0.01}
+{'loss': 7.9017, 'grad_norm': 56.349609375, 'learning_rate': 5.142857142857143e-07, 'epoch': 0.01}
+{'loss': 7.5339, 'grad_norm': 46.21449661254883, 'learning_rate': 8.571428571428571e-07, 'epoch': 0.02}
+{'loss': 7.0781, 'grad_norm': 46.809688568115234, 'learning_rate': 1.2000000000000002e-06, 'epoch': 0.02}
+{'loss': 7.7511, 'grad_norm': 49.036277770996094, 'learning_rate': 1.542857142857143e-06, 'epoch': 0.03}
+{'loss': 7.3652, 'grad_norm': 44.14030456542969, 'learning_rate': 1.885714285714286e-06, 'epoch': 0.03}
+{'loss': 7.0651, 'grad_norm': 45.94730758666992, 'learning_rate': 2.2285714285714286e-06, 'epoch': 0.04}
+{'loss': 7.3348, 'grad_norm': 52.81222915649414, 'learning_rate': 2.5714285714285716e-06, 'epoch': 0.05}
+{'loss': 6.9632, 'grad_norm': 43.51761245727539, 'learning_rate': 2.9142857142857142e-06, 'epoch': 0.05}
+{'loss': 7.3663, 'grad_norm': 57.74129104614258, 'learning_rate': 3.2571428571428572e-06, 'epoch': 0.06}
+{'loss': 6.4733, 'grad_norm': 42.97620391845703, 'learning_rate': 3.6e-06, 'epoch': 0.06}
+{'loss': 6.1368, 'grad_norm': 45.62385940551758, 'learning_rate': 3.942857142857143e-06, 'epoch': 0.07}
+{'loss': 5.6558, 'grad_norm': 46.919517517089844, 'learning_rate': 4.2857142857142855e-06, 'epoch': 0.07}
+{'loss': 4.6453, 'grad_norm': 54.78307342529297, 'learning_rate': 4.628571428571428e-06, 'epoch': 0.08}
+{'loss': 4.3543, 'grad_norm': 98.49665069580078, 'learning_rate': 4.9714285714285715e-06, 'epoch': 0.09}
+{'loss': 3.1194, 'grad_norm': 47.870059967041016, 'learning_rate': 5.314285714285714e-06, 'epoch': 0.09}
+{'loss': 2.6988, 'grad_norm': 42.66558837890625, 'learning_rate': 5.6571428571428576e-06, 'epoch': 0.1}
+{'loss': 1.3336, 'grad_norm': 21.18936538696289, 'learning_rate': 6e-06, 'epoch': 0.1}
+{'loss': 1.0643, 'grad_norm': 24.36442756652832, 'learning_rate': 6.342857142857144e-06, 'epoch': 0.11}
+{'loss': 1.2624, 'grad_norm': 15.977349281311035, 'learning_rate': 6.685714285714286e-06, 'epoch': 0.11}
+{'loss': 1.059, 'grad_norm': 31.339637756347656, 'learning_rate': 7.028571428571429e-06, 'epoch': 0.12}
+{'loss': 0.7809, 'grad_norm': 12.638799667358398, 'learning_rate': 7.371428571428571e-06, 'epoch': 0.13}
+{'loss': 1.1197, 'grad_norm': 13.93277645111084, 'learning_rate': 7.714285714285714e-06, 'epoch': 0.13}
+{'loss': 0.832, 'grad_norm': 19.55994987487793, 'learning_rate': 8.057142857142857e-06, 'epoch': 0.14}
+{'loss': 0.8991, 'grad_norm': 11.860841751098633, 'learning_rate': 8.400000000000001e-06, 'epoch': 0.14}
+/fs04/scratch2/iq38/biomed_model_pmct/data/minigptmed/MiniGPT-Med/miniconda3/miniconda/conda/envs/med3dvlm/lib/python3.12/site-packages/peft/utils/save_and_load.py:260: UserWarning: Setting `save_embedding_layers` to `True` as the embedding layer has been resized during finetuning.
+
+=== compute_metrics DEBUG ===
+[0] REF:  C
+[0] HYP:  C
+[0] ref_letter=C  hyp_letter=C
+---
+[1] REF:  B
+[1] HYP:  B
+[1] ref_letter=B  hyp_letter=B
+---
+[2] REF:  B
+[2] HYP:  C
+[2] ref_letter=B  hyp_letter=C
+---
+[3] REF:  B
+[3] HYP:  C
+[3] ref_letter=B  hyp_letter=C
+---
+[4] REF:  C
+[4] HYP:  C
+[4] ref_letter=C  hyp_letter=C
+---
+[5] REF:  C
+[5] HYP:  C
+[5] ref_letter=C  hyp_letter=C
+---
+{'eval_loss': 0.5485633015632629, 'eval_token_acc': 0.7515822784810127, 'eval_string_acc': 0.5031645569620253, 'eval_choice_acc': 0.5031645569620253, 'eval_runtime': 268.0922, 'eval_samples_per_second': 1.179, 'eval_steps_per_second': 0.295, 'epoch': 0.14}
+  warnings.warn(
+  3%|██▊                                                                               | 59/1750 [15:08<5:16:08, 11.22s/it]
+{'loss': 0.751, 'grad_norm': 14.771913528442383, 'learning_rate': 8.742857142857143e-06, 'epoch': 0.15}
+{'loss': 0.8211, 'grad_norm': 11.111494064331055, 'learning_rate': 9.085714285714286e-06, 'epoch': 0.15}
+{'loss': 0.6952, 'grad_norm': 14.800749778747559, 'learning_rate': 9.428571428571428e-06, 'epoch': 0.16}
+{'loss': 0.7872, 'grad_norm': 10.382168769836426, 'learning_rate': 9.771428571428573e-06, 'epoch': 0.17}

@@ -1,0 +1,16 @@
+{"time":"2025-09-04T09:11:06.6457648+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250904_091105-tgn11zhz/logs/debug-core.log"}
+{"time":"2025-09-04T09:11:06.784929972+10:00","level":"INFO","msg":"created new stream","id":"tgn11zhz"}
+{"time":"2025-09-04T09:11:06.784979397+10:00","level":"INFO","msg":"stream: started","id":"tgn11zhz"}
+{"time":"2025-09-04T09:11:06.784988723+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"tgn11zhz"}
+{"time":"2025-09-04T09:11:06.785006665+10:00","level":"INFO","msg":"handler: started","stream_id":"tgn11zhz"}
+{"time":"2025-09-04T09:11:06.785010037+10:00","level":"INFO","msg":"sender: started","stream_id":"tgn11zhz"}
+{"time":"2025-09-04T09:11:07.115937264+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-04T09:54:51.87587911+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-04T09:54:51.991657478+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-04T09:54:52.837938858+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.490561335,"progress":"39.5KB/39.5KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.490545827,"progress":"191B/191B"},{"desc":"uploading config.yaml","runtime_seconds":0.264300411,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-09-04T09:54:53.000265325+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-04T09:54:54.526522184+10:00","level":"INFO","msg":"stream: closing","id":"tgn11zhz"}
+{"time":"2025-09-04T09:54:54.52655469+10:00","level":"INFO","msg":"handler: closed","stream_id":"tgn11zhz"}
+{"time":"2025-09-04T09:54:54.526565902+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"tgn11zhz"}
+{"time":"2025-09-04T09:54:54.526573237+10:00","level":"INFO","msg":"sender: closed","stream_id":"tgn11zhz"}
+{"time":"2025-09-04T09:54:54.526823493+10:00","level":"INFO","msg":"stream: closed","id":"tgn11zhz"}

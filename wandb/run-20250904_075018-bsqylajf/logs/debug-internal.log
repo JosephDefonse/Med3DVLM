@@ -1,0 +1,16 @@
+{"time":"2025-09-04T07:50:19.727328056+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250904_075018-bsqylajf/logs/debug-core.log"}
+{"time":"2025-09-04T07:50:19.97925947+10:00","level":"INFO","msg":"created new stream","id":"bsqylajf"}
+{"time":"2025-09-04T07:50:19.979309758+10:00","level":"INFO","msg":"stream: started","id":"bsqylajf"}
+{"time":"2025-09-04T07:50:19.979322528+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"bsqylajf"}
+{"time":"2025-09-04T07:50:19.979369003+10:00","level":"INFO","msg":"handler: started","stream_id":"bsqylajf"}
+{"time":"2025-09-04T07:50:19.979335991+10:00","level":"INFO","msg":"sender: started","stream_id":"bsqylajf"}
+{"time":"2025-09-04T07:50:20.403865876+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-04T08:33:58.494018237+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-04T08:33:58.494722017+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-04T08:33:59.494253262+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.470169268,"progress":"39.5KB/39.5KB"},{"desc":"uploading config.yaml","runtime_seconds":0.244866123,"progress":"972B/972B"}],"total_operations":2}}
+{"time":"2025-09-04T08:33:59.625671391+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-04T08:34:00.936335087+10:00","level":"INFO","msg":"stream: closing","id":"bsqylajf"}
+{"time":"2025-09-04T08:34:00.936375685+10:00","level":"INFO","msg":"handler: closed","stream_id":"bsqylajf"}
+{"time":"2025-09-04T08:34:00.936386822+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"bsqylajf"}
+{"time":"2025-09-04T08:34:00.936399888+10:00","level":"INFO","msg":"sender: closed","stream_id":"bsqylajf"}
+{"time":"2025-09-04T08:34:00.936652844+10:00","level":"INFO","msg":"stream: closed","id":"bsqylajf"}

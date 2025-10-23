@@ -1,0 +1,17 @@
+{"time":"2025-10-14T10:14:10.542198441+11:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20251014_101409-wc0x0q6l/logs/debug-core.log"}
+{"time":"2025-10-14T10:14:10.850686289+11:00","level":"INFO","msg":"created new stream","id":"wc0x0q6l"}
+{"time":"2025-10-14T10:14:10.850735804+11:00","level":"INFO","msg":"stream: started","id":"wc0x0q6l"}
+{"time":"2025-10-14T10:14:10.850749811+11:00","level":"INFO","msg":"writer: Do: started","stream_id":"wc0x0q6l"}
+{"time":"2025-10-14T10:14:10.850797446+11:00","level":"INFO","msg":"sender: started","stream_id":"wc0x0q6l"}
+{"time":"2025-10-14T10:14:10.850762242+11:00","level":"INFO","msg":"handler: started","stream_id":"wc0x0q6l"}
+{"time":"2025-10-14T10:14:11.2164273+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-10-14T11:13:47.005925838+11:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/sheandefonseka/MLLM/wc0x0q6l/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-10-14T13:01:49.628943483+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-10-14T13:01:49.846708806+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-10-14T13:01:50.435068743+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.184599232},{"desc":"uploading wandb-summary.json","runtime_seconds":0.159852327}],"total_operations":2}}
+{"time":"2025-10-14T13:01:51.23798487+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-14T13:01:53.17641586+11:00","level":"INFO","msg":"stream: closing","id":"wc0x0q6l"}
+{"time":"2025-10-14T13:01:53.176442867+11:00","level":"INFO","msg":"handler: closed","stream_id":"wc0x0q6l"}
+{"time":"2025-10-14T13:01:53.176451367+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wc0x0q6l"}
+{"time":"2025-10-14T13:01:53.176986714+11:00","level":"INFO","msg":"sender: closed","stream_id":"wc0x0q6l"}
+{"time":"2025-10-14T13:01:53.17701953+11:00","level":"INFO","msg":"stream: closed","id":"wc0x0q6l"}

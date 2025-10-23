@@ -1,0 +1,16 @@
+{"time":"2025-09-06T06:33:55.071827826+10:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/fs04/scratch2/iq38/biomed_model_pmct/data/med3dvlm/Med3DVLM/wandb/run-20250906_063353-jduyjdt0/logs/debug-core.log"}
+{"time":"2025-09-06T06:33:55.198575734+10:00","level":"INFO","msg":"created new stream","id":"jduyjdt0"}
+{"time":"2025-09-06T06:33:55.198626566+10:00","level":"INFO","msg":"stream: started","id":"jduyjdt0"}
+{"time":"2025-09-06T06:33:55.198646157+10:00","level":"INFO","msg":"writer: Do: started","stream_id":"jduyjdt0"}
+{"time":"2025-09-06T06:33:55.198655104+10:00","level":"INFO","msg":"handler: started","stream_id":"jduyjdt0"}
+{"time":"2025-09-06T06:33:55.198671857+10:00","level":"INFO","msg":"sender: started","stream_id":"jduyjdt0"}
+{"time":"2025-09-06T06:33:55.59129886+10:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-06T07:19:52.319896876+10:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-06T07:19:52.320682935+10:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-06T07:19:53.281461082+10:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.465417116,"progress":"35.4KB/35.4KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.465402104,"progress":"191B/191B"},{"desc":"uploading config.yaml","runtime_seconds":0.195603079,"progress":"972B/972B"}],"total_operations":3}}
+{"time":"2025-09-06T07:19:54.183221305+10:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-06T07:19:55.679238557+10:00","level":"INFO","msg":"stream: closing","id":"jduyjdt0"}
+{"time":"2025-09-06T07:19:55.67927072+10:00","level":"INFO","msg":"handler: closed","stream_id":"jduyjdt0"}
+{"time":"2025-09-06T07:19:55.679280729+10:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jduyjdt0"}
+{"time":"2025-09-06T07:19:55.679288247+10:00","level":"INFO","msg":"sender: closed","stream_id":"jduyjdt0"}
+{"time":"2025-09-06T07:19:55.679530846+10:00","level":"INFO","msg":"stream: closed","id":"jduyjdt0"}
