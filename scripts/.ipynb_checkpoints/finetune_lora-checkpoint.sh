@@ -27,7 +27,7 @@ deepspeed src/train/train_vlm.py \
     --vqa_data_val_path   /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_13_val.csv \
     --vqa_data_test_path  /home/sdef0001/iq38_scratch/nmdid/nmdid_cause_vqa_13_test.csv \
     --bf16 True \
-    --output_dir ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_31 \
+    --output_dir ./output/Med3DVLM-Qwen-2.5-7B-finetune_vqa_32 \
     --num_train_epochs 5 \
     --per_device_train_batch_size 8 \
     --per_device_eval_batch_size 4 \

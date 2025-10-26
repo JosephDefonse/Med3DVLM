@@ -16,31 +16,6 @@ from monai.transforms import (
     Rand3DElastic, RandGaussianSmooth, RandCoarseDropout, RandRotate90, RandZoom
 )
 
-class RandomCTWindowJitter:
-    """
-    Jitters CT window/level after base_norm.
-    Assumes input ~[0,1]. We apply a small affine to simulate WL/WC changes.
-    """
-    def __init__(self, p=0.5, level_delta=0.05, width_scale=(0.95, 1.05)):
-        self.p = p
-        self.level_delta = level_delta
-        self.width_scale = width_scale
-
-    def __call__(self, img):
-        # img is a numpy/torch array shaped (1, D, H, W) in ~[0,1]
-        import numpy as np
-        if np.random.rand() > self.p:
-            return img
-        lvl_shift = (np.random.rand() * 2 - 1) * self.level_delta   # ±level_delta around mid-gray
-        w_scale  = np.random.uniform(*self.width_scale)
-        out = (img - 0.5 + lvl_shift) * w_scale + 0.5
-        # clamp to [0,1]
-        if hasattr(out, "clip"):
-            return out.clip(0.0, 1.0)
-        else:
-            import numpy as np
-            return np.clip(out, 0.0, 1.0)
-
 def resample_volume(img: sitk.Image, target_size=(256,256,128)) -> np.ndarray:
     """
     Resample a sitk.Image to the given (W,H,D)=target_size
@@ -148,9 +123,8 @@ class VQADataset(Dataset):
         # COR = 1
         # SAG = 2
         
-        self.light_train = mtf.Compose([ 
-            self.base_norm, 
-            # very mild spatial + intensity jitter for ALL train samples
+        self.light_train = mtf.Compose([
+            self.base_norm,
             mtf.RandAffine(
                 prob=0.2,
                 translate_range=(0.02, 0.02, 0.02),
@@ -158,10 +132,10 @@ class VQADataset(Dataset):
                 scale_range=(0.05,)*3,
                 mode='bilinear',
                 padding_mode='zeros'
-            ), 
+            ),
             mtf.RandShiftIntensity(offsets=0.05, prob=0.3),
             mtf.RandAdjustContrast(prob=0.2, gamma=(0.9, 1.1)),
-            mtf.ToTensor(dtype=torch.float), 
+            mtf.ToTensor(dtype=torch.float),
         ])
         
         self.heavy_train = mtf.Compose([
@@ -173,15 +147,13 @@ class VQADataset(Dataset):
                 scale_range=(0.12,)*3,
                 mode='bilinear',
                 padding_mode='zeros'
-            ), 
-            mtf.RandFlip(prob=0.5, spatial_axis=2), # sagittal
-            mtf.RandFlip(prob=0.5, spatial_axis=1), # coronal
+            ),
+            mtf.RandFlip(prob=0.5, spatial_axis=2),  # sagittal?
+            mtf.RandFlip(prob=0.5, spatial_axis=1),  # coronal?
             mtf.RandShiftIntensity(offsets=0.10, prob=0.5),
             mtf.RandAdjustContrast(prob=0.4, gamma=(0.8, 1.25)),
             mtf.RandGaussianNoise(prob=0.25, mean=0.0, std=0.01),
-            # Optional, often helpful on CT:
-            # mtf.RandBiasField(prob=0.2),
-            mtf.ToTensor(dtype=torch.float), 
+            mtf.ToTensor(dtype=torch.float),
         ])
         
         val_transform = Compose([

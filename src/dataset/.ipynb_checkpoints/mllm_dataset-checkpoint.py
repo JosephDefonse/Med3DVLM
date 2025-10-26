@@ -148,9 +148,8 @@ class VQADataset(Dataset):
         # COR = 1
         # SAG = 2
         
-        self.light_train = mtf.Compose([ 
-            self.base_norm, 
-            # very mild spatial + intensity jitter for ALL train samples
+        self.light_train = mtf.Compose([
+            self.base_norm,
             mtf.RandAffine(
                 prob=0.2,
                 translate_range=(0.02, 0.02, 0.02),
@@ -158,10 +157,10 @@ class VQADataset(Dataset):
                 scale_range=(0.05,)*3,
                 mode='bilinear',
                 padding_mode='zeros'
-            ), 
+            ),
             mtf.RandShiftIntensity(offsets=0.05, prob=0.3),
             mtf.RandAdjustContrast(prob=0.2, gamma=(0.9, 1.1)),
-            mtf.ToTensor(dtype=torch.float), 
+            mtf.ToTensor(dtype=torch.float),
         ])
         
         self.heavy_train = mtf.Compose([
@@ -173,15 +172,13 @@ class VQADataset(Dataset):
                 scale_range=(0.12,)*3,
                 mode='bilinear',
                 padding_mode='zeros'
-            ), 
-            mtf.RandFlip(prob=0.5, spatial_axis=2), # sagittal
-            mtf.RandFlip(prob=0.5, spatial_axis=1), # coronal
+            ),
+            mtf.RandFlip(prob=0.5, spatial_axis=2),  # sagittal?
+            mtf.RandFlip(prob=0.5, spatial_axis=1),  # coronal?
             mtf.RandShiftIntensity(offsets=0.10, prob=0.5),
             mtf.RandAdjustContrast(prob=0.4, gamma=(0.8, 1.25)),
             mtf.RandGaussianNoise(prob=0.25, mean=0.0, std=0.01),
-            # Optional, often helpful on CT:
-            # mtf.RandBiasField(prob=0.2),
-            mtf.ToTensor(dtype=torch.float), 
+            mtf.ToTensor(dtype=torch.float),
         ])
         
         val_transform = Compose([
